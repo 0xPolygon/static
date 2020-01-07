@@ -1,0 +1,206 @@
+{
+BetaMainNetV2: {
+Main: {
+NetworkName: "Ethereum",
+ChainId: 1,
+RPC: "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
+SyncerAPI: "https://betav2-syncer.api.matic.network",
+WatcherAPI: "https://betav2-watcher.api.matic.network",
+DaggerEndpoint: "wss://mainnet.dagger.matic.network",
+Explorer: "https://etherscan.io",
+Contracts: {
+BytesLib: "0x3355991B6eD52D399932cfDeb8068651E9d2161B",
+Common: "0xe6F4843a84Ad302b345593c9edd1dCdF1BDcF892",
+ECVerify: "0x05c16f548330034054E06C7b8B70EC0f6F55BacE",
+Merkle: "0x16716ecaf428DDD872B5F8724A6Ca81B648746F7",
+MerklePatriciaProof: "0xF7560D0D5d07988e215c67bF5704AcDf8ad15158",
+PriorityQueue: "0xF14a2b1C71F71F788aB54eb4b31e5A72BFc3997c",
+RLPEncode: "0xf5A58Cdbb0B5c51d6a843b8D5007803D9db621ee",
+RLPReader: "0xEf3fdb61C8876728CCeC8C2f900bA5c735cB3929",
+SafeMath: "0x22D56916F084BB9955525A10234FF875caB5c6a9",
+Registry: "0x4eE5e7477d6abDA5a0E0172a72a92F1E060EcD7B",
+RootChain: "0xA4edab1eF6358c40D487a9D466D977e98F7AC218",
+StakeManager: "0x0A149deE25eE0D8C9BbAF99620c4Cb94B606bcdE",
+SlashingManager: "0x9252FAef5667aD74E300C343ee3dfCc7F7CA9309",
+DelegationManager: "0xA0e87680fB536eb7dD4BCd53b5C70BeAf9d7ceC6",
+StateSender: "0xA6770aCDCF7CD75ffaC3A6A24cC676d6CcF3bb64",
+DepositManager: "0xDE41EfDf7B4523B80523875b122F0eaF42e10dcC",
+DepositManagerProxy: "0xb3Fe6f0eB663DbE4D4813Ee32d6f30d64640D2f8",
+WithdrawManager: "0xf294c253a6903E5eCb35716a6e6735b69f409Ec4",
+WithdrawManagerProxy: "0x52214f98e6D33ae6Eef7a5A8655e8075BfE10Fe0",
+tokens: {
+TestToken: "0x21c2B63b03f0a798bC1dDd0FC4f0377d57AC6dC3"
+},
+TestToken: "0xB3b2672b9e3905F6Ac4e74382062f79d22203087"
+}
+},
+Matic: {
+NetworkName: "Matic betanet",
+ChainId: 16110,
+RPC: "https://betav2.matic.network",
+SyncerAPI: "https://betav2-syncer.api.matic.network",
+Explorer: "https://betav2-explorer.matic.network",
+DaggerEndpoint: "https://betav2-dagger.matic.network",
+Contracts: {
+ChildChain: "0x2188FBac4A9044bB07eDE86f81344873262ABc18",
+tokens: {
+TestToken: "0xA248F9eB9eDe9629Fcc05C19131b0690A51851Bf"
+}
+}
+}
+},
+AlphaMainNet: {
+Main: {
+NetworkName: "Ethereum",
+ChainId: 1,
+RPC: "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
+SyncerAPI: "https://alpha.ethereum.api.matic.network/api/v1",
+WatcherAPI: "https://alpha.ethereum.watcher.matic.network/api/v1",
+DaggerEndpoint: "wss://mainnet.dagger.matic.network",
+Explorer: "https://etherscan.io",
+Contracts: {
+SafeMath: "0xc0c0cdea396948006a83e090a63b871dc75b8f32",
+Math: "0xa2f4749c419a280aa77d4f3ec821c9e3376e24f4",
+ECVerify: "0x4a82fd81c9be2b3ccdb0710cbdea11e52fe3f97f",
+BytesLib: "0xfeb4f1648b9aed70fc71b0afa28cdcfd198e7656",
+RLP: "0x1bb0e0cc1f49bb93e9911a6812a91afdff886b0d",
+MerklePatriciaProof: "0x13aa292222d2fbb74892ea05b6af553a08cf1bc5",
+Merkle: "0xe9199f2205acbf0fde3079a812e7ce0c3ef55548",
+RLPEncode: "0xe232b36e5de416d96c5f1c093f6b3cb3f351eb1e",
+Common: "0xdc1af11a42824ea6735bcbec010400f69e468891",
+RootChain: "0x2aa012a32db4297b6c1ec06b81e498154b4e8d46",
+DepositManager: "0x0bdb53216625f71d17bf94999d31257751e5cbc9",
+WithdrawManager: "0x592ca027cde761ed1c1d4b5f6a169b4e64881cca",
+TestToken: "0xd391dd06730931c84cc168e54466b234451c1a0e",
+StakeManager: "0x8fa51b94d32d138aaa44ee43a6f9e5e2868aee9f",
+ExitNFT: "0xe558788785e8c49a8589e87fb77b18f1130d919e",
+TxValidator: "0x00ed4ab2571b835bc854c498f926c8624f43f9bc",
+ERC20Validator: "0x17de7965fa251d3f884d137dc114606f136bf944",
+ExitValidator: "0x8b13343926a54067a28c17c5db9abea8fe77de2f",
+NonceValidator: "0xd47d4147189cedea56d50563c3468fba441a1c4f",
+ERC721Validator: "0x34a81888f4056dce238d793bdc7da65944bead5b",
+DepositValidator: "0xb5fe624017b607b4c66c02b7e6a48e1eb3ce827a"
+}
+},
+Matic: {
+NetworkName: "Matic alphanet",
+ChainId: 4626,
+RPC: "https://alpha.ethereum.matic.network",
+RPCWebSocketEndpoint: "wss://alpha.ethereum.ws.matic.network",
+SyncerAPI: "https://alpha.matic.mainnet.api.matic.network/api/v1",
+Explorer: "https://alpha-mainnet.explorer.matic.network",
+DaggerEndpoint: "wss://alpha.matic.mainnet.dagger.matic.network",
+Contracts: {
+ChildTestToken: "0x9d3F6E51A7C485381AFD53802fF828b083DB403C",
+ChildChain: "0x676792140b94f77204ba8dc18223b73a5bbaef9d"
+}
+}
+},
+TestnetV3: {
+Main: {
+NetworkName: "Ropsten testnet",
+ChainId: 3,
+RPC: "https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
+SyncerAPI: "https://testnetv3-syncer.api.matic.network",
+WatcherAPI: "https://testnetv3-watcher.api.matic.network",
+DaggerEndpoint: "https://ropsten.dagger.matic.network",
+Explorer: "https://ropsten.etherscan.io",
+Contracts: {
+Registry: "0x56B082d0a590A7ce5d170402D6f7f88B58F71988",
+RootChain: "0x82a72315E16cE224f28E1F1fB97856d3bF83f010",
+DepositManager: "0x4b068Ac93b3b71DB13Fce4c4510Eb70D3022576A",
+DepositManagerProxy: "0x3Bc6701cA1C32BBaC8D1ffA2294EE3444Ad93989",
+WithdrawManager: "0xaBb936ff1DD3aC41e5041f29a99c7627eFCf4C5F",
+WithdrawManagerProxy: "0x3cf9aD3395028a42EAfc949e2EC4588396b8A7D4",
+StakeManager: "0x0aEd86c6cA8c68C5499cec6F3570e2CA4860A918",
+SlashingManager: "0xAb1e2218EAF1b2d242ddDD047BE5f5583A68BA84",
+DelegationManager: "0xba032CD2B41a6FDA32ad9f1DE5623694a47Db9EA",
+ExitNFT: "0xe4202974B2d5b2f26b7A8f27098EC439d1e6C4aa",
+StateSender: "0x22E1f5aa1BA9e60527250FFeb35e30Aa2913727f",
+predicates: {
+ERC20Predicate: "0xaBE79B1B44581c69cCc45146dd8681Fb82a8AA18",
+ERC721Predicate: "0x1F07Aa7eB46414d2F89746C7510E8597E82CF698",
+MarketplacePredicate: "0x2E3a58bF3644E4D790f93A01527F85E211c57841",
+TransferWithSigPredicate: "0x3f0dC47C79254cfCA4195519954b444F87a766E0"
+},
+tokens: {
+MaticWeth: "0x7BdDd37621186f1382FD59e1cCAE0316F979a866",
+TestToken: "0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec",
+TestERC721: "0x07d799252cf13c01f602779b4dce24f4e5b08bbd"
+}
+}
+},
+Matic: {
+NetworkName: "Matic testnet",
+ChainId: 15001,
+RPC: "https://testnetv3.matic.network",
+RPCWebSocketEndpoint: "wss://testnetv3-wss.matic.network",
+SyncerAPI: "https://testnetv3-syncer.api.matic.network",
+Explorer: "https://testnetv3-explorer.matic.network/",
+DaggerEndpoint: "https://testnetv3-dagger.matic.network",
+Contracts: {
+ChildChain: "0xa2EF03edfA084ac9e5Bf110e409Ed5483BAe4101",
+tokens: {
+MaticWeth: "0x8567184E6F9b1B77f24AfF6168453419AD22f90e",
+TestToken: "0x9a93c912F4eFf0254d178a18ACD980C1B05b57b0",
+TestERC721: "0x8D5231e0B79edD9331e0CF0d4B9f3F30d05C47A5"
+}
+}
+}
+},
+TestnetV2: {
+Main: {
+NetworkName: "Ropsten testnet",
+ChainId: 3,
+RPC: "https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
+SyncerAPI: "https://ropsten-syncer.api.matic.network/api/v1",
+WatcherAPI: "https://ropsten-watcher2.api.matic.network/api/v1",
+DaggerEndpoint: "https://ropsten.dagger.matic.network",
+Explorer: "https://ropsten.etherscan.io",
+Contracts: {
+SafeMath: "0xa9def934823fba1501f598d8b1dca5fde18d023b",
+Math: "0x0b5225f4e33e197540b93b208283f6823caa18b9",
+ECVerify: "0x0f887ad36c64f66011de05c5f3d522671276ba13",
+BytesLib: "0xd4ac6c1a94242f550978defb6fb422379509cb67",
+RLP: "0x8e463c17503cc2c5178fad59f87e57ab07bd6ac1",
+MerklePatriciaProof: "0x543e3bfb4bf0d537d599f23c8ed9bd06cded2446",
+Merkle: "0x4147d70dad5ff5cf1119288e58f85e9046370bc1",
+RLPEncode: "0x4b60995a611a03298f577c25b2b50f7e7d10624b",
+Common: "0x39a0987fa8a70738db57f7fed51cd11fba85ed5a",
+RootChain: "0x60e2b19b9a87a3f37827f2c8c8306be718a5f9b4",
+DepositManager: "0x4072fab2a132bf98207cbfcd2c341adb904a67e9",
+WithdrawManager: "0x4ef2b60cdd4611fa0bc815792acc14de4c158d22",
+TestToken: "0x70459e550254b9d3520a56ee95b78ee4f2dbd846",
+TestERC721: "0x07d799252cf13c01f602779b4dce24f4e5b08bbd",
+WETH: "0x421dc9053cb4b51a7ec07b60c2bbb3ec3cfe050b",
+StakeManager: "0x89abfed47887c0cc135b0d522fd68fb1b0c2d701",
+ExitNFT: "0x1215e047acd378d70b685f1856516dc6c99a57e1",
+TxValidator: "0x3c8b84dcde69b538ba9f7769ea2573440a8b29c1",
+ERC20Validator: "0xba217eb99269a9080b20188385dcbd51ecfb66fc",
+ExitValidator: "0xfb0fa7b181d67d9ca8ab72cad33fef594be01c4a",
+NonceValidator: "0xd2557a2273e751555f987114513bc935a71e6ad4",
+ERC721Validator: "0x9f1fad59f2e3ec58d2999968e9b841e3bac37487",
+DepositValidator: "0x0af016d0fbd0079cbc2cfb65022e910e192eeff6"
+}
+},
+Matic: {
+NetworkName: "Matic testnet",
+ChainId: 8995,
+RPC: "https://testnet2.matic.network",
+RPCWebSocketEndpoint: "wss://testnet2-ws.matic.network",
+SyncerAPI: "https://matic-syncer2.api.matic.network/api/v1",
+Explorer: "https://explorer.testnet2.matic.network",
+DaggerEndpoint: "wss://matic.dagger2.matic.network",
+Contracts: {
+ChildTestERC721: "0x9f289a264b6db56d69ad53f363d06326b984e637",
+ChildTestToken: "0xc82c13004c06E4c627cF2518612A55CE7a3Db699",
+ChildWETH: "0x31074c34a757a4b9FC45169C58068F43B717b2D0",
+ChildChain: "0x7f57bd9a688b1461633ae56452c2391b2f0d2e91",
+Marketplace: "0x0e629a5BfC2a3278Ec0f9a56C6a401e58c1402f4"
+}
+},
+Heimdall: {
+ChainId: "0xb3f9989a5c32ba38b27f2196a41c5eca1fa36c21938915939aeeed0bbf7a5859"
+}
+}
+}
