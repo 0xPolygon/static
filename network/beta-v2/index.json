@@ -1,0 +1,56 @@
+{
+  "Main": {
+    "NetworkName": "Ethereum",
+    "ChainId": 1,
+    "RPC": "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
+    "SyncerAPI": "https://betav2-syncer.api.matic.network",
+    "WatcherAPI": "https://betav2-watcher.api.matic.network",
+    "DaggerEndpoint": "wss://mainnet.dagger.matic.network",
+    "Explorer": "https://etherscan.io",
+    "Contracts": {
+      "BytesLib": "0x3355991B6eD52D399932cfDeb8068651E9d2161B",
+      "Common": "0xe6F4843a84Ad302b345593c9edd1dCdF1BDcF892",
+      "ECVerify": "0x05c16f548330034054E06C7b8B70EC0f6F55BacE",
+      "Merkle": "0x16716ecaf428DDD872B5F8724A6Ca81B648746F7",
+      "MerklePatriciaProof": "0xF7560D0D5d07988e215c67bF5704AcDf8ad15158",
+      "PriorityQueue": "0xF14a2b1C71F71F788aB54eb4b31e5A72BFc3997c",
+      "RLPEncode": "0xf5A58Cdbb0B5c51d6a843b8D5007803D9db621ee",
+      "RLPReader": "0xEf3fdb61C8876728CCeC8C2f900bA5c735cB3929",
+      "SafeMath": "0x22D56916F084BB9955525A10234FF875caB5c6a9",
+      "Registry": "0x0055a1796330a3a900b6d7DbbC761d3634827f9a",
+      "RootChain": "0x5AEe1922F69bA5d51C2Fe0b5d68f184069f7f85B",
+      "StakeManager": "0xB335b93017581d1A9977cF0eA5C00e0e4c4bc668",
+      "SlashingManager": "0x9252FAef5667aD74E300C343ee3dfCc7F7CA9309",
+      "DelegationManager": "0xA0e87680fB536eb7dD4BCd53b5C70BeAf9d7ceC6",
+      "StateSender": "0xfB631F5A239A5B651120335239CC19aEbCb185e6",
+      "DepositManager": "0xcd2f94691d175BbD3ad3d5cD2a5708485cde853A",
+      "DepositManagerProxy": "0xb3Fe6f0eB663DbE4D4813Ee32d6f30d64640D2f8",
+      "WithdrawManager": "0xa99b1AB012E1ea604858DE3DE73A3fE564CFABDB",
+      "WithdrawManagerProxy": "0x52214f98e6D33ae6Eef7a5A8655e8075BfE10Fe0",
+      "tokens": {
+        "TestToken": "0x21c2B63b03f0a798bC1dDd0FC4f0377d57AC6dC3"
+      },
+      "Registry": "0x4eE5e7477d6abDA5a0E0172a72a92F1E060EcD7B",
+      "StateSender": "0xA6770aCDCF7CD75ffaC3A6A24cC676d6CcF3bb64",
+      "DepositManager": "0xDE41EfDf7B4523B80523875b122F0eaF42e10dcC",
+      "WithdrawManager": "0xf294c253a6903E5eCb35716a6e6735b69f409Ec4",
+      "RootChain": "0xA4edab1eF6358c40D487a9D466D977e98F7AC218",
+      "StakeManager": "0x0A149deE25eE0D8C9BbAF99620c4Cb94B606bcdE",
+      "TestToken": "0xB3b2672b9e3905F6Ac4e74382062f79d22203087"
+    }
+  },
+  "Matic": {
+    "NetworkName": "Matic betanet",
+    "ChainId": 16110,
+    "RPC": "https://betav2.matic.network",
+    "SyncerAPI": "https://betav2-syncer.api.matic.network",
+    "Explorer": "https://betav2-explorer.matic.network",
+    "DaggerEndpoint": "https://betav2-dagger.matic.network",
+    "Contracts": {
+      "ChildChain": "0x2188FBac4A9044bB07eDE86f81344873262ABc18",
+      "tokens": {
+        "TestToken": "0xA248F9eB9eDe9629Fcc05C19131b0690A51851Bf"
+      }
+    }
+  }
+}

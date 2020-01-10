@@ -1,0 +1,47 @@
+{
+  "Main": {
+    "NetworkName": "Ethereum",
+    "ChainId": 1,
+    "RPC": "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
+    "SyncerAPI": "https://alpha.ethereum.api.matic.network/api/v1",
+    "WatcherAPI": "https://alpha.ethereum.watcher.matic.network/api/v1",
+    "DaggerEndpoint": "wss://mainnet.dagger.matic.network",
+    "Explorer": "https://etherscan.io",
+    "Contracts": {
+      "SafeMath": "0xc0c0cdea396948006a83e090a63b871dc75b8f32",
+      "Math": "0xa2f4749c419a280aa77d4f3ec821c9e3376e24f4",
+      "ECVerify": "0x4a82fd81c9be2b3ccdb0710cbdea11e52fe3f97f",
+      "BytesLib": "0xfeb4f1648b9aed70fc71b0afa28cdcfd198e7656",
+      "RLP": "0x1bb0e0cc1f49bb93e9911a6812a91afdff886b0d",
+      "MerklePatriciaProof": "0x13aa292222d2fbb74892ea05b6af553a08cf1bc5",
+      "Merkle": "0xe9199f2205acbf0fde3079a812e7ce0c3ef55548",
+      "RLPEncode": "0xe232b36e5de416d96c5f1c093f6b3cb3f351eb1e",
+      "Common": "0xdc1af11a42824ea6735bcbec010400f69e468891",
+      "RootChain": "0x2aa012a32db4297b6c1ec06b81e498154b4e8d46",
+      "DepositManager": "0x0bdb53216625f71d17bf94999d31257751e5cbc9",
+      "WithdrawManager": "0x592ca027cde761ed1c1d4b5f6a169b4e64881cca",
+      "TestToken": "0xd391dd06730931c84cc168e54466b234451c1a0e",
+      "StakeManager": "0x8fa51b94d32d138aaa44ee43a6f9e5e2868aee9f",
+      "ExitNFT": "0xe558788785e8c49a8589e87fb77b18f1130d919e",
+      "TxValidator": "0x00ed4ab2571b835bc854c498f926c8624f43f9bc",
+      "ERC20Validator": "0x17de7965fa251d3f884d137dc114606f136bf944",
+      "ExitValidator": "0x8b13343926a54067a28c17c5db9abea8fe77de2f",
+      "NonceValidator": "0xd47d4147189cedea56d50563c3468fba441a1c4f",
+      "ERC721Validator": "0x34a81888f4056dce238d793bdc7da65944bead5b",
+      "DepositValidator": "0xb5fe624017b607b4c66c02b7e6a48e1eb3ce827a"
+    }
+  },
+  "Matic": {
+    "NetworkName": "Matic alphanet",
+    "ChainId": 4626,
+    "RPC": "https://alpha.ethereum.matic.network",
+    "RPCWebSocketEndpoint": "wss://alpha.ethereum.ws.matic.network",
+    "SyncerAPI": "https://alpha.matic.mainnet.api.matic.network/api/v1",
+    "Explorer": "https://alpha-mainnet.explorer.matic.network",
+    "DaggerEndpoint": "wss://alpha.matic.mainnet.dagger.matic.network",
+    "Contracts": {
+      "ChildTestToken": "0x9d3F6E51A7C485381AFD53802fF828b083DB403C",
+      "ChildChain": "0x676792140b94f77204ba8dc18223b73a5bbaef9d"
+    }
+  }
+}
