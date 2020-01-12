@@ -3,8 +3,8 @@
     "NetworkName": "Ethereum",
     "ChainId": 1,
     "RPC": "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
-    "SyncerAPI": "https://betav2-syncer.api.matic.network",
-    "WatcherAPI": "https://betav2-watcher.api.matic.network",
+    "SyncerAPI": "https://betav2-syncer.api.matic.network/api/v1",
+    "WatcherAPI": "https://betav2-watcher.api.matic.network/api/v1",
     "DaggerEndpoint": "wss://mainnet.dagger.matic.network",
     "Explorer": "https://etherscan.io",
     "Contracts": {
@@ -28,28 +28,23 @@
       "WithdrawManager": "0xa99b1AB012E1ea604858DE3DE73A3fE564CFABDB",
       "WithdrawManagerProxy": "0x52214f98e6D33ae6Eef7a5A8655e8075BfE10Fe0",
       "Tokens": {
-        "TestToken": "0x21c2B63b03f0a798bC1dDd0FC4f0377d57AC6dC3"
-      },
-      "Registry": "0x4eE5e7477d6abDA5a0E0172a72a92F1E060EcD7B",
-      "StateSender": "0xA6770aCDCF7CD75ffaC3A6A24cC676d6CcF3bb64",
-      "DepositManager": "0xDE41EfDf7B4523B80523875b122F0eaF42e10dcC",
-      "WithdrawManager": "0xf294c253a6903E5eCb35716a6e6735b69f409Ec4",
-      "RootChain": "0xA4edab1eF6358c40D487a9D466D977e98F7AC218",
-      "StakeManager": "0x0A149deE25eE0D8C9BbAF99620c4Cb94B606bcdE",
-      "TestToken": "0xB3b2672b9e3905F6Ac4e74382062f79d22203087"
+        "TestToken": "0x21c2B63b03f0a798bC1dDd0FC4f0377d57AC6dC3",
+        "TestErc721": "0x6607De2644D9CbBE2BA1b6EAAddBFD8353F4A918"
+      }
     }
   },
   "Matic": {
     "NetworkName": "Matic betanet",
     "ChainId": 16110,
     "RPC": "https://betav2.matic.network",
-    "SyncerAPI": "https://betav2-syncer.api.matic.network",
+    "SyncerAPI": "https://betav2-syncer.api.matic.network/api/v1",
     "Explorer": "https://betav2-explorer.matic.network",
     "DaggerEndpoint": "https://betav2-dagger.matic.network",
     "Contracts": {
       "ChildChain": "0x2188FBac4A9044bB07eDE86f81344873262ABc18",
       "Tokens": {
-        "TestToken": "0xA248F9eB9eDe9629Fcc05C19131b0690A51851Bf"
+        "TestToken": "0xA248F9eB9eDe9629Fcc05C19131b0690A51851Bf",
+        "TestErc721": "0x864e19f6DEcba4B68544fd60DD3577B739d1F7BD"
       }
     }
   }
