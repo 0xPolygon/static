@@ -3,8 +3,8 @@
     "NetworkName": "Ropsten testnet",
     "ChainId": 3,
     "RPC": "https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
-    "SyncerAPI": "https://testnetv3-syncer.api.matic.network",
-    "WatcherAPI": "https://testnetv3-watcher.api.matic.network",
+    "SyncerAPI": "https://testnetv3-syncer.api.matic.network/api/v1",
+    "WatcherAPI": "https://testnetv3-watcher.api.matic.network/api/v1",
     "DaggerEndpoint": "https://ropsten.dagger.matic.network",
     "Explorer": "https://ropsten.etherscan.io",
     "Contracts": {
@@ -37,7 +37,7 @@
     "ChainId": 15001,
     "RPC": "https://testnetv3.matic.network",
     "RPCWebSocketEndpoint": "wss://testnetv3-wss.matic.network",
-    "SyncerAPI": "https://testnetv3-syncer.api.matic.network",
+    "SyncerAPI": "https://testnetv3-syncer.api.matic.network/api/v1",
     "Explorer": "https://testnetv3-explorer.matic.network/",
     "DaggerEndpoint": "https://testnetv3-dagger.matic.network",
     "Contracts": {
