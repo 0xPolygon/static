@@ -12,7 +12,7 @@
       "RootChain": "0x82a72315E16cE224f28E1F1fB97856d3bF83f010",
       "DepositManager": "0x4b068Ac93b3b71DB13Fce4c4510Eb70D3022576A",
       "DepositManagerProxy": "0x3Bc6701cA1C32BBaC8D1ffA2294EE3444Ad93989",
-      "WithdrawManager": "0xaBb936ff1DD3aC41e5041f29a99c7627eFCf4C5F",
+      "WithdrawManager": "0xcBd99DfD6fbC55e7596318FC069bC3B7869Ff30a",
       "WithdrawManagerProxy": "0x3cf9aD3395028a42EAfc949e2EC4588396b8A7D4",
       "StakeManager": "0x0aEd86c6cA8c68C5499cec6F3570e2CA4860A918",
       "SlashingManager": "0xAb1e2218EAF1b2d242ddDD047BE5f5583A68BA84",
