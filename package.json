@@ -1,12 +1,20 @@
 {
-    "name": "@maticnetwork/meta",
-    "version": "1.0.0",
-    "description": "matic network contracts' addresses and ABIs",
-    "repository": "maticnetwork/static",
-    "main": "./network/index.js",
-    "keywords": [
-        "meta",
-        "addresses",
-        "abi"
-    ]
+  "name": "@maticnetwork/meta",
+  "version": "1.0.0",
+  "description": "Matic network contracts' addresses and ABIs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maticnetwork/static.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maticnetwork/static/issues"
+  },
+  "homepage": "https://github.com/maticnetwork/static#readme",
+  "main": "./network/index.js",
+  "keywords": [
+    "meta",
+    "addresses",
+    "abi"
+  ]
 }
