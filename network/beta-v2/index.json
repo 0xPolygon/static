@@ -27,7 +27,7 @@
       "DepositManagerProxy": "0xb3Fe6f0eB663DbE4D4813Ee32d6f30d64640D2f8",
       "WithdrawManager": "0xa99b1AB012E1ea604858DE3DE73A3fE564CFABDB",
       "WithdrawManagerProxy": "0x52214f98e6D33ae6Eef7a5A8655e8075BfE10Fe0",
-      "tokens": {
+      "Tokens": {
         "TestToken": "0x21c2B63b03f0a798bC1dDd0FC4f0377d57AC6dC3",
         "TestErc721": "0x6607De2644D9CbBE2BA1b6EAAddBFD8353F4A918"
       }
@@ -42,7 +42,7 @@
     "DaggerEndpoint": "https://betav2-dagger.matic.network",
     "Contracts": {
       "ChildChain": "0x2188FBac4A9044bB07eDE86f81344873262ABc18",
-      "tokens": {
+      "Tokens": {
         "TestToken": "0xA248F9eB9eDe9629Fcc05C19131b0690A51851Bf",
         "TestErc721": "0x864e19f6DEcba4B68544fd60DD3577B739d1F7BD"
       }
