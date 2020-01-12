@@ -1,0 +1,12 @@
+{
+    "name": "@maticnetwork/meta",
+    "version": "1.0.0",
+    "description": "matic network contracts' addresses and ABIs",
+    "repository": "maticnetwork/static",
+    "main": "./network/index.js",
+    "keywords": [
+        "meta",
+        "addresses",
+        "abi"
+    ]
+}
