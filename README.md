@@ -7,7 +7,7 @@ All files, in this repository, will be served over AWS S3 at `https://static.mat
 ### Production
 Master branch will be automatically deployed. No other action required. 
 
-### Package Usage
+## Package Usage
 
 ### Installation
 ```bash
@@ -15,22 +15,23 @@ $ npm i --save @maticnetwork/meta
 ```
 ### Usage
 ```javascript
-// require('@maticnetwork/meta').<network-name>.<version>
-const meta = require('@maticnetwork/meta').testnet.v3
- 
-const DepositManagerABI = meta.DepositManager.abi;
-const DepositManagerAddress = meta.addresses.Main.Contracts.DepositManager;
+const Network = require("@maticnetwork/meta/network")
+
+// define network
+const network = new Network("testnet", "v3")
+
+const Matic = network.Matic  // all info related to Matic
+const Main = network.Main // all info related to Main
+const Heimdall = network.Heimdall // all info related to Heimdall
+
+const RootChainABI = network.abi("RootChain")
 
 // use matic js 
 let matic = new Matic ({
-    maticProvider: meta.addresses.Matic.RPC,
-    mainProvider: meta.addresses.Main.RPC,
-    registry: meta.addresses.Main.Contracts.Registry,
+    maticProvider: Matic.RPC,
+    mainProvider: Main.RPC,
+    registry: Main.Contracts.Registry,
     ...
     ...
 })
-
-// or contract instantiation via web3
-let DepositManagerContract = new web3.eth.Contract(DepositManagerABI, DepositManagerAddresss)
-
 ```
