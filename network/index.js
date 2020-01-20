@@ -1,3 +1,5 @@
+const networks = require("./networks")
+
 class Network {
   constructor(name, version = "v1") {
     this.name = name
@@ -23,5 +25,7 @@ class Network {
     return this.artifacts(name).abi
   }
 }
+
+Network.networks = networks
 
 module.exports = Network
