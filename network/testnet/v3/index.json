@@ -5,7 +5,6 @@
     "RPC": "https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
     "SyncerAPI": "https://testnetv3-syncer.api.matic.network/api/v1",
     "WatcherAPI": "https://testnetv3-watcher.api.matic.network/api/v1",
-    "HeimdallAPI": "http://18.210.127.43:1317",
     "DaggerEndpoint": "https://ropsten.dagger.matic.network",
     "Explorer": "https://ropsten.etherscan.io",
     "Contracts": {
@@ -49,5 +48,8 @@
         "TestERC721": "0x8D5231e0B79edD9331e0CF0d4B9f3F30d05C47A5"
       }
     }
+  },
+  "Heimdall": {
+    "API": "http://18.210.127.43:1317"
   }
 }

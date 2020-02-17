@@ -5,7 +5,6 @@
     "RPC": "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
     "SyncerAPI": "https://betav2-syncer.api.matic.network/api/v1",
     "WatcherAPI": "https://betav2-watcher.api.matic.network/api/v1",
-    "HeimdallAPI": "http://3.210.255.76:1317",
     "DaggerEndpoint": "wss://mainnet.dagger.matic.network",
     "Explorer": "https://etherscan.io",
     "Contracts": {
@@ -48,5 +47,8 @@
         "TestErc721": "0x864e19f6DEcba4B68544fd60DD3577B739d1F7BD"
       }
     }
+  },
+  "Heimdall": {
+    "API": "http://3.210.255.76:1317"
   }
 }

@@ -5,7 +5,6 @@
     "RPC": "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
     "SyncerAPI": "https://alpha.ethereum.api.matic.network/api/v1",
     "WatcherAPI": "https://alpha.ethereum.watcher.matic.network/api/v1",
-    "HeimdallAPI": "http://34.239.211.122:1317",
     "DaggerEndpoint": "wss://mainnet.dagger.matic.network",
     "Explorer": "https://etherscan.io",
     "Contracts": {
@@ -44,5 +43,8 @@
       "ChildTestToken": "0x9d3F6E51A7C485381AFD53802fF828b083DB403C",
       "ChildChain": "0x676792140b94f77204ba8dc18223b73a5bbaef9d"
     }
+  },
+  "Heimdall": {
+    "API": "http://34.239.211.122:1317"
   }
 }
