@@ -32,7 +32,7 @@
       "ExitNFT": "0x3849735A8049Cc89f0e2F0b04DFD4b2EcE2db091",
       "WithdrawManagerProxy": "0xD7963e35BdCbdFF9EB6fAD6fA8576610af182931",
       "Tokens": {
-        "TestToken": "0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec"
+        "TestToken": "0xA68e9e5dde3f80057fe639952e4acfD28D6d871B"
       }
     }
   },
@@ -41,7 +41,10 @@
     "ChainId": 2001,
     "RPC": "http://34.226.60.226:8545/",
     "Contracts": {
-      "ChildChain": "0xd179E9A09Eb434A092dEB3EBcCB0dd6133A91712"
+      "ChildChain": "0xd179E9A09Eb434A092dEB3EBcCB0dd6133A91712",
+      "Tokens": {
+        "TestToken": "0xDb1722a2b3156ffC67Bd358677168DCCEA62B6Ee"
+      }
     }
   },
   "Heimdall": {
