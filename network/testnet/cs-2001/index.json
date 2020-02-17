@@ -48,6 +48,7 @@
     }
   },
   "Heimdall": {
+    "ChainId": "heimdall-lXaaU9",
     "API": "https://stage1-heimdall.api.matic.network"
   }
 }
