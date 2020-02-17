@@ -1,0 +1,67 @@
+{
+  "Main": {
+    "NetworkName": "Ropsten testnet",
+    "ChainId": 3,
+    "RPC": "https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
+    "SyncerAPI": "https://testnetv3-syncer.api.matic.network/api/v1",
+    "WatcherAPI": "https://stage1-watcher.api.matic.network/api/v1",
+    "DaggerEndpoint": "https://ropsten.dagger.matic.network",
+    "Explorer": "https://ropsten.etherscan.io",
+    "Contracts": {
+      "BytesLib": "0xD1177eC040bCEF1eab7c9d8fA92c296d63838184",
+      "Common": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
+      "ECVerify": "0x46eD7904137e6ABA7c879D8dD676A3f57191Fdac",
+      "Merkle": "0xf52E92A81Ad4f242Df4E8426178c9Ddc0F2191C8",
+      "MerklePatriciaProof": "0xd179E9A09Eb434A092dEB3EBcCB0dd6133A91712",
+      "PriorityQueue": "0x224de567f24C111bF98b04Cb875682815aA9ED8A",
+      "RLPEncode": "0x4f9C5Abe93E48EA087a423aDcB38aF349b18dcdD",
+      "RLPReader": "0x2285aa1cdD3Ed51A1b052A17a58ab0F0aaf4a5Bc",
+      "SafeMath": "0x25bdaA6Ff67014572Ba33b76a158c095B15DFcad",
+      "Registry": "0x6eD25faaa5F38d626f2c2E93d683C09dD04d74e7",
+      "RootChain": "0xb26C687D70Df7c463B4E6b459560E4c50734BeCf",
+      "RootChainProxy": "0xe029642119840f4866F0A77B67e641AA3c20D764",
+      "ValidatorShareFactory": "0xc6CbeA9CC9075eBD484F75DA79c3B1EFf246dfC0",
+      "StakingInfo": "0xD0D89C9bc21b088e74fC9c7c7ff793a11498d316",
+      "StakingNFT": "0x1851F36BA0C7F82FE5a9D32ECfb4834BBcF2547b",
+      "StakeManager": "0xC4701aCE05B5D8A821D00f790f7Bee532d5F3C61",
+      "SlashingManager": "0x45331b78Ecfe13C916842ae8b494A97F2db0F5cD",
+      "StateSender": "0x0E4Bb4ed32D330FAd5EBDf185841047d88d3c409",
+      "DepositManager": "0x7CC755B4e715d9d17e227365406771DC7F90fcd1",
+      "DepositManagerProxy": "0xfE8e44e55714746Ef85Caa62DBE65A1F90535CF7",
+      "WithdrawManager": "0x91c6868A8072740479175513d1CFd2cdd30e1118",
+      "ExitNFT": "0x3849735A8049Cc89f0e2F0b04DFD4b2EcE2db091",
+      "WithdrawManagerProxy": "0xD7963e35BdCbdFF9EB6fAD6fA8576610af182931",
+      "Predicates": {
+        "ERC20Predicate": "0xaBE79B1B44581c69cCc45146dd8681Fb82a8AA18",
+        "ERC721Predicate": "0x1F07Aa7eB46414d2F89746C7510E8597E82CF698",
+        "MarketplacePredicate": "0x2E3a58bF3644E4D790f93A01527F85E211c57841",
+        "TransferWithSigPredicate": "0x3f0dC47C79254cfCA4195519954b444F87a766E0"
+      },
+      "Tokens": {
+        "MaticWeth": "",
+        "TestToken": "0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec",
+        "TestERC721": ""
+      }
+    }
+  },
+  "Matic": {
+    "NetworkName": "CS 2001",
+    "ChainId": 2001,
+    "RPC": "http://34.226.60.226:8545/",
+    "RPCWebSocketEndpoint": "",
+    "SyncerAPI": "",
+    "Explorer": "",
+    "DaggerEndpoint": "",
+    "Contracts": {
+      "ChildChain": "0xd179E9A09Eb434A092dEB3EBcCB0dd6133A91712",
+      "Tokens": {
+        "MaticWeth": "",
+        "TestToken": "",
+        "TestERC721": ""
+      }
+    }
+  },
+  "Heimdall": {
+    "API": "https://stage1-heimdall.api.matic.network"
+  }
+}
