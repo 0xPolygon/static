@@ -53,6 +53,6 @@
   },
   "Heimdall": {
     "ChainId": "heimdall-cs2002",
-    "API": "https://stage1-heimdall.api.matic.network"
+    "API": "https://cs2002-heimdall.api.matic.network"
   }
 }
