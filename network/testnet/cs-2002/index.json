@@ -1,0 +1,58 @@
+{
+  "Main": {
+    "NetworkName": "Ropsten testnet",
+    "ChainId": 3,
+    "RPC": "https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
+    "WatcherAPI": "https://stage1-watcher.api.matic.network/api/v1",
+    "DaggerEndpoint": "https://ropsten.dagger.matic.network",
+    "Explorer": "https://ropsten.etherscan.io",
+    "Contracts": {
+      "BytesLib": "0xdb596dA720dFc70545BaeC90FbFBf5220cEaba3E",
+      "Common": "0x3816Dee51ED4AFb42f2D865177747b15A874884f",
+      "ECVerify": "0x760F11060a15579F8dfF66f1b3f3bf956D46fF17",
+      "Merkle": "0x6b898Fb688020217FC7a5a8941D5051aCb7cbA24",
+      "MerklePatriciaProof": "0x9fcc0465469cC8F1648E56b64C5BE5A46154CAFC",
+      "PriorityQueue": "0xA70af15BC10738DDaDE437aa276D93eB5D5886D4",
+      "RLPEncode": "0x9134D1fFE4672aF4DBd965b6E822C086C7a539d8",
+      "RLPReader": "0x109241f8fBF90BEF52ca3b860A4554db096383E5",
+      "SafeMath": "0xCDA425e4B2E20b91B731B7A203e75e58A1655D84",
+      "Governance": "0x7aa387ACB997E81008fFA7b1753165883bd9B627",
+      "GovernanceProxy": "0x355558a09e8cD893E4d2f0A4AB1C153a2c69e911",
+      "Registry": "0xa5C789F57A83623c0E6aFBeB1431e84499174c29",
+      "RootChain": "0xB8d5548FF080fc99eec38B276B27d5CB2F020300",
+      "RootChainProxy": "0x12c1d34135bee2745AD930647F54D36c9dD6Cbe3",
+      "ValidatorShareFactory": "0x4f72f033FFf36542fC183302282405a91fB57171",
+      "StakingInfo": "0x4A77108eA2380217553dcc77C7Aa62f58C5b04a2",
+      "StakingNFT": "0x99897ab637dE021EA5394295c59ae02d2054c440",
+      "StakeManager": "0xDED60C3cD705cC9fa6FdE82277757843a7664F96",
+      "StakeManagerProxy": "0x228DF261D960d48bDBF50BDC8dc00ba20358aCea",
+      "SlashingManager": "0x90f2cB83e97223f97EE4B07553749a5Ce390d8c0",
+      "StateSender": "0x061b9fE56513BBa078d509C2377e3E5be9219FeB",
+      "DepositManager": "0x2B6514f3C883f61c2A13fF36401700C3467a1a83",
+      "DepositManagerProxy": "0x2e44c551376CD13f4EE0dBa330A47893f12F410D",
+      "WithdrawManager": "0x93D5082f07a9334dcd08c6F161e70fb01C3fC8B3",
+      "ExitNFT": "0xE360B8E5A69077dee2101C2E0778Be3a38a9122b",
+      "WithdrawManagerProxy": "0x6318313B42f81b0AEFF2Fb58dd467935561DfC47",
+      "Tokens": {
+        "TestToken": "0x6bAA90c411945C2fE93f1D336fb5787b6531a67C",
+        "Matic": "0xF1a4509105a888933C72464C5f5F8ED45f54f1b0"
+      }
+    }
+  },
+  "Matic": {
+    "NetworkName": "CS 2002",
+    "ChainId": 2002,
+    "RPC": "http://3.223.91.213:8545",
+    "Contracts": {
+      "ChildChain": "0x4f9C5Abe93E48EA087a423aDcB38aF349b18dcdD",
+      "Tokens": {
+        "TestToken": "0xd72A0495684fb7B489b8089EA2317c1d68e5a8c9",
+        "Matic": "0x0000000000000000000000000000000000001010"
+      }
+    }
+  },
+  "Heimdall": {
+    "ChainId": "heimdall-cs2002",
+    "API": "https://stage1-heimdall.api.matic.network"
+  }
+}

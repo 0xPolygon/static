@@ -1,0 +1,1518 @@
+{
+  "contractName": "RootChainHeader",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "proposer",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "headerBlockId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "reward",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "start",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "end",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "root",
+          "type": "bytes32"
+        }
+      ],
+      "name": "NewHeaderBlock",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"proposer\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"headerBlockId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"reward\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"start\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"end\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"root\",\"type\":\"bytes32\"}],\"name\":\"NewHeaderBlock\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/arth/Documents/Projects/contracts/contracts/root/RootChainStorage.sol\":\"RootChainHeader\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol\":{\"keccak256\":\"0x90ac831440b6fbfff97d84c61172cfc523f15121b22b87d10f94b66e47541a79\",\"urls\":[\"bzz-raw://a9606e5be8cf3eb999ca2a3bb9f9fad0f0c80c2e2f356c95789beedb842ca0b5\",\"dweb:/ipfs/QmNiTSnxTwQacGbQPmYr2sdGgWwJk3GsE8nsifBuD3EFnN\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/governance/Governable.sol\":{\"keccak256\":\"0x38ecd54850256c7f03fd236d4fd95de3f2e307cb6f3fd843994d588e0f2fbc04\",\"urls\":[\"bzz-raw://5ce3e82b37ad1e5a5475355729bb731434bfc47a1b865c3589f666907b6b0b7b\",\"dweb:/ipfs/QmUMRzD27ab7gEecNwoUdZRMysxik9RduLqyym9nhLvevT\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/governance/IGovernance.sol\":{\"keccak256\":\"0x81b923a9b6ee8ee89a9741b5a74bc1318c5e570e09a66e20e26cb8850d76b367\",\"urls\":[\"bzz-raw://a634cba0419365bbbcb507ba519ea912e96ce0ad1369c736c5059ed3c86441a6\",\"dweb:/ipfs/QmTQSA3KNDo9yiZboXqNDSCSVbUshudqJNLMrXGcnxRJM3\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/ProxyStorage.sol\":{\"keccak256\":\"0x0e5e5f5817051530eca15e416300236610a50e096015f51d8bf44e89e3a87995\",\"urls\":[\"bzz-raw://55a953138a02a8091b290ae40f27d18e1e8ffcb886f9461b0e3bfad7dd8e46d7\",\"dweb:/ipfs/QmRw1doqSgJxyPVfaYTWNJu5P83u3JECXPAfEFNJPQjGsP\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/RootChainStorage.sol\":{\"keccak256\":\"0x9337f9782e6a06498550b9c8d7402a54f53f2cb0f098c1f84d65bdd503b1b73b\",\"urls\":[\"bzz-raw://2377eae52021f69d76b0282b0744f83f9acabffb3a1703ba9f7be0f83f029166\",\"dweb:/ipfs/QmeerbtNvma5oHCdsz9UEYSbpFEmXCSxjw6xsSxucLQaNL\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/IWithdrawManager.sol\":{\"keccak256\":\"0xcf284a6c5fa2e5f6aa045ae18fe617bab6f4d82dc30dec5682c9d13190529449\",\"urls\":[\"bzz-raw://eac0c653215537db1e97263afeda269485c1daf5671dfa64fa92be205abdf623\",\"dweb:/ipfs/QmaWWvvxSbyAtPjhCMEXM8QACurs7Av8NMNevSuL8wFJaB\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582091503998c268deacebf11c4850081ef1fc781d7029868d9fc03cafb7d1a6316464736f6c634300050b0032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582091503998c268deacebf11c4850081ef1fc781d7029868d9fc03cafb7d1a6316464736f6c634300050b0032",
+  "sourceMap": "137:382:44:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;137:382:44;;;;;;;",
+  "deployedSourceMap": "137:382:44:-;;;;;",
+  "source": "pragma solidity ^0.5.2;\n\nimport {Registry} from \"../common/Registry.sol\";\nimport {ProxyStorage} from \"../common/misc/ProxyStorage.sol\";\n\ncontract RootChainHeader {\n    event NewHeaderBlock(\n        address indexed proposer,\n        uint256 indexed headerBlockId,\n        uint256 indexed reward,\n        uint256 start,\n        uint256 end,\n        bytes32 root\n    );\n\n    struct HeaderBlock {\n        bytes32 root;\n        uint256 start;\n        uint256 end;\n        uint256 createdAt;\n        address proposer;\n    }\n}\n\ncontract RootChainStorage is ProxyStorage, RootChainHeader {\n    bytes32 public heimdallId;\n    uint8 public constant VOTE_TYPE = 2;\n\n    uint16 internal constant MAX_DEPOSITS = 10000;\n    uint256 public _nextHeaderBlock = MAX_DEPOSITS;\n    uint256 internal _blockDepositId = 1;\n    mapping(uint256 => HeaderBlock) public headerBlocks;\n    Registry internal registry;\n}\n",
+  "sourcePath": "/Users/arth/Documents/Projects/contracts/contracts/root/RootChainStorage.sol",
+  "ast": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/RootChainStorage.sol",
+    "exportedSymbols": {
+      "RootChainHeader": [
+        5782
+      ],
+      "RootChainStorage": [
+        5807
+      ]
+    },
+    "id": 5808,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5752,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:44"
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol",
+        "file": "../common/Registry.sol",
+        "id": 5754,
+        "nodeType": "ImportDirective",
+        "scope": 5808,
+        "sourceUnit": 2555,
+        "src": "25:48:44",
+        "symbolAliases": [
+          {
+            "foreign": 5753,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/misc/ProxyStorage.sol",
+        "file": "../common/misc/ProxyStorage.sol",
+        "id": 5756,
+        "nodeType": "ImportDirective",
+        "scope": 5808,
+        "sourceUnit": 4459,
+        "src": "74:61:44",
+        "symbolAliases": [
+          {
+            "foreign": 5755,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5782,
+        "linearizedBaseContracts": [
+          5782
+        ],
+        "name": "RootChainHeader",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 5770,
+            "name": "NewHeaderBlock",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 5769,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5758,
+                  "indexed": true,
+                  "name": "proposer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "198:24:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5757,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "198:7:44",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5760,
+                  "indexed": true,
+                  "name": "headerBlockId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "232:29:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5759,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "232:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5762,
+                  "indexed": true,
+                  "name": "reward",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "271:22:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5761,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "271:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5764,
+                  "indexed": false,
+                  "name": "start",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "303:13:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5763,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "303:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5766,
+                  "indexed": false,
+                  "name": "end",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "326:11:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5765,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "326:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5768,
+                  "indexed": false,
+                  "name": "root",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "347:12:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 5767,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "347:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "188:177:44"
+            },
+            "src": "168:198:44"
+          },
+          {
+            "canonicalName": "RootChainHeader.HeaderBlock",
+            "id": 5781,
+            "members": [
+              {
+                "constant": false,
+                "id": 5772,
+                "name": "root",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "401:12:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 5771,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "401:7:44",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5774,
+                "name": "start",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "423:13:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5773,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "423:7:44",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5776,
+                "name": "end",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "446:11:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5775,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "446:7:44",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5778,
+                "name": "createdAt",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "467:17:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5777,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "467:7:44",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5780,
+                "name": "proposer",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "494:16:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 5779,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "494:7:44",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "HeaderBlock",
+            "nodeType": "StructDefinition",
+            "scope": 5782,
+            "src": "372:145:44",
+            "visibility": "public"
+          }
+        ],
+        "scope": 5808,
+        "src": "137:382:44"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5783,
+              "name": "ProxyStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4458,
+              "src": "550:12:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ProxyStorage_$4458",
+                "typeString": "contract ProxyStorage"
+              }
+            },
+            "id": 5784,
+            "nodeType": "InheritanceSpecifier",
+            "src": "550:12:44"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5785,
+              "name": "RootChainHeader",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5782,
+              "src": "564:15:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RootChainHeader_$5782",
+                "typeString": "contract RootChainHeader"
+              }
+            },
+            "id": 5786,
+            "nodeType": "InheritanceSpecifier",
+            "src": "564:15:44"
+          }
+        ],
+        "contractDependencies": [
+          4458,
+          5782,
+          18972
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5807,
+        "linearizedBaseContracts": [
+          5807,
+          5782,
+          4458,
+          18972
+        ],
+        "name": "RootChainStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5788,
+            "name": "heimdallId",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "586:25:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 5787,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "586:7:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 5791,
+            "name": "VOTE_TYPE",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "617:35:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 5789,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "617:5:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 5790,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "651:1:44",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 5794,
+            "name": "MAX_DEPOSITS",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "659:45:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint16",
+              "typeString": "uint16"
+            },
+            "typeName": {
+              "id": 5792,
+              "name": "uint16",
+              "nodeType": "ElementaryTypeName",
+              "src": "659:6:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint16",
+                "typeString": "uint16"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3130303030",
+              "id": 5793,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "699:5:44",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_10000_by_1",
+                "typeString": "int_const 10000"
+              },
+              "value": "10000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5797,
+            "name": "_nextHeaderBlock",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "710:46:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5795,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "710:7:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "id": 5796,
+              "name": "MAX_DEPOSITS",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 5794,
+              "src": "744:12:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint16",
+                "typeString": "uint16"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 5800,
+            "name": "_blockDepositId",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "762:36:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5798,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "762:7:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 5799,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "797:1:44",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5804,
+            "name": "headerBlocks",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "804:51:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_HeaderBlock_$5781_storage_$",
+              "typeString": "mapping(uint256 => struct RootChainHeader.HeaderBlock)"
+            },
+            "typeName": {
+              "id": 5803,
+              "keyType": {
+                "id": 5801,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "812:7:44",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "804:31:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_HeaderBlock_$5781_storage_$",
+                "typeString": "mapping(uint256 => struct RootChainHeader.HeaderBlock)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 5802,
+                "name": "HeaderBlock",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 5781,
+                "src": "823:11:44",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_HeaderBlock_$5781_storage_ptr",
+                  "typeString": "struct RootChainHeader.HeaderBlock"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 5806,
+            "name": "registry",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "861:26:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Registry_$2554",
+              "typeString": "contract Registry"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5805,
+              "name": "Registry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2554,
+              "src": "861:8:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Registry_$2554",
+                "typeString": "contract Registry"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 5808,
+        "src": "521:369:44"
+      }
+    ],
+    "src": "0:891:44"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/RootChainStorage.sol",
+    "exportedSymbols": {
+      "RootChainHeader": [
+        5782
+      ],
+      "RootChainStorage": [
+        5807
+      ]
+    },
+    "id": 5808,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5752,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:44"
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol",
+        "file": "../common/Registry.sol",
+        "id": 5754,
+        "nodeType": "ImportDirective",
+        "scope": 5808,
+        "sourceUnit": 2555,
+        "src": "25:48:44",
+        "symbolAliases": [
+          {
+            "foreign": 5753,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/misc/ProxyStorage.sol",
+        "file": "../common/misc/ProxyStorage.sol",
+        "id": 5756,
+        "nodeType": "ImportDirective",
+        "scope": 5808,
+        "sourceUnit": 4459,
+        "src": "74:61:44",
+        "symbolAliases": [
+          {
+            "foreign": 5755,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5782,
+        "linearizedBaseContracts": [
+          5782
+        ],
+        "name": "RootChainHeader",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 5770,
+            "name": "NewHeaderBlock",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 5769,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5758,
+                  "indexed": true,
+                  "name": "proposer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "198:24:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5757,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "198:7:44",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5760,
+                  "indexed": true,
+                  "name": "headerBlockId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "232:29:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5759,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "232:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5762,
+                  "indexed": true,
+                  "name": "reward",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "271:22:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5761,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "271:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5764,
+                  "indexed": false,
+                  "name": "start",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "303:13:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5763,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "303:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5766,
+                  "indexed": false,
+                  "name": "end",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "326:11:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5765,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "326:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5768,
+                  "indexed": false,
+                  "name": "root",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5770,
+                  "src": "347:12:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 5767,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "347:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "188:177:44"
+            },
+            "src": "168:198:44"
+          },
+          {
+            "canonicalName": "RootChainHeader.HeaderBlock",
+            "id": 5781,
+            "members": [
+              {
+                "constant": false,
+                "id": 5772,
+                "name": "root",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "401:12:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 5771,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "401:7:44",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5774,
+                "name": "start",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "423:13:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5773,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "423:7:44",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5776,
+                "name": "end",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "446:11:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5775,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "446:7:44",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5778,
+                "name": "createdAt",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "467:17:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5777,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "467:7:44",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5780,
+                "name": "proposer",
+                "nodeType": "VariableDeclaration",
+                "scope": 5781,
+                "src": "494:16:44",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 5779,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "494:7:44",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "HeaderBlock",
+            "nodeType": "StructDefinition",
+            "scope": 5782,
+            "src": "372:145:44",
+            "visibility": "public"
+          }
+        ],
+        "scope": 5808,
+        "src": "137:382:44"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5783,
+              "name": "ProxyStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4458,
+              "src": "550:12:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ProxyStorage_$4458",
+                "typeString": "contract ProxyStorage"
+              }
+            },
+            "id": 5784,
+            "nodeType": "InheritanceSpecifier",
+            "src": "550:12:44"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5785,
+              "name": "RootChainHeader",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5782,
+              "src": "564:15:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RootChainHeader_$5782",
+                "typeString": "contract RootChainHeader"
+              }
+            },
+            "id": 5786,
+            "nodeType": "InheritanceSpecifier",
+            "src": "564:15:44"
+          }
+        ],
+        "contractDependencies": [
+          4458,
+          5782,
+          18972
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5807,
+        "linearizedBaseContracts": [
+          5807,
+          5782,
+          4458,
+          18972
+        ],
+        "name": "RootChainStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5788,
+            "name": "heimdallId",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "586:25:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 5787,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "586:7:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 5791,
+            "name": "VOTE_TYPE",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "617:35:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 5789,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "617:5:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 5790,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "651:1:44",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 5794,
+            "name": "MAX_DEPOSITS",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "659:45:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint16",
+              "typeString": "uint16"
+            },
+            "typeName": {
+              "id": 5792,
+              "name": "uint16",
+              "nodeType": "ElementaryTypeName",
+              "src": "659:6:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint16",
+                "typeString": "uint16"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3130303030",
+              "id": 5793,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "699:5:44",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_10000_by_1",
+                "typeString": "int_const 10000"
+              },
+              "value": "10000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5797,
+            "name": "_nextHeaderBlock",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "710:46:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5795,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "710:7:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "id": 5796,
+              "name": "MAX_DEPOSITS",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 5794,
+              "src": "744:12:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint16",
+                "typeString": "uint16"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 5800,
+            "name": "_blockDepositId",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "762:36:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5798,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "762:7:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 5799,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "797:1:44",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5804,
+            "name": "headerBlocks",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "804:51:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_HeaderBlock_$5781_storage_$",
+              "typeString": "mapping(uint256 => struct RootChainHeader.HeaderBlock)"
+            },
+            "typeName": {
+              "id": 5803,
+              "keyType": {
+                "id": 5801,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "812:7:44",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "804:31:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_HeaderBlock_$5781_storage_$",
+                "typeString": "mapping(uint256 => struct RootChainHeader.HeaderBlock)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 5802,
+                "name": "HeaderBlock",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 5781,
+                "src": "823:11:44",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_HeaderBlock_$5781_storage_ptr",
+                  "typeString": "struct RootChainHeader.HeaderBlock"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 5806,
+            "name": "registry",
+            "nodeType": "VariableDeclaration",
+            "scope": 5807,
+            "src": "861:26:44",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Registry_$2554",
+              "typeString": "contract Registry"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5805,
+              "name": "Registry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2554,
+              "src": "861:8:44",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Registry_$2554",
+                "typeString": "contract Registry"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 5808,
+        "src": "521:369:44"
+      }
+    ],
+    "src": "0:891:44"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2020-02-20T10:11:00.321Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
