@@ -45,9 +45,10 @@
     "ChainId": 2003,
     "RPC": "http://107.20.111.135:8545/",
     "Contracts": {
-      "ChildChain": "",
+      "ChildChain": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
       "Tokens": {
-        "TestToken": ""
+        "MaticWeth": "0x4DfAe612aaCB5b448C12A591cD0879bFa2e51d62",
+        "TestToken": "0x2d7882beDcbfDDce29Ba99965dd3cdF7fcB10A1e"
       }
     }
   },
