@@ -1,0 +1,309 @@
+{
+  "contractName": "ChainIdMixin",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "networkId",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "CHAINID",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"networkId\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"CHAINID\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/arth/Documents/Projects/contracts/contracts/common/mixin/ChainIdMixin.sol\":\"ChainIdMixin\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/arth/Documents/Projects/contracts/contracts/common/mixin/ChainIdMixin.sol\":{\"keccak256\":\"0xcf09e7ecd0100ba6494ccf71543df6704952f96ae61f7649d474358477290e0c\",\"urls\":[\"bzz-raw://21e976e06ba0e4cf487ce0e43ce9540bd1c2d8a9eac985eebdc891b3132f04ed\",\"dweb:/ipfs/QmbgmZnpJjtD6dBwgsmxke9oqzWaqsmqwsKVTA6VqRo4sx\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610120806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80639025e64c146037578063cc79f97b1460af575b600080fd5b603d60c7565b6040805160208082528351818301528351919283929083019185019080838360005b838110156075578181015183820152602001605f565b50505050905090810190601f16801560a15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60b560e5565b60408051918252519081900360200190f35b6040518060400160405280600281526020016101f560f21b81525081565b6107d48156fea265627a7a723158201f2ad6676a6268a3a7181073eb43276bcaad7480ded48c28ff9dc32dca1b0ea264736f6c634300050b0032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80639025e64c146037578063cc79f97b1460af575b600080fd5b603d60c7565b6040805160208082528351818301528351919283929083019185019080838360005b838110156075578181015183820152602001605f565b50505050905090810190601f16801560a15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60b560e5565b60408051918252519081900360200190f35b6040518060400160405280600281526020016101f560f21b81525081565b6107d48156fea265627a7a723158201f2ad6676a6268a3a7181073eb43276bcaad7480ded48c28ff9dc32dca1b0ea264736f6c634300050b0032",
+  "sourceMap": "25:114:33:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:114:33;;;;;;;",
+  "deployedSourceMap": "25:114:33:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:114:33;;;;;;;;;;;;;;;;;;;;;;;;51:43;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;51:43:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;98:38;;;:::i;:::-;;;;;;;;;;;;;;;;51:43;;;;;;;;;;;;;;-1:-1:-1;;;51:43:33;;;;:::o;98:38::-;132:4;98:38;:::o",
+  "source": "pragma solidity ^0.5.2;\n\ncontract ChainIdMixin {\n  bytes constant public networkId = hex\"07D4\";\n  uint256 constant public CHAINID = 2004;\n}\n",
+  "sourcePath": "/Users/arth/Documents/Projects/contracts/contracts/common/mixin/ChainIdMixin.sol",
+  "ast": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/mixin/ChainIdMixin.sol",
+    "exportedSymbols": {
+      "ChainIdMixin": [
+        4624
+      ]
+    },
+    "id": 4625,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4617,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:33"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4624,
+        "linearizedBaseContracts": [
+          4624
+        ],
+        "name": "ChainIdMixin",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 4620,
+            "name": "networkId",
+            "nodeType": "VariableDeclaration",
+            "scope": 4624,
+            "src": "51:43:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes_memory",
+              "typeString": "bytes"
+            },
+            "typeName": {
+              "id": 4618,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "51:5:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "07d4",
+              "id": 4619,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "85:9:33",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_00362a79492f30335acf6b8ea11382799992618a8d27bc18b0c843afc49d6dbb",
+                "typeString": "literal_string (contains invalid UTF-8 sequence at position 1)"
+              },
+              "value": null
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 4623,
+            "name": "CHAINID",
+            "nodeType": "VariableDeclaration",
+            "scope": 4624,
+            "src": "98:38:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 4621,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "98:7:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32303034",
+              "id": 4622,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "132:4:33",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2004_by_1",
+                "typeString": "int_const 2004"
+              },
+              "value": "2004"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 4625,
+        "src": "25:114:33"
+      }
+    ],
+    "src": "0:140:33"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/mixin/ChainIdMixin.sol",
+    "exportedSymbols": {
+      "ChainIdMixin": [
+        4624
+      ]
+    },
+    "id": 4625,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4617,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:33"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4624,
+        "linearizedBaseContracts": [
+          4624
+        ],
+        "name": "ChainIdMixin",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 4620,
+            "name": "networkId",
+            "nodeType": "VariableDeclaration",
+            "scope": 4624,
+            "src": "51:43:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes_memory",
+              "typeString": "bytes"
+            },
+            "typeName": {
+              "id": 4618,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "51:5:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "07d4",
+              "id": 4619,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "85:9:33",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_00362a79492f30335acf6b8ea11382799992618a8d27bc18b0c843afc49d6dbb",
+                "typeString": "literal_string (contains invalid UTF-8 sequence at position 1)"
+              },
+              "value": null
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 4623,
+            "name": "CHAINID",
+            "nodeType": "VariableDeclaration",
+            "scope": 4624,
+            "src": "98:38:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 4621,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "98:7:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32303034",
+              "id": 4622,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "132:4:33",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2004_by_1",
+                "typeString": "int_const 2004"
+              },
+              "value": "2004"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 4625,
+        "src": "25:114:33"
+      }
+    ],
+    "src": "0:140:33"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2020-03-16T07:46:21.372Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

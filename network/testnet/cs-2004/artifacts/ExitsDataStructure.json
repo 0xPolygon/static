@@ -1,0 +1,2728 @@
+{
+  "contractName": "ExitsDataStructure",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/WithdrawManagerStorage.sol\":\"ExitsDataStructure\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol\":{\"keccak256\":\"0x90ac831440b6fbfff97d84c61172cfc523f15121b22b87d10f94b66e47541a79\",\"urls\":[\"bzz-raw://a9606e5be8cf3eb999ca2a3bb9f9fad0f0c80c2e2f356c95789beedb842ca0b5\",\"dweb:/ipfs/QmNiTSnxTwQacGbQPmYr2sdGgWwJk3GsE8nsifBuD3EFnN\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/governance/Governable.sol\":{\"keccak256\":\"0x38ecd54850256c7f03fd236d4fd95de3f2e307cb6f3fd843994d588e0f2fbc04\",\"urls\":[\"bzz-raw://5ce3e82b37ad1e5a5475355729bb731434bfc47a1b865c3589f666907b6b0b7b\",\"dweb:/ipfs/QmUMRzD27ab7gEecNwoUdZRMysxik9RduLqyym9nhLvevT\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/governance/IGovernance.sol\":{\"keccak256\":\"0x81b923a9b6ee8ee89a9741b5a74bc1318c5e570e09a66e20e26cb8850d76b367\",\"urls\":[\"bzz-raw://a634cba0419365bbbcb507ba519ea912e96ce0ad1369c736c5059ed3c86441a6\",\"dweb:/ipfs/QmTQSA3KNDo9yiZboXqNDSCSVbUshudqJNLMrXGcnxRJM3\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/ProxyStorage.sol\":{\"keccak256\":\"0x0e5e5f5817051530eca15e416300236610a50e096015f51d8bf44e89e3a87995\",\"urls\":[\"bzz-raw://55a953138a02a8091b290ae40f27d18e1e8ffcb886f9461b0e3bfad7dd8e46d7\",\"dweb:/ipfs/QmRw1doqSgJxyPVfaYTWNJu5P83u3JECXPAfEFNJPQjGsP\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/mixin/Lockable.sol\":{\"keccak256\":\"0x818879aa3633b40320f4ecb0b404e02db25990fe59c3063fe757d653f180185d\",\"urls\":[\"bzz-raw://24c40cd51e74e450be138240c39ad05d5148638324f3fcf3507209d8a43eec79\",\"dweb:/ipfs/QmVaFn8L59wm2R95iRyCvqn1CwzVSq2QW2BSqGmhAhC2Ch\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/mixin/RootChainable.sol\":{\"keccak256\":\"0x3243e600ecb7dbc949d2416421871763c50aebdeaa30c540821fd8080eb4afdf\",\"urls\":[\"bzz-raw://55df6410b2b0d4d6307149f8c7f1a2c9e2c79558c5a83b54f578fd2a3eac51cf\",\"dweb:/ipfs/QmbCPM8JKFeyK4CZUvRfBaYTq7JLYHSPt6HNmy9bh13hNV\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/IRootChain.sol\":{\"keccak256\":\"0x733d1b4395ab7f10a1a7e2f6e95aa226ea554b414cf7d5792809846136e92594\",\"urls\":[\"bzz-raw://904b90f863c92d5a80e8bf0f2ac2e63c86707db47e18e46a517ca8b1292dcab6\",\"dweb:/ipfs/QmVmC5TrfC9ezFPk7xEQY5TzpJhz9gW5Y7Ti9X2HYdKn12\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/RootChain.sol\":{\"keccak256\":\"0x6240398733a1632f4357adfec3aef24ad08310fb4132f132815743e901031256\",\"urls\":[\"bzz-raw://aab7c64c9eb8afbb1bac73b46fb8ef6d62d07ce17aa84a0034f4715ca19ead1a\",\"dweb:/ipfs/QmRcyZj3ps3nJWiaGpH2BC2A1k64DScLjRkxpzzJuWgaKF\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/RootChainStorage.sol\":{\"keccak256\":\"0x9337f9782e6a06498550b9c8d7402a54f53f2cb0f098c1f84d65bdd503b1b73b\",\"urls\":[\"bzz-raw://2377eae52021f69d76b0282b0744f83f9acabffb3a1703ba9f7be0f83f029166\",\"dweb:/ipfs/QmeerbtNvma5oHCdsz9UEYSbpFEmXCSxjw6xsSxucLQaNL\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/ExitNFT.sol\":{\"keccak256\":\"0xe00a1c43e2912c074ac283ccf2b07dd3831bed37f0d820f04258fe8015d1bb1b\",\"urls\":[\"bzz-raw://bd7fb9cb81675f5062d6f4d34bd05cc553e0eeccdf618e67f4a51cf657d10e3d\",\"dweb:/ipfs/Qmb8eTyU5rSwRKquf7JT9iDQabNUqW5mGNnC11jasJWT9M\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/IWithdrawManager.sol\":{\"keccak256\":\"0xcf284a6c5fa2e5f6aa045ae18fe617bab6f4d82dc30dec5682c9d13190529449\",\"urls\":[\"bzz-raw://eac0c653215537db1e97263afeda269485c1daf5671dfa64fa92be205abdf623\",\"dweb:/ipfs/QmaWWvvxSbyAtPjhCMEXM8QACurs7Av8NMNevSuL8wFJaB\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/WithdrawManagerStorage.sol\":{\"keccak256\":\"0x4066b275273157ae368ad8a6e2c87bfcb9d58beb131293307de0a4b3dc2fdf58\",\"urls\":[\"bzz-raw://72879cf0c43995918cec931fb3d9903f7e4e1a4c39b55ed640990485bfa8d8b5\",\"dweb:/ipfs/QmVb95gYsxBqw7rx7XRnXeXXifkLi8jsZu9a1NyD7yKcf4\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/StakingInfo.sol\":{\"keccak256\":\"0xb9437de115a760a551a4839b2933541392f1e696ef5a0900216a235ca45c1a00\",\"urls\":[\"bzz-raw://e0c96c9e645ab9fb64f5ec2734165bb3f192f1bdab4e6c37652814cb6ec189e0\",\"dweb:/ipfs/QmWLvXkCuEgzCPt7ydfVYyi3VbmvtfbcEMhg1TdyxQYSd5\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/IStakeManager.sol\":{\"keccak256\":\"0x44f7aa89c2b39c99110165ce6c7697bb324a1460d29db0f659eedb05f9a5658b\",\"urls\":[\"bzz-raw://311837317b11c18c1ccd3f9270ebd848a68c1c8db4670a775e475f17970f537a\",\"dweb:/ipfs/QmbJ5tp8rBntw1nyAd41MmTFafnD8BrLdKtQXyfEF8LHJM\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerStorage.sol\":{\"keccak256\":\"0xd53b853a3dc6ff4632161b383af1ac0255ac02cb9020941ab46dd9aeca467f5f\",\"urls\":[\"bzz-raw://2c91a1479c415c15a8212a5bd2433c90d534b86958af5c58f912d3844514dd9f\",\"dweb:/ipfs/Qmdb4XECSfE9ejupapR8wWgRi7YiYAJzZkWJqo3KMkYdd2\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakingNFT.sol\":{\"keccak256\":\"0xee5d0269233eeef4d29874a3903de5fd8645a795b6c14997647ca36b6e36424a\",\"urls\":[\"bzz-raw://6e3f2b9e588fc6fbadf4348cfd527789b0d8aa21b0a5020ac8343b1975855053\",\"dweb:/ipfs/QmSFCAfQ3tFEBjgbwTAkK6YdjWSynHZ3HfPxkL5L8sgwxQ\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/IValidatorShare.sol\":{\"keccak256\":\"0x0a547b1030b1da43b3051579e9e2f4bd587112d141fe8a9125a3df3abeeb2801\",\"urls\":[\"bzz-raw://c293b68e83d6f24def1b8a00938ae000cddf6add67d0ae56a5a6f8d3a453d3e7\",\"dweb:/ipfs/QmcGGM9D2BggXC1Htftyww5zWzh8SW4cT9S2pS7NLitNhv\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/ValidatorShare.sol\":{\"keccak256\":\"0xde8a1907cd11ec98328975048f01adc53808f7eb9bd5c484ad790eb64a265520\",\"urls\":[\"bzz-raw://a06f626269c9b3254c83de1fb2cde58a7d31539c6aef6073cde4e89a4e23dfa0\",\"dweb:/ipfs/QmVAugmQ9Py4F1N9rwnUBERVJGmtdHZF3xhYTT4T4CPxJ4\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/ValidatorShareFactory.sol\":{\"keccak256\":\"0x829970b0a8628143a8dcad8b6d37ce4f9aeb844bda842130de5d06d9716e1c6f\",\"urls\":[\"bzz-raw://3a47592379c8f6f7e978dd527ebd3ff89e6f3168fcee72d60d38780c59cdb4ce\",\"dweb:/ipfs/QmWm9xfhxZxzrh81F5Uk7hEJi2FY4Pd7aLNH31LkWWAzrT\"]},\"openzeppelin-solidity/contracts/drafts/Counters.sol\":{\"keccak256\":\"0x982e18d2e3df98e3339f70f955a4d1fb78411a29963d0ea34621759eef67e86d\",\"urls\":[\"bzz-raw://b51463c381bc5ad8ad1c2a0b15bfbcab7810a35f0cd33e00a85c67d5526f97e8\",\"dweb:/ipfs/Qmb51F78kH7ifaW9CbkfZhprpkbY7T16gkarbscX6E7h2f\"]},\"openzeppelin-solidity/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0xd86c61f2e7e78c88716b5591bbf2d6cce8fe1a68320484994810d54f82605a7a\",\"urls\":[\"bzz-raw://aa27a9f095b9d061be9fb54082de2d76c89c127ae4e3bbf565fb3a6ddc3991a1\",\"dweb:/ipfs/QmRZaZ6czUGKAHTN3y9LokejfFCSwVPfVz6Vk6YrEuxeN7\"]},\"openzeppelin-solidity/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xc48ee580d20820cc0ef122b2acc9bf8836731dd8b9671cc03d21a12e3ab14976\",\"urls\":[\"bzz-raw://2fa424de1b3f2f31c57af99e87a0ec76e355bbf336f8db8f1238230a897c8bc8\",\"dweb:/ipfs/QmREEQFeAuyWQr27AfcvLG7qXYf6JiwZXxf5AmHT7on7cU\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xc2a200a877c4a9b2475c246c54ffecc69ffde3e11af83319c63c2dc5458bac80\",\"urls\":[\"bzz-raw://d6ee2095166a8fc1dbaff1949d786b91b8ef8ce41a7b5801a81dd2453220e770\",\"dweb:/ipfs/QmYBLFvCr9zKndkP8e7nFoKuZGcQEQtbHdwttC1MqckCgv\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x3dceb7e4aa237a56111c13f77d7efadeceda7271d62bfac94ac79afab7c1f411\",\"urls\":[\"bzz-raw://0bf3cd698ff2010ce8d55081c6e826856329f7f57a3bbfa0657310c814f46eaa\",\"dweb:/ipfs/QmQGwSkRYsFtdvfMPMLRBneEBJmD6QJi5C62o1GRDNMzYE\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x59e7df16169a498cb8837963b2f5461d88e63bd1eb6c7d58b814d76b84ccbe61\",\"urls\":[\"bzz-raw://289216c82b0a5312ed8883e117d5dead4f62837b911df982a3e1a81cbb43aecf\",\"dweb:/ipfs/QmegSf8KXg7rFnEtQnu5XuTq6jYQXtge7UDCSZfhk7CkDq\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x07029cbf047f6559e30862f33be2ee323c763e2fc251bca5de44177d29cf15e2\",\"urls\":[\"bzz-raw://d898f3b89f15102cd113de447538b699de959bebd840149c2cdef9102dbbf73a\",\"dweb:/ipfs/QmTb4v4g9GZgdm2ksA7q2xc4EbyPxX3fsqUWU5Y2StN3RA\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol\":{\"keccak256\":\"0x0c893dbe908c97ea884549fa3eb364d62986708f35a94158cd4fb4470c845408\",\"urls\":[\"bzz-raw://0939139ce989ba9aa8c279e3322d2f374353a13c5b4f0b624a0cf204e0238bf4\",\"dweb:/ipfs/QmWdNaFHDmebpzqM8VNKoaLrG3C9cUKKRwqGgT91zBAy4T\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol\":{\"keccak256\":\"0xe103f90deb39d999b79ad1bfd205b89f30830cb0250046ab89a0108268ec6cdb\",\"urls\":[\"bzz-raw://ba303a9c752140ee24ad3daea295a341cbd03b71734e44da22cb3f45f01b2111\",\"dweb:/ipfs/QmSmFghEif88d2dqcKkbTTRYbb1ASv15cYAbdPq5XxsyxA\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721Metadata.sol\":{\"keccak256\":\"0x94b168e6c4f125ea32427f097dce92e52e9c8b66128ee95a0399f14f9cfdea2b\",\"urls\":[\"bzz-raw://8d2417b41cd73a353d2550b4e699d410b7d6ee0808538fdf7d784b213db49ccc\",\"dweb:/ipfs/QmeE9geVkDGHRahTn5HYA9UWopQgMhbknxaWMhn1Hae8nL\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x44fd7c58fc1323f8481f160f2fd4c34b1653d0cc5def45c2381898d32bcc023e\",\"urls\":[\"bzz-raw://6bf189ee544432d2323a6049361cb4695ae980d11c747d4e5afb3b08537b2424\",\"dweb:/ipfs/QmeBG5Jge1QGy6rUVMpaosbqbDdZAC8jefQEnx9unWSEfF\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x80b8851ecb70ec4c3af36d5cab5dabccfcef948c874c2768c837e068b1025481\",\"urls\":[\"bzz-raw://ac2ce1ae84c5bd95a99c856bc63600bcc7c50292b8c06b605e9e3c3e5cf7012b\",\"dweb:/ipfs/QmcjMGiBF29d6BDwaCHVb9g2Ewev7q8A9KTsXFd8A9Z6di\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0x08e4f6bf25a8df438877bb717a76cfba7e2ee8650f5fdf114fa50b8106a2c11d\",\"urls\":[\"bzz-raw://20572915a456192b41112ebc8e6fa4d23020259398e4f2048fff5a7b175cdd67\",\"dweb:/ipfs/QmTcmZRC4JuxZ4LMiiP2q6EZF3fcXatNHvxz51utnCjHAu\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0xeb8a266ef2da0aa60eea704031902ffd28b2d13dd0e8f5b69bcfb8415f2dad85\",\"urls\":[\"bzz-raw://3d69bbdaef9e7beb4919fed4f5aaca68cf3ecbf8f0932959fee720110daffaba\",\"dweb:/ipfs/QmdLwrPjDbhWBzkBMiRFbz3muLr5KQ5HQoiFk8EPkTMwRh\"]},\"openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0xea16b9933153c647242ba50b3e494fb133063d49f1fa81823f35a8c28754142e\",\"urls\":[\"bzz-raw://95b3b4b5c8008b6d8a862a797bf2550e8017cbff25d0e36be86cff48b1a9bbf2\",\"dweb:/ipfs/QmZWK9sD6V3jwSarEyheM8PjHFVcuA11W65FgAZ2fsu9sq\"]},\"solidity-rlp/contracts/RLPReader.sol\":{\"keccak256\":\"0xe2df62ba34ab569e097c58eee30eb9fdab120d4df1c572c6ceae1bec3faa2c2a\",\"urls\":[\"bzz-raw://46988aac4691b498d4c6983c7617de6d29cd5d7fe4e3ecfb7f8c0d00e33e9a12\",\"dweb:/ipfs/QmdWF9ti9UJSP2E7XYkdUPRV9yfmxEmuRgzpNtt3Ex57Ar\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820032d4abc415f8442f865ea41efe0c3d8f5ce370607313f73957879f1ff6521e764736f6c634300050b0032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820032d4abc415f8442f865ea41efe0c3d8f5ce370607313f73957879f1ff6521e764736f6c634300050b0032",
+  "sourceMap": "226:415:62:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;226:415:62;;;;;;;",
+  "deployedSourceMap": "226:415:62:-;;;;;",
+  "source": "pragma solidity ^0.5.2;\n\nimport {ProxyStorage} from \"../../common/misc/ProxyStorage.sol\";\nimport {Registry} from \"../../common/Registry.sol\";\nimport {RootChain} from \"../RootChain.sol\";\nimport {ExitNFT} from \"./ExitNFT.sol\";\n\ncontract ExitsDataStructure {\n    struct Input {\n        address utxoOwner;\n        address predicate;\n        address token;\n    }\n\n    struct PlasmaExit {\n        uint256 receiptAmountOrNFTId;\n        bytes32 txHash;\n        address owner;\n        address token;\n        bool isRegularExit;\n        address predicate;\n        // Mapping from age of input to Input\n        mapping(uint256 => Input) inputs;\n    }\n}\n\ncontract WithdrawManagerHeader is ExitsDataStructure {\n    event Withdraw(\n        uint256 indexed exitId,\n        address indexed user,\n        address indexed token,\n        uint256 amount\n    );\n\n    event ExitStarted(\n        address indexed exitor,\n        uint256 indexed exitId,\n        address indexed token,\n        uint256 amount,\n        bool isRegularExit\n    );\n\n    event ExitUpdated(\n        uint256 indexed exitId,\n        uint256 indexed age,\n        address signer\n    );\n\n    event ExitCancelled(uint256 indexed exitId);\n}\n\ncontract WithdrawManagerStorage is ProxyStorage, WithdrawManagerHeader {\n    uint256 public HALF_EXIT_PERIOD = 1 weeks;\n\n    // Bonded exits collaterized at 0.1 ETH\n    uint256 internal constant BOND_AMOUNT = 10**17;\n\n    Registry internal registry;\n    RootChain internal rootChain;\n\n    mapping(uint256 => PlasmaExit) public exits;\n    // mapping with token => (owner => exitId) keccak(token+owner) keccak(token+owner+tokenId)\n    mapping(bytes32 => uint256) public ownerExits;\n    mapping(address => address) public exitsQueues;\n    ExitNFT public exitNft;\n\n    // ERC721, ERC20 and Weth transfers require 155000, 100000, 52000 gas respectively\n    // Processing each exit in a while loop iteration requires ~52000 gas (@todo check if this changed)\n    // uint32 constant internal ITERATION_GAS = 52000;\n\n    // So putting an upper limit of 155000 + 52000 + leeway\n    uint32 internal constant ON_FINALIZE_GAS_LIMIT = 210000;\n\n    uint256 public exitWindow;\n}\n",
+  "sourcePath": "/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/WithdrawManagerStorage.sol",
+  "ast": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/WithdrawManagerStorage.sol",
+    "exportedSymbols": {
+      "ExitsDataStructure": [
+        13638
+      ],
+      "WithdrawManagerHeader": [
+        13675
+      ],
+      "WithdrawManagerStorage": [
+        13711
+      ]
+    },
+    "id": 13712,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13605,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:62"
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/misc/ProxyStorage.sol",
+        "file": "../../common/misc/ProxyStorage.sol",
+        "id": 13607,
+        "nodeType": "ImportDirective",
+        "scope": 13712,
+        "sourceUnit": 4616,
+        "src": "25:64:62",
+        "symbolAliases": [
+          {
+            "foreign": 13606,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol",
+        "file": "../../common/Registry.sol",
+        "id": 13609,
+        "nodeType": "ImportDirective",
+        "scope": 13712,
+        "sourceUnit": 2555,
+        "src": "90:51:62",
+        "symbolAliases": [
+          {
+            "foreign": 13608,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/RootChain.sol",
+        "file": "../RootChain.sol",
+        "id": 13611,
+        "nodeType": "ImportDirective",
+        "scope": 13712,
+        "sourceUnit": 5867,
+        "src": "142:43:62",
+        "symbolAliases": [
+          {
+            "foreign": 13610,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/ExitNFT.sol",
+        "file": "./ExitNFT.sol",
+        "id": 13613,
+        "nodeType": "ImportDirective",
+        "scope": 13712,
+        "sourceUnit": 12400,
+        "src": "186:38:62",
+        "symbolAliases": [
+          {
+            "foreign": 13612,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13638,
+        "linearizedBaseContracts": [
+          13638
+        ],
+        "name": "ExitsDataStructure",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ExitsDataStructure.Input",
+            "id": 13620,
+            "members": [
+              {
+                "constant": false,
+                "id": 13615,
+                "name": "utxoOwner",
+                "nodeType": "VariableDeclaration",
+                "scope": 13620,
+                "src": "283:17:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13614,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "283:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13617,
+                "name": "predicate",
+                "nodeType": "VariableDeclaration",
+                "scope": 13620,
+                "src": "310:17:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13616,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "310:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13619,
+                "name": "token",
+                "nodeType": "VariableDeclaration",
+                "scope": 13620,
+                "src": "337:13:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13618,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "337:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Input",
+            "nodeType": "StructDefinition",
+            "scope": 13638,
+            "src": "260:97:62",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ExitsDataStructure.PlasmaExit",
+            "id": 13637,
+            "members": [
+              {
+                "constant": false,
+                "id": 13622,
+                "name": "receiptAmountOrNFTId",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "391:28:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13621,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "391:7:62",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13624,
+                "name": "txHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "429:14:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 13623,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "429:7:62",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13626,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "453:13:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13625,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "453:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13628,
+                "name": "token",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "476:13:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13627,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "476:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13630,
+                "name": "isRegularExit",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "499:18:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13629,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "499:4:62",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13632,
+                "name": "predicate",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "527:17:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13631,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "527:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13636,
+                "name": "inputs",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "600:32:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Input_$13620_storage_$",
+                  "typeString": "mapping(uint256 => struct ExitsDataStructure.Input)"
+                },
+                "typeName": {
+                  "id": 13635,
+                  "keyType": {
+                    "id": 13633,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "600:25:62",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Input_$13620_storage_$",
+                    "typeString": "mapping(uint256 => struct ExitsDataStructure.Input)"
+                  },
+                  "valueType": {
+                    "contractScope": null,
+                    "id": 13634,
+                    "name": "Input",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13620,
+                    "src": "619:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Input_$13620_storage_ptr",
+                      "typeString": "struct ExitsDataStructure.Input"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PlasmaExit",
+            "nodeType": "StructDefinition",
+            "scope": 13638,
+            "src": "363:276:62",
+            "visibility": "public"
+          }
+        ],
+        "scope": 13712,
+        "src": "226:415:62"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 13639,
+              "name": "ExitsDataStructure",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 13638,
+              "src": "677:18:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ExitsDataStructure_$13638",
+                "typeString": "contract ExitsDataStructure"
+              }
+            },
+            "id": 13640,
+            "nodeType": "InheritanceSpecifier",
+            "src": "677:18:62"
+          }
+        ],
+        "contractDependencies": [
+          13638
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13675,
+        "linearizedBaseContracts": [
+          13675,
+          13638
+        ],
+        "name": "WithdrawManagerHeader",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13650,
+            "name": "Withdraw",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13649,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13642,
+                  "indexed": true,
+                  "name": "exitId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13650,
+                  "src": "726:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13641,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "726:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13644,
+                  "indexed": true,
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13650,
+                  "src": "758:20:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13643,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "758:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13646,
+                  "indexed": true,
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13650,
+                  "src": "788:21:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13645,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "788:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13648,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13650,
+                  "src": "819:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13647,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "819:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "716:123:62"
+            },
+            "src": "702:138:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13662,
+            "name": "ExitStarted",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13661,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13652,
+                  "indexed": true,
+                  "name": "exitor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "873:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13651,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "873:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13654,
+                  "indexed": true,
+                  "name": "exitId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "905:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13653,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "905:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13656,
+                  "indexed": true,
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "937:21:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13655,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "937:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13658,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "968:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13657,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "968:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13660,
+                  "indexed": false,
+                  "name": "isRegularExit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "992:18:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13659,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "992:4:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "863:153:62"
+            },
+            "src": "846:171:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13670,
+            "name": "ExitUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13669,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13664,
+                  "indexed": true,
+                  "name": "exitId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13670,
+                  "src": "1050:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13663,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1050:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13666,
+                  "indexed": true,
+                  "name": "age",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13670,
+                  "src": "1082:19:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13665,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1082:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13668,
+                  "indexed": false,
+                  "name": "signer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13670,
+                  "src": "1111:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13667,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1111:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1040:91:62"
+            },
+            "src": "1023:109:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13674,
+            "name": "ExitCancelled",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13673,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13672,
+                  "indexed": true,
+                  "name": "exitId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13674,
+                  "src": "1158:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13671,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1158:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1157:24:62"
+            },
+            "src": "1138:44:62"
+          }
+        ],
+        "scope": 13712,
+        "src": "643:541:62"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 13676,
+              "name": "ProxyStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4615,
+              "src": "1221:12:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ProxyStorage_$4615",
+                "typeString": "contract ProxyStorage"
+              }
+            },
+            "id": 13677,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1221:12:62"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 13678,
+              "name": "WithdrawManagerHeader",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 13675,
+              "src": "1235:21:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WithdrawManagerHeader_$13675",
+                "typeString": "contract WithdrawManagerHeader"
+              }
+            },
+            "id": 13679,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1235:21:62"
+          }
+        ],
+        "contractDependencies": [
+          4615,
+          13638,
+          13675,
+          19142
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13711,
+        "linearizedBaseContracts": [
+          13711,
+          13675,
+          13638,
+          4615,
+          19142
+        ],
+        "name": "WithdrawManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 13682,
+            "name": "HALF_EXIT_PERIOD",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1263:41:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 13680,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1263:7:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 13681,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1297:7:62",
+              "subdenomination": "weeks",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_604800_by_1",
+                "typeString": "int_const 604800"
+              },
+              "value": "1"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 13687,
+            "name": "BOND_AMOUNT",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1355:46:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 13683,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1355:7:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_100000000000000000_by_1",
+                "typeString": "int_const 100000000000000000"
+              },
+              "id": 13686,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "hexValue": "3130",
+                "id": 13684,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "1395:2:62",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_10_by_1",
+                  "typeString": "int_const 10"
+                },
+                "value": "10"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "**",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "3137",
+                "id": 13685,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "1399:2:62",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_17_by_1",
+                  "typeString": "int_const 17"
+                },
+                "value": "17"
+              },
+              "src": "1395:6:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100000000000000000_by_1",
+                "typeString": "int_const 100000000000000000"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 13689,
+            "name": "registry",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1408:26:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Registry_$2554",
+              "typeString": "contract Registry"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 13688,
+              "name": "Registry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2554,
+              "src": "1408:8:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Registry_$2554",
+                "typeString": "contract Registry"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 13691,
+            "name": "rootChain",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1440:28:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_RootChain_$5866",
+              "typeString": "contract RootChain"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 13690,
+              "name": "RootChain",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5866,
+              "src": "1440:9:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RootChain_$5866",
+                "typeString": "contract RootChain"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 13695,
+            "name": "exits",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1475:43:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_PlasmaExit_$13637_storage_$",
+              "typeString": "mapping(uint256 => struct ExitsDataStructure.PlasmaExit)"
+            },
+            "typeName": {
+              "id": 13694,
+              "keyType": {
+                "id": 13692,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1483:7:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1475:30:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_PlasmaExit_$13637_storage_$",
+                "typeString": "mapping(uint256 => struct ExitsDataStructure.PlasmaExit)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 13693,
+                "name": "PlasmaExit",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 13637,
+                "src": "1494:10:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_PlasmaExit_$13637_storage_ptr",
+                  "typeString": "struct ExitsDataStructure.PlasmaExit"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 13699,
+            "name": "ownerExits",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1619:45:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+              "typeString": "mapping(bytes32 => uint256)"
+            },
+            "typeName": {
+              "id": 13698,
+              "keyType": {
+                "id": 13696,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1627:7:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1619:27:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                "typeString": "mapping(bytes32 => uint256)"
+              },
+              "valueType": {
+                "id": 13697,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1638:7:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 13703,
+            "name": "exitsQueues",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1670:46:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+              "typeString": "mapping(address => address)"
+            },
+            "typeName": {
+              "id": 13702,
+              "keyType": {
+                "id": 13700,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1678:7:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1670:27:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                "typeString": "mapping(address => address)"
+              },
+              "valueType": {
+                "id": 13701,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1689:7:62",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 13705,
+            "name": "exitNft",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1722:22:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ExitNFT_$12399",
+              "typeString": "contract ExitNFT"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 13704,
+              "name": "ExitNFT",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 12399,
+              "src": "1722:7:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ExitNFT_$12399",
+                "typeString": "contract ExitNFT"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 13708,
+            "name": "ON_FINALIZE_GAS_LIMIT",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "2058:55:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint32",
+              "typeString": "uint32"
+            },
+            "typeName": {
+              "id": 13706,
+              "name": "uint32",
+              "nodeType": "ElementaryTypeName",
+              "src": "2058:6:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint32",
+                "typeString": "uint32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "323130303030",
+              "id": 13707,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2107:6:62",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_210000_by_1",
+                "typeString": "int_const 210000"
+              },
+              "value": "210000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 13710,
+            "name": "exitWindow",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "2120:25:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 13709,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2120:7:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 13712,
+        "src": "1186:962:62"
+      }
+    ],
+    "src": "0:2149:62"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/WithdrawManagerStorage.sol",
+    "exportedSymbols": {
+      "ExitsDataStructure": [
+        13638
+      ],
+      "WithdrawManagerHeader": [
+        13675
+      ],
+      "WithdrawManagerStorage": [
+        13711
+      ]
+    },
+    "id": 13712,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13605,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:62"
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/misc/ProxyStorage.sol",
+        "file": "../../common/misc/ProxyStorage.sol",
+        "id": 13607,
+        "nodeType": "ImportDirective",
+        "scope": 13712,
+        "sourceUnit": 4616,
+        "src": "25:64:62",
+        "symbolAliases": [
+          {
+            "foreign": 13606,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol",
+        "file": "../../common/Registry.sol",
+        "id": 13609,
+        "nodeType": "ImportDirective",
+        "scope": 13712,
+        "sourceUnit": 2555,
+        "src": "90:51:62",
+        "symbolAliases": [
+          {
+            "foreign": 13608,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/RootChain.sol",
+        "file": "../RootChain.sol",
+        "id": 13611,
+        "nodeType": "ImportDirective",
+        "scope": 13712,
+        "sourceUnit": 5867,
+        "src": "142:43:62",
+        "symbolAliases": [
+          {
+            "foreign": 13610,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/ExitNFT.sol",
+        "file": "./ExitNFT.sol",
+        "id": 13613,
+        "nodeType": "ImportDirective",
+        "scope": 13712,
+        "sourceUnit": 12400,
+        "src": "186:38:62",
+        "symbolAliases": [
+          {
+            "foreign": 13612,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13638,
+        "linearizedBaseContracts": [
+          13638
+        ],
+        "name": "ExitsDataStructure",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ExitsDataStructure.Input",
+            "id": 13620,
+            "members": [
+              {
+                "constant": false,
+                "id": 13615,
+                "name": "utxoOwner",
+                "nodeType": "VariableDeclaration",
+                "scope": 13620,
+                "src": "283:17:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13614,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "283:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13617,
+                "name": "predicate",
+                "nodeType": "VariableDeclaration",
+                "scope": 13620,
+                "src": "310:17:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13616,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "310:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13619,
+                "name": "token",
+                "nodeType": "VariableDeclaration",
+                "scope": 13620,
+                "src": "337:13:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13618,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "337:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Input",
+            "nodeType": "StructDefinition",
+            "scope": 13638,
+            "src": "260:97:62",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ExitsDataStructure.PlasmaExit",
+            "id": 13637,
+            "members": [
+              {
+                "constant": false,
+                "id": 13622,
+                "name": "receiptAmountOrNFTId",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "391:28:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13621,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "391:7:62",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13624,
+                "name": "txHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "429:14:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 13623,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "429:7:62",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13626,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "453:13:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13625,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "453:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13628,
+                "name": "token",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "476:13:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13627,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "476:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13630,
+                "name": "isRegularExit",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "499:18:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13629,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "499:4:62",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13632,
+                "name": "predicate",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "527:17:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13631,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "527:7:62",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13636,
+                "name": "inputs",
+                "nodeType": "VariableDeclaration",
+                "scope": 13637,
+                "src": "600:32:62",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Input_$13620_storage_$",
+                  "typeString": "mapping(uint256 => struct ExitsDataStructure.Input)"
+                },
+                "typeName": {
+                  "id": 13635,
+                  "keyType": {
+                    "id": 13633,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "600:25:62",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Input_$13620_storage_$",
+                    "typeString": "mapping(uint256 => struct ExitsDataStructure.Input)"
+                  },
+                  "valueType": {
+                    "contractScope": null,
+                    "id": 13634,
+                    "name": "Input",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13620,
+                    "src": "619:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Input_$13620_storage_ptr",
+                      "typeString": "struct ExitsDataStructure.Input"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PlasmaExit",
+            "nodeType": "StructDefinition",
+            "scope": 13638,
+            "src": "363:276:62",
+            "visibility": "public"
+          }
+        ],
+        "scope": 13712,
+        "src": "226:415:62"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 13639,
+              "name": "ExitsDataStructure",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 13638,
+              "src": "677:18:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ExitsDataStructure_$13638",
+                "typeString": "contract ExitsDataStructure"
+              }
+            },
+            "id": 13640,
+            "nodeType": "InheritanceSpecifier",
+            "src": "677:18:62"
+          }
+        ],
+        "contractDependencies": [
+          13638
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13675,
+        "linearizedBaseContracts": [
+          13675,
+          13638
+        ],
+        "name": "WithdrawManagerHeader",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13650,
+            "name": "Withdraw",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13649,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13642,
+                  "indexed": true,
+                  "name": "exitId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13650,
+                  "src": "726:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13641,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "726:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13644,
+                  "indexed": true,
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13650,
+                  "src": "758:20:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13643,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "758:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13646,
+                  "indexed": true,
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13650,
+                  "src": "788:21:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13645,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "788:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13648,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13650,
+                  "src": "819:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13647,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "819:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "716:123:62"
+            },
+            "src": "702:138:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13662,
+            "name": "ExitStarted",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13661,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13652,
+                  "indexed": true,
+                  "name": "exitor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "873:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13651,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "873:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13654,
+                  "indexed": true,
+                  "name": "exitId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "905:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13653,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "905:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13656,
+                  "indexed": true,
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "937:21:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13655,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "937:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13658,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "968:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13657,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "968:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13660,
+                  "indexed": false,
+                  "name": "isRegularExit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13662,
+                  "src": "992:18:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13659,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "992:4:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "863:153:62"
+            },
+            "src": "846:171:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13670,
+            "name": "ExitUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13669,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13664,
+                  "indexed": true,
+                  "name": "exitId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13670,
+                  "src": "1050:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13663,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1050:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13666,
+                  "indexed": true,
+                  "name": "age",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13670,
+                  "src": "1082:19:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13665,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1082:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13668,
+                  "indexed": false,
+                  "name": "signer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13670,
+                  "src": "1111:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13667,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1111:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1040:91:62"
+            },
+            "src": "1023:109:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13674,
+            "name": "ExitCancelled",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13673,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13672,
+                  "indexed": true,
+                  "name": "exitId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13674,
+                  "src": "1158:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13671,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1158:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1157:24:62"
+            },
+            "src": "1138:44:62"
+          }
+        ],
+        "scope": 13712,
+        "src": "643:541:62"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 13676,
+              "name": "ProxyStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4615,
+              "src": "1221:12:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ProxyStorage_$4615",
+                "typeString": "contract ProxyStorage"
+              }
+            },
+            "id": 13677,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1221:12:62"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 13678,
+              "name": "WithdrawManagerHeader",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 13675,
+              "src": "1235:21:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WithdrawManagerHeader_$13675",
+                "typeString": "contract WithdrawManagerHeader"
+              }
+            },
+            "id": 13679,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1235:21:62"
+          }
+        ],
+        "contractDependencies": [
+          4615,
+          13638,
+          13675,
+          19142
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13711,
+        "linearizedBaseContracts": [
+          13711,
+          13675,
+          13638,
+          4615,
+          19142
+        ],
+        "name": "WithdrawManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 13682,
+            "name": "HALF_EXIT_PERIOD",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1263:41:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 13680,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1263:7:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 13681,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1297:7:62",
+              "subdenomination": "weeks",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_604800_by_1",
+                "typeString": "int_const 604800"
+              },
+              "value": "1"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 13687,
+            "name": "BOND_AMOUNT",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1355:46:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 13683,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1355:7:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_100000000000000000_by_1",
+                "typeString": "int_const 100000000000000000"
+              },
+              "id": 13686,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "hexValue": "3130",
+                "id": 13684,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "1395:2:62",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_10_by_1",
+                  "typeString": "int_const 10"
+                },
+                "value": "10"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "**",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "3137",
+                "id": 13685,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "1399:2:62",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_17_by_1",
+                  "typeString": "int_const 17"
+                },
+                "value": "17"
+              },
+              "src": "1395:6:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100000000000000000_by_1",
+                "typeString": "int_const 100000000000000000"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 13689,
+            "name": "registry",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1408:26:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Registry_$2554",
+              "typeString": "contract Registry"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 13688,
+              "name": "Registry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2554,
+              "src": "1408:8:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Registry_$2554",
+                "typeString": "contract Registry"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 13691,
+            "name": "rootChain",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1440:28:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_RootChain_$5866",
+              "typeString": "contract RootChain"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 13690,
+              "name": "RootChain",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5866,
+              "src": "1440:9:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RootChain_$5866",
+                "typeString": "contract RootChain"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 13695,
+            "name": "exits",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1475:43:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_PlasmaExit_$13637_storage_$",
+              "typeString": "mapping(uint256 => struct ExitsDataStructure.PlasmaExit)"
+            },
+            "typeName": {
+              "id": 13694,
+              "keyType": {
+                "id": 13692,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1483:7:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1475:30:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_PlasmaExit_$13637_storage_$",
+                "typeString": "mapping(uint256 => struct ExitsDataStructure.PlasmaExit)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 13693,
+                "name": "PlasmaExit",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 13637,
+                "src": "1494:10:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_PlasmaExit_$13637_storage_ptr",
+                  "typeString": "struct ExitsDataStructure.PlasmaExit"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 13699,
+            "name": "ownerExits",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1619:45:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+              "typeString": "mapping(bytes32 => uint256)"
+            },
+            "typeName": {
+              "id": 13698,
+              "keyType": {
+                "id": 13696,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1627:7:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1619:27:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                "typeString": "mapping(bytes32 => uint256)"
+              },
+              "valueType": {
+                "id": 13697,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1638:7:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 13703,
+            "name": "exitsQueues",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1670:46:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+              "typeString": "mapping(address => address)"
+            },
+            "typeName": {
+              "id": 13702,
+              "keyType": {
+                "id": 13700,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1678:7:62",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1670:27:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                "typeString": "mapping(address => address)"
+              },
+              "valueType": {
+                "id": 13701,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1689:7:62",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 13705,
+            "name": "exitNft",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "1722:22:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ExitNFT_$12399",
+              "typeString": "contract ExitNFT"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 13704,
+              "name": "ExitNFT",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 12399,
+              "src": "1722:7:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ExitNFT_$12399",
+                "typeString": "contract ExitNFT"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 13708,
+            "name": "ON_FINALIZE_GAS_LIMIT",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "2058:55:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint32",
+              "typeString": "uint32"
+            },
+            "typeName": {
+              "id": 13706,
+              "name": "uint32",
+              "nodeType": "ElementaryTypeName",
+              "src": "2058:6:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint32",
+                "typeString": "uint32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "323130303030",
+              "id": 13707,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2107:6:62",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_210000_by_1",
+                "typeString": "int_const 210000"
+              },
+              "value": "210000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 13710,
+            "name": "exitWindow",
+            "nodeType": "VariableDeclaration",
+            "scope": 13711,
+            "src": "2120:25:62",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 13709,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2120:7:62",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 13712,
+        "src": "1186:962:62"
+      }
+    ],
+    "src": "0:2149:62"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2020-03-16T07:46:21.517Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
