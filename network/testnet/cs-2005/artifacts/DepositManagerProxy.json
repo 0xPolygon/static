@@ -1,0 +1,1498 @@
+{
+  "contractName": "DepositManagerProxy",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newProxyTo",
+          "type": "address"
+        }
+      ],
+      "name": "updateImplementation",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "childChain",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proxyType",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "proxyTypeId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governance",
+      "outputs": [
+        {
+          "internalType": "contract IGovernance",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "registry",
+      "outputs": [
+        {
+          "internalType": "contract Registry",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "rootChain",
+      "outputs": [
+        {
+          "internalType": "contract RootChain",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "unlock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposits",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "depositHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "createdAt",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "stateSender",
+      "outputs": [
+        {
+          "internalType": "contract StateSender",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "locked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "lock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_proxyTo",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_registry",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_rootChain",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_governance",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amountOrNFTId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "depositBlockId",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewDepositBlock",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_new",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_old",
+          "type": "address"
+        }
+      ],
+      "name": "ProxyUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_prevOwner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerUpdate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newProxyTo\",\"type\":\"address\"}],\"name\":\"updateImplementation\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"childChain\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"proxyType\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"proxyTypeId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"governance\",\"outputs\":[{\"internalType\":\"contract IGovernance\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"registry\",\"outputs\":[{\"internalType\":\"contract Registry\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rootChain\",\"outputs\":[{\"internalType\":\"contract RootChain\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unlock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"deposits\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"depositHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"createdAt\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"stateSender\",\"outputs\":[{\"internalType\":\"contract StateSender\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"lock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_proxyTo\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_registry\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_rootChain\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_governance\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amountOrNFTId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"depositBlockId\",\"type\":\"uint256\"}],\"name\":\"NewDepositBlock\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_new\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_old\",\"type\":\"address\"}],\"name\":\"ProxyUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_prevOwner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"OwnerUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"return\":\"true if `msg.sender` is the owner of the contract.\"},\"owner()\":{\"return\":\"the address of the owner.\"},\"renounceOwnership()\":{\"details\":\"Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore.\"},\"transferOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}}}},\"userdoc\":{\"methods\":{\"renounceOwnership()\":{\"notice\":\"Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/arth/Documents/Projects/contracts/contracts/root/depositManager/DepositManagerProxy.sol\":\"DepositManagerProxy\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol\":{\"keccak256\":\"0x90ac831440b6fbfff97d84c61172cfc523f15121b22b87d10f94b66e47541a79\",\"urls\":[\"bzz-raw://a9606e5be8cf3eb999ca2a3bb9f9fad0f0c80c2e2f356c95789beedb842ca0b5\",\"dweb:/ipfs/QmNiTSnxTwQacGbQPmYr2sdGgWwJk3GsE8nsifBuD3EFnN\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/governance/Governable.sol\":{\"keccak256\":\"0x38ecd54850256c7f03fd236d4fd95de3f2e307cb6f3fd843994d588e0f2fbc04\",\"urls\":[\"bzz-raw://5ce3e82b37ad1e5a5475355729bb731434bfc47a1b865c3589f666907b6b0b7b\",\"dweb:/ipfs/QmUMRzD27ab7gEecNwoUdZRMysxik9RduLqyym9nhLvevT\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/governance/IGovernance.sol\":{\"keccak256\":\"0x81b923a9b6ee8ee89a9741b5a74bc1318c5e570e09a66e20e26cb8850d76b367\",\"urls\":[\"bzz-raw://a634cba0419365bbbcb507ba519ea912e96ce0ad1369c736c5059ed3c86441a6\",\"dweb:/ipfs/QmTQSA3KNDo9yiZboXqNDSCSVbUshudqJNLMrXGcnxRJM3\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/DelegateProxy.sol\":{\"keccak256\":\"0x3ff7d171558537af3c2d9c53bdc57ea9cb5db72624326cf93fda6a45ce50e3c1\",\"urls\":[\"bzz-raw://dbf9cbe28573f080c538ef818b39799de3402b63594af811e20847b9efa1e2e9\",\"dweb:/ipfs/QmZBNwxx9fH3gh742F86aK9sDmE9ZSMjfcTSmpMzw6K9D9\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/ERCProxy.sol\":{\"keccak256\":\"0x11f0e51892de956981bccfbd1474fffc529d4d17802a10ff0fa27ad233955847\",\"urls\":[\"bzz-raw://7f3e9de730a5c32b0691785b9b1db6072196f14714c33c723e20d380a5f5fa29\",\"dweb:/ipfs/QmZjZ9j5UWgWW78xjKY3CFckAxMTtQu1tst9F4ci9tq6zP\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/Proxy.sol\":{\"keccak256\":\"0x53939645726291691a783a6bbb34d77bd6d8906de41f4b357babd21095b461f0\",\"urls\":[\"bzz-raw://2c38a48b135a206066de1c4b5a341261f271f8af31e96e120904cd9aa346a801\",\"dweb:/ipfs/QmW1DsdkhL1Xuaodr5MV1Rc275NNTQ8WMjHhsf4sRKtKAV\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/ProxyStorage.sol\":{\"keccak256\":\"0x0e5e5f5817051530eca15e416300236610a50e096015f51d8bf44e89e3a87995\",\"urls\":[\"bzz-raw://55a953138a02a8091b290ae40f27d18e1e8ffcb886f9461b0e3bfad7dd8e46d7\",\"dweb:/ipfs/QmRw1doqSgJxyPVfaYTWNJu5P83u3JECXPAfEFNJPQjGsP\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/mixin/Lockable.sol\":{\"keccak256\":\"0x818879aa3633b40320f4ecb0b404e02db25990fe59c3063fe757d653f180185d\",\"urls\":[\"bzz-raw://24c40cd51e74e450be138240c39ad05d5148638324f3fcf3507209d8a43eec79\",\"dweb:/ipfs/QmVaFn8L59wm2R95iRyCvqn1CwzVSq2QW2BSqGmhAhC2Ch\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/mixin/RootChainable.sol\":{\"keccak256\":\"0x3243e600ecb7dbc949d2416421871763c50aebdeaa30c540821fd8080eb4afdf\",\"urls\":[\"bzz-raw://55df6410b2b0d4d6307149f8c7f1a2c9e2c79558c5a83b54f578fd2a3eac51cf\",\"dweb:/ipfs/QmbCPM8JKFeyK4CZUvRfBaYTq7JLYHSPt6HNmy9bh13hNV\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/IRootChain.sol\":{\"keccak256\":\"0x733d1b4395ab7f10a1a7e2f6e95aa226ea554b414cf7d5792809846136e92594\",\"urls\":[\"bzz-raw://904b90f863c92d5a80e8bf0f2ac2e63c86707db47e18e46a517ca8b1292dcab6\",\"dweb:/ipfs/QmVmC5TrfC9ezFPk7xEQY5TzpJhz9gW5Y7Ti9X2HYdKn12\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/RootChain.sol\":{\"keccak256\":\"0xebadc9dcf9727f18c01857fabceb1f20a5579e7f15dda57cc8eae58fd5da91ab\",\"urls\":[\"bzz-raw://1c3659c141bd90ff54dfe26db72b272d1e236198f23a0fb8b0cd2c04fcdfc9a1\",\"dweb:/ipfs/QmeeUHNYKAtY6btbBx321pB7GH9UjXNvrKdQZTPqEagsE3\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/RootChainStorage.sol\":{\"keccak256\":\"0x9337f9782e6a06498550b9c8d7402a54f53f2cb0f098c1f84d65bdd503b1b73b\",\"urls\":[\"bzz-raw://2377eae52021f69d76b0282b0744f83f9acabffb3a1703ba9f7be0f83f029166\",\"dweb:/ipfs/QmeerbtNvma5oHCdsz9UEYSbpFEmXCSxjw6xsSxucLQaNL\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/depositManager/DepositManagerProxy.sol\":{\"keccak256\":\"0x5c0fd51b0bbb0f0b952f6a79b94ffe3290fb3ecb0fadb8fab5af61a2b85d9dac\",\"urls\":[\"bzz-raw://3100de12bf86f95a291bd5a574680b4f3fce05375b37b077748640c08eaeee2d\",\"dweb:/ipfs/QmfMPpmJ6XSXCFzhqyC63zHA3AzXCTuZ5KZafUZYW4Bv38\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/depositManager/DepositManagerStorage.sol\":{\"keccak256\":\"0xc5e69fc82a239e6406f3c61b2ec1174b140e961432d3b1edc958436531aa5870\",\"urls\":[\"bzz-raw://107b22fb87c086f5ff90ac97c404c9c220c1ee4df2c838370be0cab6880aab61\",\"dweb:/ipfs/QmaNih34UUNQZv5TvSJQWoz9wtZozyZ14nXojhUW6GRva6\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/stateSyncer/StateSender.sol\":{\"keccak256\":\"0xb233c74c8e613a902f1a843f8a765e06fe7d61ded3f144cfc728f329002287e6\",\"urls\":[\"bzz-raw://061a94d346c9af61b84fe19f30955ce9fe485cfcd1909c31eaeb9adc639385b2\",\"dweb:/ipfs/QmSmHJaSCbLyCxwQWMkqJydXTVeq1xBojx2UFz9fjCr1t2\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/IWithdrawManager.sol\":{\"keccak256\":\"0xcf284a6c5fa2e5f6aa045ae18fe617bab6f4d82dc30dec5682c9d13190529449\",\"urls\":[\"bzz-raw://eac0c653215537db1e97263afeda269485c1daf5671dfa64fa92be205abdf623\",\"dweb:/ipfs/QmaWWvvxSbyAtPjhCMEXM8QACurs7Av8NMNevSuL8wFJaB\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/StakingInfo.sol\":{\"keccak256\":\"0x41662dd000fbfd530b25cf14a454b88b8e875a1ca9e3a68bc13cffce60c81fb8\",\"urls\":[\"bzz-raw://9ec9c0ca13d6ba1f80515b088ef791fc81c36c73e04b6c065bcfe3388d308f04\",\"dweb:/ipfs/QmaRbk7muSHw7MuowQj5iC2bL5Cb1maVLKykb4HLtD1nGw\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/IStakeManager.sol\":{\"keccak256\":\"0x353b99075435fb84f4efeb01ceb17bbcf370e0a49acd3357d88eaca7704c96fd\",\"urls\":[\"bzz-raw://dfc00b5669274e37d2805a91ab0639f56d59176abc7ae2a25377290628e805c9\",\"dweb:/ipfs/QmeAAZqAQjo7GcvCAgtSyASYoWhzaApVH6245LtZFoUoTE\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerStorage.sol\":{\"keccak256\":\"0x64a49e8b00d1cd413ac2f1f3d1bd0514671d365ab0c69c4d654692d56f3e98ec\",\"urls\":[\"bzz-raw://2fb6a7944a9b4f25fe9edb53df952390efed1dab846d26b06ebd3e091501b287\",\"dweb:/ipfs/QmSL7VbSjh7LBd2ETCQj6DQAp4CXWHkU5DLKj9thQunhtm\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakingNFT.sol\":{\"keccak256\":\"0xee5d0269233eeef4d29874a3903de5fd8645a795b6c14997647ca36b6e36424a\",\"urls\":[\"bzz-raw://6e3f2b9e588fc6fbadf4348cfd527789b0d8aa21b0a5020ac8343b1975855053\",\"dweb:/ipfs/QmSFCAfQ3tFEBjgbwTAkK6YdjWSynHZ3HfPxkL5L8sgwxQ\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/IValidatorShare.sol\":{\"keccak256\":\"0x0a547b1030b1da43b3051579e9e2f4bd587112d141fe8a9125a3df3abeeb2801\",\"urls\":[\"bzz-raw://c293b68e83d6f24def1b8a00938ae000cddf6add67d0ae56a5a6f8d3a453d3e7\",\"dweb:/ipfs/QmcGGM9D2BggXC1Htftyww5zWzh8SW4cT9S2pS7NLitNhv\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/ValidatorShare.sol\":{\"keccak256\":\"0xb446d14f7f717d82690d11e9b65d68c22d0183e9c1bd0349fed6d78f0e04bf96\",\"urls\":[\"bzz-raw://bc1500742e549582ef76e7c34b1a3d343e3feb285fe8c3076f3c9e2a2647d206\",\"dweb:/ipfs/QmQnpqTLVssKiYrh9JiuizqTggBvFdMvLA9QZj1MhVDc6M\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/ValidatorShareFactory.sol\":{\"keccak256\":\"0x829970b0a8628143a8dcad8b6d37ce4f9aeb844bda842130de5d06d9716e1c6f\",\"urls\":[\"bzz-raw://3a47592379c8f6f7e978dd527ebd3ff89e6f3168fcee72d60d38780c59cdb4ce\",\"dweb:/ipfs/QmWm9xfhxZxzrh81F5Uk7hEJi2FY4Pd7aLNH31LkWWAzrT\"]},\"openzeppelin-solidity/contracts/drafts/Counters.sol\":{\"keccak256\":\"0x982e18d2e3df98e3339f70f955a4d1fb78411a29963d0ea34621759eef67e86d\",\"urls\":[\"bzz-raw://b51463c381bc5ad8ad1c2a0b15bfbcab7810a35f0cd33e00a85c67d5526f97e8\",\"dweb:/ipfs/Qmb51F78kH7ifaW9CbkfZhprpkbY7T16gkarbscX6E7h2f\"]},\"openzeppelin-solidity/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0xd86c61f2e7e78c88716b5591bbf2d6cce8fe1a68320484994810d54f82605a7a\",\"urls\":[\"bzz-raw://aa27a9f095b9d061be9fb54082de2d76c89c127ae4e3bbf565fb3a6ddc3991a1\",\"dweb:/ipfs/QmRZaZ6czUGKAHTN3y9LokejfFCSwVPfVz6Vk6YrEuxeN7\"]},\"openzeppelin-solidity/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xc48ee580d20820cc0ef122b2acc9bf8836731dd8b9671cc03d21a12e3ab14976\",\"urls\":[\"bzz-raw://2fa424de1b3f2f31c57af99e87a0ec76e355bbf336f8db8f1238230a897c8bc8\",\"dweb:/ipfs/QmREEQFeAuyWQr27AfcvLG7qXYf6JiwZXxf5AmHT7on7cU\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xc2a200a877c4a9b2475c246c54ffecc69ffde3e11af83319c63c2dc5458bac80\",\"urls\":[\"bzz-raw://d6ee2095166a8fc1dbaff1949d786b91b8ef8ce41a7b5801a81dd2453220e770\",\"dweb:/ipfs/QmYBLFvCr9zKndkP8e7nFoKuZGcQEQtbHdwttC1MqckCgv\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x3dceb7e4aa237a56111c13f77d7efadeceda7271d62bfac94ac79afab7c1f411\",\"urls\":[\"bzz-raw://0bf3cd698ff2010ce8d55081c6e826856329f7f57a3bbfa0657310c814f46eaa\",\"dweb:/ipfs/QmQGwSkRYsFtdvfMPMLRBneEBJmD6QJi5C62o1GRDNMzYE\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x59e7df16169a498cb8837963b2f5461d88e63bd1eb6c7d58b814d76b84ccbe61\",\"urls\":[\"bzz-raw://289216c82b0a5312ed8883e117d5dead4f62837b911df982a3e1a81cbb43aecf\",\"dweb:/ipfs/QmegSf8KXg7rFnEtQnu5XuTq6jYQXtge7UDCSZfhk7CkDq\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x07029cbf047f6559e30862f33be2ee323c763e2fc251bca5de44177d29cf15e2\",\"urls\":[\"bzz-raw://d898f3b89f15102cd113de447538b699de959bebd840149c2cdef9102dbbf73a\",\"dweb:/ipfs/QmTb4v4g9GZgdm2ksA7q2xc4EbyPxX3fsqUWU5Y2StN3RA\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol\":{\"keccak256\":\"0x0c893dbe908c97ea884549fa3eb364d62986708f35a94158cd4fb4470c845408\",\"urls\":[\"bzz-raw://0939139ce989ba9aa8c279e3322d2f374353a13c5b4f0b624a0cf204e0238bf4\",\"dweb:/ipfs/QmWdNaFHDmebpzqM8VNKoaLrG3C9cUKKRwqGgT91zBAy4T\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol\":{\"keccak256\":\"0xe103f90deb39d999b79ad1bfd205b89f30830cb0250046ab89a0108268ec6cdb\",\"urls\":[\"bzz-raw://ba303a9c752140ee24ad3daea295a341cbd03b71734e44da22cb3f45f01b2111\",\"dweb:/ipfs/QmSmFghEif88d2dqcKkbTTRYbb1ASv15cYAbdPq5XxsyxA\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721Metadata.sol\":{\"keccak256\":\"0x94b168e6c4f125ea32427f097dce92e52e9c8b66128ee95a0399f14f9cfdea2b\",\"urls\":[\"bzz-raw://8d2417b41cd73a353d2550b4e699d410b7d6ee0808538fdf7d784b213db49ccc\",\"dweb:/ipfs/QmeE9geVkDGHRahTn5HYA9UWopQgMhbknxaWMhn1Hae8nL\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x44fd7c58fc1323f8481f160f2fd4c34b1653d0cc5def45c2381898d32bcc023e\",\"urls\":[\"bzz-raw://6bf189ee544432d2323a6049361cb4695ae980d11c747d4e5afb3b08537b2424\",\"dweb:/ipfs/QmeBG5Jge1QGy6rUVMpaosbqbDdZAC8jefQEnx9unWSEfF\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x80b8851ecb70ec4c3af36d5cab5dabccfcef948c874c2768c837e068b1025481\",\"urls\":[\"bzz-raw://ac2ce1ae84c5bd95a99c856bc63600bcc7c50292b8c06b605e9e3c3e5cf7012b\",\"dweb:/ipfs/QmcjMGiBF29d6BDwaCHVb9g2Ewev7q8A9KTsXFd8A9Z6di\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0x08e4f6bf25a8df438877bb717a76cfba7e2ee8650f5fdf114fa50b8106a2c11d\",\"urls\":[\"bzz-raw://20572915a456192b41112ebc8e6fa4d23020259398e4f2048fff5a7b175cdd67\",\"dweb:/ipfs/QmTcmZRC4JuxZ4LMiiP2q6EZF3fcXatNHvxz51utnCjHAu\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0xeb8a266ef2da0aa60eea704031902ffd28b2d13dd0e8f5b69bcfb8415f2dad85\",\"urls\":[\"bzz-raw://3d69bbdaef9e7beb4919fed4f5aaca68cf3ecbf8f0932959fee720110daffaba\",\"dweb:/ipfs/QmdLwrPjDbhWBzkBMiRFbz3muLr5KQ5HQoiFk8EPkTMwRh\"]},\"openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0xea16b9933153c647242ba50b3e494fb133063d49f1fa81823f35a8c28754142e\",\"urls\":[\"bzz-raw://95b3b4b5c8008b6d8a862a797bf2550e8017cbff25d0e36be86cff48b1a9bbf2\",\"dweb:/ipfs/QmZWK9sD6V3jwSarEyheM8PjHFVcuA11W65FgAZ2fsu9sq\"]},\"solidity-rlp/contracts/RLPReader.sol\":{\"keccak256\":\"0xe2df62ba34ab569e097c58eee30eb9fdab120d4df1c572c6ceae1bec3faa2c2a\",\"urls\":[\"bzz-raw://46988aac4691b498d4c6983c7617de6d29cd5d7fe4e3ecfb7f8c0d00e33e9a12\",\"dweb:/ipfs/QmdWF9ti9UJSP2E7XYkdUPRV9yfmxEmuRgzpNtt3Ex57Ar\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516109fc3803806109fc8339818101604052608081101561003357600080fd5b5080516020820151604080840151606090940151600080546001600160a01b031916331780825592519495939491928392839288926001600160a01b0316917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a36100a9816001600160e01b036100f216565b50600280546001600160a01b03199081166001600160a01b0393841617909155600380548216968316969096179095556004805490951693169290921790925550610279915050565b6101036001600160e01b0361024516565b61010c57600080fd5b6001600160a01b03811661018157604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601560248201527f494e56414c49445f50524f58595f414444524553530000000000000000000000604482015290519081900360640190fd5b610193816001600160e01b0361025616565b6101e8576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001806109d76025913960400191505060405180910390fd5b6001546040516001600160a01b03918216918316907fd32d24edea94f55e932d9a008afc425a8561462d1b1f57bc6e508e9a6b9509e190600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b0316331490565b60006001600160a01b03821661026e57506000610274565b50803b15155b919050565b61074f806102886000396000f3fe6080604052600436106100f35760003560e01c80638f32d59b1161008a578063cb10f94c11610059578063cb10f94c146102c9578063cf309012146102de578063f2fde38b146102f3578063f83d08ba14610326576100f3565b80638f32d59b14610233578063987ab9db1461025c578063a69df4b514610271578063b02c43d014610286576100f3565b80635c60da1b116100c65780635c60da1b146101df578063715018a6146101f45780637b103999146102095780638da5cb5b1461021e576100f3565b8063025b22bc1461013f57806342fc47fb146101725780634555d5c9146101a35780635aa6e675146101ca575b60015460408051602036601f810182900482028301820190935282825261013d936001600160a01b0316926000918190840183828082843760009201919091525061033b92505050565b005b34801561014b57600080fd5b5061013d6004803603602081101561016257600080fd5b50356001600160a01b0316610363565b34801561017e57600080fd5b50610187610468565b604080516001600160a01b039092168252519081900360200190f35b3480156101af57600080fd5b506101b8610477565b60408051918252519081900360200190f35b3480156101d657600080fd5b5061018761047c565b3480156101eb57600080fd5b5061018761048b565b34801561020057600080fd5b5061013d61049a565b34801561021557600080fd5b506101876104f5565b34801561022a57600080fd5b50610187610504565b34801561023f57600080fd5b50610248610513565b604080519115158252519081900360200190f35b34801561026857600080fd5b50610187610524565b34801561027d57600080fd5b5061013d610533565b34801561029257600080fd5b506102b0600480360360208110156102a957600080fd5b503561058b565b6040805192835260208301919091528051918290030190f35b3480156102d557600080fd5b506101876105a4565b3480156102ea57600080fd5b506102486105b3565b3480156102ff57600080fd5b5061013d6004803603602081101561031657600080fd5b50356001600160a01b03166105c3565b34801561033257600080fd5b5061013d6105e0565b600080825160208401856127105a03f43d604051816000823e82801561035f578282f35b8282fd5b61036b610513565b61037457600080fd5b6001600160a01b0381166103c7576040805162461bcd60e51b8152602060048201526015602482015274494e56414c49445f50524f58595f4144445245535360581b604482015290519081900360640190fd5b6103d08161063e565b61040b5760405162461bcd60e51b81526004018080602001828103825260258152602001806106d06025913960400191505060405180910390fd5b6001546040516001600160a01b03918216918316907fd32d24edea94f55e932d9a008afc425a8561462d1b1f57bc6e508e9a6b9509e190600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b6007546001600160a01b031681565b600290565b6002546001600160a01b031681565b6001546001600160a01b031690565b6104a2610513565b6104ab57600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6003546001600160a01b031681565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b6004546001600160a01b031681565b6002546001600160a01b0316331461057c5760405162461bcd60e51b81526004018080602001828103825260268152602001806106f56026913960400191505060405180910390fd5b6002805460ff60a01b19169055565b6006602052600090815260409020805460019091015482565b6005546001600160a01b031681565b600254600160a01b900460ff1681565b6105cb610513565b6105d457600080fd5b6105dd81610661565b50565b6002546001600160a01b031633146106295760405162461bcd60e51b81526004018080602001828103825260268152602001806106f56026913960400191505060405180910390fd5b6002805460ff60a01b1916600160a01b179055565b60006001600160a01b0382166106565750600061065c565b50803b15155b919050565b6001600160a01b03811661067457600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe44455354494e4154494f4e5f414444524553535f49535f4e4f545f415f434f4e54524143544f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820cfdfe19c0808d3c213e17d384512f5a4336096d27f06313b4e229caf5f50c22f64736f6c634300050b003244455354494e4154494f4e5f414444524553535f49535f4e4f545f415f434f4e5452414354",
+  "deployedBytecode": "0x6080604052600436106100f35760003560e01c80638f32d59b1161008a578063cb10f94c11610059578063cb10f94c146102c9578063cf309012146102de578063f2fde38b146102f3578063f83d08ba14610326576100f3565b80638f32d59b14610233578063987ab9db1461025c578063a69df4b514610271578063b02c43d014610286576100f3565b80635c60da1b116100c65780635c60da1b146101df578063715018a6146101f45780637b103999146102095780638da5cb5b1461021e576100f3565b8063025b22bc1461013f57806342fc47fb146101725780634555d5c9146101a35780635aa6e675146101ca575b60015460408051602036601f810182900482028301820190935282825261013d936001600160a01b0316926000918190840183828082843760009201919091525061033b92505050565b005b34801561014b57600080fd5b5061013d6004803603602081101561016257600080fd5b50356001600160a01b0316610363565b34801561017e57600080fd5b50610187610468565b604080516001600160a01b039092168252519081900360200190f35b3480156101af57600080fd5b506101b8610477565b60408051918252519081900360200190f35b3480156101d657600080fd5b5061018761047c565b3480156101eb57600080fd5b5061018761048b565b34801561020057600080fd5b5061013d61049a565b34801561021557600080fd5b506101876104f5565b34801561022a57600080fd5b50610187610504565b34801561023f57600080fd5b50610248610513565b604080519115158252519081900360200190f35b34801561026857600080fd5b50610187610524565b34801561027d57600080fd5b5061013d610533565b34801561029257600080fd5b506102b0600480360360208110156102a957600080fd5b503561058b565b6040805192835260208301919091528051918290030190f35b3480156102d557600080fd5b506101876105a4565b3480156102ea57600080fd5b506102486105b3565b3480156102ff57600080fd5b5061013d6004803603602081101561031657600080fd5b50356001600160a01b03166105c3565b34801561033257600080fd5b5061013d6105e0565b600080825160208401856127105a03f43d604051816000823e82801561035f578282f35b8282fd5b61036b610513565b61037457600080fd5b6001600160a01b0381166103c7576040805162461bcd60e51b8152602060048201526015602482015274494e56414c49445f50524f58595f4144445245535360581b604482015290519081900360640190fd5b6103d08161063e565b61040b5760405162461bcd60e51b81526004018080602001828103825260258152602001806106d06025913960400191505060405180910390fd5b6001546040516001600160a01b03918216918316907fd32d24edea94f55e932d9a008afc425a8561462d1b1f57bc6e508e9a6b9509e190600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b6007546001600160a01b031681565b600290565b6002546001600160a01b031681565b6001546001600160a01b031690565b6104a2610513565b6104ab57600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6003546001600160a01b031681565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b6004546001600160a01b031681565b6002546001600160a01b0316331461057c5760405162461bcd60e51b81526004018080602001828103825260268152602001806106f56026913960400191505060405180910390fd5b6002805460ff60a01b19169055565b6006602052600090815260409020805460019091015482565b6005546001600160a01b031681565b600254600160a01b900460ff1681565b6105cb610513565b6105d457600080fd5b6105dd81610661565b50565b6002546001600160a01b031633146106295760405162461bcd60e51b81526004018080602001828103825260268152602001806106f56026913960400191505060405180910390fd5b6002805460ff60a01b1916600160a01b179055565b60006001600160a01b0382166106565750600061065c565b50803b15155b919050565b6001600160a01b03811661067457600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe44455354494e4154494f4e5f414444524553535f49535f4e4f545f415f434f4e54524143544f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820cfdfe19c0808d3c213e17d384512f5a4336096d27f06313b4e229caf5f50c22f64736f6c634300050b0032",
+  "sourceMap": "298:332:47:-;;;365:263;8:9:-1;5:2;;;30:1;27;20:12;5:2;365:263:47;;;;;;;;;;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;-1:-1;365:263:47;;;;;;;;;;;;;;;;515:6:83;:19;;-1:-1:-1;;;;;;515:19:83;524:10;515:19;;;;549:40;;365:263:47;;;;;;;;;;;;-1:-1:-1;;;;;582:6:83;;549:40;;515:6;;549:40;355:30:31;376:8;-1:-1:-1;;;;;355:20:31;:30;:::i;:::-;-1:-1:-1;185:10:16;:37;;-1:-1:-1;;;;;;185:37:16;;;-1:-1:-1;;;;;185:37:16;;;;;;;548:8:47;:30;;;;;;;;;;;;;;588:9;:33;;;;;;;;;;;;;;-1:-1:-1;298:332:47;;-1:-1:-1;;298:332:47;735:343:31;863:9:83;-1:-1:-1;;;;;863:7:83;:9;:::i;:::-;855:18;;;;;;-1:-1:-1;;;;;821:27:31;;813:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;905:23;916:11;-1:-1:-1;;;;;905:10:31;:23;:::i;:::-;884:107;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1032:7;;1006:34;;-1:-1:-1;;;;;1032:7:31;;;;1006:34;;;;;1032:7;;1006:34;1050:7;:21;;-1:-1:-1;;;;;;1050:21:31;-1:-1:-1;;;;;1050:21:31;;;;;;;;;;735:343::o;979:90:83:-;1019:4;1056:6;-1:-1:-1;;;;;1056:6:83;1042:10;:20;;979:90::o;1084:264:31:-;1144:4;-1:-1:-1;;;;;1164:21:31;;1160:64;;-1:-1:-1;1208:5:31;1201:12;;1160:64;-1:-1:-1;1287:20:31;;1333:8;;1084:264;;;;:::o;298:332:47:-;;;;;;;",
+  "deployedSourceMap": "298:332:47:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;609:7:31;;596:31;;;;618:8;596:31;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;609:7:31;;-1:-1:-1;;618:8:31;;596:31;;-1:-1:-1;618:8:31;;-1:-1:-1;596:31:31;1:33:-1;99:1;81:16;;74:27;;;;-1:-1;596:12:31;;-1:-1:-1;;;596:31:31:i;:::-;298:332:47;735:343:31;;8:9:-1;5:2;;;30:1;27;20:12;5:2;735:343:31;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;735:343:31;-1:-1:-1;;;;;735:343:31;;:::i;826:25:48:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;826:25:48;;;:::i;:::-;;;;-1:-1:-1;;;;;826:25:48;;;;;;;;;;;;;;157:126:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;157:126:28;;;:::i;:::-;;;;;;;;;;;;;;;;99:29:16;;8:9:-1;5:2;;;30:1;27;20:12;5:2;99:29:16;;;:::i;640:89:31:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;640:89:31;;;:::i;1423:137:83:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1423:137:83;;;:::i;672:24:48:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;672:24:48;;;:::i;659:77:83:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;659:77:83;;;:::i;979:90::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;979:90:83;;;:::i;:::-;;;;;;;;;;;;;;;;;;702:26:48;;8:9:-1;5:2;;;30:1;27;20:12;5:2;702:26:48;;;:::i;385:73:34:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;385:73:34;;;:::i;771:48:48:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;771:48:48;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;771:48:48;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;734:30;;8:9:-1;5:2;;;30:1;27;20:12;5:2;734:30:48;;;:::i;121:18:34:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;121:18:34;;;:::i;1731:107:83:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1731:107:83;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1731:107:83;-1:-1:-1;;;;;1731:107:83;;:::i;309:70:34:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;309:70:34;;;:::i;353:866:28:-;709:1;690;662:9;656:16;633:4;622:9;618:20;596:4;572:5;567:3;563:15;533:191;749:14;794:4;788:11;835:4;832:1;827:3;812:28;1034:6;1057:64;;;;1180:4;1175:3;1168:17;1057:64;1098:4;1093:3;1086:17;735:343:31;863:9:83;:7;:9::i;:::-;855:18;;;;;;-1:-1:-1;;;;;821:27:31;;813:61;;;;;-1:-1:-1;;;813:61:31;;;;;;;;;;;;-1:-1:-1;;;813:61:31;;;;;;;;;;;;;;;905:23;916:11;905:10;:23::i;:::-;884:107;;;;-1:-1:-1;;;884:107:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1032:7;;1006:34;;-1:-1:-1;;;;;1032:7:31;;;;1006:34;;;;;1032:7;;1006:34;1050:7;:21;;-1:-1:-1;;;;;;1050:21:31;-1:-1:-1;;;;;1050:21:31;;;;;;;;;;735:343::o;826:25:48:-;;;-1:-1:-1;;;;;826:25:48;;:::o;157:126:28:-;275:1;;157:126::o;99:29:16:-;;;-1:-1:-1;;;;;99:29:16;;:::o;640:89:31:-;715:7;;-1:-1:-1;;;;;715:7:31;640:89;:::o;1423:137:83:-;863:9;:7;:9::i;:::-;855:18;;;;;;1521:1;1505:6;;1484:40;;-1:-1:-1;;;;;1505:6:83;;;;1484:40;;1521:1;;1484:40;1551:1;1534:19;;-1:-1:-1;;;;;;1534:19:83;;;1423:137::o;672:24:48:-;;;-1:-1:-1;;;;;672:24:48;;:::o;659:77:83:-;697:7;723:6;-1:-1:-1;;;;;723:6:83;659:77;:::o;979:90::-;1019:4;1056:6;-1:-1:-1;;;;;1056:6:83;1042:10;:20;;979:90::o;702:26:48:-;;;-1:-1:-1;;;;;702:26:48;;:::o;385:73:34:-;314:10:16;;-1:-1:-1;;;;;314:10:16;292;:33;271:118;;;;-1:-1:-1;;;271:118:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;437:6:34;:14;;-1:-1:-1;;;;437:14:34;;;385:73::o;771:48:48:-;;;;;;;;;;;;;;;;;;;:::o;734:30::-;;;-1:-1:-1;;;;;734:30:48;;:::o;121:18:34:-;;;-1:-1:-1;;;121:18:34;;;;;:::o;1731:107:83:-;863:9;:7;:9::i;:::-;855:18;;;;;;1803:28;1822:8;1803:18;:28::i;:::-;1731:107;:::o;309:70:34:-;314:10:16;;-1:-1:-1;;;;;314:10:16;292;:33;271:118;;;;-1:-1:-1;;;271:118:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;359:6:34;:13;;-1:-1:-1;;;;359:13:34;-1:-1:-1;;;359:13:34;;;309:70::o;1084:264:31:-;1144:4;-1:-1:-1;;;;;1164:21:31;;1160:64;;-1:-1:-1;1208:5:31;1201:12;;1160:64;-1:-1:-1;1287:20:31;;1333:8;;1084:264;;;;:::o;1982:183:83:-;-1:-1:-1;;;;;2055:22:83;;2047:31;;;;;;2114:6;;;2093:38;;-1:-1:-1;;;;;2093:38:83;;;;2114:6;;;2093:38;;;2141:6;:17;;-1:-1:-1;;;;;;2141:17:83;-1:-1:-1;;;;;2141:17:83;;;;;;;;;;1982:183::o",
+  "source": "pragma solidity ^0.5.2;\n\nimport {DepositManagerStorage} from \"./DepositManagerStorage.sol\";\nimport {Proxy} from \"../../common/misc/Proxy.sol\";\nimport {Registry} from \"../../common/Registry.sol\";\nimport {RootChain} from \"../RootChain.sol\";\nimport {Lockable} from \"../../common/mixin/Lockable.sol\";\n\ncontract DepositManagerProxy is Proxy, DepositManagerStorage {\n    constructor(\n        address _proxyTo,\n        address _registry,\n        address _rootChain,\n        address _governance\n    ) public Proxy(_proxyTo) Lockable(_governance) {\n        registry = Registry(_registry);\n        rootChain = RootChain(_rootChain);\n    }\n}\n",
+  "sourcePath": "/Users/arth/Documents/Projects/contracts/contracts/root/depositManager/DepositManagerProxy.sol",
+  "ast": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/depositManager/DepositManagerProxy.sol",
+    "exportedSymbols": {
+      "DepositManagerProxy": [
+        6555
+      ]
+    },
+    "id": 6556,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6510,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:47"
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/depositManager/DepositManagerStorage.sol",
+        "file": "./DepositManagerStorage.sol",
+        "id": 6512,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 6603,
+        "src": "25:66:47",
+        "symbolAliases": [
+          {
+            "foreign": 6511,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/misc/Proxy.sol",
+        "file": "../../common/misc/Proxy.sol",
+        "id": 6514,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 4607,
+        "src": "92:50:47",
+        "symbolAliases": [
+          {
+            "foreign": 6513,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol",
+        "file": "../../common/Registry.sol",
+        "id": 6516,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 2555,
+        "src": "143:51:47",
+        "symbolAliases": [
+          {
+            "foreign": 6515,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/RootChain.sol",
+        "file": "../RootChain.sol",
+        "id": 6518,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 5870,
+        "src": "195:43:47",
+        "symbolAliases": [
+          {
+            "foreign": 6517,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/mixin/Lockable.sol",
+        "file": "../../common/mixin/Lockable.sol",
+        "id": 6520,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 4673,
+        "src": "239:57:47",
+        "symbolAliases": [
+          {
+            "foreign": 6519,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6521,
+              "name": "Proxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4606,
+              "src": "330:5:47",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Proxy_$4606",
+                "typeString": "contract Proxy"
+              }
+            },
+            "id": 6522,
+            "nodeType": "InheritanceSpecifier",
+            "src": "330:5:47"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6523,
+              "name": "DepositManagerStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6602,
+              "src": "337:21:47",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DepositManagerStorage_$6602",
+                "typeString": "contract DepositManagerStorage"
+              }
+            },
+            "id": 6524,
+            "nodeType": "InheritanceSpecifier",
+            "src": "337:21:47"
+          }
+        ],
+        "contractDependencies": [
+          4327,
+          2587,
+          4497,
+          4606,
+          4615,
+          4672,
+          6583,
+          6602,
+          19346
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6555,
+        "linearizedBaseContracts": [
+          6555,
+          6602,
+          6583,
+          4672,
+          2587,
+          4606,
+          4327,
+          4497,
+          4615,
+          19346
+        ],
+        "name": "DepositManagerProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6553,
+              "nodeType": "Block",
+              "src": "538:90:47",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6545,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6541,
+                      "name": "registry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6591,
+                      "src": "548:8:47",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Registry_$2554",
+                        "typeString": "contract Registry"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 6543,
+                          "name": "_registry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6528,
+                          "src": "568:9:47",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 6542,
+                        "name": "Registry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2554,
+                        "src": "559:8:47",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Registry_$2554_$",
+                          "typeString": "type(contract Registry)"
+                        }
+                      },
+                      "id": 6544,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "559:19:47",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Registry_$2554",
+                        "typeString": "contract Registry"
+                      }
+                    },
+                    "src": "548:30:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Registry_$2554",
+                      "typeString": "contract Registry"
+                    }
+                  },
+                  "id": 6546,
+                  "nodeType": "ExpressionStatement",
+                  "src": "548:30:47"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6551,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6547,
+                      "name": "rootChain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6593,
+                      "src": "588:9:47",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_RootChain_$5869",
+                        "typeString": "contract RootChain"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 6549,
+                          "name": "_rootChain",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6530,
+                          "src": "610:10:47",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 6548,
+                        "name": "RootChain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5869,
+                        "src": "600:9:47",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_RootChain_$5869_$",
+                          "typeString": "type(contract RootChain)"
+                        }
+                      },
+                      "id": 6550,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "600:21:47",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_RootChain_$5869",
+                        "typeString": "contract RootChain"
+                      }
+                    },
+                    "src": "588:33:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_RootChain_$5869",
+                      "typeString": "contract RootChain"
+                    }
+                  },
+                  "id": 6552,
+                  "nodeType": "ExpressionStatement",
+                  "src": "588:33:47"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6554,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 6535,
+                    "name": "_proxyTo",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6526,
+                    "src": "506:8:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 6536,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6534,
+                  "name": "Proxy",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4606,
+                  "src": "500:5:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Proxy_$4606_$",
+                    "typeString": "type(contract Proxy)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "500:15:47"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 6538,
+                    "name": "_governance",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6532,
+                    "src": "525:11:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 6539,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6537,
+                  "name": "Lockable",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4672,
+                  "src": "516:8:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Lockable_$4672_$",
+                    "typeString": "type(contract Lockable)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "516:21:47"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6533,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6526,
+                  "name": "_proxyTo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6554,
+                  "src": "386:16:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6525,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "386:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6528,
+                  "name": "_registry",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6554,
+                  "src": "412:17:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6527,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "412:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6530,
+                  "name": "_rootChain",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6554,
+                  "src": "439:18:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6529,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "439:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6532,
+                  "name": "_governance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6554,
+                  "src": "467:19:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6531,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "467:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "376:116:47"
+            },
+            "returnParameters": {
+              "id": 6540,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "538:0:47"
+            },
+            "scope": 6555,
+            "src": "365:263:47",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6556,
+        "src": "298:332:47"
+      }
+    ],
+    "src": "0:631:47"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/depositManager/DepositManagerProxy.sol",
+    "exportedSymbols": {
+      "DepositManagerProxy": [
+        6555
+      ]
+    },
+    "id": 6556,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6510,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:47"
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/depositManager/DepositManagerStorage.sol",
+        "file": "./DepositManagerStorage.sol",
+        "id": 6512,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 6603,
+        "src": "25:66:47",
+        "symbolAliases": [
+          {
+            "foreign": 6511,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/misc/Proxy.sol",
+        "file": "../../common/misc/Proxy.sol",
+        "id": 6514,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 4607,
+        "src": "92:50:47",
+        "symbolAliases": [
+          {
+            "foreign": 6513,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol",
+        "file": "../../common/Registry.sol",
+        "id": 6516,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 2555,
+        "src": "143:51:47",
+        "symbolAliases": [
+          {
+            "foreign": 6515,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/root/RootChain.sol",
+        "file": "../RootChain.sol",
+        "id": 6518,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 5870,
+        "src": "195:43:47",
+        "symbolAliases": [
+          {
+            "foreign": 6517,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/mixin/Lockable.sol",
+        "file": "../../common/mixin/Lockable.sol",
+        "id": 6520,
+        "nodeType": "ImportDirective",
+        "scope": 6556,
+        "sourceUnit": 4673,
+        "src": "239:57:47",
+        "symbolAliases": [
+          {
+            "foreign": 6519,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6521,
+              "name": "Proxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4606,
+              "src": "330:5:47",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Proxy_$4606",
+                "typeString": "contract Proxy"
+              }
+            },
+            "id": 6522,
+            "nodeType": "InheritanceSpecifier",
+            "src": "330:5:47"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6523,
+              "name": "DepositManagerStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6602,
+              "src": "337:21:47",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DepositManagerStorage_$6602",
+                "typeString": "contract DepositManagerStorage"
+              }
+            },
+            "id": 6524,
+            "nodeType": "InheritanceSpecifier",
+            "src": "337:21:47"
+          }
+        ],
+        "contractDependencies": [
+          4327,
+          2587,
+          4497,
+          4606,
+          4615,
+          4672,
+          6583,
+          6602,
+          19346
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6555,
+        "linearizedBaseContracts": [
+          6555,
+          6602,
+          6583,
+          4672,
+          2587,
+          4606,
+          4327,
+          4497,
+          4615,
+          19346
+        ],
+        "name": "DepositManagerProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6553,
+              "nodeType": "Block",
+              "src": "538:90:47",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6545,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6541,
+                      "name": "registry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6591,
+                      "src": "548:8:47",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Registry_$2554",
+                        "typeString": "contract Registry"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 6543,
+                          "name": "_registry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6528,
+                          "src": "568:9:47",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 6542,
+                        "name": "Registry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2554,
+                        "src": "559:8:47",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Registry_$2554_$",
+                          "typeString": "type(contract Registry)"
+                        }
+                      },
+                      "id": 6544,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "559:19:47",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Registry_$2554",
+                        "typeString": "contract Registry"
+                      }
+                    },
+                    "src": "548:30:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Registry_$2554",
+                      "typeString": "contract Registry"
+                    }
+                  },
+                  "id": 6546,
+                  "nodeType": "ExpressionStatement",
+                  "src": "548:30:47"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6551,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6547,
+                      "name": "rootChain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6593,
+                      "src": "588:9:47",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_RootChain_$5869",
+                        "typeString": "contract RootChain"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 6549,
+                          "name": "_rootChain",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6530,
+                          "src": "610:10:47",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 6548,
+                        "name": "RootChain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5869,
+                        "src": "600:9:47",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_RootChain_$5869_$",
+                          "typeString": "type(contract RootChain)"
+                        }
+                      },
+                      "id": 6550,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "600:21:47",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_RootChain_$5869",
+                        "typeString": "contract RootChain"
+                      }
+                    },
+                    "src": "588:33:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_RootChain_$5869",
+                      "typeString": "contract RootChain"
+                    }
+                  },
+                  "id": 6552,
+                  "nodeType": "ExpressionStatement",
+                  "src": "588:33:47"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6554,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 6535,
+                    "name": "_proxyTo",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6526,
+                    "src": "506:8:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 6536,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6534,
+                  "name": "Proxy",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4606,
+                  "src": "500:5:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Proxy_$4606_$",
+                    "typeString": "type(contract Proxy)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "500:15:47"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 6538,
+                    "name": "_governance",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6532,
+                    "src": "525:11:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 6539,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6537,
+                  "name": "Lockable",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4672,
+                  "src": "516:8:47",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Lockable_$4672_$",
+                    "typeString": "type(contract Lockable)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "516:21:47"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6533,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6526,
+                  "name": "_proxyTo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6554,
+                  "src": "386:16:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6525,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "386:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6528,
+                  "name": "_registry",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6554,
+                  "src": "412:17:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6527,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "412:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6530,
+                  "name": "_rootChain",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6554,
+                  "src": "439:18:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6529,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "439:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6532,
+                  "name": "_governance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6554,
+                  "src": "467:19:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6531,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "467:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "376:116:47"
+            },
+            "returnParameters": {
+              "id": 6540,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "538:0:47"
+            },
+            "scope": 6555,
+            "src": "365:263:47",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6556,
+        "src": "298:332:47"
+      }
+    ],
+    "src": "0:631:47"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2020-04-06T09:29:52.756Z",
+  "devdoc": {
+    "methods": {
+      "isOwner()": {
+        "return": "true if `msg.sender` is the owner of the contract."
+      },
+      "owner()": {
+        "return": "the address of the owner."
+      },
+      "renounceOwnership()": {
+        "details": "Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore."
+      },
+      "transferOwnership(address)": {
+        "details": "Allows the current owner to transfer control of the contract to a newOwner.",
+        "params": {
+          "newOwner": "The address to transfer ownership to."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "renounceOwnership()": {
+        "notice": "Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      }
+    }
+  }
+}
