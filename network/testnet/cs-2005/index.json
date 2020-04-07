@@ -41,7 +41,7 @@
   "Matic": {
     "NetworkName": "CS 2005",
     "ChainId": 2005,
-    "RPC": "http://107.20.111.135:8545/",
+    "RPC": "https://cs-bor.matic.today/",
     "Contracts": {
       "ChildChain": "",
       "Tokens": {
