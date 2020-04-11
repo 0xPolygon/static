@@ -1,0 +1,57 @@
+{
+  "Main": {
+    "NetworkName": "Goerli testnet",
+    "ChainId": 5,
+    "RPC": "https://goerli.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
+    "WatcherAPI": "https://stage1-watcher.api.matic.network/api/v1",
+    "Explorer": "https://goerli.etherscan.io",
+    "Contracts": {
+      "BytesLib": "0x0B260FE52319bA7C2EC6d2789Dfe232cD9FF1221",
+      "Common": "0xf7dAd62aa41414386e3cD726E29A56F20498Ae25",
+      "ECVerify": "0xe780e332648B23B286D9CD8FCD9DA2d3db374EcD",
+      "Merkle": "0xF370Cda637781138D117021F8741131e0CB2a547",
+      "MerklePatriciaProof": "0x8641D72146d42B104d4A9e21C24Cd4E9074fD97B",
+      "PriorityQueue": "0x954FB499bc37D0Aaca4158008bB32a3D80D7b759",
+      "RLPEncode": "0x3F3ae2375fdcD448452d3371229254Ac7bbFe327",
+      "RLPReader": "0x3C98a16ecF2eB815F4eE0fa93874a51434d85D67",
+      "SafeMath": "0xFc82651a53C862f2C1a780061265D7611734a5b9",
+      "Governance": "0xF3575642771f7C481551F47cCc76e60F5E980fE5",
+      "GovernanceProxy": "0x75a1BF9cd13FD53C2DD106224b5b53498894EA96",
+      "Registry": "0x8d1075Ad193842D52c7d2F3C242d07de09685836",
+      "RootChain": "0x14F46a768F7A012120B86B4E671ec6cc4235d197",
+      "RootChainProxy": "0x10eDF56FDd2122FBD2E97557D90f56984774f80a",
+      "ValidatorShareFactory": "0x00be4f5B706D717b3025Db0Fa2ee5Bf0c3c4c180",
+      "StakingInfo": "0xdAb9330e3D769F8c1D7Cc7B9537c7cf3B974FA1f",
+      "StakingNFT": "0xA75275a818AC1356b59DFB36fd579cbf89142560",
+      "StakeManager": "0x8F2819D6cbe317cB60b012F33F29A539B772A51B",
+      "StakeManagerProxy": "0x3CCa6E6B5c974B931DCf4217C70a9845c4Ef9D3C",
+      "SlashingManager": "0x25e97c5F62310f3D522Da78a660F9Ada25a99B8B",
+      "StateSender": "0x89f6e520fa45ad26b88aa3FCb34aC280865f5FDD",
+      "DepositManager": "0x35D047387C4e2276f786CaD0b4d8deb746fcFCDf",
+      "DepositManagerProxy": "0xd063afB3B57135c2B5630d479B2370Ceb1579Dcc",
+      "WithdrawManager": "0xd4C2f2Bc373DC3B6DBB254F05d30177dECCab93b",
+      "ExitNFT": "0x11E9647f7056f0FD5F98976172c2FeF493Cb6607",
+      "WithdrawManagerProxy": "0x6E478fb6d91EDfd9f4ACDc976253cFf180924053",
+      "Tokens": {
+        "TestToken": "0x6c568a7F87886491CDd9CC43858dA3F9B47199E4",
+        "MaticWeth": "0x64F125792041A4F842b2d9cd12A53E6F0621E6E3"
+      }
+    }
+  },
+  "Matic": {
+    "NetworkName": "CS 2006",
+    "ChainId": 2006,
+    "RPC": "https://cs-bor.matic.today/",
+    "Contracts": {
+      "ChildChain": "",
+      "Tokens": {
+        "MaticWeth": "",
+        "TestToken": ""
+      }
+    }
+  },
+  "Heimdall": {
+    "ChainId": "heimdall-cs2006",
+    "API": "https://cs2002-heimdall.api.matic.network"
+  }
+}
