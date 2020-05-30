@@ -45,6 +45,7 @@
   "Matic": {
     "NetworkName": "Matic Network",
     "ChainId": 137,
+    "RPC": "http://localhost:8545/",
     "Contracts": {
       "ChildChain": "0xD9c7C4ED4B66858301D0cb28Cc88bf655Fe34861",
       "Tokens": {
