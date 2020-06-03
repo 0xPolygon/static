@@ -61,6 +61,6 @@
   },
   "Heimdall": {
     "ChainId": "heimdall-137",
-    "API": "https://heimdall-api.matic.network"
+    "API": "https://heimdall.api.matic.network"
   }
 }
