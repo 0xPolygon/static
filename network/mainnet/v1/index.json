@@ -3,8 +3,8 @@
     "NetworkName": "Ethereum",
     "ChainId": 1,
     "RPC": "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
-    "WatcherAPI": "https://staking-api.matic.network/",
-    "StakingAPI": "https://staking-api.matic.network/",
+    "WatcherAPI": "https://staking-api.matic.network/api/v1",
+    "StakingAPI": "https://staking-api.matic.network/api/v1",
     "Explorer": "https://etherscan.io",
     "Contracts": {
       "BytesLib": "0x1d21fACFC8CaD068eF0cbc87FdaCdFb20D7e2417",
