@@ -1,0 +1,64 @@
+{
+  "Main": {
+    "NetworkName": "Ethereum",
+    "ChainId": 5,
+    "RPC": "https://goerli.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
+    "Explorer": "https://goerli.etherscan.io",
+    "Contracts": {
+      "BytesLib": "0xde5807d201788dB32C38a6CE0F11d31b1aeB822a",
+      "Common": "0x84Dc17F28658Bc74125C7E82299992429ED34c12",
+      "ECVerify": "0xccd1d8d16F462f9d281024CBD3eF52BADB10131C",
+      "Merkle": "0xCD87Be2Df3de01EA23666c97104613ec252300E8",
+      "MerklePatriciaProof": "0x3a0Db8fa2805DEcd49cCAa839DaC15455498EDE2",
+      "PriorityQueue": "0xD26361204b8e4a4bb16668bfE7A1b9106AD17140",
+      "RLPEncode": "0xDE0D18799a20f29d9618f8DDbf4c2b029FAdc491",
+      "RLPReader": "0xA5e463c187E53da5b193E2beBca702e9fEeA3738",
+      "SafeMath": "0x1bEb355BE0577E61870C4c57DAaa6e2129dd0604",
+      "Governance": "0x03Ac67D03A06571A059F20425FFD1BEa300d98C2",
+      "GovernanceProxy": "0xAcdEADEE4c054A86F5b1e8705126b30Ec999899B",
+      "Registry": "0xeE11713Fe713b2BfF2942452517483654078154D",
+      "RootChain": "0xCe29AEdCdBeef0b05066316013253beACa7A6268",
+      "RootChainProxy": "0x2890bA17EfE978480615e330ecB65333b880928e",
+      "ValidatorShareFactory": "0xCf7725ACCE2B0a61CD8F908B96E6e853d9E56cBE",
+      "StakingInfo": "0x318EeD65F064904Bc6E0e3842940c5972BC8E38f",
+      "StakingNFT": "0x940690A7a2F5e09250a806589C1C874707cf0895",
+      "StakeManager": "0xbc4E8bb919b1Faed1E4519EcfA71b3c98740d89B",
+      "StakeManagerProxy": "0x4864d89DCE4e24b2eDF64735E014a7E4154bfA7A",
+      "SlashingManager": "0x93D8f8A1A88498b258ceb69dD82311962374269C",
+      "ValidatorShare": "0xcF6e5b6D5cF2eFB4EddC13D956b531dDEDc96123",
+      "StateSender": "0xEAa852323826C71cd7920C3b4c007184234c3945",
+      "DepositManager": "0x20339c5Ea91D680E681B9374Fc0a558D5b96a026",
+      "DepositManagerProxy": "0x7850ec290A2e2F40B82Ed962eaf30591bb5f5C96",
+      "WithdrawManager": "0x45672147647889c0f409181d8685F3dCdF723449",
+      "ExitNFT": "0xE2Ab047326B38e4DDb6791551e8d593D30E02724",
+      "WithdrawManagerProxy": "0x2923C8dD6Cdf6b2507ef91de74F1d5E0F11Eac53",
+      "ERC20Predicate": "0x5BC221CCB7d11961d562C1a23D29d0ed85a5c800",
+      "ERC721Predicate": "0xEa363A512F95C0D602bfa10139255085AB2d8543",
+      "Tokens": {
+        "MaticToken": "0x499d11E0b6eAC7c0593d8Fb292DCBbF815Fb29Ae",
+        "TestToken": "0x3f152B63Ec5CA5831061B2DccFb29a874C317502",
+        "RootERC721": "0xfA08B72137eF907dEB3F202a60EfBc610D2f224b",
+        "MaticWeth": "0x60D4dB9b534EF9260a88b0BED6c486fe13E604Fc"
+      }
+    }
+  },
+  "Matic": {
+    "NetworkName": "Matic Testnet Mumbai",
+    "ChainId": 80001,
+    "RPC": "https://rpc-mumbai.matic.today",
+    "Explorer": "https://testnetv4-explorer.matic.today",
+    "Contracts": {
+      "ChildChain": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
+      "Tokens": {
+        "MaticWeth": "0x4DfAe612aaCB5b448C12A591cD0879bFa2e51d62",
+        "MaticToken": "0x0000000000000000000000000000000000001010",
+        "TestToken": "0x2d7882beDcbfDDce29Ba99965dd3cdF7fcB10A1e",
+        "RootERC721": "0x33FC58F12A56280503b04AC7911D1EceEBcE179c"
+      }
+    }
+  },
+  "Heimdall": {
+    "ChainId": "heimdall-80001",
+    "API": "https://heimdall.api.matic.today"
+  }
+}

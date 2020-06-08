@@ -1,0 +1,2838 @@
+{
+  "contractName": "StakeManagerProxy",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newProxyTo",
+          "type": "address"
+        }
+      ],
+      "name": "updateImplementation",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "auctionPeriod",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalRewards",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "WITHDRAWAL_DELAY",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "accountStateRoot",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "checkPointBlockInterval",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "NFTContract",
+      "outputs": [
+        {
+          "internalType": "contract StakingNFT",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proposerBonus",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "validators",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "reward",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "activationEpoch",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deactivationEpoch",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "jailTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "signer",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "contractAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "enum StakeManagerStorage.Status",
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "signerToValidator",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "minDeposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proxyType",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "proxyTypeId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "signerUpdateLimit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "validatorThreshold",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "validatorAuction",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startEpoch",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "delegationEnabled",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "NFTCounter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governance",
+      "outputs": [
+        {
+          "internalType": "contract IGovernance",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "validatorState",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "amount",
+          "type": "int256"
+        },
+        {
+          "internalType": "int256",
+          "name": "stakerCount",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "dynasty",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "currentEpoch",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "replacementCoolDown",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userFeeExit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "registry",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "CHECKPOINT_REWARD",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalStaked",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "rootChain",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalHeimdallFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "unlock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "factory",
+      "outputs": [
+        {
+          "internalType": "contract ValidatorShareFactory",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalRewardsLiquidated",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "locked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "latestSignerUpdateEpoch",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newRootChain",
+          "type": "address"
+        }
+      ],
+      "name": "changeRootChain",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "logger",
+      "outputs": [
+        {
+          "internalType": "contract StakingInfo",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "lock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "minHeimdallFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_proxyTo",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_registry",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_rootchain",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_NFTContract",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_stakingLogger",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_validatorShareFactory",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_governance",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousRootChain",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newRootChain",
+          "type": "address"
+        }
+      ],
+      "name": "RootChainChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_new",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_old",
+          "type": "address"
+        }
+      ],
+      "name": "ProxyUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_prevOwner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerUpdate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newProxyTo\",\"type\":\"address\"}],\"name\":\"updateImplementation\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"auctionPeriod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalRewards\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"WITHDRAWAL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"accountStateRoot\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"checkPointBlockInterval\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"NFTContract\",\"outputs\":[{\"internalType\":\"contract StakingNFT\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"proposerBonus\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"validators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reward\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"activationEpoch\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deactivationEpoch\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"jailTime\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"signer\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"contractAddress\",\"type\":\"address\"},{\"internalType\":\"enum StakeManagerStorage.Status\",\"name\":\"status\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"signerToValidator\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"minDeposit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"proxyType\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"proxyTypeId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"signerUpdateLimit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"validatorThreshold\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"validatorAuction\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"startEpoch\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"delegationEnabled\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"NFTCounter\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"governance\",\"outputs\":[{\"internalType\":\"contract IGovernance\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"validatorState\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"amount\",\"type\":\"int256\"},{\"internalType\":\"int256\",\"name\":\"stakerCount\",\"type\":\"int256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"dynasty\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"currentEpoch\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"replacementCoolDown\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"userFeeExit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"registry\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"CHECKPOINT_REWARD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalStaked\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rootChain\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalHeimdallFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unlock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"factory\",\"outputs\":[{\"internalType\":\"contract ValidatorShareFactory\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalRewardsLiquidated\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"latestSignerUpdateEpoch\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newRootChain\",\"type\":\"address\"}],\"name\":\"changeRootChain\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"logger\",\"outputs\":[{\"internalType\":\"contract StakingInfo\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"lock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"minHeimdallFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_proxyTo\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_registry\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_rootchain\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_NFTContract\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_stakingLogger\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_validatorShareFactory\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_governance\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousRootChain\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newRootChain\",\"type\":\"address\"}],\"name\":\"RootChainChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_new\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_old\",\"type\":\"address\"}],\"name\":\"ProxyUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_prevOwner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"OwnerUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"changeRootChain(address)\":{\"details\":\"Allows the current owner to change root chain address.\",\"params\":{\"newRootChain\":\"The address to new rootchain.\"}},\"isOwner()\":{\"return\":\"true if `msg.sender` is the owner of the contract.\"},\"owner()\":{\"return\":\"the address of the owner.\"},\"renounceOwnership()\":{\"details\":\"Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore.\"},\"transferOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}}}},\"userdoc\":{\"methods\":{\"renounceOwnership()\":{\"notice\":\"Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerProxy.sol\":\"StakeManagerProxy\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol\":{\"keccak256\":\"0x4b1a52c27bc1bfce2e2b6fc39f5aee3e3bc5bc12da46a72c46ae96a54d84b88d\",\"urls\":[\"bzz-raw://3825d6dd42f0e86d1ae5fb511fdaeace7193af7af30cb7f952077611e12a8f84\",\"dweb:/ipfs/QmVLf13m6nvvyMGU5CmGwFERTPXyWKQZUVwatQD5Gmt77k\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/governance/Governable.sol\":{\"keccak256\":\"0x38ecd54850256c7f03fd236d4fd95de3f2e307cb6f3fd843994d588e0f2fbc04\",\"urls\":[\"bzz-raw://5ce3e82b37ad1e5a5475355729bb731434bfc47a1b865c3589f666907b6b0b7b\",\"dweb:/ipfs/QmUMRzD27ab7gEecNwoUdZRMysxik9RduLqyym9nhLvevT\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/governance/IGovernance.sol\":{\"keccak256\":\"0x81b923a9b6ee8ee89a9741b5a74bc1318c5e570e09a66e20e26cb8850d76b367\",\"urls\":[\"bzz-raw://a634cba0419365bbbcb507ba519ea912e96ce0ad1369c736c5059ed3c86441a6\",\"dweb:/ipfs/QmTQSA3KNDo9yiZboXqNDSCSVbUshudqJNLMrXGcnxRJM3\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/lib/BytesLib.sol\":{\"keccak256\":\"0xfab8066886f17875ca203d9df49666528b798a6b6099883a884767862d0b7b55\",\"urls\":[\"bzz-raw://5df28eb907729ccfb33917576652046c4516fdb3b5820e2be76e3fc1cb2e3742\",\"dweb:/ipfs/QmXMzHwoMX57FSXMybH87oq2L2k4TLYd9MVvi89KEac5Nu\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/lib/ECVerify.sol\":{\"keccak256\":\"0xc10958c48f3e89c0f5ae672295584fbf4ad906951cbdb8df81d93d3c0362093f\",\"urls\":[\"bzz-raw://03e89ca872bef29244ebd398206b6ccb7960fbd40c70dedcc73ba9d29fb81e75\",\"dweb:/ipfs/QmYSewryBE8GjEfjcGfsjGTC6aSAvZLaRq6fRzmgP5k1xh\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/DelegateProxy.sol\":{\"keccak256\":\"0x3ff7d171558537af3c2d9c53bdc57ea9cb5db72624326cf93fda6a45ce50e3c1\",\"urls\":[\"bzz-raw://dbf9cbe28573f080c538ef818b39799de3402b63594af811e20847b9efa1e2e9\",\"dweb:/ipfs/QmZBNwxx9fH3gh742F86aK9sDmE9ZSMjfcTSmpMzw6K9D9\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/ERCProxy.sol\":{\"keccak256\":\"0x11f0e51892de956981bccfbd1474fffc529d4d17802a10ff0fa27ad233955847\",\"urls\":[\"bzz-raw://7f3e9de730a5c32b0691785b9b1db6072196f14714c33c723e20d380a5f5fa29\",\"dweb:/ipfs/QmZjZ9j5UWgWW78xjKY3CFckAxMTtQu1tst9F4ci9tq6zP\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/Proxy.sol\":{\"keccak256\":\"0x288c6ad0bc877ed7ba3ac6f8aeeb9f5d60f83707b4425b9bcd0340d76665a91c\",\"urls\":[\"bzz-raw://f84e155021b20c091a37d5180092644c222c1a00280461fe0dbb4c93ba741255\",\"dweb:/ipfs/QmRH5ZtsTTs9VekzSSD1n3NZNvo7vMqKBJuNe3bzykgEh5\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/misc/ProxyStorage.sol\":{\"keccak256\":\"0x0e5e5f5817051530eca15e416300236610a50e096015f51d8bf44e89e3a87995\",\"urls\":[\"bzz-raw://55a953138a02a8091b290ae40f27d18e1e8ffcb886f9461b0e3bfad7dd8e46d7\",\"dweb:/ipfs/QmRw1doqSgJxyPVfaYTWNJu5P83u3JECXPAfEFNJPQjGsP\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/mixin/Lockable.sol\":{\"keccak256\":\"0x818879aa3633b40320f4ecb0b404e02db25990fe59c3063fe757d653f180185d\",\"urls\":[\"bzz-raw://24c40cd51e74e450be138240c39ad05d5148638324f3fcf3507209d8a43eec79\",\"dweb:/ipfs/QmVaFn8L59wm2R95iRyCvqn1CwzVSq2QW2BSqGmhAhC2Ch\"]},\"/Users/arth/Documents/Projects/contracts/contracts/common/mixin/RootChainable.sol\":{\"keccak256\":\"0x3243e600ecb7dbc949d2416421871763c50aebdeaa30c540821fd8080eb4afdf\",\"urls\":[\"bzz-raw://55df6410b2b0d4d6307149f8c7f1a2c9e2c79558c5a83b54f578fd2a3eac51cf\",\"dweb:/ipfs/QmbCPM8JKFeyK4CZUvRfBaYTq7JLYHSPt6HNmy9bh13hNV\"]},\"/Users/arth/Documents/Projects/contracts/contracts/root/withdrawManager/IWithdrawManager.sol\":{\"keccak256\":\"0xcf284a6c5fa2e5f6aa045ae18fe617bab6f4d82dc30dec5682c9d13190529449\",\"urls\":[\"bzz-raw://eac0c653215537db1e97263afeda269485c1daf5671dfa64fa92be205abdf623\",\"dweb:/ipfs/QmaWWvvxSbyAtPjhCMEXM8QACurs7Av8NMNevSuL8wFJaB\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/StakingInfo.sol\":{\"keccak256\":\"0xe1de27c140bab443f2a8ac6935ba06d40c8c968231e01dafb1ac4aa5e173f43b\",\"urls\":[\"bzz-raw://25d1a84ea5ef5639746cb81e88ea39f3699674380cf6b8c4c8bcd07df1e61513\",\"dweb:/ipfs/QmfCYj5FMHCL9ecw1Qgm2ha2qttwwZq4eTkbZZG2VEPhHc\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/IStakeManager.sol\":{\"keccak256\":\"0xabe9dc7c76a237b44d379df9431d67315e3ac89e7ae5a6b26dd1dd1bdbdd8612\",\"urls\":[\"bzz-raw://54ab5478aa98ae590b71d1070fd26a43316742fea1c3896fc95383871c96b4c9\",\"dweb:/ipfs/QmVMheDXRxrKHD5BcXnQ1Td44Jz8zUKxtRVhdtfMsPB43X\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerProxy.sol\":{\"keccak256\":\"0xb835b450a8c4dfdfc2476d34b812dc14d6580754c96a07d20fa904675ee284fe\",\"urls\":[\"bzz-raw://a2abea3c403e833ae4ac52286c82a7f12cd790b9ea74c619dd0d046a38b42dbc\",\"dweb:/ipfs/QmZbC6QdN68QPcdD8abVkEcRfk4yH4bsVw3SP1NhXZNSXY\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerStorage.sol\":{\"keccak256\":\"0x417ef2cd5c68163f4d444415480b55ff23b3f064df0c816a6806572e3b94cc10\",\"urls\":[\"bzz-raw://db7e868c6219f6c6f29baf40f262ef288ec81abf671cd6056ebacbb0c3414f6b\",\"dweb:/ipfs/Qmawp8Xynfyb4xA62EHiY5MZ55h8sDstXXPrUsVsVr9aKo\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakingNFT.sol\":{\"keccak256\":\"0x997da731c97bfba978afcdaa90b243b632482ae19869ba8b25924b41d0fcacf8\",\"urls\":[\"bzz-raw://86865455a0893f004099559e653724992d87b9d50e92030fce93d7a3e186651e\",\"dweb:/ipfs/QmV6mRszPybVTjy2VeSD1Mh4VVmSgXa4mhYw8Ecy7ACcdi\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/ValidatorShareFactory.sol\":{\"keccak256\":\"0x72f644c1a213c9e0fcb03619baadad3e46fdd1e52445f827054c423d7f1e9daf\",\"urls\":[\"bzz-raw://cdbb96e57aa105b5923d5b4c61a0d2aa66f1d4d40d15323dbb522c7324a52a70\",\"dweb:/ipfs/QmYwGvjs1CACoPXhatr45XxARnwpZnPYhwuxGcnimbBd7o\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/ValidatorShareProxy.sol\":{\"keccak256\":\"0x0a3dbbd1d2f736e0dd5291b41d123e4420abdbb08704793d26e517dd71251d4c\",\"urls\":[\"bzz-raw://7bf1f80216bb94a32b360db6677d9e4d15256d9981e8d02b2b5bb1b1f69b8ea8\",\"dweb:/ipfs/QmPh8cx4cHfD1jB9Pdibh4MyNyU7U4MV8GriN1Zz3NZq7M\"]},\"/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/ValidatorShareStorage.sol\":{\"keccak256\":\"0x99ed48814b4a0322304bcf7e84858538b2fecf26270a635f25c0245df87f5336\",\"urls\":[\"bzz-raw://e5d4acb29a3ca8e223cdfb574b9456e30e9b75bd1de6757d7397a2848d6324be\",\"dweb:/ipfs/Qmf4mFxo6GWgfVSm6K2YUkwVQF12w9uAxei9eawMcsi3z3\"]},\"openzeppelin-solidity/contracts/drafts/Counters.sol\":{\"keccak256\":\"0x982e18d2e3df98e3339f70f955a4d1fb78411a29963d0ea34621759eef67e86d\",\"urls\":[\"bzz-raw://b51463c381bc5ad8ad1c2a0b15bfbcab7810a35f0cd33e00a85c67d5526f97e8\",\"dweb:/ipfs/Qmb51F78kH7ifaW9CbkfZhprpkbY7T16gkarbscX6E7h2f\"]},\"openzeppelin-solidity/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0xd86c61f2e7e78c88716b5591bbf2d6cce8fe1a68320484994810d54f82605a7a\",\"urls\":[\"bzz-raw://aa27a9f095b9d061be9fb54082de2d76c89c127ae4e3bbf565fb3a6ddc3991a1\",\"dweb:/ipfs/QmRZaZ6czUGKAHTN3y9LokejfFCSwVPfVz6Vk6YrEuxeN7\"]},\"openzeppelin-solidity/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xc48ee580d20820cc0ef122b2acc9bf8836731dd8b9671cc03d21a12e3ab14976\",\"urls\":[\"bzz-raw://2fa424de1b3f2f31c57af99e87a0ec76e355bbf336f8db8f1238230a897c8bc8\",\"dweb:/ipfs/QmREEQFeAuyWQr27AfcvLG7qXYf6JiwZXxf5AmHT7on7cU\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xc2a200a877c4a9b2475c246c54ffecc69ffde3e11af83319c63c2dc5458bac80\",\"urls\":[\"bzz-raw://d6ee2095166a8fc1dbaff1949d786b91b8ef8ce41a7b5801a81dd2453220e770\",\"dweb:/ipfs/QmYBLFvCr9zKndkP8e7nFoKuZGcQEQtbHdwttC1MqckCgv\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x3dceb7e4aa237a56111c13f77d7efadeceda7271d62bfac94ac79afab7c1f411\",\"urls\":[\"bzz-raw://0bf3cd698ff2010ce8d55081c6e826856329f7f57a3bbfa0657310c814f46eaa\",\"dweb:/ipfs/QmQGwSkRYsFtdvfMPMLRBneEBJmD6QJi5C62o1GRDNMzYE\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x59e7df16169a498cb8837963b2f5461d88e63bd1eb6c7d58b814d76b84ccbe61\",\"urls\":[\"bzz-raw://289216c82b0a5312ed8883e117d5dead4f62837b911df982a3e1a81cbb43aecf\",\"dweb:/ipfs/QmegSf8KXg7rFnEtQnu5XuTq6jYQXtge7UDCSZfhk7CkDq\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x07029cbf047f6559e30862f33be2ee323c763e2fc251bca5de44177d29cf15e2\",\"urls\":[\"bzz-raw://d898f3b89f15102cd113de447538b699de959bebd840149c2cdef9102dbbf73a\",\"dweb:/ipfs/QmTb4v4g9GZgdm2ksA7q2xc4EbyPxX3fsqUWU5Y2StN3RA\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol\":{\"keccak256\":\"0x0c893dbe908c97ea884549fa3eb364d62986708f35a94158cd4fb4470c845408\",\"urls\":[\"bzz-raw://0939139ce989ba9aa8c279e3322d2f374353a13c5b4f0b624a0cf204e0238bf4\",\"dweb:/ipfs/QmWdNaFHDmebpzqM8VNKoaLrG3C9cUKKRwqGgT91zBAy4T\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol\":{\"keccak256\":\"0xe103f90deb39d999b79ad1bfd205b89f30830cb0250046ab89a0108268ec6cdb\",\"urls\":[\"bzz-raw://ba303a9c752140ee24ad3daea295a341cbd03b71734e44da22cb3f45f01b2111\",\"dweb:/ipfs/QmSmFghEif88d2dqcKkbTTRYbb1ASv15cYAbdPq5XxsyxA\"]},\"openzeppelin-solidity/contracts/token/ERC721/ERC721Metadata.sol\":{\"keccak256\":\"0x94b168e6c4f125ea32427f097dce92e52e9c8b66128ee95a0399f14f9cfdea2b\",\"urls\":[\"bzz-raw://8d2417b41cd73a353d2550b4e699d410b7d6ee0808538fdf7d784b213db49ccc\",\"dweb:/ipfs/QmeE9geVkDGHRahTn5HYA9UWopQgMhbknxaWMhn1Hae8nL\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x44fd7c58fc1323f8481f160f2fd4c34b1653d0cc5def45c2381898d32bcc023e\",\"urls\":[\"bzz-raw://6bf189ee544432d2323a6049361cb4695ae980d11c747d4e5afb3b08537b2424\",\"dweb:/ipfs/QmeBG5Jge1QGy6rUVMpaosbqbDdZAC8jefQEnx9unWSEfF\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x80b8851ecb70ec4c3af36d5cab5dabccfcef948c874c2768c837e068b1025481\",\"urls\":[\"bzz-raw://ac2ce1ae84c5bd95a99c856bc63600bcc7c50292b8c06b605e9e3c3e5cf7012b\",\"dweb:/ipfs/QmcjMGiBF29d6BDwaCHVb9g2Ewev7q8A9KTsXFd8A9Z6di\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0x08e4f6bf25a8df438877bb717a76cfba7e2ee8650f5fdf114fa50b8106a2c11d\",\"urls\":[\"bzz-raw://20572915a456192b41112ebc8e6fa4d23020259398e4f2048fff5a7b175cdd67\",\"dweb:/ipfs/QmTcmZRC4JuxZ4LMiiP2q6EZF3fcXatNHvxz51utnCjHAu\"]},\"openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0xeb8a266ef2da0aa60eea704031902ffd28b2d13dd0e8f5b69bcfb8415f2dad85\",\"urls\":[\"bzz-raw://3d69bbdaef9e7beb4919fed4f5aaca68cf3ecbf8f0932959fee720110daffaba\",\"dweb:/ipfs/QmdLwrPjDbhWBzkBMiRFbz3muLr5KQ5HQoiFk8EPkTMwRh\"]},\"openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0xea16b9933153c647242ba50b3e494fb133063d49f1fa81823f35a8c28754142e\",\"urls\":[\"bzz-raw://95b3b4b5c8008b6d8a862a797bf2550e8017cbff25d0e36be86cff48b1a9bbf2\",\"dweb:/ipfs/QmZWK9sD6V3jwSarEyheM8PjHFVcuA11W65FgAZ2fsu9sq\"]}},\"version\":1}",
+  "bytecode": "0x6080604052610dd86009556001600a55610dd8600b556901119931efd9147c0000600c55670de0b6b3a7640000600d55670de0b6b3a7640000600e55610100600f556064601055600b60115560016013556004600b548161005c57fe5b04601655600a601755601a805460ff1916600117905534801561007e57600080fd5b5060405161116638038061116683398181016040526101008110156100a257600080fd5b50805160208201516040808401516060850151608086015160a087015160c088015160e090980151600080546001600160a01b03191633178082559651989997989597949693959294939192839283928c926001600160a01b0392909216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a3610138816001600160e01b036101bb16565b50600280546001600160a01b03199081166001600160a01b03938416179091556005805482169a83169a909a17909955600380548a16988216989098179097555050600480548716948616949094179093556007805486169285169290921790915560068054851691841691909117905560088054909316911617905550610342565b6101cc6001600160e01b0361030e16565b6101d557600080fd5b6001600160a01b03811661024a57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601560248201527f494e56414c49445f50524f58595f414444524553530000000000000000000000604482015290519081900360640190fd5b61025c816001600160e01b0361031f16565b6102b1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001806111416025913960400191505060405180910390fd5b6001546040516001600160a01b03918216918316907fd32d24edea94f55e932d9a008afc425a8561462d1b1f57bc6e508e9a6b9509e190600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b0316331490565b60006001600160a01b0382166103375750600061033d565b50803b15155b919050565b610df0806103516000396000f3fe60806040526004361061025c5760003560e01c8063715018a611610144578063a69df4b5116100b6578063e8afa8e81161007a578063e8afa8e81461075a578063f24ccbfe1461078d578063f2fde38b146107a2578063f83d08ba146107d5578063fba58f34146107ea578063fc0c546a146107ff5761025c565b8063a69df4b5146106dc578063c45a0155146106f1578063cd6b838814610706578063cf3090121461071b578063d7f5549d146107305761025c565b80637d669752116101085780637d6697521461065e578063817b1cd2146106735780638da5cb5b146106885780638f32d59b1461069d578063987ab9db146106b25780639a8a6243146106c75761025c565b8063715018a6146105d757806376671808146105ec57806377939d101461060157806378f84a44146106165780637b103999146106495761025c565b806341b3d185116101dd57806354b8c601116101a157806354b8c601146105175780635508d8e1146105405780635aa6e675146105555780635c2488551461056a5780635c60da1b146105ad5780637060054d146105c25761025c565b806341b3d185146104725780634555d5c9146104875780634e3c83f11461049c5780634fd101d7146104b15780635325e144146104c65761025c565b80632531641111610224578063253164111461034157806331c2273b14610356578063342745861461038757806335aa2e441461039c5780633862da0b1461043f5761025c565b8063025b22bc146102a85780630cccfc58146102db5780630e15561a146103025780630ebb172a1461031757806317c2b9101461032c575b60015460408051602036601f81018290048202830182019093528282526102a6936001600160a01b0316926000918190840183828082843760009201919091525061081492505050565b005b3480156102b457600080fd5b506102a6600480360360208110156102cb57600080fd5b50356001600160a01b031661083c565b3480156102e757600080fd5b506102f0610941565b60408051918252519081900360200190f35b34801561030e57600080fd5b506102f0610947565b34801561032357600080fd5b506102f061094d565b34801561033857600080fd5b506102f0610953565b34801561034d57600080fd5b506102f0610959565b34801561036257600080fd5b5061036b61095f565b604080516001600160a01b039092168252519081900360200190f35b34801561039357600080fd5b506102f061096e565b3480156103a857600080fd5b506103c6600480360360208110156103bf57600080fd5b5035610974565b60405180898152602001888152602001878152602001868152602001858152602001846001600160a01b03166001600160a01b03168152602001836001600160a01b03166001600160a01b0316815260200182600381111561042457fe5b60ff1681526020019850505050505050505060405180910390f35b34801561044b57600080fd5b506102f06004803603602081101561046257600080fd5b50356001600160a01b03166109ca565b34801561047e57600080fd5b506102f06109dc565b34801561049357600080fd5b506102f06109e2565b3480156104a857600080fd5b506102f06109e7565b3480156104bd57600080fd5b506102f06109ed565b3480156104d257600080fd5b506104f0600480360360208110156104e957600080fd5b50356109f3565b6040805193845260208401929092526001600160a01b031682820152519081900360600190f35b34801561052357600080fd5b5061052c610a1d565b604080519115158252519081900360200190f35b34801561054c57600080fd5b506102f0610a26565b34801561056157600080fd5b5061036b610a2c565b34801561057657600080fd5b506105946004803603602081101561058d57600080fd5b5035610a3b565b6040805192835260208301919091528051918290030190f35b3480156105b957600080fd5b5061036b610a54565b3480156105ce57600080fd5b506102f0610a63565b3480156105e357600080fd5b506102a6610a69565b3480156105f857600080fd5b506102f0610ac4565b34801561060d57600080fd5b506102f0610aca565b34801561062257600080fd5b506102f06004803603602081101561063957600080fd5b50356001600160a01b0316610ad0565b34801561065557600080fd5b5061036b610ae2565b34801561066a57600080fd5b506102f0610af1565b34801561067f57600080fd5b506102f0610af7565b34801561069457600080fd5b5061036b610afd565b3480156106a957600080fd5b5061052c610b0c565b3480156106be57600080fd5b5061036b610b1d565b3480156106d357600080fd5b506102f0610b2c565b3480156106e857600080fd5b506102a6610b32565b3480156106fd57600080fd5b5061036b610b8a565b34801561071257600080fd5b506102f0610b99565b34801561072757600080fd5b5061052c610b9f565b34801561073c57600080fd5b506102f06004803603602081101561075357600080fd5b5035610baf565b34801561076657600080fd5b506102a66004803603602081101561077d57600080fd5b50356001600160a01b0316610bc0565b34801561079957600080fd5b5061036b610c40565b3480156107ae57600080fd5b506102a6600480360360208110156107c557600080fd5b50356001600160a01b0316610c4f565b3480156107e157600080fd5b506102a6610c6c565b3480156107f657600080fd5b506102f0610cca565b34801561080b57600080fd5b5061036b610cd0565b600080825160208401856127105a03f43d604051816000823e828015610838578282f35b8282fd5b610844610b0c565b61084d57600080fd5b6001600160a01b0381166108a0576040805162461bcd60e51b8152602060048201526015602482015274494e56414c49445f50524f58595f4144445245535360581b604482015290519081900360640190fd5b6108a981610cdf565b6108e45760405162461bcd60e51b8152600401808060200182810382526025815260200180610d716025913960400191505060405180910390fd5b6001546040516001600160a01b03918216918316907fd32d24edea94f55e932d9a008afc425a8561462d1b1f57bc6e508e9a6b9509e190600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b60165481565b60145481565b60095481565b60185481565b600f5481565b6007546001600160a01b031681565b60175481565b601b602052600090815260409020805460018201546002830154600384015460048501546005860154600690960154949593949293919290916001600160a01b039081169190811690600160a01b900460ff1688565b601c6020526000908152604090205481565b600d5481565b600290565b60105481565b60115481565b601f602052600090815260409020805460018201546002909201549091906001600160a01b031683565b601a5460ff1681565b60135481565b6002546001600160a01b031681565b601d602052600090815260409020805460019091015482565b6001546001600160a01b031690565b600b5481565b610a71610b0c565b610a7a57600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b600a5481565b60195481565b601e6020526000908152604090205481565b6005546001600160a01b031681565b600c5481565b60125481565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b6003546001600160a01b031681565b60215481565b6002546001600160a01b03163314610b7b5760405162461bcd60e51b8152600401808060200182810382526026815260200180610d966026913960400191505060405180910390fd5b6002805460ff60a01b19169055565b6008546001600160a01b031681565b60155481565b600254600160a01b900460ff1681565b602080526000908152604090205481565b610bc8610b0c565b610bd157600080fd5b6001600160a01b038116610be457600080fd5b6003546040516001600160a01b038084169216907f211c9015fc81c0dbd45bd99f0f29fc1c143bfd53442d5ffd722bbbef7a887fe990600090a3600380546001600160a01b0319166001600160a01b0392909216919091179055565b6006546001600160a01b031681565b610c57610b0c565b610c6057600080fd5b610c6981610d02565b50565b6002546001600160a01b03163314610cb55760405162461bcd60e51b8152600401808060200182810382526026815260200180610d966026913960400191505060405180910390fd5b6002805460ff60a01b1916600160a01b179055565b600e5481565b6004546001600160a01b031681565b60006001600160a01b038216610cf757506000610cfd565b50803b15155b919050565b6001600160a01b038116610d1557600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe44455354494e4154494f4e5f414444524553535f49535f4e4f545f415f434f4e54524143544f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820b47c0168eed43b3cd49f883427cc47e24e868747d98d1897e7cc558cdeb3916d64736f6c634300050b003244455354494e4154494f4e5f414444524553535f49535f4e4f545f415f434f4e5452414354",
+  "deployedBytecode": "0x60806040526004361061025c5760003560e01c8063715018a611610144578063a69df4b5116100b6578063e8afa8e81161007a578063e8afa8e81461075a578063f24ccbfe1461078d578063f2fde38b146107a2578063f83d08ba146107d5578063fba58f34146107ea578063fc0c546a146107ff5761025c565b8063a69df4b5146106dc578063c45a0155146106f1578063cd6b838814610706578063cf3090121461071b578063d7f5549d146107305761025c565b80637d669752116101085780637d6697521461065e578063817b1cd2146106735780638da5cb5b146106885780638f32d59b1461069d578063987ab9db146106b25780639a8a6243146106c75761025c565b8063715018a6146105d757806376671808146105ec57806377939d101461060157806378f84a44146106165780637b103999146106495761025c565b806341b3d185116101dd57806354b8c601116101a157806354b8c601146105175780635508d8e1146105405780635aa6e675146105555780635c2488551461056a5780635c60da1b146105ad5780637060054d146105c25761025c565b806341b3d185146104725780634555d5c9146104875780634e3c83f11461049c5780634fd101d7146104b15780635325e144146104c65761025c565b80632531641111610224578063253164111461034157806331c2273b14610356578063342745861461038757806335aa2e441461039c5780633862da0b1461043f5761025c565b8063025b22bc146102a85780630cccfc58146102db5780630e15561a146103025780630ebb172a1461031757806317c2b9101461032c575b60015460408051602036601f81018290048202830182019093528282526102a6936001600160a01b0316926000918190840183828082843760009201919091525061081492505050565b005b3480156102b457600080fd5b506102a6600480360360208110156102cb57600080fd5b50356001600160a01b031661083c565b3480156102e757600080fd5b506102f0610941565b60408051918252519081900360200190f35b34801561030e57600080fd5b506102f0610947565b34801561032357600080fd5b506102f061094d565b34801561033857600080fd5b506102f0610953565b34801561034d57600080fd5b506102f0610959565b34801561036257600080fd5b5061036b61095f565b604080516001600160a01b039092168252519081900360200190f35b34801561039357600080fd5b506102f061096e565b3480156103a857600080fd5b506103c6600480360360208110156103bf57600080fd5b5035610974565b60405180898152602001888152602001878152602001868152602001858152602001846001600160a01b03166001600160a01b03168152602001836001600160a01b03166001600160a01b0316815260200182600381111561042457fe5b60ff1681526020019850505050505050505060405180910390f35b34801561044b57600080fd5b506102f06004803603602081101561046257600080fd5b50356001600160a01b03166109ca565b34801561047e57600080fd5b506102f06109dc565b34801561049357600080fd5b506102f06109e2565b3480156104a857600080fd5b506102f06109e7565b3480156104bd57600080fd5b506102f06109ed565b3480156104d257600080fd5b506104f0600480360360208110156104e957600080fd5b50356109f3565b6040805193845260208401929092526001600160a01b031682820152519081900360600190f35b34801561052357600080fd5b5061052c610a1d565b604080519115158252519081900360200190f35b34801561054c57600080fd5b506102f0610a26565b34801561056157600080fd5b5061036b610a2c565b34801561057657600080fd5b506105946004803603602081101561058d57600080fd5b5035610a3b565b6040805192835260208301919091528051918290030190f35b3480156105b957600080fd5b5061036b610a54565b3480156105ce57600080fd5b506102f0610a63565b3480156105e357600080fd5b506102a6610a69565b3480156105f857600080fd5b506102f0610ac4565b34801561060d57600080fd5b506102f0610aca565b34801561062257600080fd5b506102f06004803603602081101561063957600080fd5b50356001600160a01b0316610ad0565b34801561065557600080fd5b5061036b610ae2565b34801561066a57600080fd5b506102f0610af1565b34801561067f57600080fd5b506102f0610af7565b34801561069457600080fd5b5061036b610afd565b3480156106a957600080fd5b5061052c610b0c565b3480156106be57600080fd5b5061036b610b1d565b3480156106d357600080fd5b506102f0610b2c565b3480156106e857600080fd5b506102a6610b32565b3480156106fd57600080fd5b5061036b610b8a565b34801561071257600080fd5b506102f0610b99565b34801561072757600080fd5b5061052c610b9f565b34801561073c57600080fd5b506102f06004803603602081101561075357600080fd5b5035610baf565b34801561076657600080fd5b506102a66004803603602081101561077d57600080fd5b50356001600160a01b0316610bc0565b34801561079957600080fd5b5061036b610c40565b3480156107ae57600080fd5b506102a6600480360360208110156107c557600080fd5b50356001600160a01b0316610c4f565b3480156107e157600080fd5b506102a6610c6c565b3480156107f657600080fd5b506102f0610cca565b34801561080b57600080fd5b5061036b610cd0565b600080825160208401856127105a03f43d604051816000823e828015610838578282f35b8282fd5b610844610b0c565b61084d57600080fd5b6001600160a01b0381166108a0576040805162461bcd60e51b8152602060048201526015602482015274494e56414c49445f50524f58595f4144445245535360581b604482015290519081900360640190fd5b6108a981610cdf565b6108e45760405162461bcd60e51b8152600401808060200182810382526025815260200180610d716025913960400191505060405180910390fd5b6001546040516001600160a01b03918216918316907fd32d24edea94f55e932d9a008afc425a8561462d1b1f57bc6e508e9a6b9509e190600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b60165481565b60145481565b60095481565b60185481565b600f5481565b6007546001600160a01b031681565b60175481565b601b602052600090815260409020805460018201546002830154600384015460048501546005860154600690960154949593949293919290916001600160a01b039081169190811690600160a01b900460ff1688565b601c6020526000908152604090205481565b600d5481565b600290565b60105481565b60115481565b601f602052600090815260409020805460018201546002909201549091906001600160a01b031683565b601a5460ff1681565b60135481565b6002546001600160a01b031681565b601d602052600090815260409020805460019091015482565b6001546001600160a01b031690565b600b5481565b610a71610b0c565b610a7a57600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b600a5481565b60195481565b601e6020526000908152604090205481565b6005546001600160a01b031681565b600c5481565b60125481565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b6003546001600160a01b031681565b60215481565b6002546001600160a01b03163314610b7b5760405162461bcd60e51b8152600401808060200182810382526026815260200180610d966026913960400191505060405180910390fd5b6002805460ff60a01b19169055565b6008546001600160a01b031681565b60155481565b600254600160a01b900460ff1681565b602080526000908152604090205481565b610bc8610b0c565b610bd157600080fd5b6001600160a01b038116610be457600080fd5b6003546040516001600160a01b038084169216907f211c9015fc81c0dbd45bd99f0f29fc1c143bfd53442d5ffd722bbbef7a887fe990600090a3600380546001600160a01b0319166001600160a01b0392909216919091179055565b6006546001600160a01b031681565b610c57610b0c565b610c6057600080fd5b610c6981610d02565b50565b6002546001600160a01b03163314610cb55760405162461bcd60e51b8152600401808060200182810382526026815260200180610d966026913960400191505060405180910390fd5b6002805460ff60a01b1916600160a01b179055565b600e5481565b6004546001600160a01b031681565b60006001600160a01b038216610cf757506000610cfd565b50803b15155b919050565b6001600160a01b038116610d1557600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe44455354494e4154494f4e5f414444524553535f49535f4e4f545f415f434f4e54524143544f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820b47c0168eed43b3cd49f883427cc47e24e868747d98d1897e7cc558cdeb3916d64736f6c634300050b0032",
+  "sourceMap": "546:624:69:-;;;769:4:70;735:38;;824:1;794:31;;893:4;868:29;;961:15;926:50;;1036:6;1007:36;;1100:6;1067:40;;1172:3;1131:44;;1216:3;1181:38;;1262:2;1226:38;;1330:1;1302:29;;1454:1;1444:7;;:11;;;;;;1413:42;;1512:2;1481:33;;1694:36;;;-1:-1:-1;;1694:36:70;1726:4;1694:36;;;609:559:69;5:2:-1;;;;30:1;27;20:12;5:2;609:559:69;;;;;;;;;;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;-1:-1;609:559:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;515:6:89;:19;;-1:-1:-1;;;;;;515:19:89;524:10;515:19;;;;549:40;;609:559:69;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;582:6:89;;;;;549:40;;515:6;;549:40;356:30:32;377:8;-1:-1:-1;;;;;356:20:32;:30;:::i;:::-;-1:-1:-1;185:10:16;:37;;-1:-1:-1;;;;;;185:37:16;;;-1:-1:-1;;;;;185:37:16;;;;;;;918:8:69;:20;;;;;;;;;;;;;;948:9;:22;;;;;;;;;;;;;;-1:-1:-1;;980:5:69;:22;;;;;;;;;;;;;;1012:11;:38;;;;;;;;;;;;;;1060:6;:36;;;;;;;;;;;;;1106:7;:55;;;;;;;;;;-1:-1:-1;546:624:69;;736:309:32;863:9:89;-1:-1:-1;;;;;863:7:89;:9;:::i;:::-;855:18;;;;;;-1:-1:-1;;;;;822:27:32;;814:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;893:23;904:11;-1:-1:-1;;;;;893:10:32;:23;:::i;:::-;885:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;999:7;;973:34;;-1:-1:-1;;;;;999:7:32;;;;973:34;;;;;999:7;;973:34;1017:7;:21;;-1:-1:-1;;;;;;1017:21:32;-1:-1:-1;;;;;1017:21:32;;;;;;;;;;736:309::o;979:90:89:-;1019:4;1056:6;-1:-1:-1;;;;;1056:6:89;1042:10;:20;;979:90::o;1051:264:32:-;1111:4;-1:-1:-1;;;;;1131:21:32;;1127:64;;-1:-1:-1;1175:5:32;1168:12;;1127:64;-1:-1:-1;1254:20:32;;1300:8;;1051:264;;;;:::o;546:624:69:-;;;;;;;",
+  "deployedSourceMap": "546:624:69:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;610:7:32;;597:31;;;;619:8;597:31;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;610:7:32;;-1:-1:-1;;619:8:32;;597:31;;-1:-1:-1;619:8:32;;-1:-1:-1;597:31:32;1:33:-1;99:1;81:16;;74:27;;;;-1:-1;597:12:32;;-1:-1:-1;;;597:31:32:i;:::-;546:624:69;736:309:32;;8:9:-1;5:2;;;30:1;27;20:12;5:2;736:309:32;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;736:309:32;-1:-1:-1;;;;;736:309:32;;:::i;1413:42:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1413:42:70;;;:::i;:::-;;;;;;;;;;;;;;;;1337:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1337:27:70;;;:::i;735:38::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;735:38:70;;;:::i;1545:31::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1545:31:70;;;:::i;1131:44::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1131:44:70;;;:::i;658:29::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;658:29:70;;;:::i;:::-;;;;-1:-1:-1;;;;;658:29:70;;;;;;;;;;;;;;1481:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1481:33:70;;;:::i;2221:47::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2221:47:70;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2221:47:70;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;2221:47:70;-1:-1:-1;;;;;2221:47:70;;;;;;-1:-1:-1;;;;;2221:47:70;-1:-1:-1;;;;;2221:47:70;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2309:52;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2309:52:70;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2309:52:70;-1:-1:-1;;;;;2309:52:70;;:::i;1007:36::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1007:36:70;;;:::i;157:126:28:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;157:126:28;;;:::i;1181:38:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1181:38:70;;;:::i;1226:::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1226:38:70;;;:::i;2564:51::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2564:51:70;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2564:51:70;;:::i;:::-;;;;;;;;;;;;;;-1:-1:-1;;;;;2564:51:70;;;;;;;;;;;;;;1694:36;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1694:36:70;;;:::i;:::-;;;;;;;;;;;;;;;;;;1302:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1302:29:70;;;:::i;99::16:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;99:29:16;;;:::i;2420:47:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2420:47:70;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2420:47:70;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;641:89:32;;8:9:-1;5:2;;;30:1;27;20:12;5:2;641:89:32;;;:::i;868:29:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;868:29:70;;;:::i;1423:137:89:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1423:137:89;;;:::i;794:31:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;794:31:70;;;:::i;1654:34::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1654:34:70;;;:::i;2473:46::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2473:46:70;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2473:46:70;-1:-1:-1;;;;;2473:46:70;;:::i;598:23::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;598:23:70;;;:::i;926:50::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;926:50:70;;;:::i;1270:26::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1270:26:70;;;:::i;659:77:89:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;659:77:89;;;:::i;979:90::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;979:90:89;;;:::i;177:24:36:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;177:24:36;;;:::i;2733:31:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2733:31:70;;;:::i;385:73:35:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;385:73:35;;;:::i;693:36:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;693:36:70;;;:::i;1370:37::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1370:37:70;;;:::i;121:18:35:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;121:18:35;;;:::i;2668:58:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2668:58:70;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2668:58:70;;:::i;635:206:36:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;635:206:36;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;635:206:36;-1:-1:-1;;;;;635:206:36;;:::i;627:25:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;627:25:70;;;:::i;1731:107:89:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1731:107:89;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1731:107:89;-1:-1:-1;;;;;1731:107:89;;:::i;309:70:35:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;309:70:35;;;:::i;1067:40:70:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1067:40:70;;;:::i;573:19::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;573:19:70;;;:::i;353:866:28:-;709:1;690;662:9;656:16;633:4;622:9;618:20;596:4;572:5;567:3;563:15;533:191;749:14;794:4;788:11;835:4;832:1;827:3;812:28;1034:6;1057:64;;;;1180:4;1175:3;1168:17;1057:64;1098:4;1093:3;1086:17;736:309:32;863:9:89;:7;:9::i;:::-;855:18;;;;;;-1:-1:-1;;;;;822:27:32;;814:61;;;;;-1:-1:-1;;;814:61:32;;;;;;;;;;;;-1:-1:-1;;;814:61:32;;;;;;;;;;;;;;;893:23;904:11;893:10;:23::i;:::-;885:73;;;;-1:-1:-1;;;885:73:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;999:7;;973:34;;-1:-1:-1;;;;;999:7:32;;;;973:34;;;;;999:7;;973:34;1017:7;:21;;-1:-1:-1;;;;;;1017:21:32;-1:-1:-1;;;;;1017:21:32;;;;;;;;;;736:309::o;1413:42:70:-;;;;:::o;1337:27::-;;;;:::o;735:38::-;;;;:::o;1545:31::-;;;;:::o;1131:44::-;;;;:::o;658:29::-;;;-1:-1:-1;;;;;658:29:70;;:::o;1481:33::-;;;;:::o;2221:47::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;2221:47:70;;;;;;;;-1:-1:-1;;;2221:47:70;;;;;:::o;2309:52::-;;;;;;;;;;;;;:::o;1007:36::-;;;;:::o;157:126:28:-;275:1;;157:126::o;1181:38:70:-;;;;:::o;1226:::-;;;;:::o;2564:51::-;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;2564:51:70;;:::o;1694:36::-;;;;;;:::o;1302:29::-;;;;:::o;99::16:-;;;-1:-1:-1;;;;;99:29:16;;:::o;2420:47:70:-;;;;;;;;;;;;;;;;;;;:::o;641:89:32:-;716:7;;-1:-1:-1;;;;;716:7:32;641:89;:::o;868:29:70:-;;;;:::o;1423:137:89:-;863:9;:7;:9::i;:::-;855:18;;;;;;1521:1;1505:6;;1484:40;;-1:-1:-1;;;;;1505:6:89;;;;1484:40;;1521:1;;1484:40;1551:1;1534:19;;-1:-1:-1;;;;;;1534:19:89;;;1423:137::o;794:31:70:-;;;;:::o;1654:34::-;;;;:::o;2473:46::-;;;;;;;;;;;;;:::o;598:23::-;;;-1:-1:-1;;;;;598:23:70;;:::o;926:50::-;;;;:::o;1270:26::-;;;;:::o;659:77:89:-;697:7;723:6;-1:-1:-1;;;;;723:6:89;659:77;:::o;979:90::-;1019:4;1056:6;-1:-1:-1;;;;;1056:6:89;1042:10;:20;;979:90::o;177:24:36:-;;;-1:-1:-1;;;;;177:24:36;;:::o;2733:31:70:-;;;;:::o;385:73:35:-;314:10:16;;-1:-1:-1;;;;;314:10:16;292;:33;271:118;;;;-1:-1:-1;;;271:118:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;437:6:35;:14;;-1:-1:-1;;;;437:14:35;;;385:73::o;693:36:70:-;;;-1:-1:-1;;;;;693:36:70;;:::o;1370:37::-;;;;:::o;121:18:35:-;;;-1:-1:-1;;;121:18:35;;;;;:::o;2668:58:70:-;;;;;;;;;;;;;:::o;635:206:36:-;863:9:89;:7;:9::i;:::-;855:18;;;;;;-1:-1:-1;;;;;717:26:36;;709:35;;;;;;776:9;;759:41;;-1:-1:-1;;;;;759:41:36;;;;776:9;;759:41;;776:9;;759:41;810:9;:24;;-1:-1:-1;;;;;;810:24:36;-1:-1:-1;;;;;810:24:36;;;;;;;;;;635:206::o;627:25:70:-;;;-1:-1:-1;;;;;627:25:70;;:::o;1731:107:89:-;863:9;:7;:9::i;:::-;855:18;;;;;;1803:28;1822:8;1803:18;:28::i;:::-;1731:107;:::o;309:70:35:-;314:10:16;;-1:-1:-1;;;;;314:10:16;292;:33;271:118;;;;-1:-1:-1;;;271:118:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;359:6:35;:13;;-1:-1:-1;;;;359:13:35;-1:-1:-1;;;359:13:35;;;309:70::o;1067:40:70:-;;;;:::o;573:19::-;;;-1:-1:-1;;;;;573:19:70;;:::o;1051:264:32:-;1111:4;-1:-1:-1;;;;;1131:21:32;;1127:64;;-1:-1:-1;1175:5:32;1168:12;;1127:64;-1:-1:-1;1254:20:32;;1300:8;;1051:264;;;;:::o;1982:183:89:-;-1:-1:-1;;;;;2055:22:89;;2047:31;;;;;;2114:6;;;2093:38;;-1:-1:-1;;;;;2093:38:89;;;;2114:6;;;2093:38;;;2141:6;:17;;-1:-1:-1;;;;;;2141:17:89;-1:-1:-1;;;;;2141:17:89;;;;;;;;;;1982:183::o",
+  "source": "pragma solidity ^0.5.2;\n\nimport {IERC20} from \"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\";\n\nimport {IGovernance} from \"../../common/governance/IGovernance.sol\";\nimport {StakeManagerStorage} from \"./StakeManagerStorage.sol\";\nimport {Proxy} from \"../../common/misc/Proxy.sol\";\nimport {Registry} from \"../../common/Registry.sol\";\nimport {Lockable} from \"../../common/mixin/Lockable.sol\";\nimport {StakingInfo} from \"../StakingInfo.sol\";\nimport {StakingNFT} from \"./StakingNFT.sol\";\nimport \"../validatorShare/ValidatorShareFactory.sol\";\n\ncontract StakeManagerProxy is Proxy, StakeManagerStorage {\n    constructor(\n        address _proxyTo,\n        address _registry,\n        address _rootchain,\n        address _token,\n        address _NFTContract,\n        address _stakingLogger,\n        address _validatorShareFactory,\n        address _governance\n    ) public Proxy(_proxyTo) Lockable(_governance) {\n        registry = _registry;\n        rootChain = _rootchain;\n        token = IERC20(_token);\n        NFTContract = StakingNFT(_NFTContract);\n        logger = StakingInfo(_stakingLogger);\n        factory = ValidatorShareFactory(_validatorShareFactory);\n    }\n}\n",
+  "sourcePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerProxy.sol",
+  "ast": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerProxy.sol",
+    "exportedSymbols": {
+      "StakeManagerProxy": [
+        18360
+      ]
+    },
+    "id": 18361,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 18280,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:69"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "id": 18282,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 21436,
+        "src": "25:78:69",
+        "symbolAliases": [
+          {
+            "foreign": 18281,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/governance/IGovernance.sol",
+        "file": "../../common/governance/IGovernance.sol",
+        "id": 18284,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 2650,
+        "src": "105:68:69",
+        "symbolAliases": [
+          {
+            "foreign": 18283,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerStorage.sol",
+        "file": "./StakeManagerStorage.sol",
+        "id": 18286,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 18517,
+        "src": "174:62:69",
+        "symbolAliases": [
+          {
+            "foreign": 18285,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/misc/Proxy.sol",
+        "file": "../../common/misc/Proxy.sol",
+        "id": 18288,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 4664,
+        "src": "237:50:69",
+        "symbolAliases": [
+          {
+            "foreign": 18287,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol",
+        "file": "../../common/Registry.sol",
+        "id": 18290,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 2558,
+        "src": "288:51:69",
+        "symbolAliases": [
+          {
+            "foreign": 18289,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/mixin/Lockable.sol",
+        "file": "../../common/mixin/Lockable.sol",
+        "id": 18292,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 4730,
+        "src": "340:57:69",
+        "symbolAliases": [
+          {
+            "foreign": 18291,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/StakingInfo.sol",
+        "file": "../StakingInfo.sol",
+        "id": 18294,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 14836,
+        "src": "398:47:69",
+        "symbolAliases": [
+          {
+            "foreign": 18293,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakingNFT.sol",
+        "file": "./StakingNFT.sol",
+        "id": 18296,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 18602,
+        "src": "446:44:69",
+        "symbolAliases": [
+          {
+            "foreign": 18295,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/ValidatorShareFactory.sol",
+        "file": "../validatorShare/ValidatorShareFactory.sol",
+        "id": 18297,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 19605,
+        "src": "491:53:69",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 18298,
+              "name": "Proxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4663,
+              "src": "576:5:69",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Proxy_$4663",
+                "typeString": "contract Proxy"
+              }
+            },
+            "id": 18299,
+            "nodeType": "InheritanceSpecifier",
+            "src": "576:5:69"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 18300,
+              "name": "StakeManagerStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18516,
+              "src": "583:19:69",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StakeManagerStorage_$18516",
+                "typeString": "contract StakeManagerStorage"
+              }
+            },
+            "id": 18301,
+            "nodeType": "InheritanceSpecifier",
+            "src": "583:19:69"
+          }
+        ],
+        "contractDependencies": [
+          4347,
+          2590,
+          4554,
+          4663,
+          4672,
+          4729,
+          4780,
+          18516,
+          20897
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 18360,
+        "linearizedBaseContracts": [
+          18360,
+          18516,
+          4780,
+          4729,
+          2590,
+          4663,
+          4347,
+          4554,
+          4672,
+          20897
+        ],
+        "name": "StakeManagerProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 18358,
+              "nodeType": "Block",
+              "src": "908:260:69",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18328,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18326,
+                      "name": "registry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18387,
+                      "src": "918:8:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 18327,
+                      "name": "_registry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18305,
+                      "src": "929:9:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "918:20:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 18329,
+                  "nodeType": "ExpressionStatement",
+                  "src": "918:20:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18332,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18330,
+                      "name": "rootChain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4737,
+                      "src": "948:9:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 18331,
+                      "name": "_rootchain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18307,
+                      "src": "960:10:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "948:22:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 18333,
+                  "nodeType": "ExpressionStatement",
+                  "src": "948:22:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18338,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18334,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18385,
+                      "src": "980:5:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$21435",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 18336,
+                          "name": "_token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 18309,
+                          "src": "995:6:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 18335,
+                        "name": "IERC20",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21435,
+                        "src": "988:6:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IERC20_$21435_$",
+                          "typeString": "type(contract IERC20)"
+                        }
+                      },
+                      "id": 18337,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "988:14:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$21435",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "src": "980:22:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$21435",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "id": 18339,
+                  "nodeType": "ExpressionStatement",
+                  "src": "980:22:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18344,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18340,
+                      "name": "NFTContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18391,
+                      "src": "1012:11:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_StakingNFT_$18601",
+                        "typeString": "contract StakingNFT"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 18342,
+                          "name": "_NFTContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 18311,
+                          "src": "1037:12:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 18341,
+                        "name": "StakingNFT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 18601,
+                        "src": "1026:10:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_StakingNFT_$18601_$",
+                          "typeString": "type(contract StakingNFT)"
+                        }
+                      },
+                      "id": 18343,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1026:24:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_StakingNFT_$18601",
+                        "typeString": "contract StakingNFT"
+                      }
+                    },
+                    "src": "1012:38:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_StakingNFT_$18601",
+                      "typeString": "contract StakingNFT"
+                    }
+                  },
+                  "id": 18345,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1012:38:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18350,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18346,
+                      "name": "logger",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18389,
+                      "src": "1060:6:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_StakingInfo_$14835",
+                        "typeString": "contract StakingInfo"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 18348,
+                          "name": "_stakingLogger",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 18313,
+                          "src": "1081:14:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 18347,
+                        "name": "StakingInfo",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14835,
+                        "src": "1069:11:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_StakingInfo_$14835_$",
+                          "typeString": "type(contract StakingInfo)"
+                        }
+                      },
+                      "id": 18349,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1069:27:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_StakingInfo_$14835",
+                        "typeString": "contract StakingInfo"
+                      }
+                    },
+                    "src": "1060:36:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_StakingInfo_$14835",
+                      "typeString": "contract StakingInfo"
+                    }
+                  },
+                  "id": 18351,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1060:36:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18356,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18352,
+                      "name": "factory",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18393,
+                      "src": "1106:7:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ValidatorShareFactory_$19604",
+                        "typeString": "contract ValidatorShareFactory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 18354,
+                          "name": "_validatorShareFactory",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 18315,
+                          "src": "1138:22:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 18353,
+                        "name": "ValidatorShareFactory",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19604,
+                        "src": "1116:21:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ValidatorShareFactory_$19604_$",
+                          "typeString": "type(contract ValidatorShareFactory)"
+                        }
+                      },
+                      "id": 18355,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1116:45:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ValidatorShareFactory_$19604",
+                        "typeString": "contract ValidatorShareFactory"
+                      }
+                    },
+                    "src": "1106:55:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ValidatorShareFactory_$19604",
+                      "typeString": "contract ValidatorShareFactory"
+                    }
+                  },
+                  "id": 18357,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1106:55:69"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 18359,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 18320,
+                    "name": "_proxyTo",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 18303,
+                    "src": "876:8:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 18321,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 18319,
+                  "name": "Proxy",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4663,
+                  "src": "870:5:69",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Proxy_$4663_$",
+                    "typeString": "type(contract Proxy)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "870:15:69"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 18323,
+                    "name": "_governance",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 18317,
+                    "src": "895:11:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 18324,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 18322,
+                  "name": "Lockable",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4729,
+                  "src": "886:8:69",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Lockable_$4729_$",
+                    "typeString": "type(contract Lockable)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "886:21:69"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18318,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18303,
+                  "name": "_proxyTo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "630:16:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18302,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "630:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18305,
+                  "name": "_registry",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "656:17:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18304,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18307,
+                  "name": "_rootchain",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "683:18:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18306,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18309,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "711:14:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18308,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "711:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18311,
+                  "name": "_NFTContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "735:20:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18310,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18313,
+                  "name": "_stakingLogger",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "765:22:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18312,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "765:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18315,
+                  "name": "_validatorShareFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "797:30:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18314,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "797:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18317,
+                  "name": "_governance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "837:19:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18316,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "837:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "620:242:69"
+            },
+            "returnParameters": {
+              "id": 18325,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "908:0:69"
+            },
+            "scope": 18360,
+            "src": "609:559:69",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 18361,
+        "src": "546:624:69"
+      }
+    ],
+    "src": "0:1171:69"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerProxy.sol",
+    "exportedSymbols": {
+      "StakeManagerProxy": [
+        18360
+      ]
+    },
+    "id": 18361,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 18280,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:69"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "id": 18282,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 21436,
+        "src": "25:78:69",
+        "symbolAliases": [
+          {
+            "foreign": 18281,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/governance/IGovernance.sol",
+        "file": "../../common/governance/IGovernance.sol",
+        "id": 18284,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 2650,
+        "src": "105:68:69",
+        "symbolAliases": [
+          {
+            "foreign": 18283,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakeManagerStorage.sol",
+        "file": "./StakeManagerStorage.sol",
+        "id": 18286,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 18517,
+        "src": "174:62:69",
+        "symbolAliases": [
+          {
+            "foreign": 18285,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/misc/Proxy.sol",
+        "file": "../../common/misc/Proxy.sol",
+        "id": 18288,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 4664,
+        "src": "237:50:69",
+        "symbolAliases": [
+          {
+            "foreign": 18287,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/Registry.sol",
+        "file": "../../common/Registry.sol",
+        "id": 18290,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 2558,
+        "src": "288:51:69",
+        "symbolAliases": [
+          {
+            "foreign": 18289,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/common/mixin/Lockable.sol",
+        "file": "../../common/mixin/Lockable.sol",
+        "id": 18292,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 4730,
+        "src": "340:57:69",
+        "symbolAliases": [
+          {
+            "foreign": 18291,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/StakingInfo.sol",
+        "file": "../StakingInfo.sol",
+        "id": 18294,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 14836,
+        "src": "398:47:69",
+        "symbolAliases": [
+          {
+            "foreign": 18293,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/stakeManager/StakingNFT.sol",
+        "file": "./StakingNFT.sol",
+        "id": 18296,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 18602,
+        "src": "446:44:69",
+        "symbolAliases": [
+          {
+            "foreign": 18295,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/arth/Documents/Projects/contracts/contracts/staking/validatorShare/ValidatorShareFactory.sol",
+        "file": "../validatorShare/ValidatorShareFactory.sol",
+        "id": 18297,
+        "nodeType": "ImportDirective",
+        "scope": 18361,
+        "sourceUnit": 19605,
+        "src": "491:53:69",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 18298,
+              "name": "Proxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4663,
+              "src": "576:5:69",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Proxy_$4663",
+                "typeString": "contract Proxy"
+              }
+            },
+            "id": 18299,
+            "nodeType": "InheritanceSpecifier",
+            "src": "576:5:69"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 18300,
+              "name": "StakeManagerStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18516,
+              "src": "583:19:69",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StakeManagerStorage_$18516",
+                "typeString": "contract StakeManagerStorage"
+              }
+            },
+            "id": 18301,
+            "nodeType": "InheritanceSpecifier",
+            "src": "583:19:69"
+          }
+        ],
+        "contractDependencies": [
+          4347,
+          2590,
+          4554,
+          4663,
+          4672,
+          4729,
+          4780,
+          18516,
+          20897
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 18360,
+        "linearizedBaseContracts": [
+          18360,
+          18516,
+          4780,
+          4729,
+          2590,
+          4663,
+          4347,
+          4554,
+          4672,
+          20897
+        ],
+        "name": "StakeManagerProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 18358,
+              "nodeType": "Block",
+              "src": "908:260:69",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18328,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18326,
+                      "name": "registry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18387,
+                      "src": "918:8:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 18327,
+                      "name": "_registry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18305,
+                      "src": "929:9:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "918:20:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 18329,
+                  "nodeType": "ExpressionStatement",
+                  "src": "918:20:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18332,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18330,
+                      "name": "rootChain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4737,
+                      "src": "948:9:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 18331,
+                      "name": "_rootchain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18307,
+                      "src": "960:10:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "948:22:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 18333,
+                  "nodeType": "ExpressionStatement",
+                  "src": "948:22:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18338,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18334,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18385,
+                      "src": "980:5:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$21435",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 18336,
+                          "name": "_token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 18309,
+                          "src": "995:6:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 18335,
+                        "name": "IERC20",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21435,
+                        "src": "988:6:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IERC20_$21435_$",
+                          "typeString": "type(contract IERC20)"
+                        }
+                      },
+                      "id": 18337,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "988:14:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$21435",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "src": "980:22:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$21435",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "id": 18339,
+                  "nodeType": "ExpressionStatement",
+                  "src": "980:22:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18344,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18340,
+                      "name": "NFTContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18391,
+                      "src": "1012:11:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_StakingNFT_$18601",
+                        "typeString": "contract StakingNFT"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 18342,
+                          "name": "_NFTContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 18311,
+                          "src": "1037:12:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 18341,
+                        "name": "StakingNFT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 18601,
+                        "src": "1026:10:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_StakingNFT_$18601_$",
+                          "typeString": "type(contract StakingNFT)"
+                        }
+                      },
+                      "id": 18343,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1026:24:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_StakingNFT_$18601",
+                        "typeString": "contract StakingNFT"
+                      }
+                    },
+                    "src": "1012:38:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_StakingNFT_$18601",
+                      "typeString": "contract StakingNFT"
+                    }
+                  },
+                  "id": 18345,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1012:38:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18350,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18346,
+                      "name": "logger",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18389,
+                      "src": "1060:6:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_StakingInfo_$14835",
+                        "typeString": "contract StakingInfo"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 18348,
+                          "name": "_stakingLogger",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 18313,
+                          "src": "1081:14:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 18347,
+                        "name": "StakingInfo",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14835,
+                        "src": "1069:11:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_StakingInfo_$14835_$",
+                          "typeString": "type(contract StakingInfo)"
+                        }
+                      },
+                      "id": 18349,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1069:27:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_StakingInfo_$14835",
+                        "typeString": "contract StakingInfo"
+                      }
+                    },
+                    "src": "1060:36:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_StakingInfo_$14835",
+                      "typeString": "contract StakingInfo"
+                    }
+                  },
+                  "id": 18351,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1060:36:69"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18356,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 18352,
+                      "name": "factory",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18393,
+                      "src": "1106:7:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ValidatorShareFactory_$19604",
+                        "typeString": "contract ValidatorShareFactory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 18354,
+                          "name": "_validatorShareFactory",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 18315,
+                          "src": "1138:22:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 18353,
+                        "name": "ValidatorShareFactory",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19604,
+                        "src": "1116:21:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ValidatorShareFactory_$19604_$",
+                          "typeString": "type(contract ValidatorShareFactory)"
+                        }
+                      },
+                      "id": 18355,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1116:45:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ValidatorShareFactory_$19604",
+                        "typeString": "contract ValidatorShareFactory"
+                      }
+                    },
+                    "src": "1106:55:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ValidatorShareFactory_$19604",
+                      "typeString": "contract ValidatorShareFactory"
+                    }
+                  },
+                  "id": 18357,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1106:55:69"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 18359,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 18320,
+                    "name": "_proxyTo",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 18303,
+                    "src": "876:8:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 18321,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 18319,
+                  "name": "Proxy",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4663,
+                  "src": "870:5:69",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Proxy_$4663_$",
+                    "typeString": "type(contract Proxy)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "870:15:69"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 18323,
+                    "name": "_governance",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 18317,
+                    "src": "895:11:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 18324,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 18322,
+                  "name": "Lockable",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4729,
+                  "src": "886:8:69",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Lockable_$4729_$",
+                    "typeString": "type(contract Lockable)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "886:21:69"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18318,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18303,
+                  "name": "_proxyTo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "630:16:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18302,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "630:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18305,
+                  "name": "_registry",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "656:17:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18304,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18307,
+                  "name": "_rootchain",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "683:18:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18306,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18309,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "711:14:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18308,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "711:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18311,
+                  "name": "_NFTContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "735:20:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18310,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18313,
+                  "name": "_stakingLogger",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "765:22:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18312,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "765:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18315,
+                  "name": "_validatorShareFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "797:30:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18314,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "797:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18317,
+                  "name": "_governance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18359,
+                  "src": "837:19:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18316,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "837:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "620:242:69"
+            },
+            "returnParameters": {
+              "id": 18325,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "908:0:69"
+            },
+            "scope": 18360,
+            "src": "609:559:69",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 18361,
+        "src": "546:624:69"
+      }
+    ],
+    "src": "0:1171:69"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2020-06-08T05:57:39.640Z",
+  "devdoc": {
+    "methods": {
+      "changeRootChain(address)": {
+        "details": "Allows the current owner to change root chain address.",
+        "params": {
+          "newRootChain": "The address to new rootchain."
+        }
+      },
+      "isOwner()": {
+        "return": "true if `msg.sender` is the owner of the contract."
+      },
+      "owner()": {
+        "return": "the address of the owner."
+      },
+      "renounceOwnership()": {
+        "details": "Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore."
+      },
+      "transferOwnership(address)": {
+        "details": "Allows the current owner to transfer control of the contract to a newOwner.",
+        "params": {
+          "newOwner": "The address to transfer ownership to."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "renounceOwnership()": {
+        "notice": "Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      }
+    }
+  }
+}
