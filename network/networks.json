@@ -1,6 +1,14 @@
 [
   {
     "network": "testnet",
+    "version": "mumbai"
+  },
+  {
+    "network": "mainnet",
+    "version": "v1"
+  },
+  {
+    "network": "testnet",
     "version": "v2"
   },
   {
