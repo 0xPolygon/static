@@ -46,7 +46,7 @@
     "NetworkName": "Matic Testnet Mumbai",
     "ChainId": 80001,
     "RPC": "https://rpc-mumbai.matic.today",
-    "Explorer": "https://testnetv4-explorer.matic.today",
+    "Explorer": "https://mumbai-explorer.matic.today",
     "Contracts": {
       "ChildChain": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
       "Tokens": {
