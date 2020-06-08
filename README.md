@@ -18,7 +18,7 @@ $ npm i --save @maticnetwork/meta
 const Network = require("@maticnetwork/meta/network")
 
 // define network
-const network = new Network("testnet", "v3")
+const network = new Network("testnet", "mumbai")
 
 const Matic = network.Matic  // all info related to Matic
 const Main = network.Main // all info related to Main

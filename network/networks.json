@@ -6,25 +6,5 @@
   {
     "network": "mainnet",
     "version": "v1"
-  },
-  {
-    "network": "testnet",
-    "version": "v2"
-  },
-  {
-    "network": "testnet",
-    "version": "v3"
-  },
-  {
-    "network": "beta",
-    "version": "v1"
-  },
-  {
-    "network": "beta",
-    "version": "v2"
-  },
-  {
-    "network": "alpha",
-    "version": "v1"
   }
 ]
