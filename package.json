@@ -1,12 +1,15 @@
 {
   "name": "@maticnetwork/meta",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Matic network contracts' addresses and ABIs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maticnetwork/static.git"
   },
   "license": "MIT",
+  "scripts": {
+    "minify": "node minify.js"
+  },
   "bugs": {
     "url": "https://github.com/maticnetwork/static/issues"
   },

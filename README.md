@@ -5,7 +5,7 @@ The private static server for Matic.
 All files, in this repository, will be served over AWS S3 at `https://static.matic.network/<file-path>`.
 
 ### Production
-Master branch will be automatically deployed. No other action required. 
+Master branch will be automatically deployed. No other action required.
 
 ## Package Usage
 
@@ -26,7 +26,7 @@ const Heimdall = network.Heimdall // all info related to Heimdall
 
 const RootChainABI = network.abi("RootChain")
 
-// use matic js 
+// use matic js
 let matic = new Matic ({
     maticProvider: Matic.RPC,
     mainProvider: Main.RPC,
@@ -34,4 +34,10 @@ let matic = new Matic ({
     ...
     ...
 })
+```
+
+
+### Before Publishing
+```
+npm run minify
 ```
