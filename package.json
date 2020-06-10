@@ -7,6 +7,9 @@
     "url": "git+https://github.com/maticnetwork/static.git"
   },
   "license": "MIT",
+  "scripts": {
+    "minify": "node minify.js"
+  },
   "bugs": {
     "url": "https://github.com/maticnetwork/static/issues"
   },
