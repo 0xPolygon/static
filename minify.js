@@ -12,7 +12,7 @@ networks.forEach(n => {
       if (!abi.length) {
         fs.unlinkSync(name)
       } else {
-        fs.writeFileSync(name, JSON.stringify({ abi }))
+        fs.writeFileSync(name, JSON.stringify({ abi }) + '\n')
       }
     })
   })
