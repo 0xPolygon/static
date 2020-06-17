@@ -3,6 +3,7 @@
     "NetworkName": "Ethereum",
     "ChainId": 1,
     "RPC": "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
+    "DaggerEndpoint": "wss://mainnet.dagger.matic.network",
     "WatcherAPI": "https://staking.api.matic.network/api/v1",
     "StakingAPI": "https://staking.api.matic.network/api/v1",
     "Explorer": "https://etherscan.io",
@@ -48,6 +49,7 @@
     "NetworkName": "Matic Network",
     "ChainId": 137,
     "RPC": "https://rpc-mainnet.matic.network",
+    "DaggerEndpoint": "wss://matic-mainnet.dagger.matic.network",
     "Explorer": "https://explorer.matic.network",
     "Contracts": {
       "ChildChain": "0xD9c7C4ED4B66858301D0cb28Cc88bf655Fe34861",
