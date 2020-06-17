@@ -3,6 +3,7 @@
     "NetworkName": "Ethereum",
     "ChainId": 5,
     "RPC": "https://goerli.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
+    "DaggerEndpoint": "wss://goerli.dagger.matic.network",
     "Explorer": "https://goerli.etherscan.io",
     "Contracts": {
       "BytesLib": "0xde5807d201788dB32C38a6CE0F11d31b1aeB822a",
@@ -46,6 +47,7 @@
     "NetworkName": "Matic Testnet Mumbai",
     "ChainId": 80001,
     "RPC": "https://rpc-mumbai.matic.today",
+    "DaggerEndpoint": "wss://mumbai-dagger.matic.today",
     "Explorer": "https://mumbai-explorer.matic.today",
     "Contracts": {
       "ChildChain": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
