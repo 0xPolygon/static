@@ -39,8 +39,8 @@
       "ERC721Predicate": "0xDbBffd69Ef9F34bA8Fb8722157A51a4733992B35",
       "Tokens": {
         "MaticToken": "0x499d11E0b6eAC7c0593d8Fb292DCBbF815Fb29Ae",
-        "TestToken": "0x3f152B63Ec5CA5831061B2DccFb29a874C317502",
-        "RootERC721": "0xfA08B72137eF907dEB3F202a60EfBc610D2f224b",
+        "TestToken": "0xb2eda8A855A4176B7f8758E0388b650BcB1828a4",
+        "RootERC721": "0x0217B02596Dfe39385946f82Aab6A92509b7F352",
         "MaticWeth": "0x60D4dB9b534EF9260a88b0BED6c486fe13E604Fc"
       }
     }
@@ -56,8 +56,8 @@
       "Tokens": {
         "MaticWeth": "0x4DfAe612aaCB5b448C12A591cD0879bFa2e51d62",
         "MaticToken": "0x0000000000000000000000000000000000001010",
-        "TestToken": "0x2d7882beDcbfDDce29Ba99965dd3cdF7fcB10A1e",
-        "RootERC721": "0x33FC58F12A56280503b04AC7911D1EceEBcE179c"
+        "TestToken": "0xc7bb71b405ea25A9251a1ea060C2891b84BE1929",
+        "RootERC721": "0xa38c6F7FEaB941160f32DA7Bbc8a4897b37876b5"
       }
     }
   },
