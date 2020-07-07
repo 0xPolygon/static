@@ -2,7 +2,6 @@
   "Main": {
     "NetworkName": "Goerli",
     "ChainId": 5,
-    "RPC": "<insert full node RPC URL for Goerli testnet>",
     "DaggerEndpoint": "wss://goerli.dagger.matic.network",
     "WatcherAPI": "https://mumbai-watcher.api.matic.today/api/v1",
     "StakingAPI": "https://mumbai-watcher.api.matic.today/api/v1",
