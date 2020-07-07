@@ -2,7 +2,6 @@
   "Main": {
     "NetworkName": "Ethereum",
     "ChainId": 1,
-    "RPC": "https://mainnet.infura.io/v3/73d0b3b9a4b2499da81c71a2b2a473a9",
     "DaggerEndpoint": "wss://mainnet.dagger.matic.network",
     "WatcherAPI": "https://staking.api.matic.network/api/v1",
     "StakingAPI": "https://staking.api.matic.network/api/v1",

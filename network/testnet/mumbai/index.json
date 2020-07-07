@@ -1,8 +1,7 @@
 {
   "Main": {
-    "NetworkName": "Ethereum",
+    "NetworkName": "Goerli",
     "ChainId": 5,
-    "RPC": "https://goerli.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc",
     "DaggerEndpoint": "wss://goerli.dagger.matic.network",
     "WatcherAPI": "https://mumbai-watcher.api.matic.today/api/v1",
     "StakingAPI": "https://mumbai-watcher.api.matic.today/api/v1",
