@@ -17,12 +17,12 @@ class Network {
     })
   }
 
-  artifacts(name) {
-    return require(`./${this.name}/${this.version}/artifacts/${name}.json`)
+  artifacts(name, type = 'plasma') {
+    return require(`./${this.name}/${this.version}/artifacts/${type}/${name}.json`)
   }
 
-  abi(name) {
-    return this.artifacts(name).abi
+  abi(name, type = 'plasma') {
+    return this.artifacts(name, type).abi
   }
 }
 
