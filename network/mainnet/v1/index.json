@@ -42,6 +42,32 @@
         "RootERC721": "0x96CDDF45C0Cd9a59876A2a29029d7c54f6e54AD3",
         "MaticWeth": "0xa45b966996374E9e65ab991C6FE4Bfce3a56DDe8"
       }
+    },
+    "POSContracts": {
+      "Merkle": "0x195fe6EE6639665CCeB15BCCeB9980FC445DFa0B",
+      "MerklePatriciaProof": "0xA6FA4fB5f76172d178d61B04b0ecd319C5d1C0aa",
+      "RLPReader": "0xBEFe614A45A8300f2a4A00fb634b7137b6b1Bc47",
+      "SafeERC20": "0xeFfdCB49C2D0EF813764B709Ca3c6fe71f230E3e",
+      "SafeMath": "0x6EBEAC13f6403D19C95b6B75008B12fd21a93Aab",
+      "RootChainManager": "0xD4888faB8bd39A663B63161F5eE1Eae31a25B653",
+      "RootChainManagerProxy": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
+      "ERC20Predicate": "0xC760DefB87E5194E62b282c2a76CBCe4766d7345",
+      "ERC20PredicateProxy": "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf",
+      "ERC721Predicate": "0x9aaae29879c95eD732babaBEa4cAe20A6D931DbB",
+      "ERC721PredicateProxy": "0xE6F45376f64e1F568BD1404C155e5fFD2F80F7AD",
+      "MintableERC721Predicate": "0x3Bf44AD2e36f39572175C72C1D0Fa85933c6E0b6",
+      "MintableERC721PredicateProxy": "0x932532aA4c0174b8453839A6E44eE09Cc615F2b7",
+      "ERC1155Predicate": "0x46cA157573005281774be9be9a4187cce4ec1871",
+      "ERC1155PredicateProxy": "0x0B9020d4E32990D67559b1317c7BF0C15D6EB88f",
+      "EtherPredicate": "0xb6a508B418d49080Ce4AE4F140e585A0f95C1326",
+      "EtherPredicateProxy": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
+      "DummyStateSender": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+      "Tokens": {
+        "DummyERC20": "0xf2F3bD7Ca5746C5fac518f67D1BE87805a2Be82A",
+        "DummyERC721": "0x71B821aa52a49F32EEd535fCA6Eb5aa130085978",
+        "DummyMintableERC721": "0x578360AdF0BbB2F10ec9cEC7EF89Ef495511ED5f",
+        "DummyERC1155": "0x556f501CF8a43216Df5bc9cC57Eb04D4FFAA9e6D"
+      }
     }
   },
   "Matic": {
@@ -57,6 +83,17 @@
         "MaticToken": "0x0000000000000000000000000000000000001010",
         "TestToken": "0x5E1DDF2e5a0eCDD923692d4b4429d8603825A8C6",
         "RootERC721": "0xa35363CFf92980F8268299D0132D5f45834A9527"
+      }
+    },
+    "POSContracts": {
+      "ChildChainManager": "0x195fe6EE6639665CCeB15BCCeB9980FC445DFa0B",
+      "ChildChainManagerProxy": "0xA6FA4fB5f76172d178d61B04b0ecd319C5d1C0aa",
+      "Tokens": {
+        "DummyERC20": "0xeFfdCB49C2D0EF813764B709Ca3c6fe71f230E3e",
+        "DummyERC721": "0x6EBEAC13f6403D19C95b6B75008B12fd21a93Aab",
+        "DummyMintableERC721": "0xD4888faB8bd39A663B63161F5eE1Eae31a25B653",
+        "DummyERC1155": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
+        "MaticWETH": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619"
       }
     }
   },
