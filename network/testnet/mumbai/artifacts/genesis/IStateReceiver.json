@@ -1,0 +1,1 @@
+{"abi":[{"constant":false,"inputs":[{"internalType":"uint256","name":"stateId","type":"uint256"},{"internalType":"bytes","name":"data","type":"bytes"}],"name":"onStateReceive","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]}
