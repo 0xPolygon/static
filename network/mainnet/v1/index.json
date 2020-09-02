@@ -95,6 +95,10 @@
         "DummyERC1155": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
         "MaticWETH": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619"
       }
+    },
+    "GenesisContracts": {
+      "ValidatorSet": "0000000000000000000000000000000000001000",
+      "StateReceiver": "0000000000000000000000000000000000001001"
     }
   },
   "Heimdall": {

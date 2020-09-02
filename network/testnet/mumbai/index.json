@@ -94,6 +94,10 @@
         "DummyMintableERC721": "0xd854928B54c408F1D38D869BE744c9E6Ce0A2448",
         "MaticWETH": "0x714550C2C1Ea08688607D86ed8EeF4f5E4F22323"
       }
+    },
+    "GenesisContracts": {
+      "ValidatorSet": "0000000000000000000000000000000000001000",
+      "StateReceiver": "0000000000000000000000000000000000001001"
     }
   },
   "Heimdall": {
