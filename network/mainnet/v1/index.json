@@ -76,6 +76,7 @@
     "RPC": "https://rpc-mainnet.matic.network",
     "DaggerEndpoint": "wss://matic-mainnet.dagger.matic.network",
     "Explorer": "https://explorer.matic.network",
+    "NetworkAPI": "https://apis.matic.network/api/v1/matic",
     "Contracts": {
       "ChildChain": "0xD9c7C4ED4B66858301D0cb28Cc88bf655Fe34861",
       "Tokens": {

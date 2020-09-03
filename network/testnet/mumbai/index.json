@@ -75,6 +75,7 @@
     "RPC": "https://rpc-mumbai.matic.today",
     "DaggerEndpoint": "wss://mumbai-dagger.matic.today",
     "Explorer": "https://mumbai-explorer.matic.today",
+    "NetworkAPI": "https://apis.matic.network/api/v1/mumbai",
     "Contracts": {
       "ChildChain": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
       "Tokens": {
