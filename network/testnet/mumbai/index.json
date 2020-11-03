@@ -70,7 +70,7 @@
     }
   },
   "Matic": {
-    "NetworkName": "Matic Testnet Mumbai",
+    "NetworkName": "Mumbai Testnet",
     "ChainId": 80001,
     "RPC": "https://rpc-mumbai.matic.today",
     "DaggerEndpoint": "wss://mumbai-dagger.matic.today",
