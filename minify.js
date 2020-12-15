@@ -1,5 +1,4 @@
 var fs = require('fs');
-var files = fs.readdirSync('network');
 
 const networks = ['mainnet', 'testnet']
 networks.forEach(n => {
