@@ -78,7 +78,7 @@
   "Matic": {
     "NetworkName": "Mumbai Testnet",
     "ChainId": 80001,
-    "RPC": "https://rpc-mumbai.matic.today",
+    "RPC": "https://rpc-mumbai.maticvigil.com",
     "DaggerEndpoint": "wss://mumbai-dagger.matic.today",
     "Explorer": "https://mumbai-explorer.matic.today",
     "NetworkAPI": "https://apis.matic.network/api/v1/mumbai",
