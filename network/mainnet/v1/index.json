@@ -77,7 +77,7 @@
   "Matic": {
     "NetworkName": "Matic Network",
     "ChainId": 137,
-    "RPC": "https://rpc-mainnet.matic.network",
+    "RPC": "https://rpc-mainnet.maticvigil.com",
     "DaggerEndpoint": "wss://matic-mainnet.dagger.matic.network",
     "Explorer": "https://explorer.matic.network",
     "NetworkAPI": "https://apis.matic.network/api/v1/matic",
