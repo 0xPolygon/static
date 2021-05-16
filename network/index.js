@@ -1,4 +1,4 @@
-const networks = require("./networks")
+const networks = require("./networks.json")
 
 class Network {
   constructor(name, version = "v1") {
