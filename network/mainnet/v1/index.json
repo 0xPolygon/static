@@ -75,7 +75,7 @@
     }
   },
   "Matic": {
-    "NetworkName": "Matic Network",
+    "NetworkName": "Polygon",
     "ChainId": 137,
     "RPC": "https://rpc-mainnet.maticvigil.com",
     "DaggerEndpoint": "wss://matic-mainnet.dagger.matic.network",
