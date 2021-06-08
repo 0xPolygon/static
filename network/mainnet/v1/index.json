@@ -34,7 +34,7 @@
       "WithdrawManager": "0xa0CAaefd809b946De6de929545Ea55f0267aF84b",
       "ExitNFT": "0xDF74156420Bd57ab387B195ed81EcA36F9fABAca",
       "WithdrawManagerProxy": "0x2A88696e0fFA76bAA1338F2C74497cC013495922",
-      "ERC20Predicate": "0x886e02327cAd4E1E29688C7Db0c9d28879ac44Da",
+      "ERC20Predicate": "0x988d367bb08a39c00560a9d0ec7a683d6c0963f6",
       "ERC721Predicate": "0xe4924d8708D6646C0A6B2985DCFe2855211f4ddD",
       "Tokens": {
         "MaticToken": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
