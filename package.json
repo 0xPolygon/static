@@ -8,7 +8,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "minify": "node minify.js"
+    "minify": "node minify.js",
+    "prepublish": "npm run minify"
   },
   "bugs": {
     "url": "https://github.com/maticnetwork/static/issues"
