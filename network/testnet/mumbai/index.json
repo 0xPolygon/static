@@ -73,6 +73,9 @@
         "DummyMintableERC721": "0xFf3aD71e6323dD584348d3E5FfFD4d07d82a2355",
         "DummyMintableERC1155": "0x9f5755D47fB80100E7ee65Bf7e136FCA85Dd9334"
       }
+    }, 
+    "FxPortalContracts": {
+      "FxERC20RootTunnel": "0xbfDeFCd92335b22b205bb5b63B9eC909D6e99C16"
     }
   },
   "Matic": {
@@ -104,6 +107,9 @@
         "DummyMintableERC1155": "0xfAc5F13459EB4241D2C3F8BbfC2789FC006BCBc8",
         "MaticWETH": "0xA6FA4fB5f76172d178d61B04b0ecd319C5d1C0aa"
       }
+    },
+    "FxPortalContracts": {
+      "FxERC20ChildTunnel": "0xd0ddbab3bD60E591c300b2e365D732d9Ce76D3fd"
     },
     "GenesisContracts": {
       "BorValidatorSet": "0000000000000000000000000000000000001000",
