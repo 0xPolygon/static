@@ -6,6 +6,7 @@
     "WatcherAPI": "https://staking.api.subgraph.matic.today/api/v2",
     "StakingAPI": "https://staking.api.subgraph.matic.today/api/v2",
     "Explorer": "https://goerli.etherscan.io",
+    "SupportsEIP1559": true,
     "Contracts": {
       "BytesLib": "0xde5807d201788dB32C38a6CE0F11d31b1aeB822a",
       "Common": "0x84Dc17F28658Bc74125C7E82299992429ED34c12",
@@ -73,7 +74,7 @@
         "DummyMintableERC721": "0xFf3aD71e6323dD584348d3E5FfFD4d07d82a2355",
         "DummyMintableERC1155": "0x9f5755D47fB80100E7ee65Bf7e136FCA85Dd9334"
       }
-    }, 
+    },
     "FxPortalContracts": {
       "FxERC20RootTunnel": "0xbfDeFCd92335b22b205bb5b63B9eC909D6e99C16"
     }
@@ -85,6 +86,7 @@
     "DaggerEndpoint": "wss://mumbai-dagger.matic.today",
     "Explorer": "https://mumbai.polygonscan.com",
     "NetworkAPI": "https://apis.matic.network/api/v1/mumbai",
+    "SupportsEIP1559": false,
     "Contracts": {
       "ChildChain": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
       "Tokens": {
