@@ -24,13 +24,6 @@ jobs:
           node-version: "12.18.0"
           registry-url: https://registry.npmjs.org/
 
-      # Runs a single command using the runners shell
-      - name: INSTALL
-        run: npm install
-
-      - name: BUILD
-        run: npm build
-
       # Runs a set of commands using the runners shell
       - name: Uploading to s3 bucket
         uses: jakejarvis/s3-sync-action@master
@@ -40,6 +33,7 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.MASTER_AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.MASTER_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.MASTER_AWS_SECRET_ACCESS_KEY }}
+          SOURCE_DIR: 'network' # optional: defaults to entire repository
 
       - name: invalidate cloudfront distribution and wait for completion
         uses: muratiger/invalidate-cloudfront-and-wait-for-completion-action@master
