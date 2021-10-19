@@ -76,7 +76,10 @@
       }
     },
     "FxPortalContracts": {
-      "FxERC20RootTunnel": "0xbfDeFCd92335b22b205bb5b63B9eC909D6e99C16"
+      "FxRoot": "0x3d1d3E34f7fB6D26245E6640E1c50710eFFf15bA",
+      "FxERC20RootTunnel": "0x21cC7A74Be653eec6D7d6453811A7570515eeffD",
+      "FxERC721RootTunnel": "0x00406C388b660c5ce88dbDCC9a00ACa156409dac",
+      "FxERC1155RootTunnel": "0x8C839343a1E21D52beBf4B91229909499f7bdd3c"
     }
   },
   "Matic": {
@@ -111,7 +114,10 @@
       }
     },
     "FxPortalContracts": {
-      "FxERC20ChildTunnel": "0xd0ddbab3bD60E591c300b2e365D732d9Ce76D3fd"
+      "FxChild": "0xCf73231F28B7331BBe3124B907840A94851f9f11",
+      "FxERC20ChildTunnel": "0x587C9FF1c528C7aeE2804Bf5301Dc2ec057A75a8",
+      "FxERC721ChildTunnel": "0x96d26FCA4cB14e14CABc28eF8bc8Aba0E03702A8",
+      "FxERC1155ChildTunnel": "0x24a16Db524d342968A11b9E1aD75b6D5eD002db7"
     },
     "GenesisContracts": {
       "BorValidatorSet": "0000000000000000000000000000000000001000",

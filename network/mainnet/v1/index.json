@@ -73,6 +73,12 @@
         "DummyMintableERC721": "0x578360AdF0BbB2F10ec9cEC7EF89Ef495511ED5f",
         "DummyERC1155": "0x556f501CF8a43216Df5bc9cC57Eb04D4FFAA9e6D"
       }
+    },
+    "FxPortalContracts": {
+      "FxRoot": "0xfe5e5D361b2ad62c541bAb87C45a0B9B018389a2",
+      "FxERC20RootTunnel": "0x0FBDa4EB110FFF0B62E9d3d3895B8349Bb9d137b",
+      "FxERC721RootTunnel": "0xE76ef2Be50F7B08bbBD0c0c354f372D90f4C17Dd",
+      "FxERC1155RootTunnel": "0xEBb043Bc5d352d982367043142a37eA46495bED4"
     }
   },
   "Matic": {
@@ -103,6 +109,12 @@
         "DummyERC1155": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
         "MaticWETH": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619"
       }
+    },
+    "FxPortalContracts": {
+      "FxChild": "0x8397259c983751DAf40400790063935a11afa28a",
+      "FxERC20ChildTunnel": "0x051b9728A582C07858A96396fF0AE152deBe3993",
+      "FxERC721ChildTunnel": "0x98A686e19e2549289Db4ec955776d09B3026c821",
+      "FxERC1155ChildTunnel": "0x2D1cd47e6B121e7bcF58c506b8489ff500Fc2A24"
     },
     "GenesisContracts": {
       "BorValidatorSet": "0000000000000000000000000000000000001000",
