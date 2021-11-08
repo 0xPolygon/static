@@ -84,7 +84,7 @@
   "Matic": {
     "NetworkName": "Polygon",
     "ChainId": 137,
-    "RPC": "https://matic-mainnet.chainstacklabs.com",
+    "RPC": "https://polygon-rpc.com",
     "DaggerEndpoint": "wss://matic-mainnet.dagger.matic.network",
     "Explorer": "https://polygonscan.com",
     "NetworkAPI": "https://apis.matic.network/api/v1/matic",
