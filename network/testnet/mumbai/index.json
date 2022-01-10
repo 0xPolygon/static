@@ -37,6 +37,7 @@
       "ExitNFT": "0xE2Ab047326B38e4DDb6791551e8d593D30E02724",
       "ERC20Predicate": "0xf213e8ff5d797ed2b052d3b96c11ac71db358027",
       "ERC721Predicate": "0x473cb675c9214f79dee10948443509c441a678e7",
+      "EIP1559Burn": "0x70bca57f4579f58670ab2d18ef16e02c17553c38",
       "Tokens": {
         "MaticToken": "0x499d11E0b6eAC7c0593d8Fb292DCBbF815Fb29Ae",
         "TestToken": "0x3f152B63Ec5CA5831061B2DccFb29a874C317502",
@@ -91,6 +92,7 @@
     "NetworkAPI": "https://apis.matic.network/api/v1/mumbai",
     "SupportsEIP1559": false,
     "Contracts": {
+      "EIP1559Burn": "0x70bca57f4579f58670ab2d18ef16e02c17553c38",
       "ChildChain": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
       "Tokens": {
         "MaticWeth": "0x4DfAe612aaCB5b448C12A591cD0879bFa2e51d62",
