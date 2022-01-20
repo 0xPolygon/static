@@ -89,7 +89,7 @@
     "DaggerEndpoint": "wss://matic-mainnet.dagger.matic.network",
     "Explorer": "https://polygonscan.com",
     "NetworkAPI": "https://apis.matic.network/api/v1/matic",
-    "SupportsEIP1559": false,
+    "SupportsEIP1559": true,
     "Contracts": {
       "ChildChain": "0xD9c7C4ED4B66858301D0cb28Cc88bf655Fe34861",
       "EIP1559Burn": "0x70bca57f4579f58670ab2d18ef16e02c17553c38",
