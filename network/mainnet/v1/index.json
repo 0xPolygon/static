@@ -6,6 +6,7 @@
     "WatcherAPI": "https://sentinel.matic.network/api/v2",
     "StakingAPI": "https://sentinel.matic.network/api/v2",
     "Explorer": "https://etherscan.io",
+    "SubgraphUrl": "https://thegraph.com/hosted-service/subgraph/maticnetwork/mainnet-root-subgraphs",
     "SupportsEIP1559": true,
     "Contracts": {
       "BytesLib": "0x1d21fACFC8CaD068eF0cbc87FdaCdFb20D7e2417",
