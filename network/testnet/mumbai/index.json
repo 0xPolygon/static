@@ -8,6 +8,7 @@
     "Explorer": "https://goerli.etherscan.io",
     "SubgraphUrl": "https://api.thegraph.com/subgraphs/name/maticnetwork/mumbai-root-subgraphs",
     "SupportsEIP1559": true,
+    "Owner": "0x32B148f600435Ab2a0aD44e3c96F6F3B8B20c84b",
     "Contracts": {
       "BytesLib": "0xde5807d201788dB32C38a6CE0F11d31b1aeB822a",
       "Common": "0x84Dc17F28658Bc74125C7E82299992429ED34c12",
