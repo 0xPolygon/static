@@ -78,7 +78,7 @@
     },
     "FxPortalContracts": {
       "FxRoot": "0xfe5e5D361b2ad62c541bAb87C45a0B9B018389a2",
-      "FxERC20RootTunnel": "0xF1D80Ecb5de086b197EB2683513A3Da4061F0102",
+      "FxERC20RootTunnel": "0x0cC2CaeD31490B546c741BD93dbba8Ab387f7F2c",
       "FxERC721RootTunnel": "0xca1f5ec720eCdA31bE3d80BD3ef4686cBb07eb4D",
       "FxERC1155RootTunnel": "0x1E2baf7541C68FAfd0560FB87D2eAb0c4E51589d"
     }
@@ -115,7 +115,7 @@
     },
     "FxPortalContracts": {
       "FxChild": "0x8397259c983751DAf40400790063935a11afa28a",
-      "FxERC20ChildTunnel": "0x0cC2CaeD31490B546c741BD93dbba8Ab387f7F2c",
+      "FxERC20ChildTunnel": "0xd531Cf2142D9b9Dc8b077dF3c4E93B46E7Cf879a",
       "FxERC721ChildTunnel": "0x2b4732e448b3023131a7b25046b3A5EF50CfCf71",
       "FxERC1155ChildTunnel": "0x80a708B92939B373e86eF8e8cfc9e05EfE2f5e49"
     },
