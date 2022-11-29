@@ -142,7 +142,6 @@
     "Explorer": "https://explorer.public.zkevm-test.net",
     "SupportsEIP1559": false,
     "Contracts": {
-      "Bridge": "0x9D98DeAbC42dd696Deb9e40b4f1CAB7dDBF55988",
       "BridgeProxy": "0x9D98DeAbC42dd696Deb9e40b4f1CAB7dDBF55988",
       "GlobalExitRootManagerL2": "0xae4bb80be56b819606589de61d5ec3b522eeb032"
     }
