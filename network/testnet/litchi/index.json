@@ -1,0 +1,26 @@
+{
+  "Main": {
+    "NetworkName": "Goerli",
+    "ChainId": 5,
+    "Explorer": "https://goerli.etherscan.io",
+    "SupportsEIP1559": true,
+    "Contracts": {
+      "ProofOfEfficiency": "0x93459066571e7207a1d82f84e10f0bf4911217a3",
+      "ProofOfEfficiencyProxy": "0x14cB06e8dE2222912138F9a062E5a4d9F4821409",
+      "Bridge": "0x5a7a09058ded783458ba2a83bb51e28e2c9e6c2b",
+      "BridgeProxy": "0x0C93ebAadbDD954bC88EF74A3C4d4c0a85e92e78",
+      "GlobalExitRootManager": "0x762d09Ed110ace4EaC94acbb67b1C35D16C3297b",
+    }
+  },
+  "zkEVM": {
+    "NetworkName": "Litchi",
+    "ChainId": 1402,
+    "RPC": "https://rpc.public.zkevm-test.net",
+    "Explorer": "https://explorer.public.zkevm-test.net",
+    "SupportsEIP1559": false,
+    "Contracts": {
+      "Bridge": "0x9D98DeAbC42dd696Deb9e40b4f1CAB7dDBF55988",
+      "GlobalExitRootManagerL2": "0xae4bb80be56b819606589de61d5ec3b522eeb032"
+    }
+  }
+}
