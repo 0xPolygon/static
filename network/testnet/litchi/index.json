@@ -9,7 +9,7 @@
       "ProofOfEfficiencyProxy": "0x14cB06e8dE2222912138F9a062E5a4d9F4821409",
       "Bridge": "0x5a7a09058ded783458ba2a83bb51e28e2c9e6c2b",
       "BridgeProxy": "0x0C93ebAadbDD954bC88EF74A3C4d4c0a85e92e78",
-      "GlobalExitRootManager": "0x762d09Ed110ace4EaC94acbb67b1C35D16C3297b",
+      "GlobalExitRootManager": "0x762d09Ed110ace4EaC94acbb67b1C35D16C3297b"
     }
   },
   "zkEVM": {
