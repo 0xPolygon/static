@@ -130,6 +130,6 @@
   },
   "Heimdall": {
     "ChainId": "heimdall-80001",
-    "API": "https://heimdall.api.matic.today"
+    "API": "https://heimdall-api-testnet.polygon.technology"
   }
 }
