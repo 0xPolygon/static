@@ -80,15 +80,17 @@
     },
     "FxPortalContracts": {
       "FxRoot": "0x3d1d3E34f7fB6D26245E6640E1c50710eFFf15bA",
-      "FxERC20Root":"0x6dd0f2215ce78fed85bc5d48c8ea7199201f2f64",
-      "FxERC721Root":"0x55671d7a0c6062bb5989bb5f460936a9b64d8c79",
-      "FxERC1155Root":"0x83e45874538bed57bac3f60312699258634d551c",
       "FxERC20RootTunnel": "0x79B77456684AEB0bf7c8Ec50FB9c714d52BdA46c",
       "FxERC721RootTunnel": "0x823eF03B39C339337E451d82cEC57f31316de15F",
       "FxERC1155RootTunnel": "0x186C72e49a3Db03E9161Ca18e52C09DE9468Bfc9",
       "FxMintableERC20RootTunnel": "0x6BA51546A59Ff365Cd412eCb0F5ebb23ecb26Ffe",
       "FxMintableERC721RootTunnel": "0x2b60ad29cCc8D3Cd6f1b3444Ee537B57907c38f2",
-      "FxMintableERC1555RootTunnel": "0x2aA092781bE66528641f4afF4cABD947Ee588D79"
+      "FxMintableERC1555RootTunnel": "0x2aA092781bE66528641f4afF4cABD947Ee588D79",
+      "Tokens": {
+        "FxERC20Root":"0x6dd0f2215ce78fed85bc5d48c8ea7199201f2f64",
+        "FxERC721Root":"0x55671d7a0c6062bb5989bb5f460936a9b64d8c79",
+        "FxERC1155Root":"0x83e45874538bed57bac3f60312699258634d551c"
+      }
     }
   },
   "Matic": {

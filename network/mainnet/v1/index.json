@@ -88,7 +88,9 @@
       "FxMintableERC721RootTunnel": "0xE7887126bEDf37863a4c16DbbAC4bB980D37B28A",
       "FxMintableERC1155RootTunnel": "0x51C2589Ec9E37B855046Eaf32e1C5EDa2FD6574C",
       "Tokens": {
-        "DummyFx": "0x9c1d50c0e7b2c153955d11cabaad1c95690f14c7"
+        "FxERC20Root": "0xd26CD6ce2a1705C49610F951f232510532c6856D",
+        "FxERC721Root": "0x43E2bC0C29B1Db3389e5Ffd30CbB2aC31e47078a",
+        "FxERC1155Root": "0xAf21e1B1F2e8711a95AB4cAa579885224a8e3461"
       }
     }
   },
