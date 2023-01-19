@@ -1,0 +1,27 @@
+{
+  "Main": {
+    "NetworkName": "Goerli",
+    "ChainId": 5,
+    "Explorer": "https://goerli.etherscan.io",
+    "SupportsEIP1559": true,
+    "Contracts": {
+      "PolygonZkEVM": "0x6228e338985a5265a57718687d8775228725ba48",
+      "PolygonZkEVMProxy": "0x5e2e663A39205348cE985Bccc9673Ca25AeE727E",
+      "PolygonZkEVMBridge": "0xd08fa8FA2056997Bd2CA3ba689C63dDF54f3874F",
+      "PolygonZkEVMBridgeProxy": "0xe2E52C2D0D64209b8DD1854371A4C673c13448f0",
+      "PolygonZkEVMGlobalExitRoot": "0x11dec2c21999c5283db6aa794359fe0a94207dac",
+      "PolygonZkEVMGlobalExitRootProxy": "0x715fC3A1422de7Ae2EA483d1DA8415E8dD45bAd3"
+    }
+  },
+  "zkEVM": {
+    "NetworkName": "Mango",
+    "ChainId": 1422,
+    "RPC": "https://rpc.public.zkevm-test.net",
+    "Explorer": "https://explorer.public.zkevm-test.net",
+    "SupportsEIP1559": false,
+    "Contracts": {
+      "PolygonZkEVMBridge": "0x9d98deabc42dd696deb9e40b4f1cab7ddbf55988",
+      "PolygonZkEVMGlobalExitRootL2": "0xae4bb80be56b819606589de61d5ec3b522eeb032"
+    }
+  }
+}
