@@ -20,7 +20,7 @@
     "Explorer": "https://explorer.public.zkevm-test.net",
     "SupportsEIP1559": false,
     "Contracts": {
-      "PolygonZkEVMBridge": "0x39e780D8800f7396e8B7530A8925B14025AedC77",
+      "PolygonZkEVMBridge": "0xF6BEEeBB578e214CA9E23B0e9683454Ff88Ed2A7",
       "PolygonZkEVMGlobalExitRootL2": "0x77Fc57b154fCF8320Df2C2e6C044AA50141c023b"
     }
   }
