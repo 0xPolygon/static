@@ -3,7 +3,6 @@
     "NetworkName": "Ethereum",
     "ChainId": 1,
     "DaggerEndpoint": "wss://mainnet.dagger.matic.network",
-    "WatcherAPI": "https://staking-api.polygon.technology/api/v2",
     "StakingAPI": "https://staking-api.polygon.technology/api/v2",
     "Explorer": "https://etherscan.io",
     "SubgraphUrl": "https://api.thegraph.com/subgraphs/name/maticnetwork/mainnet-root-subgraphs",
