@@ -17,7 +17,7 @@
     "NetworkName": "Cherry",
     "ChainId": 1100,
     "RPC": "https://zkevm-rpc.com",
-    "Explorer": "https://explorer.public.zkevm-test.net",
+    "Explorer": "",
     "SupportsEIP1559": false,
     "Contracts": {
       "PolygonZkEVMBridge": "0xf0Cbe43624e92a0F532236C1a564e189ef130765",
