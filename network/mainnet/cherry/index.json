@@ -1,0 +1,27 @@
+{
+  "Main": {
+    "NetworkName": "Ethereum",
+    "ChainId": 1,
+    "Explorer": "https://etherscan.io",
+    "SupportsEIP1559": true,
+    "Contracts": {
+      "PolygonZkEVM": "0xbf1b90d606418bf8f89c12a29710959f504a649c",
+      "PolygonZkEVMProxy": "0xf7CAC54DE3578e6975424caBAf2Ddfc0EFdA58f4",
+      "PolygonZkEVMBridge": "0xda01980192fcf524be07df7bd075081e58b6a3b1",
+      "PolygonZkEVMBridgeProxy": "0xf0Cbe43624e92a0F532236C1a564e189ef130765",
+      "PolygonZkEVMGlobalExitRoot": "0xad58366137689989da0f72bb8ce92551720a0d0e",
+      "PolygonZkEVMGlobalExitRootProxy": "0xF5f027EF57197E623b51871Ddc72EFC9a33Fad18"
+    }
+  },
+  "zkEVM": {
+    "NetworkName": "Cherry",
+    "ChainId": 1100,
+    "RPC": "https://zkevm-rpc.com",
+    "Explorer": "https://explorer.public.zkevm-test.net",
+    "SupportsEIP1559": false,
+    "Contracts": {
+      "PolygonZkEVMBridge": "0xf0Cbe43624e92a0F532236C1a564e189ef130765",
+      "PolygonZkEVMGlobalExitRootL2": "0xa40d5f56745a118d0906a34e69aec8c0db1cb8fa"
+    }
+  }
+}

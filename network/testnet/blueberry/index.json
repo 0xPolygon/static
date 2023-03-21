@@ -17,7 +17,7 @@
     "NetworkName": "Blueberry",
     "ChainId": 1442,
     "RPC": "https://rpc.public.zkevm-test.net",
-    "Explorer": "https://explorer.public.zkevm-test.net",
+    "Explorer": "https://testnet-zkevm.polygonscan.com",
     "SupportsEIP1559": false,
     "Contracts": {
       "PolygonZkEVMBridge": "0xF6BEEeBB578e214CA9E23B0e9683454Ff88Ed2A7",
