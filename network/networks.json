@@ -10,5 +10,9 @@
   {
     "network": "testnet",
     "version": "blueberry"
+  },
+  {
+    "network": "mainnet",
+    "version": "cherry"
   }
 ]
