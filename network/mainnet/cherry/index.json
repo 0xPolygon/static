@@ -5,22 +5,22 @@
     "Explorer": "https://etherscan.io",
     "SupportsEIP1559": true,
     "Contracts": {
-      "PolygonZkEVM": "0xbf1b90d606418bf8f89c12a29710959f504a649c",
-      "PolygonZkEVMProxy": "0xf7CAC54DE3578e6975424caBAf2Ddfc0EFdA58f4",
-      "PolygonZkEVMBridge": "0xda01980192fcf524be07df7bd075081e58b6a3b1",
-      "PolygonZkEVMBridgeProxy": "0xf0Cbe43624e92a0F532236C1a564e189ef130765",
-      "PolygonZkEVMGlobalExitRoot": "0xad58366137689989da0f72bb8ce92551720a0d0e",
-      "PolygonZkEVMGlobalExitRootProxy": "0xF5f027EF57197E623b51871Ddc72EFC9a33Fad18"
+      "PolygonZkEVM": "0xe262ea2782e2e8dbfe354048c3b5d6de9603efef",
+      "PolygonZkEVMProxy": "0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2",
+      "PolygonZkEVMBridge": "0x5ac4182a1dd41aeef465e40b82fd326bf66ab82c",
+      "PolygonZkEVMBridgeProxy": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
+      "PolygonZkEVMGlobalExitRoot": "0xbc1ea504fC54D078514eFCCA1F6860B5219B6BC3",
+      "PolygonZkEVMGlobalExitRootProxy": "0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb"
     }
   },
   "zkEVM": {
     "NetworkName": "Cherry",
-    "ChainId": 1100,
+    "ChainId": 1101,
     "RPC": "https://zkevm-rpc.com",
     "Explorer": "https://explorer.mainnet.zkevm-test.net",
     "SupportsEIP1559": false,
     "Contracts": {
-      "PolygonZkEVMBridge": "0xf0Cbe43624e92a0F532236C1a564e189ef130765",
+      "PolygonZkEVMBridge": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
       "PolygonZkEVMGlobalExitRootL2": "0xa40d5f56745a118d0906a34e69aec8c0db1cb8fa"
     }
   }
