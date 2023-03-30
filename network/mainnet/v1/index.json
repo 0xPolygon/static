@@ -35,6 +35,7 @@
       "DepositManagerProxy": "0x401F6c983eA34274ec46f84D70b31C151321188b",
       "WithdrawManager": "0x4ef5123a30e4CFeC02B3E2F5Ce97F1328B29f7de",
       "WithdrawManagerProxy": "0x2A88696e0fFA76bAA1338F2C74497cC013495922",
+      "EventsHubProxy": "0x6dF5CB08d3f0193C768C8A01f42ac4424DC5086b",
       "ExitNFT": "0xDF74156420Bd57ab387B195ed81EcA36F9fABAca",
       "ERC20Predicate": "0x158d5fa3ef8e4dda8a5367decf76b94e7effce95",
       "ERC721Predicate": "0x54150f44c785d412ec262fe895cc3b689c72f49b",
