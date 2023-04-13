@@ -30,13 +30,6 @@ jobs:
           node-version: "12.18.0"
           registry-url: https://registry.npmjs.org/
 
-    - name: Install dependencies
-      run: npm install -g yarn
-    - name: yarn install 
-      run: yarn install --frozen-lockfile
-    - name: yarn build
-      run: yarn build
-
     - name: Deploy to S3 bucket
       run: aws s3 sync . s3://${{ secrets.PROD_AWS_S3_BUCKET }} --acl public-read --follow-symlinks --delete --exclude '.git/*' --exclude '.github/*' --exclude '.gitignore'
     
