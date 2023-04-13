@@ -1,0 +1,48 @@
+name: Static production Deployment
+on:
+  push:
+    branches:
+    - master
+  workflow_dispatch:  
+
+jobs:
+  build:
+   name: Production Deployment
+   permissions:
+    id-token: write
+    contents: write
+   environment: production
+   runs-on: ubuntu-latest
+   steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+          ref: master
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1-node16
+      with:
+        aws-region: eu-west-1
+        role-to-assume: ${{ secrets.ACTION_ROLE }}
+        role-session-name: GitHubActionsSession
+    - name: Setup node
+      uses: actions/setup-node@v3
+      with:
+          node-version: "12.18.0"
+          registry-url: https://registry.npmjs.org/
+
+    - name: Install dependencies
+      run: npm install -g yarn
+    - name: yarn install 
+      run: yarn install --frozen-lockfile
+    - name: yarn build
+      run: yarn build
+
+    - name: Deploy to S3 bucket
+      run: aws s3 sync . s3://${{ secrets.PROD_AWS_S3_BUCKET }} --acl public-read --follow-symlinks --delete --exclude '.git/*' --exclude '.github/*' --exclude '.gitignore'
+    
+    - name: invalidate cloudfront distribution and wait for completion
+      uses: muratiger/invalidate-cloudfront-and-wait-for-completion-action@master
+      env:
+         DISTRIBUTION_ID: ${{ secrets.PROD_CLOUDFRONT_DISTRIBUTION_ID }}
+         PATHS: "/*"
+         AWS_REGION: "eu-west-1"
