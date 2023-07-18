@@ -10,7 +10,8 @@
       "PolygonZkEVMBridge": "0x5ac4182a1dd41aeef465e40b82fd326bf66ab82c",
       "PolygonZkEVMBridgeProxy": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
       "PolygonZkEVMGlobalExitRoot": "0xbc1ea504fC54D078514eFCCA1F6860B5219B6BC3",
-      "PolygonZkEVMGlobalExitRootProxy": "0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb"
+      "PolygonZkEVMGlobalExitRootProxy": "0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb",
+      "ZkEVMWrapper": "0x2efb4dcb6bca848b57637e5bb56ce75d2c693a02"
     }
   },
   "zkEVM": {
