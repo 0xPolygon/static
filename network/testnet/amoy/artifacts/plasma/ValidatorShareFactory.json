@@ -1,0 +1,1 @@
+{"abi":[{"constant":false,"inputs":[{"internalType":"uint256","name":"validatorId","type":"uint256"},{"internalType":"address","name":"loggerAddress","type":"address"},{"internalType":"address","name":"registry","type":"address"}],"name":"create","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"function"}]}
