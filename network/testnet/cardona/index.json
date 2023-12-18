@@ -1,0 +1,27 @@
+{
+  "Main": {
+    "NetworkName": "Sepolia",
+    "ChainId": 11155111,
+    "Explorer": "https://sepolia.etherscan.io",
+    "SupportsEIP1559": true,
+    "Contracts": {
+      "PolygonZkEVM": "0x798d7f240cf197a5a4aa1928dc7aa2f2ead17012",
+      "PolygonZkEVMProxy": "0x32d33d5137a7cffb54c5bf8371172bcec5f310ff",
+      "PolygonZkEVMBridge": "0x8BD36ca1A55e389335004872aA3C3Be0969D3aA7",
+      "PolygonZkEVMBridgeProxy": "0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582",
+      "PolygonZkEVMGlobalExitRootProxy": "0xAd1490c248c5d3CbAE399Fd529b79B42984277DF",
+      "ZkEVMWrapper": "0x0f04f8434bac2e1db8fca8a34d3e177b6c7ccaba"
+    }
+  },
+  "zkEVM": {
+    "NetworkName": "Cardona",
+    "ChainId": 2442,
+    "RPC": "https://rpc.cardona.zkevm-rpc.com",
+    "Explorer": "https://explorer-ui.cardona.zkevm-rpc.com",
+    "SupportsEIP1559": false,
+    "Contracts": {
+      "PolygonZkEVMBridge": "0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582",
+      "PolygonZkEVMGlobalExitRootL2": "0xa40d5f56745a118d0906a34e69aec8c0db1cb8fa"
+    }
+  }
+}

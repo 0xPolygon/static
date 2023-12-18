@@ -16,6 +16,10 @@
     "version": "blueberry"
   },
   {
+    "network": "testnet",
+    "version": "cardona"
+  },
+  {
     "network": "mainnet",
     "version": "cherry"
   }

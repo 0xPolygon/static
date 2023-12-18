@@ -4,7 +4,7 @@
     "ChainId": 11155111,
     "StakingAPI": "",
     "Explorer": "https://sepolia.etherscan.io",
-    "SubgraphUrl": "",
+    "SubgraphUrl": "https://api.thegraph.com/subgraphs/name/nitinmittal23/amoy-root-subgraph",
     "SupportsEIP1559": true,
     "Contracts": {
       "Registry": "0xfE92F7c3a701e43d8479738c8844bCc555b9e5CD",
