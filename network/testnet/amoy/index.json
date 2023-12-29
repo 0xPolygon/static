@@ -72,9 +72,9 @@
   "Matic": {
     "NetworkName": "Amoy",
     "ChainId": 80002,
-    "RPC": "",
+    "RPC": "https://rpc-amoy.polygon.technology",
     "Explorer": "",
-    "NetworkAPI": "",
+    "NetworkAPI": "https://proof-generator.polygon.technology/api/v1/amoy",
     "SupportsEIP1559": true,
     "Contracts": {
       "EIP1559Burn": "0xeCDD77cE6f146cCf5dab707941d318Bd50eeD2C9",
@@ -116,6 +116,6 @@
   },
   "Heimdall": {
     "ChainId": "heimdall-80002",
-    "API": ""
+    "API": "https://heimdall-api-amoy.polygon.technology"
   }
 }
