@@ -1,7 +1,7 @@
 name: static-staging
 on:
   push:
-    branches: ['staging']
+    branches: ['DEVOPS-2599-static-staging-app-infra']
   workflow_dispatch:
 env:
   AWS_REGION: eu-west-1
@@ -27,7 +27,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1-node16
         with:
           aws-region: ${{ env.AWS_REGION }}
-          role-to-assume: arn:aws:iam::042947190491:role/static-staging-GithubActionsRole
+          role-to-assume: arn:aws:iam::070528468658:role/static-staging-GithubActionsRole
           role-session-name: GithubActionsSession
 
       - name: Login to Amazon ECR
