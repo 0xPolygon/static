@@ -20,7 +20,7 @@
                 "secretOptions": [
                     {
                         "name": "apiKey",
-                        "valueFrom": "arn:aws:ssm:$region:070528468658:parameter/DATADOG_APIKEY"
+                        "valueFrom": "arn:aws:ssm:$region:070528468658:parameter/static-staging/DATADOG_APIKEY"
                     }
                 ]
             },
