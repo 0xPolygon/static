@@ -1,0 +1,11 @@
+region: eu-west-1
+account_number: "042947190491"
+hostport: 3000
+containerport: 3000
+app_name: static-prod
+role: frontend-apps
+environment: prod
+iac: terraform-workspace-aws-prod-applications-eu-west-1-apps-static-prod-polygon-technology
+team_name: product-apps
+memory: 1024
+cpu: 512

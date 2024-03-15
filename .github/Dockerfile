@@ -3,5 +3,5 @@ FROM nginx:alpine
 COPY . /usr/share/nginx/html
 RUN rm -rf /usr/share/nginx/html/.git*
 
-EXPOSE 80
+EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]

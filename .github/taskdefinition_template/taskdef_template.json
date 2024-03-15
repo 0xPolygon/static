@@ -12,7 +12,7 @@
                 "options": {
                     "Name": "datadog",
                     "Host": "http-intake.logs.datadoghq.com",
-                    "dd_service": "static-staging",
+                    "dd_service": "$app_name",
                     "dd_source": "nodejs",
                     "TLS": "on",
                     "provider": "ecs"
@@ -20,28 +20,32 @@
                 "secretOptions": [
                     {
                         "name": "apiKey",
-                        "valueFrom": "arn:aws:ssm:eu-west-1:070528468658:parameter/static-staging/DATADOG_APIKEY"
+                        "valueFrom": "arn:aws:ssm:$region:$account_number:parameter/DATADOG_APIKEY"
                     }
                 ]
             },
             "entryPoint": null,
             "portMappings": [
                 {
-                    "hostPort": 80,
+                    "hostPort": $hostport,
                     "protocol": "tcp",
-                    "containerPort": 80
+                    "containerPort": $containerport
                 }
             ],
             "command": null,
             "linuxParameters": null,
             "cpu": 0,
-            "environment": null,
+            "environment": [
+                $env_vars
+            ],
             "resourceRequirements": null,
             "ulimits": null,
             "dnsServers": null,
             "mountPoints": null,
             "workingDirectory": null,
-            "secrets": [],
+            "secrets": [
+                $secret_vars
+            ],
             "dockerSecurityOptions": null,
             "memory": null,
             "memoryReservation": null,
@@ -64,7 +68,7 @@
             "dockerLabels": null,
             "systemControls": null,
             "privileged": null,
-            "name": "static-staging",
+            "name": "$app_name",
             "repositoryCredentials": {
                 "credentialsParameter": ""
             }
@@ -102,26 +106,26 @@
     ],
     "volumes": [],
     "networkMode": "awsvpc",
-    "memory": "1024",
-    "cpu": "512",
-    "executionRoleArn": "arn:aws:iam::070528468658:role/static-staging-TaskRole",
-    "family": "static-staging-taskdefinition",
-    "taskRoleArn": "arn:aws:iam::070528468658:role/static-staging-TaskRole",
+    "memory": "$memory",
+    "cpu": "$cpu",
+    "executionRoleArn": "arn:aws:iam::$account_number:role/$app_name-TaskRole",
+    "family": "$app_name-taskdefinition",
+    "taskRoleArn": "arn:aws:iam::$account_number:role/$app_name-TaskRole",
     "runtimePlatform": {
         "operatingSystemFamily": "LINUX"
     },
     "tags": [
         {
             "key": "Role",
-            "value": "frontend-application"
+            "value": "$role"
         },
         {
             "key": "Environment",
-            "value": "staging"
+            "value": "$environment"
         },
         {
             "key": "Service",
-            "value": "static-staging"
+            "value": "$app_name.polygon.technology"
         },
         {
             "key": "Host",
@@ -129,15 +133,15 @@
         },
         {
             "key": "IAC",
-            "value": "terraform-aws-test-applications-eu-west-1-apps-static-staging-polygon-technology"
+            "value": "$iac"
         },
         {
             "key": "Team",
-            "value": "product-apps"
+            "value": "$team_name"
         },
         {
             "key": "Name",
-            "value": "static-staging-taskdefinition"
+            "value": "$app_name-taskdefinition"
         }
     ]
 }
