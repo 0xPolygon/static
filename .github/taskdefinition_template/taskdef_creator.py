@@ -147,8 +147,8 @@ class TaskdefCreator:
             "memory",
             "cpu",
         ]
-        self._substitute_env_vars(user_data["env_vars"])
-        self._substitute_secret_vars(user_data["secret_vars"])
+        self._substitute_env_vars(user_data.get("env_vars", []))
+        self._substitute_secret_vars(user_data.get("secret_vars", []))
         [user_data.pop(key) for key in ["env_vars", "secret_vars"] if key in user_data]
         for sub in expected_sub:
             self._subtitute_data(user_data, sub)

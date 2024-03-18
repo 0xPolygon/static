@@ -5,9 +5,6 @@ on:
       - dev
       - staging
       - main
-    paths:
-      - "network/**"
-      - ".github/workflows/deployment.yml"
   workflow_dispatch:
 
 jobs:
@@ -21,25 +18,76 @@ jobs:
         id: set-env-var
         run: |
           if [ "${{ github.ref }}" == "refs/heads/dev" ]; then
-            echo "::set-output name=ENVIRONMENT::dev"
-            echo "::set-output name=ACCOUNT_NUMBER::058264511034"
+            echo "ENVIRONMENT=dev" >> $GITHUB_OUTPUT
+            echo "ACCOUNT_NUMBER=058264511034" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/staging" ]; then
-            echo "::set-output name=ENVIRONMENT::staging"
-            echo "::set-output name=ACCOUNT_NUMBER::070528468658"
+            echo "ENVIRONMENT=staging" >> $GITHUB_OUTPUT
+            echo "ACCOUNT_NUMBER=070528468658" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/master" ]; then
-            echo "::set-output name=ENVIRONMENT::prod"
-            echo "::set-output name=ACCOUNT_NUMBER::042947190491"
+            echo "ENVIRONMENT=prod" >> $GITHUB_OUTPUT
+            echo "ACCOUNT_NUMBER=042947190491" >> $GITHUB_OUTPUT
           fi
-
-  deploy:
-    uses: 0xPolygon/pipelines/.github/workflows/ecs_deploy_docker_taskdef.yaml@main
+  deploy_workflow:
+    name: Deploy static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}
     needs: set-env-variable
-    with:
-      app_name: static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}
-      taskdef_file_vars: .github/taskdef/${{ needs.set-env-variable.outputs.ENVIRONMENT }}-taskdef.yaml
-      account_number: "${{ needs.set-env-variable.outputs.ACCOUNT_NUMBER }}"
-      aws_region: eu-west-1
-      environment: ${{ needs.set-env-variable.outputs.ENVIRONMENT }}
-      docker_file: .github/Dockerfile
-      cluster_name: static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}-ecs-cluster
-    secrets: inherit
+    permissions:
+      id-token: write
+      contents: write
+    environment: ${{ needs.set-env-variable.outputs.ENVIRONMENT }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Create taskdef file dynamically using parameters passed
+        run: |
+          ls -lrt
+          export PIPENV_PIPFILE=.github/taskdefinition_template/Pipfile
+          python -m pip install --upgrade pip && \
+          pip install pipenv && \
+          pipenv install && \
+          pipenv run python ".github/taskdefinition_template/taskdef_creator.py" \
+            .github/taskdef/${{ needs.set-env-variable.outputs.ENVIRONMENT }}-taskdef.yaml \
+            ".github/taskdefinition_template/taskdef_template.json"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-region: eu-west-1
+          role-to-assume: arn:aws:iam::${{ needs.set-env-variable.outputs.ACCOUNT_NUMBER }}:role/static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}-GithubActionsRole
+          role-session-name: GithubActionsSession
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build, tag, and push image to Amazon ECR
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }}
+          ECR_REPOSITORY: "static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}-ecr"
+        run: |
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+      - name: Extract directory path
+        run: |
+          echo "TASKDEF_FILE=.github/taskdefinition_template/static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}.json" >> $GITHUB_ENV
+
+      - name: Fill in the new image ID in the Amazon ECS task definition
+        id: task-def
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: "${{ env.TASKDEF_FILE }}"
+          container-name: "static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}"
+          image: ${{ steps.build-image.outputs.image }}
+
+      - name: Deploy Amazon ECS task definition
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: ${{ steps.task-def.outputs.task-definition }}
+          service: "static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}-ecs-service"
+          cluster: "frontend-${{ needs.set-env-variable.outputs.ENVIRONMENT }}-ecs-cluster"
+          wait-for-service-stability: true
