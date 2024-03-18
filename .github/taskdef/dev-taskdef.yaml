@@ -1,0 +1,11 @@
+region: eu-west-1
+account_number: "058264511034"
+hostport: 3000
+containerport: 3000
+app_name: static-dev
+role: frontend-apps
+environment: dev
+iac: terraform-workspace-aws-dev-apps-eu-west-1-apps-static-dev-polygon-technology
+team_name: product-apps
+memory: 1024
+cpu: 512

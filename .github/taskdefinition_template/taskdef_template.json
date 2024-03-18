@@ -1,0 +1,147 @@
+{
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "inferenceAccelerators": [],
+    "containerDefinitions": [
+        {
+            "dnsSearchDomains": null,
+            "environmentFiles": [],
+            "logConfiguration": {
+                "logDriver": "awsfirelens",
+                "options": {
+                    "Name": "datadog",
+                    "Host": "http-intake.logs.datadoghq.com",
+                    "dd_service": "$app_name",
+                    "dd_source": "nodejs",
+                    "TLS": "on",
+                    "provider": "ecs"
+                },
+                "secretOptions": [
+                    {
+                        "name": "apiKey",
+                        "valueFrom": "arn:aws:ssm:$region:$account_number:parameter/DATADOG_APIKEY"
+                    }
+                ]
+            },
+            "entryPoint": null,
+            "portMappings": [
+                {
+                    "hostPort": $hostport,
+                    "protocol": "tcp",
+                    "containerPort": $containerport
+                }
+            ],
+            "command": null,
+            "linuxParameters": null,
+            "cpu": 0,
+            "environment": [
+                $env_vars
+            ],
+            "resourceRequirements": null,
+            "ulimits": null,
+            "dnsServers": null,
+            "mountPoints": null,
+            "workingDirectory": null,
+            "secrets": [
+                $secret_vars
+            ],
+            "dockerSecurityOptions": null,
+            "memory": null,
+            "memoryReservation": null,
+            "volumesFrom": null,
+            "stopTimeout": null,
+            "image": "nginx:latest",
+            "startTimeout": null,
+            "firelensConfiguration": null,
+            "dependsOn": null,
+            "disableNetworking": null,
+            "interactive": null,
+            "healthCheck": null,
+            "essential": true,
+            "links": null,
+            "hostname": null,
+            "extraHosts": null,
+            "pseudoTerminal": null,
+            "user": null,
+            "readonlyRootFilesystem": null,
+            "dockerLabels": null,
+            "systemControls": null,
+            "privileged": null,
+            "name": "$app_name",
+            "repositoryCredentials": {
+                "credentialsParameter": ""
+            }
+        },
+        {
+            "essential": true,
+            "image": "amazon/aws-for-fluent-bit:stable",
+            "name": "log_router",
+            "firelensConfiguration": {
+                "type": "fluentbit",
+                "options": {
+                    "enable-ecs-log-metadata": "true"
+                }
+            },
+            "environment": null,
+            "secrets": null,
+            "memoryReservation": 50,
+            "resourceRequirements": null,
+            "portMappings": [],
+            "environmentFiles": [],
+            "mountPoints": null,
+            "volumesFrom": null,
+            "hostname": null,
+            "user": null,
+            "workingDirectory": null,
+            "extraHosts": null,
+            "logConfiguration": null,
+            "ulimits": null,
+            "dockerLabels": null,
+            "dependsOn": null,
+            "repositoryCredentials": {
+                "credentialsParameter": ""
+            }
+        }
+    ],
+    "volumes": [],
+    "networkMode": "awsvpc",
+    "memory": "$memory",
+    "cpu": "$cpu",
+    "executionRoleArn": "arn:aws:iam::$account_number:role/$app_name-TaskRole",
+    "family": "$app_name-taskdefinition",
+    "taskRoleArn": "arn:aws:iam::$account_number:role/$app_name-TaskRole",
+    "runtimePlatform": {
+        "operatingSystemFamily": "LINUX"
+    },
+    "tags": [
+        {
+            "key": "Role",
+            "value": "$role"
+        },
+        {
+            "key": "Environment",
+            "value": "$environment"
+        },
+        {
+            "key": "Service",
+            "value": "$app_name.polygon.technology"
+        },
+        {
+            "key": "Host",
+            "value": "AWS"
+        },
+        {
+            "key": "IAC",
+            "value": "$iac"
+        },
+        {
+            "key": "Team",
+            "value": "$team_name"
+        },
+        {
+            "key": "Name",
+            "value": "$app_name-taskdefinition"
+        }
+    ]
+}
