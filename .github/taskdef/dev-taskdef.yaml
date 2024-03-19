@@ -1,7 +1,7 @@
 region: eu-west-1
 account_number: "058264511034"
-hostport: 3000
-containerport: 3000
+hostport: 80
+containerport: 80
 app_name: static-dev
 role: frontend-apps
 environment: dev
