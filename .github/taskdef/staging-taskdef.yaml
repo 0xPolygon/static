@@ -1,0 +1,10 @@
+region: eu-west-1
+hostport: 80
+containerport: 80
+app_name: static-staging
+role: frontend-apps
+environment: staging
+iac: terraform-workspace-aws-test-applications-eu-west-1-apps-static-staging-polygon-technology
+team_name: product-apps
+memory: 1024
+cpu: 512

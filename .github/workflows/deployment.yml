@@ -1,0 +1,20 @@
+name: Static Deployment
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      environment:
+        required: false
+        default: dev
+        type: choice
+        description: "Select the environment to deploy to (optional for pushes)"
+        choices: ["dev", "staging", "prod"]
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/build_and_deploy.yml
+    with:
+      environment: ${{ github.event.inputs.environment || 'dev' }}
+    secrets: inherit

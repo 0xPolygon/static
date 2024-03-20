@@ -1,0 +1,10 @@
+region: eu-west-1
+hostport: 80
+containerport: 80
+app_name: static-prod
+role: frontend-apps
+environment: prod
+iac: terraform-workspace-aws-prod-applications-eu-west-1-apps-static-prod-polygon-technology
+team_name: product-apps
+memory: 1024
+cpu: 512
