@@ -45,7 +45,12 @@
         "TestToken": "0x3f152B63Ec5CA5831061B2DccFb29a874C317502",
         "RootERC721": "0xfA08B72137eF907dEB3F202a60EfBc610D2f224b",
         "MaticWeth": "0x60D4dB9b534EF9260a88b0BED6c486fe13E604Fc"
-      }
+      },
+      "PolygonMigrationProxy": "0x5c5589fca76237Ed00BA024e19b6C077a108f687",
+      "PolygonMigration": "0x41E44496AfE9FE59004b9d166eFa5A31245746b5",
+      "DefaultEmissionManagerProxy": "0x0e481cfeB712d37A0C6cd4e2801cA01E09Bc1A9d",
+      "DefaultEmissionManager": "0x16258ebEa8eb68271Ca2677aBE05256265398A4D",
+      "PolygonEcosystemToken": "0x4f34BF3352A701AEc924CE34d6CfC373eABb186c"
     },
     "POSContracts": {
       "Merkle": "0x0ef207185e0c1631beb5514eb76501dd16ff9258",
