@@ -2,92 +2,19 @@ name: Static Deployment
 on:
   push:
     branches:
-      - dev
-      - staging
-      - main
+      - master
   workflow_dispatch:
+    inputs:
+      environment:
+        required: false
+        default: dev
+        type: choice
+        description: "Select the environment to deploy to (optional for pushes)"
+        choices: ["dev", "staging", "prod"]
 
 jobs:
-  set-env-variable:
-    runs-on: ubuntu-latest
-    outputs:
-      ENVIRONMENT: ${{ steps.set-env-var.outputs.ENVIRONMENT }}
-      ACCOUNT_NUMBER: ${{ steps.set-env-var.outputs.ACCOUNT_NUMBER }}
-    steps:
-      - name: Set Environment Variable
-        id: set-env-var
-        run: |
-          if [ "${{ github.ref }}" == "refs/heads/dev" ]; then
-            echo "ENVIRONMENT=dev" >> $GITHUB_OUTPUT
-            echo "ACCOUNT_NUMBER=058264511034" >> $GITHUB_OUTPUT
-          elif [ "${{ github.ref }}" == "refs/heads/staging" ]; then
-            echo "ENVIRONMENT=staging" >> $GITHUB_OUTPUT
-            echo "ACCOUNT_NUMBER=070528468658" >> $GITHUB_OUTPUT
-          elif [ "${{ github.ref }}" == "refs/heads/master" ]; then
-            echo "ENVIRONMENT=prod" >> $GITHUB_OUTPUT
-            echo "ACCOUNT_NUMBER=042947190491" >> $GITHUB_OUTPUT
-          fi
-  deploy_workflow:
-    name: Deploy static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}
-    needs: set-env-variable
-    permissions:
-      id-token: write
-      contents: write
-    environment: ${{ needs.set-env-variable.outputs.ENVIRONMENT }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Create taskdef file dynamically using parameters passed
-        run: |
-          ls -lrt
-          export PIPENV_PIPFILE=.github/taskdefinition_template/Pipfile
-          python -m pip install --upgrade pip && \
-          pip install pipenv && \
-          pipenv install && \
-          pipenv run python ".github/taskdefinition_template/taskdef_creator.py" \
-            .github/taskdef/${{ needs.set-env-variable.outputs.ENVIRONMENT }}-taskdef.yaml \
-            ".github/taskdefinition_template/taskdef_template.json"
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v3
-        with:
-          aws-region: eu-west-1
-          role-to-assume: arn:aws:iam::${{ needs.set-env-variable.outputs.ACCOUNT_NUMBER }}:role/static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}-GithubActionsRole
-          role-session-name: GithubActionsSession
-
-      - name: Login to Amazon ECR
-        id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v2
-
-      - name: Build, tag, and push image to Amazon ECR
-        id: build-image
-        env:
-          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          IMAGE_TAG: ${{ github.sha }}
-          ECR_REPOSITORY: "static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}-ecr"
-        run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
-
-      - name: Extract directory path
-        run: |
-          echo "TASKDEF_FILE=.github/taskdefinition_template/static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}.json" >> $GITHUB_ENV
-
-      - name: Fill in the new image ID in the Amazon ECS task definition
-        id: task-def
-        uses: aws-actions/amazon-ecs-render-task-definition@v1
-        with:
-          task-definition: "${{ env.TASKDEF_FILE }}"
-          container-name: "static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}"
-          image: ${{ steps.build-image.outputs.image }}
-
-      - name: Deploy Amazon ECS task definition
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-        with:
-          task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: "static-${{ needs.set-env-variable.outputs.ENVIRONMENT }}-ecs-service"
-          cluster: "frontend-${{ needs.set-env-variable.outputs.ENVIRONMENT }}-ecs-cluster"
-          wait-for-service-stability: true
+  deploy:
+    uses: ./.github/workflows/build_and_deploy.yml
+    with:
+      environment: ${{ github.event.inputs.environment || 'dev' }}
+    secrets: inherit
