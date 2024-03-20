@@ -3,5 +3,5 @@ WORKDIR /usr/share/nginx/html
 COPY . .
 RUN rm -rf .git*
 
-EXPOSE 3000
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
