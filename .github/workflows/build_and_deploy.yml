@@ -47,7 +47,8 @@ jobs:
           pipenv install && \
           pipenv run python ".github/taskdefinition_template/taskdef_creator.py" \
             .github/taskdef/${{ inputs.environment }}-taskdef.yaml \
-            ".github/taskdefinition_template/taskdef_template.json"
+            ".github/taskdefinition_template/taskdef_template.json" \
+            ${{ steps.get_account_number.outputs.ACCOUNT_NUMBER }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3

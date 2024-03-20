@@ -24,6 +24,11 @@ class TaskdefCreator:
             help="Template json file to be used",
             default=".github/taskdefinition_template/taskdef_template.json",
         )
+        parser.add_argument(
+            "account_number",
+            type=str,
+            help="AWS account number to be used for deployment"
+        )
         self.args = parser.parse_args()
         self.template_data = ""
         self.taskdef_final_file = ""
@@ -147,6 +152,8 @@ class TaskdefCreator:
             "memory",
             "cpu",
         ]
+        if user_data is not None:
+            user_data["account_number"] = self.args.account_number
         self._substitute_env_vars(user_data.get("env_vars", []))
         self._substitute_secret_vars(user_data.get("secret_vars", []))
         [user_data.pop(key) for key in ["env_vars", "secret_vars"] if key in user_data]
