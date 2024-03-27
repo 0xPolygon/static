@@ -33,7 +33,12 @@
         "MaticToken": "0x3fd0A53F4Bf853985a95F4Eb3F9C9FDE1F8e2b53",
         "MaticWeth": "0x700dDE29De87ed2c01c27C896dc8Badb4f671302",
         "RootERC721": "0x13B0Edd9312886Ac0C73116e767208bEd1199679"
-      }
+      },
+      "PolygonMigrationProxy": "0x3A3B750E7d4d389Bc1d0be20E5D09530F82B9911",
+      "PolygonMigration": "0xC70198ad91082c4d6eEb70d991cc4B2b61Cb3d1E",
+      "DefaultEmissionManagerProxy": "0x20393fF3B3C38b72a16eB7d7A474cd38ABD8Ff27",
+      "DefaultEmissionManager": "0x9B4D4Fc98C2Aa924a65AB827494159a76Fce6ceD",
+      "PolygonEcosystemToken": "0x44499312f493F62f2DFd3C6435Ca3603EbFCeeBa"
     },
     "POSContracts": {
       "RootChainManager": "0x6d5E942717d2c128Bd0c87f5d8312CAD6360d8f5",
@@ -73,7 +78,7 @@
     "NetworkName": "Amoy",
     "ChainId": 80002,
     "RPC": "https://rpc-amoy.polygon.technology",
-    "Explorer": "",
+    "Explorer": "https://www.oklink.com/amoy",
     "NetworkAPI": "https://proof-generator.polygon.technology/api/v1/amoy",
     "SupportsEIP1559": true,
     "Contracts": {
@@ -82,7 +87,8 @@
       "Tokens": {
         "MaticWeth": "0x41Dc3C8eB8368bd9139Cec50434a0C294c8c1102",
         "MaticToken": "0x0000000000000000000000000000000000001010",
-        "RootERC721": "0x3ADBC484Ff0cFEb657e1A9AF8F3CB16DC0B53e7e"
+        "RootERC721": "0x3ADBC484Ff0cFEb657e1A9AF8F3CB16DC0B53e7e",
+        "WMATIC": "0x360ad4f9a9A8EFe9A8DCB5f461c4Cc1047E1Dcf9"
       }
     },
     "POSContracts": {
