@@ -78,7 +78,7 @@
     "NetworkName": "Amoy",
     "ChainId": 80002,
     "RPC": "https://rpc-amoy.polygon.technology",
-    "Explorer": "",
+    "Explorer": "https://www.oklink.com/amoy",
     "NetworkAPI": "https://proof-generator.polygon.technology/api/v1/amoy",
     "SupportsEIP1559": true,
     "Contracts": {
