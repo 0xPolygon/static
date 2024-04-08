@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy_workflow:
-    name: Deploy static
+    name: Deploy static ${{ inputs.environment }}
     permissions:
       id-token: write
       contents: write
