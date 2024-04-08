@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - DEVOPS-2599-cors-issue-update
   workflow_dispatch:
     inputs:
       environment:
@@ -18,6 +17,5 @@ jobs:
   deploy:
     uses: ./.github/workflows/build_and_deploy.yml
     with:
-      environment: "staging"
-      # environment: ${{ inputs.environment || 'dev' }}
+      environment: ${{ inputs.environment || 'dev' }}
     secrets: inherit
