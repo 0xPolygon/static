@@ -5,17 +5,18 @@ on:
         required: false
         type: string
         default: "dev"
+      core_app_name:
+        type: string
+        default: "static"
 
 jobs:
   deploy_workflow:
-    name: Deploy static ${{ inputs.environment }}
+    name: Deploy ${{ inputs.core_app_name }}-${{ inputs.environment }}
     permissions:
       id-token: write
       contents: write
     environment: ${{ inputs.environment }}
     runs-on: ubuntu-latest
-    env:
-      APP_NAME: static-${{ inputs.environment }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -32,12 +33,21 @@ jobs:
               ;;
             "prod")
               echo "ACCOUNT_NUMBER=${{ secrets.PROD_ACCOUNT_NUMBER }}" >> $GITHUB_OUTPUT
-              ;;
+              ;;              
             *)
               echo "Error: Unknown environment!"
               exit 1
               ;;
           esac
+
+      - name: Determine APP name
+        id: get_app_name
+        run: |
+          if [[ "${{ inputs.environment }}" == "prod" ]]; then
+            echo "APP_NAME=${{ inputs.core_app_name }}-${{ inputs.environment }}" >> $GITHUB_ENV
+          else
+            echo "APP_NAME=${{ inputs.core_app_name }}-${{ inputs.environment }}" >> $GITHUB_ENV
+          fi
 
       - name: Create taskdef file dynamically using parameters passed
         run: |
