@@ -44,7 +44,7 @@ jobs:
         id: get_app_name
         run: |
           if [[ "${{ inputs.environment }}" == "prod" ]]; then
-            echo "APP_NAME=${{ inputs.core_app_name }}-${{ inputs.environment }}" >> $GITHUB_ENV
+            echo "APP_NAME=${{ inputs.core_app_name }}" >> $GITHUB_ENV
           else
             echo "APP_NAME=${{ inputs.core_app_name }}-${{ inputs.environment }}" >> $GITHUB_ENV
           fi
