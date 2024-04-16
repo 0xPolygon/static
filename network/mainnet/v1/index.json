@@ -8,15 +8,7 @@
     "SubgraphUrl": "https://api.thegraph.com/subgraphs/name/maticnetwork/mainnet-root-subgraphs",
     "SupportsEIP1559": true,
     "Contracts": {
-      "BytesLib": "0x1d21fACFC8CaD068eF0cbc87FdaCdFb20D7e2417",
-      "Common": "0x31851aAf1FA4cC6632f45570c2086aDcF8B7BD75",
-      "ECVerify": "0x71d91a8988D81617be53427126ee62471321b7DF",
-      "Merkle": "0x8b90C7633F1f751E19E76433990B1663c625B258",
-      "MerklePatriciaProof": "0x8E51a119E892D3fb324C0410F11f39F61dec9DC8",
       "PriorityQueue": "0x61AdDcD534Bdc1721c91740Cf711dBEcE936053e",
-      "RLPEncode": "0x021c2Bf4d2941cE3D593e07317EC355937bae495",
-      "RLPReader": "0xD75f1d6A8A7Dc558A65c2f30eBF876DdbeE035a2",
-      "SafeMath": "0x96D358795782a73d90F2ed2d505aB235D197ca05",
       "Governance": "0x98165b71cdDea047C0A49413350C40571195fd07",
       "GovernanceProxy": "0x6e7a5820baD6cebA8Ef5ea69c0C92EbbDAc9CE48",
       "Timelock": "0xCaf0aa768A3AE1297DF20072419Db8Bb8b5C8cEf",
@@ -53,11 +45,7 @@
       "PolygonEcosystemToken": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6"
     },
     "POSContracts": {
-      "Merkle": "0x195fe6EE6639665CCeB15BCCeB9980FC445DFa0B",
-      "MerklePatriciaProof": "0xA6FA4fB5f76172d178d61B04b0ecd319C5d1C0aa",
-      "RLPReader": "0xBEFe614A45A8300f2a4A00fb634b7137b6b1Bc47",
       "SafeERC20": "0xeFfdCB49C2D0EF813764B709Ca3c6fe71f230E3e",
-      "SafeMath": "0x6EBEAC13f6403D19C95b6B75008B12fd21a93Aab",
       "RootChainManager": "0x37D26DC2890b35924b40574BAc10552794771997",
       "RootChainManagerProxy": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
       "ERC20Predicate": "0x608669d4914eec1e20408bc4c9efff27bb8cbde5",
