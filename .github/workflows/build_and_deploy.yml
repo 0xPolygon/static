@@ -5,99 +5,41 @@ on:
         required: false
         type: string
         default: "dev"
-      core_app_name:
+      core_app:
+        required: false
         type: string
+        description: "Core app name"
         default: "static"
 
 jobs:
-  deploy_workflow:
-    name: Deploy ${{ inputs.core_app_name }}-${{ inputs.environment }}
-    permissions:
-      id-token: write
-      contents: write
-    environment: ${{ inputs.environment }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Determine account number
-        id: get_account_number
-        run: |
-          case "${{ inputs.environment }}" in
-            "dev")
-              echo "ACCOUNT_NUMBER=${{ secrets.DEV_ACCOUNT_NUMBER }}" >> $GITHUB_OUTPUT
-              ;;
-            "staging")
-              echo "ACCOUNT_NUMBER=${{ secrets.STAGING_ACCOUNT_NUMBER }}" >> $GITHUB_OUTPUT
-              ;;
-            "prod")
-              echo "ACCOUNT_NUMBER=${{ secrets.PROD_ACCOUNT_NUMBER }}" >> $GITHUB_OUTPUT
-              ;;              
-            *)
-              echo "Error: Unknown environment!"
-              exit 1
-              ;;
-          esac
-
-      - name: Determine APP name
-        id: get_app_name
-        run: |
-          if [[ "${{ inputs.environment }}" == "prod" ]]; then
-            echo "APP_NAME=${{ inputs.core_app_name }}" >> $GITHUB_ENV
-          else
-            echo "APP_NAME=${{ inputs.core_app_name }}-${{ inputs.environment }}" >> $GITHUB_ENV
-          fi
-
-      - name: Create taskdef file dynamically using parameters passed
-        run: |
-          export PIPENV_PIPFILE=.github/taskdefinition_template/Pipfile
-          python -m pip install --upgrade pip && \
-          pip install pipenv && \
-          pipenv install && \
-          pipenv run python ".github/taskdefinition_template/taskdef_creator.py" \
-            .github/taskdef/${{ inputs.environment }}-taskdef.yaml \
-            ".github/taskdefinition_template/taskdef_template.json" \
-            ${{ steps.get_account_number.outputs.ACCOUNT_NUMBER }}
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v3
-        with:
-          aws-region: eu-west-1
-          role-to-assume: arn:aws:iam::${{ steps.get_account_number.outputs.ACCOUNT_NUMBER }}:role/${{ env.APP_NAME }}-GithubActionsRole
-          role-session-name: GithubActionsSession
-
-      - name: Login to Amazon ECR
-        id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v2
-
-      - name: Build, tag, and push image to Amazon ECR
-        id: build-image
-        env:
-          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          IMAGE_TAG: ${{ github.sha }}
-          ECR_REPOSITORY: "${{ env.APP_NAME }}-ecr"
-        run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
-
-      - name: Extract directory path
-        run: |
-          echo "TASKDEF_FILE=.github/taskdefinition_template/${{ env.APP_NAME }}.json" >> $GITHUB_ENV
-
-      - name: Fill in the new image ID in the Amazon ECS task definition
-        id: task-def
-        uses: aws-actions/amazon-ecs-render-task-definition@v1
-        with:
-          task-definition: "${{ env.TASKDEF_FILE }}"
-          container-name: "${{ env.APP_NAME }}"
-          image: ${{ steps.build-image.outputs.image }}
-
-      - name: Deploy Amazon ECS task definition
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-        with:
-          task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: "${{ env.APP_NAME }}-ecs-service"
-          cluster: "frontend-${{ inputs.environment }}-ecs-cluster"
-          wait-for-service-stability: true
+  set-env-variable:
+      runs-on: ubuntu-latest
+      outputs:
+          ACCOUNT_NUMBER: ${{ steps.set-env-var.outputs.ACCOUNT_NUMBER }}
+          APP_NAME: ${{ steps.set-env-var.outputs.APP_NAME }}
+      steps:
+        - name: Set Environment Variable
+          id: set-env-var
+          run: |
+              if [ "${{ inputs.environment }}" == "dev" ]; then
+                  echo "ACCOUNT_NUMBER=058264511034" >> $GITHUB_OUTPUT
+                  echo "APP_NAME=${{ inputs.core_app }}-dev" >> $GITHUB_OUTPUT
+              elif [ "${{ inputs.environment }}" == "staging" ]; then
+                  echo "ACCOUNT_NUMBER=070528468658" >> $GITHUB_OUTPUT
+                  echo "APP_NAME=${{ inputs.core_app }}-staging" >> $GITHUB_OUTPUT
+              elif [ "${{ inputs.environment }}" == "prod" ]; then
+                  echo "ACCOUNT_NUMBER=042947190491" >> $GITHUB_OUTPUT
+                  echo "APP_NAME=${{ inputs.core_app }}" >> $GITHUB_OUTPUT
+              fi
+          
+  deploy:
+      uses: 0xPolygon/pipelines/.github/workflows/ecs_deploy_docker_taskdef.yaml@main
+      needs: set-env-variable
+      with:            
+          app_name: ${{ needs.set-env-variable.outputs.APP_NAME }}
+          taskdef_file_vars: .github/taskdef/${{ inputs.environment }}-taskdef.yaml
+          aws_region: eu-west-1
+          environment: ${{ inputs.environment }}
+          cluster_name: frontend-${{ inputs.environment }}-ecs-cluster
+          account_number: "${{ needs.set-env-variable.outputs.ACCOUNT_NUMBER }}"
+      secrets: inherit
