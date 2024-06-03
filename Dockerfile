@@ -8,4 +8,4 @@ COPY index.html .
 RUN rm -rf .git*
 
 EXPOSE 80
-CMD ["nginx", "-g", "daemon on;"]
+CMD ["nginx", "-g", "daemon off;"]
