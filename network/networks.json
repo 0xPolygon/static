@@ -1,19 +1,11 @@
 [
   {
     "network": "testnet",
-    "version": "mumbai"
-  },
-  {
-    "network": "testnet",
     "version": "amoy"
   },
   {
     "network": "mainnet",
     "version": "v1"
-  },
-  {
-    "network": "testnet",
-    "version": "blueberry"
   },
   {
     "network": "testnet",
