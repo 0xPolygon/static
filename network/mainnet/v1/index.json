@@ -29,7 +29,7 @@
       "WithdrawManagerProxy": "0x2A88696e0fFA76bAA1338F2C74497cC013495922",
       "EventsHubProxy": "0x6dF5CB08d3f0193C768C8A01f42ac4424DC5086b",
       "ExitNFT": "0xDF74156420Bd57ab387B195ed81EcA36F9fABAca",
-      "ERC20Predicate": "0x158d5fa3ef8e4dda8a5367decf76b94e7effce95",
+      "ERC20Predicate": "0x626fb210bf50e201ed62ca2705c16de2a53dc966",
       "ERC721Predicate": "0x54150f44c785d412ec262fe895cc3b689c72f49b",
       "EIP1559Burn": "0x70bca57f4579f58670ab2d18ef16e02c17553c38",
       "Tokens": {
