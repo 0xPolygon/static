@@ -11,7 +11,7 @@
       "PolygonZkEVMBridgeProxy": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
       "PolygonZkEVMGlobalExitRoot": "0xbc1ea504fC54D078514eFCCA1F6860B5219B6BC3",
       "PolygonZkEVMGlobalExitRootProxy": "0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb",
-      "ZkEVMWrapper": "0x047E0b64743071b897A6177F1796E98b4C3f344E"
+      "ZkEVMWrapper": "0x000000d19e30E7b15c0C0902ab715b65000fC900"
     }
   },
   "zkEVM": {
