@@ -29,7 +29,7 @@
       "WithdrawManagerProxy": "0x2A88696e0fFA76bAA1338F2C74497cC013495922",
       "EventsHubProxy": "0x6dF5CB08d3f0193C768C8A01f42ac4424DC5086b",
       "ExitNFT": "0xDF74156420Bd57ab387B195ed81EcA36F9fABAca",
-      "ERC20Predicate": "0x158d5fa3ef8e4dda8a5367decf76b94e7effce95",
+      "ERC20Predicate": "0x626fb210bf50e201ed62ca2705c16de2a53dc966",
       "ERC721Predicate": "0x54150f44c785d412ec262fe895cc3b689c72f49b",
       "EIP1559Burn": "0x70bca57f4579f58670ab2d18ef16e02c17553c38",
       "Tokens": {
@@ -41,7 +41,7 @@
       "PolygonMigrationProxy": "0x29e7DF7b6A1B2b07b731457f499E1696c60E2C4e",
       "PolygonMigration": "0x550B7CDaC6F5a0d9e840505c3Df74aC045530446",
       "DefaultEmissionManagerProxy": "0xbC9f74b3b14f460a6c47dCdDFd17411cBc7b6c53",
-      "DefaultEmissionManager": "0x2126E6952C3af75C9D4CF21f63F509195C79ce44",
+      "DefaultEmissionManager": "0x5e875267f65537768435C3C6C81cd313a570B422",
       "PolygonEcosystemToken": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6"
     },
     "POSContracts": {
