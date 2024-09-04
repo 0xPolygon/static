@@ -25,7 +25,7 @@
       "StateSender": "0x28e4F3a7f651294B9564800b2D01f35189A5bFbE",
       "DepositManager": "0xDdaC6D3A2a787b1F4bf26AB6FAF519ae3F1a94cf",
       "DepositManagerProxy": "0x401F6c983eA34274ec46f84D70b31C151321188b",
-      "WithdrawManager": "0xA376680d32Cece9756D9f1087318400DA2fd83dF",
+      "WithdrawManager": "0x31f9c8c786ad7cc70ad10cf136b36681d340b792",
       "WithdrawManagerProxy": "0x2A88696e0fFA76bAA1338F2C74497cC013495922",
       "EventsHubProxy": "0x6dF5CB08d3f0193C768C8A01f42ac4424DC5086b",
       "ExitNFT": "0xDF74156420Bd57ab387B195ed81EcA36F9fABAca",
