@@ -23,7 +23,7 @@
       "SlashingManager": "0x01F645DcD6C796F6BC6C982159B32fAaaebdC96A",
       "ValidatorShare": "0x7e94d6cAbb20114b22a088d828772645f68CC67B",
       "StateSender": "0x28e4F3a7f651294B9564800b2D01f35189A5bFbE",
-      "DepositManager": "0xDdaC6D3A2a787b1F4bf26AB6FAF519ae3F1a94cf",
+      "DepositManager": "0xb00aa68b87256E2F22058fB2Ba3246EEc54A44fc",
       "DepositManagerProxy": "0x401F6c983eA34274ec46f84D70b31C151321188b",
       "WithdrawManager": "0x6F8a42cf6f3CE657B66A9d5849f1251dE7a35168",
       "WithdrawManagerProxy": "0x2A88696e0fFA76bAA1338F2C74497cC013495922",
@@ -41,7 +41,7 @@
       "PolygonMigrationProxy": "0x29e7DF7b6A1B2b07b731457f499E1696c60E2C4e",
       "PolygonMigration": "0x550B7CDaC6F5a0d9e840505c3Df74aC045530446",
       "DefaultEmissionManagerProxy": "0xbC9f74b3b14f460a6c47dCdDFd17411cBc7b6c53",
-      "DefaultEmissionManager": "0x5e875267f65537768435C3C6C81cd313a570B422",
+      "DefaultEmissionManager": "0x152442D77E9fB9C210953d583Cbb2da88027fCB9",
       "PolygonEcosystemToken": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6"
     },
     "POSContracts": {
