@@ -1,0 +1,26 @@
+name: Static Deployment GCP
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      environment:
+        required: true
+        type: choice
+        description: "Select the environment to deploy to"
+        options:
+          - staging
+          - prod
+          - dev
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  docker-release:
+    uses: 0xPolygon/pipelines/.github/workflows/gcp_pipeline_release_image.yaml@main
+    with:
+      image_name: static
+      environment: ${{ github.event_name == 'push' && 'dev' || inputs.environment }}
