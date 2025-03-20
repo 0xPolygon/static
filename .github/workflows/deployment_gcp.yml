@@ -9,7 +9,13 @@ permissions:
   id-token: write
 
 jobs:
+  generate-version:
+    uses: 0xPolygon/pipelines/.github/workflows/generate_version.yaml@main
+
   docker-release:
+    needs:
+      - generate-version
     uses: 0xPolygon/pipelines/.github/workflows/gcp_pipeline_release_image.yaml@main
     with:
       image_name: static
+      image_tag: ${{ needs.generate-version.outputs.version }}
