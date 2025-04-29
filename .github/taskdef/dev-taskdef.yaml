@@ -8,3 +8,4 @@ iac: terraform-workspace-aws-dev-apps-eu-west-1-apps-static-dev-polygon-technolo
 team_name: product-apps
 memory: 1024
 cpu: 512
+#
