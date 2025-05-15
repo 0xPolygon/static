@@ -1,8 +1,14 @@
 name: Deploy docker image to GCP
 on:
   push:
-    branches:
+    branches: 
       - master
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to build and push'
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -14,8 +20,9 @@ jobs:
 
   docker-release:
     needs:
-      - generate-version
-    uses: 0xPolygon/pipelines/.github/workflows/gcp_pipeline_release_image.yaml@main
+        - generate-version  
+    uses: 0xPolygon/pipelines/.github/workflows/gcp_pipeline_release_image.yaml@main    
     with:
-      image_name: static
-      image_tag: ${{ needs.generate-version.outputs.version }}
+        image_name: "static"
+        image_tag: ${{ inputs.tag || needs.generate-version.outputs.version }}
+        checkout_ref: ${{ github.ref_name }}
