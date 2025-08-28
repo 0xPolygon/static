@@ -41,10 +41,10 @@
       "PolygonEcosystemToken": "0x44499312f493F62f2DFd3C6435Ca3603EbFCeeBa"
     },
     "POSContracts": {
-      "RootChainManager": "0x6d5E942717d2c128Bd0c87f5d8312CAD6360d8f5",
+      "RootChainManager": "0xfc30033BB0a3161e6793BBf965468C4f84306D2E",
       "RootChainManagerProxy": "0x34F5A25B627f50Bb3f5cAb72807c4D4F405a9232",
       "DummyStateSender": "0x277A3f85F10fccC006771C7852E93D1a0c748aBe",
-      "ERC20Predicate": "0x54b6fE64dB240A19b31ae6f91f7D7830804DdEC8",
+      "ERC20Predicate": "0x04C5aCb46f184857F747bee259E2592418c8D30F",
       "ERC20PredicateProxy": "0x4258C75b752c812B7Fa586bdeb259f2d4bd17f4F",
       "MintableERC20Predicate": "0x1eeBd02d6be09ea59416Ab7d69a6C3DAdd8FF50a",
       "MintableERC20PredicateProxy": "0x1aCb66777aC167c7c8F5c94D169f953a9773555F",
