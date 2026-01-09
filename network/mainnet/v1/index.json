@@ -20,7 +20,6 @@
       "StakingNFT": "0x47Cbe25BbDB40a774cC37E1dA92d10C2C7Ec897F",
       "StakeManager": "0x3AD88467E40399dc6Ae10427f8B0842348d9076c",
       "StakeManagerProxy": "0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908",
-      "SlashingManager": "0x01F645DcD6C796F6BC6C982159B32fAaaebdC96A",
       "ValidatorShare": "0x7e94d6cAbb20114b22a088d828772645f68CC67B",
       "StateSender": "0x28e4F3a7f651294B9564800b2D01f35189A5bFbE",
       "DepositManager": "0xb00aa68b87256E2F22058fB2Ba3246EEc54A44fc",
