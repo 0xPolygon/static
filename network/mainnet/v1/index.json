@@ -38,16 +38,16 @@
         "MaticWeth": "0xa45b966996374E9e65ab991C6FE4Bfce3a56DDe8"
       },
       "PolygonMigrationProxy": "0x29e7DF7b6A1B2b07b731457f499E1696c60E2C4e",
-      "PolygonMigration": "0x550B7CDaC6F5a0d9e840505c3Df74aC045530446",
+      "PolygonMigration": "0xB037347ef306db3b41aB0b250F891887039d9231",
       "DefaultEmissionManagerProxy": "0xbC9f74b3b14f460a6c47dCdDFd17411cBc7b6c53",
       "DefaultEmissionManager": "0x152442D77E9fB9C210953d583Cbb2da88027fCB9",
       "PolygonEcosystemToken": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6"
     },
     "POSContracts": {
       "SafeERC20": "0xeFfdCB49C2D0EF813764B709Ca3c6fe71f230E3e",
-      "RootChainManager": "0x639f13D5f30B47c792b6851238c05D0b623C77DE",
+      "RootChainManager": "0xF0235dCa8fb0D3999685724dCBB9DD00c5d62DFa",
       "RootChainManagerProxy": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
-      "ERC20Predicate": "0xB1fd4ae726c64A793588001EB465c46BD1BdF1cB",
+      "ERC20Predicate": "0x1F4c1E0afBeb5b5B86d7722549274434b29884F6",
       "ERC20PredicateProxy": "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf",
       "ERC721Predicate": "0x02Bc987f54B54bf18Ca6E20a13e57508ec561072",
       "ERC721PredicateProxy": "0xE6F45376f64e1F568BD1404C155e5fFD2F80F7AD",
