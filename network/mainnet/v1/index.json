@@ -20,7 +20,6 @@
       "StakingNFT": "0x47Cbe25BbDB40a774cC37E1dA92d10C2C7Ec897F",
       "StakeManager": "0x3AD88467E40399dc6Ae10427f8B0842348d9076c",
       "StakeManagerProxy": "0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908",
-      "SlashingManager": "0x01F645DcD6C796F6BC6C982159B32fAaaebdC96A",
       "ValidatorShare": "0x7e94d6cAbb20114b22a088d828772645f68CC67B",
       "StateSender": "0x28e4F3a7f651294B9564800b2D01f35189A5bFbE",
       "DepositManager": "0xb00aa68b87256E2F22058fB2Ba3246EEc54A44fc",
@@ -39,16 +38,16 @@
         "MaticWeth": "0xa45b966996374E9e65ab991C6FE4Bfce3a56DDe8"
       },
       "PolygonMigrationProxy": "0x29e7DF7b6A1B2b07b731457f499E1696c60E2C4e",
-      "PolygonMigration": "0x550B7CDaC6F5a0d9e840505c3Df74aC045530446",
+      "PolygonMigration": "0xB037347ef306db3b41aB0b250F891887039d9231",
       "DefaultEmissionManagerProxy": "0xbC9f74b3b14f460a6c47dCdDFd17411cBc7b6c53",
       "DefaultEmissionManager": "0x152442D77E9fB9C210953d583Cbb2da88027fCB9",
       "PolygonEcosystemToken": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6"
     },
     "POSContracts": {
       "SafeERC20": "0xeFfdCB49C2D0EF813764B709Ca3c6fe71f230E3e",
-      "RootChainManager": "0x639f13D5f30B47c792b6851238c05D0b623C77DE",
+      "RootChainManager": "0xF0235dCa8fb0D3999685724dCBB9DD00c5d62DFa",
       "RootChainManagerProxy": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
-      "ERC20Predicate": "0xB1fd4ae726c64A793588001EB465c46BD1BdF1cB",
+      "ERC20Predicate": "0x1F4c1E0afBeb5b5B86d7722549274434b29884F6",
       "ERC20PredicateProxy": "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf",
       "ERC721Predicate": "0x02Bc987f54B54bf18Ca6E20a13e57508ec561072",
       "ERC721PredicateProxy": "0xE6F45376f64e1F568BD1404C155e5fFD2F80F7AD",
@@ -63,7 +62,7 @@
       "EtherPredicate": "0xeB185ED8f664D105903EF434E5becd214a8AC874",
       "EtherPredicateProxy": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
       "DummyStateSender": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
-      "GasSwapper": "0x1646a4761aa54f23d7f4d5deb5d393f67d318b80",
+      "GasSwapper": "0x4CcD4CbDE5Ec758cCBf75f0be280647Ff359c17a",
       "Tokens": {
         "DummyERC20": "0xf2F3bD7Ca5746C5fac518f67D1BE87805a2Be82A",
         "DummyERC721": "0x71B821aa52a49F32EEd535fCA6Eb5aa130085978",
