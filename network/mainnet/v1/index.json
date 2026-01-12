@@ -62,7 +62,7 @@
       "EtherPredicate": "0xeB185ED8f664D105903EF434E5becd214a8AC874",
       "EtherPredicateProxy": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
       "DummyStateSender": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
-      "GasSwapper": "0x1646a4761aa54f23d7f4d5deb5d393f67d318b80",
+      "GasSwapper": "0x4CcD4CbDE5Ec758cCBf75f0be280647Ff359c17a",
       "Tokens": {
         "DummyERC20": "0xf2F3bD7Ca5746C5fac518f67D1BE87805a2Be82A",
         "DummyERC721": "0x71B821aa52a49F32EEd535fCA6Eb5aa130085978",
