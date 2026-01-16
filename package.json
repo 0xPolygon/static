@@ -1,6 +1,6 @@
 {
   "name": "@maticnetwork/meta",
-  "version": "2.4.81",
+  "version": "2.4.82",
   "description": "Matic network contracts' addresses and ABIs",
   "repository": {
     "type": "git",
