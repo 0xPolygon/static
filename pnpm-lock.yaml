@@ -6,4 +6,50 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      '@tsconfig/node-ts':
+        specifier: ^23.6.4
+        version: 23.6.4
+      '@tsconfig/node24':
+        specifier: ^24.0.4
+        version: 24.0.4
+      '@types/node':
+        specifier: ^24.12.2
+        version: 24.12.2
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+
+packages:
+
+  '@tsconfig/node-ts@23.6.4':
+    resolution: {integrity: sha512-37BMJvNQZ+vTgd1xG2TGBkJ6ENeT4eO4Wh2CHrnn0IwH7ybLFCzh4Uc//kc7UIvqiRac4uGdIc1meKOjMSlKzw==}
+
+  '@tsconfig/node24@24.0.4':
+    resolution: {integrity: sha512-2A933l5P5oCbv6qSxHs7ckKwobs8BDAe9SJ/Xr2Hy+nDlwmLE1GhFh/g/vXGRZWgxBg9nX/5piDtHR9Dkw/XuA==}
+
+  '@types/node@24.12.2':
+    resolution: {integrity: sha512-A1sre26ke7HDIuY/M23nd9gfB+nrmhtYyMINbjI1zHJxYteKR6qSMX56FsmjMcDb3SMcjJg5BiRRgOCC/yBD0g==}
+
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
+
+snapshots:
+
+  '@tsconfig/node-ts@23.6.4': {}
+
+  '@tsconfig/node24@24.0.4': {}
+
+  '@types/node@24.12.2':
+    dependencies:
+      undici-types: 7.16.0
+
+  typescript@6.0.3: {}
+
+  undici-types@7.16.0: {}
