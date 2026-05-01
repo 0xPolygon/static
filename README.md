@@ -92,6 +92,10 @@ The HTTP endpoint serves the same JSON files as the npm package's
 modules (e.g. clients running in a browser without a bundler) or when
 you want to fetch ABIs dynamically without bundling them.
 
+CORS is open: the endpoint sends `Access-Control-Allow-Origin: *` and
+allows `GET, POST, OPTIONS` so browsers can `fetch()` directly from
+any origin.
+
 ## Available paths
 
 ```

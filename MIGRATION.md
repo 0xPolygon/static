@@ -53,12 +53,12 @@ keep fetching from `static.polygon.technology` over HTTPS.
 
 ```js
 // Before
-const RootChainABI = require('@maticnetwork/meta/network/mainnet/v1/artifacts/pos/RootChain.json').abi
+const RootChainABI = require('@maticnetwork/meta/network/mainnet/v1/artifacts/plasma/RootChain.json').abi
 ```
 
 ```ts
 // After
-import { abi as RootChainAbi } from '@polygonlabs/meta/abi/mainnet/v1/pos/RootChain'
+import { abi as RootChainAbi } from '@polygonlabs/meta/abi/mainnet/v1/plasma/RootChain'
 ```
 
 The new path is tree-shakable and gives you the literal `as const`
@@ -68,12 +68,12 @@ type that viem/wagmi/abitype need.
 
 ```js
 // Before
-const RootChainJson = require('@maticnetwork/meta/network/mainnet/v1/artifacts/pos/RootChain.json')
+const RootChainJson = require('@maticnetwork/meta/network/mainnet/v1/artifacts/plasma/RootChain.json')
 ```
 
 ```ts
 // After — same path, just the renamed package
-import RootChainJson from '@polygonlabs/meta/network/mainnet/v1/artifacts/pos/RootChain.json' with { type: 'json' }
+import RootChainJson from '@polygonlabs/meta/network/mainnet/v1/artifacts/plasma/RootChain.json' with { type: 'json' }
 ```
 
 ### Network metadata
@@ -110,7 +110,7 @@ const RootChainAbi = net.abi('RootChain')
 import { Network } from '@polygonlabs/meta'
 const net = await Network.create('mainnet', 'v1')
 const Main = net.Main                                     // sync read after create()
-const RootChainAbi = await net.abi('RootChain', 'pos')    // async
+const RootChainAbi = await net.abi('RootChain')           // async; defaults to type 'plasma'
 ```
 
 For new code, prefer the static `/abi/*` and `/info/*` deep imports
