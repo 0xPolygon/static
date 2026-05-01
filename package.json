@@ -9,9 +9,18 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".":         { "types": "./dist/index.d.ts",  "import": "./dist/index.js" },
-    "./abi/*":   { "types": "./dist/abi/*.d.ts",  "import": "./dist/abi/*.js" },
-    "./info/*":  { "types": "./dist/info/*.d.ts", "import": "./dist/info/*.js" },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./abi/*": {
+      "types": "./dist/abi/*.d.ts",
+      "import": "./dist/abi/*.js"
+    },
+    "./info/*": {
+      "types": "./dist/info/*.d.ts",
+      "import": "./dist/info/*.js"
+    },
     "./network/*": "./network/*"
   },
   "files": [
@@ -48,6 +57,7 @@
     "provenance": true
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "@tsconfig/node-ts": "^23.6.4",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.12.2",
