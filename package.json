@@ -20,5 +20,9 @@
     "meta",
     "addresses",
     "abi"
-  ]
+  ],
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=24"
+  }
 }
