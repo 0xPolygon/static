@@ -208,3 +208,62 @@ Update boxes inline (`- [ ]` → `- [x]`) as work completes. Each commit is inde
 ## History note
 
 An earlier iteration of this plan proposed deleting the HTTP-endpoint deployment infrastructure and committing the TS files directly (no codegen). That decision was reversed because the `static.polygon.technology` HTTPS endpoint is in active use and removing it carries unknown blast radius. The current plan keeps both transports and codegens TS from the JSON source, which is the format new ABIs naturally arrive in from solc/foundry/hardhat.
+
+## First-release bootstrap
+
+The canonical first-release flow used across the team's `@polygonlabs/*` packages — documented in `apps-team-packages/packages/sync-github-releases/README.md` — combines a small local bootstrap with the standard changesets math.
+
+**Empirically confirmed bump math** (`pnpm exec changeset version` from `package.json @ 0.0.0`):
+
+| Bump | Result |
+|------|--------|
+| `patch` | `0.0.1` |
+| `minor` | `0.1.0` |
+| **`major`** | **`1.0.0`** ✓ |
+
+So our scaffold is `package.json @ 0.0.0` plus a `major` changeset (`.changeset/initial-rename.md`). After this PR merges, the Version Packages PR auto-bumps to `1.0.0`, generates `CHANGELOG.md` from the changeset body, and consumes the changeset.
+
+### Weekend dev-publish (one-time bootstrap, performed locally)
+
+The trusted-publisher entry on npm requires Owner/Admin role on the `@polygonlabs` org. A package admin can configure it per-package without org-admin — and you become package admin by being the **first publisher** of the name. So we bootstrap by publishing a dev version manually:
+
+```sh
+cd repositories/static
+pnpm install && pnpm run build
+# Hand-edit package.json: "version": "0.0.0" → "1.0.0-dev.0"  (working tree only)
+npm login
+npm publish --tag dev --access public --provenance
+git checkout package.json   # revert to 0.0.0; do NOT commit the version edit
+```
+
+Then on https://www.npmjs.com/package/@polygonlabs/meta/access (now accessible because you're package admin), configure the trusted publisher:
+
+- Repository: `0xPolygon/static`
+- Workflow filename: `npm-release-trigger.yml`
+- Environment: empty
+
+This claims `@polygonlabs/meta@1.0.0-dev.0` under the npm `dev` tag for downstream-app validation, and unlocks OIDC publishing so Monday's CI publish goes through cleanly without an org-admin step.
+
+### Monday's flow (fully automated)
+
+1. Reviewer approves PR → merges to `master`.
+2. `apps-npm-release.yml` fires → `changesets/action` sees the major changeset → opens "Version Packages" PR. That PR bumps `0.0.0 → 1.0.0`, generates `CHANGELOG.md`, deletes `.changeset/initial-rename.md`.
+3. Reviewer merges Version Packages PR → action runs again, `hasChangesets == false` → publish step calls `pnpm exec changeset publish`.
+4. **OIDC publish succeeds** (trusted publisher was configured during the weekend bootstrap) — `@polygonlabs/meta@1.0.0` lands on npm with provenance, becomes the `latest` dist-tag.
+5. `changesets/action` creates the GitHub Release object with the body extracted from `CHANGELOG.md`.
+
+### Fallback if the trusted publisher isn't configured by Monday
+
+The team's documented recovery is a 403 on first CI publish, then a local recovery:
+
+```sh
+pnpm exec changeset publish        # publishes via your npm member auth
+GH_TOKEN=$(gh auth token) npx @polygonlabs/sync-github-releases \
+  release 0xPolygon/static @polygonlabs/meta@1.0.0 --apply
+```
+
+The sync-github-releases CLI repopulates the GitHub Release body from `CHANGELOG.md` byte-equal to what `changesets/action` would have produced, so the published release looks identical regardless of whether OIDC succeeded or we fell through to the recovery path.
+
+### Subsequent releases
+
+Standard `pnpm exec changeset add` flow. CI publishes via OIDC every time once the trusted publisher is configured.

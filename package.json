@@ -1,6 +1,6 @@
 {
   "name": "@polygonlabs/meta",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Polygon contract addresses and ABIs as typed `as const` TypeScript modules, with raw JSON also available",
   "repository": {
     "type": "git",
