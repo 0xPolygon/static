@@ -17,13 +17,24 @@
 // return types at the call site.
 
 import { mkdirSync, readFileSync, readdirSync, writeFileSync, statSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, join, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
-const networkRoot = join(repoRoot, 'network');
-const srcAbiRoot = join(repoRoot, 'src', 'abi');
-const srcInfoRoot = join(repoRoot, 'src', 'info');
+const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const networkRoot = resolve(repoRoot, 'network');
+const srcAbiRoot = resolve(repoRoot, 'src', 'abi');
+const srcInfoRoot = resolve(repoRoot, 'src', 'info');
+
+// Confines a child path to live within `base`. Defends against a
+// directory entry containing `..` or a symlink that resolves outside
+// the expected root.
+function confine(base, ...segments) {
+  const candidate = resolve(base, ...segments);
+  if (candidate !== base && !candidate.startsWith(base + sep)) {
+    throw new Error(`Path escapes base: ${candidate} not under ${base}`);
+  }
+  return candidate;
+}
 
 const stats = { abi: 0, info: 0, networks: 0, mismatches: [] };
 
@@ -54,9 +65,9 @@ function listFiles(p) {
 
 // 1. ABI artifacts: network/<chain>/<network>/artifacts/<type>/<Contract>.json
 for (const chain of listDirs(networkRoot)) {
-  const chainPath = join(networkRoot, chain);
+  const chainPath = confine(networkRoot, chain);
   for (const network of listDirs(chainPath)) {
-    const artifactsPath = join(chainPath, network, 'artifacts');
+    const artifactsPath = confine(networkRoot, chain, network, 'artifacts');
     let types;
     try {
       types = listDirs(artifactsPath);
@@ -64,15 +75,16 @@ for (const chain of listDirs(networkRoot)) {
       continue;
     }
     for (const type of types) {
-      const typePath = join(artifactsPath, type);
+      const typePath = confine(networkRoot, chain, network, 'artifacts', type);
       for (const fileName of listFiles(typePath)) {
         if (!fileName.endsWith('.json')) continue;
         const basename = fileName.slice(0, -'.json'.length);
-        const srcJson = JSON.parse(readFileSync(join(typePath, fileName), 'utf8'));
+        const inPath = confine(networkRoot, chain, network, 'artifacts', type, fileName);
+        const srcJson = JSON.parse(readFileSync(inPath, 'utf8'));
         if (!Array.isArray(srcJson.abi)) {
-          throw new Error(`Expected { abi: [...] } in ${join(typePath, fileName)}`);
+          throw new TypeError(`Expected { abi: [...] } in ${inPath}`);
         }
-        const outPath = join(srcAbiRoot, chain, network, type, `${basename}.ts`);
+        const outPath = confine(srcAbiRoot, chain, network, type, `${basename}.ts`);
         writeTs(outPath, 'abi', srcJson.abi);
 
         const roundTripped = readTsLiteral(outPath, 'abi');
@@ -87,16 +99,16 @@ for (const chain of listDirs(networkRoot)) {
 
 // 2. Per-network metadata: network/<chain>/<network>/index.json
 for (const chain of listDirs(networkRoot)) {
-  const chainPath = join(networkRoot, chain);
+  const chainPath = confine(networkRoot, chain);
   for (const network of listDirs(chainPath)) {
-    const indexPath = join(chainPath, network, 'index.json');
+    const indexPath = confine(networkRoot, chain, network, 'index.json');
     let info;
     try {
       info = JSON.parse(readFileSync(indexPath, 'utf8'));
     } catch {
       continue;
     }
-    const outPath = join(srcInfoRoot, chain, `${network}.ts`);
+    const outPath = confine(srcInfoRoot, chain, `${network}.ts`);
     writeTs(outPath, 'info', info);
 
     const roundTripped = readTsLiteral(outPath, 'info');
@@ -109,8 +121,9 @@ for (const chain of listDirs(networkRoot)) {
 
 // 3. Top-level network registry: network/networks.json
 {
-  const networks = JSON.parse(readFileSync(join(networkRoot, 'networks.json'), 'utf8'));
-  const outPath = join(srcInfoRoot, 'networks.ts');
+  const networksPath = confine(networkRoot, 'networks.json');
+  const networks = JSON.parse(readFileSync(networksPath, 'utf8'));
+  const outPath = confine(srcInfoRoot, 'networks.ts');
   writeTs(outPath, 'networks', networks);
 
   const roundTripped = readTsLiteral(outPath, 'networks');
