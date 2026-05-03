@@ -1,2 +1,8 @@
 .DS_Store
-node_modules
+node_modules/
+dist/
+src/abi/
+src/info/
+pnpm-debug.log
+plans/*
+!plans/refactoring-with-polygonlabs-renaming.md

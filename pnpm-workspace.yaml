@@ -1,0 +1,9 @@
+blockExoticSubdeps: true
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - '@polygonlabs/*'
+  - '@maticnetwork/*'
+  - '@agglayer/*'
+  - '@0xsequence/*'
+  - '@0xtrails/*'
+trustPolicy: no-downgrade

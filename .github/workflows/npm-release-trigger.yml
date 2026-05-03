@@ -1,0 +1,17 @@
+name: Release
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  release:
+    uses: 0xPolygon/pipelines/.github/workflows/apps-npm-release.yml@main
+    secrets:
+      CHANGESET_RELEASE_BOT_APP_ID: ${{ secrets.CHANGESET_RELEASE_BOT_APP_ID }}
+      CHANGESET_RELEASE_BOT_APP_PRIVATE_KEY: ${{ secrets.CHANGESET_RELEASE_BOT_APP_PRIVATE_KEY }}

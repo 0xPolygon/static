@@ -1,49 +1,129 @@
-# Static server
+# @polygonlabs/meta
 
-The private static server for Matic.
+Polygon contract addresses and ABIs in two transports from one set of
+source files:
 
-### How it works?
+1. **npm package `@polygonlabs/meta`** — tree-shakable `as const`
+   TypeScript ABIs, typed network metadata, and the same raw JSON
+   files as the previous `@maticnetwork/meta`.
+2. **Public HTTP endpoint** at `https://static.polygon.technology/...`
+   — the same JSON files served by nginx, unchanged from how
+   `@maticnetwork/meta@2.x` exposed them.
 
-All files, in this repository, will be served over AWS S3 at `https://static.polygon.technology/<file-path>`.
+## Install
 
-### Production
-
-Master branch will be automatically deployed. No other action required.
-
-## Package Usage
-
-### Installation
-
-```bash
-$ npm i --save @maticnetwork/meta
+```sh
+pnpm add @polygonlabs/meta
+# or
+npm i @polygonlabs/meta
 ```
 
-### Usage
+Requires **Node ≥ 24** and an **ESM** consumer.
 
-```javascript
-const Network = require("@maticnetwork/meta/network")
+## Usage
 
-// define network
-const network = new Network("testnet", "mumbai")
+### Typed ABI per contract (preferred)
 
-const Matic = network.Matic  // all info related to Matic
-const Main = network.Main // all info related to Main
-const Heimdall = network.Heimdall // all info related to Heimdall
+```ts
+import { abi } from '@polygonlabs/meta/abi/mainnet/v1/pos/AccessControl'
+import { readContract } from 'viem'
 
-const RootChainABI = network.abi("RootChain")
-
-// use matic js
-let matic = new Matic ({
-    maticProvider: Matic.RPC,
-    mainProvider: Main.RPC,
-    registry: Main.Contracts.Registry,
-    ...
-    ...
+await readContract(client, {
+  abi,                         // ← `as const` literal type — viem infers everything below
+  functionName: 'hasRole',     // autocompleted from the literal tuple
+  args: [bytes32Role, address] // arg types inferred from the function's `inputs`
 })
 ```
 
-### Before Publishing
+The ABI is loaded only for the contracts you import. Unused contracts
+do not enter your bundle.
+
+### Network metadata
+
+```ts
+import { info } from '@polygonlabs/meta/info/mainnet/v1'
+
+const ethChainId = info.Main.ChainId           // typed as the literal `1`
+const rootChainAddr = info.Main.Contracts.RootChain
+```
+
+```ts
+import { networks } from '@polygonlabs/meta/info/networks'
+
+for (const { network, version } of networks) {
+  // ...
+}
+```
+
+### Raw JSON (no types)
+
+The same JSON files served by `static.polygon.technology` are also
+reachable from the npm package, at the same paths:
+
+```ts
+import abi from '@polygonlabs/meta/network/mainnet/v1/artifacts/pos/AccessControl.json'
+  with { type: 'json' }
+```
+
+### Dynamic name-based lookup
+
+For code that needs to load ABIs by string name at runtime:
+
+```ts
+import { Network } from '@polygonlabs/meta'
+
+const net = await Network.create('mainnet', 'v1')
+const main = net.Main                                         // sync after create()
+const accessControlAbi = await net.abi('AccessControl', 'pos') // async
+```
+
+Methods are async because contract artifacts are loaded via dynamic
+`import()`. For new code, prefer the static deep imports above — same
+data, fully typed, sync.
+
+## HTTP endpoint
 
 ```
-npm run minify
+https://static.polygon.technology/network/<chain>/<network>/artifacts/<type>/<Contract>.json
 ```
+
+The HTTP endpoint serves the same JSON files as the npm package's
+`/network/*` subpath. Use it for environments that can't import
+modules (e.g. clients running in a browser without a bundler) or when
+you want to fetch ABIs dynamically without bundling them.
+
+CORS is open: the endpoint sends `Access-Control-Allow-Origin: *` and
+allows `GET, POST, OPTIONS` so browsers can `fetch()` directly from
+any origin.
+
+## Available paths
+
+```
+@polygonlabs/meta/abi/<chain>/<network>/<type>/<Contract>           # typed
+@polygonlabs/meta/info/<chain>/<network>                            # typed
+@polygonlabs/meta/info/networks                                     # typed
+@polygonlabs/meta/network/<chain>/<network>/artifacts/<type>/<C>.json  # raw JSON
+```
+
+| chain     | network   | types                                  |
+| --------- | --------- | -------------------------------------- |
+| `mainnet` | `v1`      | `pos`, `plasma`, `fx-portal`, `genesis` |
+| `mainnet` | `cherry`  | `zkevm`                                |
+| `testnet` | `amoy`    | `pos`, `plasma`, `fx-portal`, `genesis` |
+| `testnet` | `cardona` | `zkevm`                                |
+
+## Migrating from `@maticnetwork/meta`
+
+See [MIGRATION.md](./MIGRATION.md). The HTTP endpoint at
+`static.polygon.technology` continues to work as before — the
+migration only affects npm consumers.
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md). Source of truth is the JSON
+tree under `network/`; the typed TS modules are codegenned by
+`scripts/codegen.mjs` at build time.
+
+## License
+
+MIT

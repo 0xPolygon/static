@@ -1,24 +1,66 @@
 {
-  "name": "@maticnetwork/meta",
-  "version": "2.4.82",
-  "description": "Matic network contracts' addresses and ABIs",
+  "name": "@polygonlabs/meta",
+  "version": "0.0.0",
+  "description": "Polygon contract addresses and ABIs as typed `as const` TypeScript modules, with raw JSON also available",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maticnetwork/static.git"
+    "url": "git+https://github.com/0xPolygon/static.git"
   },
   "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./abi/*": {
+      "types": "./dist/abi/*.d.ts",
+      "import": "./dist/abi/*.js"
+    },
+    "./info/*": {
+      "types": "./dist/info/*.d.ts",
+      "import": "./dist/info/*.js"
+    },
+    "./network/*": "./network/*"
+  },
+  "files": [
+    "dist",
+    "network",
+    "MIGRATION.md",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
-    "minify": "node minify.js",
-    "prepublish": "npm run minify"
+    "codegen": "node scripts/codegen.mjs",
+    "build": "pnpm run codegen && tsc -p tsconfig.build.json",
+    "prepack": "pnpm run build",
+    "ci:publish": "changeset publish"
   },
   "bugs": {
-    "url": "https://github.com/maticnetwork/static/issues"
+    "url": "https://github.com/0xPolygon/static/issues"
   },
-  "homepage": "https://github.com/maticnetwork/static#readme",
-  "main": "./network/index.js",
+  "homepage": "https://github.com/0xPolygon/static#readme",
   "keywords": [
-    "meta",
+    "polygon",
+    "ethereum",
+    "abi",
     "addresses",
-    "abi"
-  ]
+    "viem",
+    "wagmi"
+  ],
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=24"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0",
+    "@tsconfig/node-ts": "^23.6.4",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/node": "^24.12.2",
+    "typescript": "^6.0.3"
+  }
 }
