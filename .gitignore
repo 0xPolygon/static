@@ -5,4 +5,3 @@ src/abi/
 src/info/
 pnpm-debug.log
 plans/*
-!plans/refactoring-with-polygonlabs-renaming.md
