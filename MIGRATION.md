@@ -149,8 +149,8 @@ await readContract(client, {
 ```
 
 The codegen step (`scripts/codegen.mjs`) emits each ABI module with
-the trailing `as const` automatically. Don't hand-edit `src/abi/` —
-it's gitignored and regenerated on every build.
+the trailing `as const` automatically. Don't hand-edit anything under
+`src/generated/` — it's gitignored and regenerated on every build.
 
 ## Path scheme
 

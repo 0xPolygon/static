@@ -1,7 +1,5 @@
 .DS_Store
 node_modules/
 dist/
-src/abi/
-src/info/
+src/generated/
 pnpm-debug.log
-plans/*

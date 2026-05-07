@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 // Walks the JSON ABI tree under `network/` and emits TypeScript modules
-// under `src/abi/` and `src/info/` whose bodies are `as const` literals.
-// Run via `pnpm run codegen`; also called from `pnpm run build` and
-// transitively by `pnpm run prepack`.
+// under `src/generated/abi/` and `src/generated/info/` whose bodies are
+// `as const` literals. Run via `pnpm run codegen`; also called from
+// `pnpm run build` and transitively by `pnpm run prepack`.
 //
-// JSON in `network/` is the source of truth. Both `src/abi/` and
-// `src/info/` are gitignored — never hand-edit them.
+// JSON in `network/` is the source of truth. Everything under
+// `src/generated/` is gitignored — never hand-edit it.
 //
 // Each emitted ABI module looks like:
 //
@@ -22,8 +22,8 @@ import { fileURLToPath } from 'node:url';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const networkRoot = resolve(repoRoot, 'network');
-const srcAbiRoot = resolve(repoRoot, 'src', 'abi');
-const srcInfoRoot = resolve(repoRoot, 'src', 'info');
+const srcAbiRoot = resolve(repoRoot, 'src', 'generated', 'abi');
+const srcInfoRoot = resolve(repoRoot, 'src', 'generated', 'info');
 
 // Confines a child path to live within `base`. Defends against a
 // directory entry containing `..` or a symlink that resolves outside

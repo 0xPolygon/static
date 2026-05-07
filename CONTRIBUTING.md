@@ -22,7 +22,7 @@ the typed TS modules are codegenned at build time.
    `<type>` is the artifact bucket (`pos`, `plasma`, `fx-portal`,
    `genesis`, `zkevm`).
 3. Run `pnpm run codegen`. The script:
-   - Walks `network/` and re-emits `src/abi/<...>.ts` with
+   - Walks `network/` and re-emits `src/generated/abi/<...>.ts` with
      `export const abi = [...] as const;`.
    - Includes a round-trip self-test that parses each emitted TS
      literal and `JSON.stringify`-compares it to the source JSON,
@@ -32,7 +32,7 @@ the typed TS modules are codegenned at build time.
    `as const` tuple type.
 5. Add a changeset describing the addition (`pnpm exec changeset add`).
 
-**Don't hand-edit `src/abi/` or `src/info/`.** Both are gitignored
+**Don't hand-edit anything under `src/generated/`.** It is gitignored
 and regenerated on every build. The only authored surface is the
 JSON in `network/` plus the small hand-written code in `src/`
 (`Network.ts`, `index.ts`).
@@ -70,7 +70,7 @@ ever need to extend the codegen, preserve it.
 ## Build
 
 ```sh
-pnpm run codegen      # emit src/abi/**.ts and src/info/**.ts from network/
+pnpm run codegen      # emit src/generated/**.ts from network/
 pnpm run build        # codegen + tsc → dist/
 ```
 

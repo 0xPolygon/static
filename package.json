@@ -14,12 +14,12 @@
       "import": "./dist/index.js"
     },
     "./abi/*": {
-      "types": "./dist/abi/*.d.ts",
-      "import": "./dist/abi/*.js"
+      "types": "./dist/generated/abi/*.d.ts",
+      "import": "./dist/generated/abi/*.js"
     },
     "./info/*": {
-      "types": "./dist/info/*.d.ts",
-      "import": "./dist/info/*.js"
+      "types": "./dist/generated/info/*.d.ts",
+      "import": "./dist/generated/info/*.js"
     },
     "./network/*": "./network/*"
   },

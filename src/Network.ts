@@ -1,4 +1,4 @@
-import { networks } from './info/networks.ts';
+import { networks } from './generated/info/networks.ts';
 
 export type Chain = 'mainnet' | 'testnet';
 export type ArtifactType = 'pos' | 'plasma' | 'fx-portal' | 'genesis' | 'zkevm';
@@ -66,7 +66,7 @@ export class Network {
 
   static async create(name: Chain, version: string = 'v1'): Promise<Network> {
     assertKnownNetwork(name, version);
-    const mod = (await import(`./info/${name}/${version}.js`)) as {
+    const mod = (await import(`./generated/info/${name}/${version}.js`)) as {
       info: Record<string, unknown>;
     };
     return new Network(name, version, mod.info);
@@ -79,7 +79,7 @@ export class Network {
     assertContractName(name);
     assertArtifactType(type);
     const mod = (await import(
-      `./abi/${this.name}/${this.version}/${type}/${name}.js`
+      `./generated/abi/${this.name}/${this.version}/${type}/${name}.js`
     )) as {
       abi: readonly unknown[];
     };
