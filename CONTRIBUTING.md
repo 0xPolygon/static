@@ -33,9 +33,8 @@ the typed TS modules are codegenned at build time.
 5. Add a changeset describing the addition (`pnpm exec changeset add`).
 
 **Don't hand-edit anything under `src/generated/`.** It is gitignored
-and regenerated on every build. The only authored surface is the
-JSON in `network/` plus the small hand-written code in `src/`
-(`Network.ts`, `index.ts`).
+and regenerated on every build. The only authored surface is the JSON
+in `network/`; everything published from `src/` is codegenned.
 
 ## Adding a new network
 

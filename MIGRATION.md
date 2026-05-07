@@ -91,30 +91,22 @@ import { info } from '@polygonlabs/meta/info/mainnet/v1'
 const chainId = info.Main.ChainId  // typed as the literal `1`
 ```
 
-### Dynamic name-based lookup (legacy ergonomic surface)
+### Dynamic name-based lookup
 
-The `Network` class still exists but its methods are async, and
-construction goes through a static factory because the per-network
-`info` is loaded via dynamic `import()`:
-
-```js
-// Before — sync
-const Network = require('@maticnetwork/meta/network')
-const net = new Network('mainnet', 'v1')
-const Main = net.Main
-const RootChainAbi = net.abi('RootChain')
-```
+The `Network` class is gone. Code that previously did
+`new Network('mainnet', 'v1').abi('RootChain')` should switch to the
+static deep imports shown above — fully typed, sync, and tree-shakable.
+For runtime name → ABI lookups, build a small map at the call site:
 
 ```ts
-// After — async
-import { Network } from '@polygonlabs/meta'
-const net = await Network.create('mainnet', 'v1')
-const Main = net.Main                                     // sync read after create()
-const RootChainAbi = await net.abi('RootChain')           // async; defaults to type 'plasma'
+import { abi as RootChainAbi } from '@polygonlabs/meta/abi/mainnet/v1/plasma/RootChain'
+import { abi as DepositManagerAbi } from '@polygonlabs/meta/abi/mainnet/v1/plasma/DepositManager'
+
+const ABIS = { RootChain: RootChainAbi, DepositManager: DepositManagerAbi } as const
 ```
 
-For new code, prefer the static `/abi/*` and `/info/*` deep imports
-above — fully typed, sync, tree-shakable.
+This keeps the bundler honest: only the contracts actually referenced
+end up in the bundle.
 
 ## Why `as const`
 

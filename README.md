@@ -65,22 +65,6 @@ import abi from '@polygonlabs/meta/network/mainnet/v1/artifacts/pos/AccessContro
   with { type: 'json' }
 ```
 
-### Dynamic name-based lookup
-
-For code that needs to load ABIs by string name at runtime:
-
-```ts
-import { Network } from '@polygonlabs/meta'
-
-const net = await Network.create('mainnet', 'v1')
-const main = net.Main                                         // sync after create()
-const accessControlAbi = await net.abi('AccessControl', 'pos') // async
-```
-
-Methods are async because contract artifacts are loaded via dynamic
-`import()`. For new code, prefer the static deep imports above — same
-data, fully typed, sync.
-
 ## HTTP endpoint
 
 ```

@@ -16,7 +16,7 @@ Initial release of `@polygonlabs/meta`, replacing the legacy `@maticnetwork/meta
 
 - **Package renamed**: `@maticnetwork/meta` → `@polygonlabs/meta`.
 - **ESM-only.** `require()` is no longer supported. Consumers must be ESM and on Node ≥ 24.
-- **`Network` class methods are async.** Construction now goes through `await Network.create(name, version)`, and `artifacts()` / `abi()` return Promises because contract artifacts are loaded via dynamic `import()`.
+- **The `Network` class is gone.** Replace `new Network(chain, version).abi(name)` with the typed deep imports under `./abi/<chain>/<network>/<type>/<Contract>` — same data, fully typed, sync, tree-shakable.
 - **Mumbai testnet** is gone (already removed upstream); use Amoy.
 
 The HTTP endpoint at `static.polygon.technology` is unchanged. See `MIGRATION.md` for full before/after import examples.
