@@ -17,6 +17,15 @@ importers:
       '@tsconfig/node24':
         specifier: ^24.0.4
         version: 24.0.4
+
+  packages/meta:
+    devDependencies:
+      '@tsconfig/node-ts':
+        specifier: ^23.6.4
+        version: 23.6.4
+      '@tsconfig/node24':
+        specifier: ^24.0.4
+        version: 24.0.4
       '@types/node':
         specifier: ^24.12.2
         version: 24.12.2

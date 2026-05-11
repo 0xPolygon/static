@@ -4,5 +4,6 @@
     "noEmit": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src/**/*.ts"]
+  "references": [{ "path": "./packages/meta/tsconfig.build.json" }],
+  "include": []
 }

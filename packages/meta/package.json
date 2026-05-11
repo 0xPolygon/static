@@ -1,0 +1,61 @@
+{
+  "name": "@polygonlabs/meta",
+  "version": "0.0.0",
+  "description": "Polygon contract addresses and ABIs as typed `as const` TypeScript modules, with raw JSON also available",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xPolygon/static.git",
+    "directory": "packages/meta"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./abi/*": {
+      "types": "./dist/generated/abi/*.d.ts",
+      "import": "./dist/generated/abi/*.js"
+    },
+    "./info/*": {
+      "types": "./dist/generated/info/*.d.ts",
+      "import": "./dist/generated/info/*.js"
+    },
+    "./network/*": "./network/*"
+  },
+  "files": [
+    "dist",
+    "network",
+    "MIGRATION.md",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "codegen": "node scripts/codegen.mjs",
+    "build": "pnpm run codegen && tsc -p tsconfig.build.json",
+    "prepack": "pnpm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/0xPolygon/static/issues"
+  },
+  "homepage": "https://github.com/0xPolygon/static#readme",
+  "keywords": [
+    "polygon",
+    "ethereum",
+    "abi",
+    "addresses",
+    "viem",
+    "wagmi"
+  ],
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=24"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@tsconfig/node-ts": "^23.6.4",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/node": "^24.12.2",
+    "typescript": "^6.0.3"
+  }
+}
