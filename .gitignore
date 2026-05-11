@@ -1,5 +1,4 @@
 .DS_Store
 node_modules/
 dist/
-packages/meta/src/generated/
 pnpm-debug.log

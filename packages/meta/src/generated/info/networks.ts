@@ -1,0 +1,18 @@
+export const networks = [
+  {
+    "network": "testnet",
+    "version": "amoy"
+  },
+  {
+    "network": "mainnet",
+    "version": "v1"
+  },
+  {
+    "network": "testnet",
+    "version": "cardona"
+  },
+  {
+    "network": "mainnet",
+    "version": "cherry"
+  }
+] as const;

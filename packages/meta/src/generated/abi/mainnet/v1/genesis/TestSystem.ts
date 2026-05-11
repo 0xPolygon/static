@@ -1,0 +1,32 @@
+export const abi = [
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "dummySystem",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_system",
+        "type": "address"
+      }
+    ],
+    "name": "setSystemAddress",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+] as const;

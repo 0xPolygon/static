@@ -1,0 +1,127 @@
+export const info = {
+  "Main": {
+    "NetworkName": "Sepolia",
+    "ChainId": 11155111,
+    "StakingAPI": "",
+    "Explorer": "https://sepolia.etherscan.io",
+    "SubgraphUrl": "https://api.thegraph.com/subgraphs/name/nitinmittal23/amoy-root-subgraph",
+    "SupportsEIP1559": true,
+    "Contracts": {
+      "Registry": "0xfE92F7c3a701e43d8479738c8844bCc555b9e5CD",
+      "RootChain": "0xD23E7ebB837de8625F16F575077D176b9d6B9b39",
+      "Governance": "0x7ebDeC03873994A02acA5dbfac665e5e39287D77",
+      "GovernanceProxy": "0xB7086eda3180c728C1536B35c4d54F6A2B33D6aC",
+      "RootChainProxy": "0xbd07D7E1E93c8d4b2a261327F3C28a8EA7167209",
+      "DepositManager": "0x332d42a3C83fbC46f27137278018A589c637cE3B",
+      "DepositManagerProxy": "0x44Ad17990F9128C6d823Ee10dB7F0A5d40a731A4",
+      "WithdrawManager": "0xE1D0DdD817CA39301c9E4F5A7218BbDAf59D248D",
+      "WithdrawManagerProxy": "0x822db7e79096E7247d9273E5782ecAec464Eb96C",
+      "StakeManager": "0x777badC2C75Bd4Ee5303BF6E90009BD31d8fd3d1",
+      "StakeManagerProxy": "0x4AE8f648B1Ec892B6cc68C89cc088583964d08bE",
+      "SlashingManager": "0x9e699267858ce513eACF3b66420334785f9c8E4c",
+      "StakingInfo": "0x5E3111a5d928D24718c1A7897261D0B9087002ed",
+      "ExitNFT": "0x68EB9202b48D3980832aDE89d580bA883b313B40",
+      "StateSender": "0x49E307Fa5a58ff1834E0F8a60eB2a9609E6A5F50",
+      "ValidatorShareFactory": "0xF5f09458Ecc701Dd93fa4C88b67d550289Ae6805",
+      "StakingNFT": "0x72CF5618142Eb369E75ec6529A907e9A6Fe99bB7",
+      "ValidatorShare": "0xE609eFaafF03E26ed0ed224b7e6439c3E2065C27",
+      "EventsHubProxy": "0x700e0f2AfBd92e2b3fF91CAD8C62A564690ddf39",
+      "ERC20Predicate": "0x7A03d5b77e2091805013EeCE6CF2B53253dA9645",
+      "ERC721Predicate": "0x0059bBF8E5b9b071acc7682B6fe198c32AAA2A97",
+      "EIP1559Burn": "0xeCDD77cE6f146cCf5dab707941d318Bd50eeD2C9",
+      "Tokens": {
+        "MaticToken": "0x3fd0A53F4Bf853985a95F4Eb3F9C9FDE1F8e2b53",
+        "MaticWeth": "0x700dDE29De87ed2c01c27C896dc8Badb4f671302",
+        "RootERC721": "0x13B0Edd9312886Ac0C73116e767208bEd1199679"
+      },
+      "PolygonMigrationProxy": "0x3A3B750E7d4d389Bc1d0be20E5D09530F82B9911",
+      "PolygonMigration": "0xeBa42DcAb2C8264E6c2F5cB45c352bAE7C74B9b4",
+      "DefaultEmissionManagerProxy": "0x20393fF3B3C38b72a16eB7d7A474cd38ABD8Ff27",
+      "DefaultEmissionManager": "0xBd5b3D1E179457435b368E3D1C019D487869b85E",
+      "PolygonEcosystemToken": "0x44499312f493F62f2DFd3C6435Ca3603EbFCeeBa"
+    },
+    "POSContracts": {
+      "RootChainManager": "0xfc30033BB0a3161e6793BBf965468C4f84306D2E",
+      "RootChainManagerProxy": "0x34F5A25B627f50Bb3f5cAb72807c4D4F405a9232",
+      "DummyStateSender": "0x277A3f85F10fccC006771C7852E93D1a0c748aBe",
+      "ERC20Predicate": "0x04C5aCb46f184857F747bee259E2592418c8D30F",
+      "ERC20PredicateProxy": "0x4258C75b752c812B7Fa586bdeb259f2d4bd17f4F",
+      "MintableERC20Predicate": "0x1eeBd02d6be09ea59416Ab7d69a6C3DAdd8FF50a",
+      "MintableERC20PredicateProxy": "0x1aCb66777aC167c7c8F5c94D169f953a9773555F",
+      "ERC721Predicate": "0x9aD936Ff297C669e4a0A31010F6d602Fd7e0b1B9",
+      "ERC721PredicateProxy": "0x97f6dDF7c21E05dd2c41d59d886cf63129326BCa",
+      "MintableERC721Predicate": "0x9c87adbA93B7dA01934aA3A92F494a9A14312831",
+      "MintableERC721PredicateProxy": "0xf8D2ecCA43F50F04922A13c417aEd05C34F1EF52",
+      "ERC1155Predicate": "0xe2771cF5f04d28275EbbA9340c431F637fBf49a1",
+      "ERC1155PredicateProxy": "0xd1Cba165ce987EC496C7c2a8e12712d0165241DA",
+      "MintableERC1155Predicate": "0x845024812b85125884f4C8e818899340916f6B42",
+      "MintableERC1155PredicateProxy": "0x0a08430072e8d0fBc649860f1b2E360E779942CD",
+      "EtherPredicate": "0x8b78e1f3e4fFA3cB68055817BbA1be5e209dff53",
+      "EtherPredicateProxy": "0x930C824C1e423a4b4949C665c4e92BD8f6ccF04e",
+      "Tokens": {
+        "DummyERC20": "0xb480378044d92C96D16589Eb95986df6a97F2cFB",
+        "DummyMintableERC20": "0xf35e40Ba249a1CbF5dC3E0ab3084A0df836c0d18",
+        "DummyERC721": "0x421DbB7B5dFCb112D7a13944DeFB80b28eC5D22C",
+        "DummyMintableERC721": "0xBF1b745C3B341743842542394438fB734a3ebcCF",
+        "DummyERC1155": "0x095DD31b6473c4a32548d2A5B09e0f2F3F30d8F1",
+        "DummyMintableERC1155": "0x24807284cA404023870EC11D98f46E4741c5f6fb"
+      }
+    },
+    "FxPortalContracts": {
+      "FxRoot": "0x0E13EBEdDb8cf9f5987512d5E081FdC2F5b0991e",
+      "FxERC20RootTunnel": "0x4B915DC5D123631C53aE619D2222f7124a2143Fa",
+      "FxERC721RootTunnel": "0x9E688939Cb5d484e401933D850207D6750852053",
+      "FxERC1155RootTunnel": "0x085C505139C3Ec6dD3D285f350f1155cf63Ad7E2"
+    }
+  },
+  "Matic": {
+    "NetworkName": "Amoy",
+    "ChainId": 80002,
+    "RPC": "https://rpc-amoy.polygon.technology",
+    "Explorer": "https://www.oklink.com/amoy",
+    "NetworkAPI": "https://proof-generator.polygon.technology/api/v1/amoy",
+    "SupportsEIP1559": true,
+    "Contracts": {
+      "EIP1559Burn": "0xeCDD77cE6f146cCf5dab707941d318Bd50eeD2C9",
+      "ChildChain": "0x4f9cd8a945EE035523979D7A120a23999D17D8C0",
+      "Tokens": {
+        "MaticWeth": "0x41Dc3C8eB8368bd9139Cec50434a0C294c8c1102",
+        "MaticToken": "0x0000000000000000000000000000000000001010",
+        "RootERC721": "0x3ADBC484Ff0cFEb657e1A9AF8F3CB16DC0B53e7e",
+        "WMATIC": "0x360ad4f9a9A8EFe9A8DCB5f461c4Cc1047E1Dcf9"
+      }
+    },
+    "POSContracts": {
+      "ChildChainManager": "0x687C1D2dd0F422421BeF7aC2a52f50e858CAA867",
+      "ChildChainManagerProxy": "0xb991E39a401136348Dee93C75143B159FabF483f",
+      "Tokens": {
+        "DummyERC20": "0xf3202E7270a10E599394d8A7dA2F4Fbd475e96bA",
+        "DummyMintableERC20": "0x0507b845fF73C463f3c73450787DAEf46F3548dB",
+        "DummyERC721": "0x02f83d4110D3595872481f677Ae323D50Aa09209",
+        "DummyMintableERC721": "0x5f76f67edDaa88A2A69ee8bb4477Ac54AB5E31cC",
+        "DummyERC1155": "0x488AfDFef019f511E343becb98B7c24ee02fA639",
+        "DummyMintableERC1155": "0x95E72C12D69b2E471C3B850131E122354c3398f4",
+        "MaticWETH": "0x52eF3d68BaB452a294342DC3e5f464d7f610f72E"
+      }
+    },
+    "FxPortalContracts": {
+      "FxChild": "0xE5930336866d0388f0f745A2d9207C7781047C0f",
+      "FxERC20ChildTunnel": "0x59e860059B3441aDEA812a0D6779aaD270640649",
+      "FxERC721ChildTunnel": "0x921D1Ed589311f743676f78d8bf54f0664B067F9",
+      "FxERC1155ChildTunnel": "0x3227b1bE1Ba1ae4777E68a7197BC8551d478bf0b",
+      "Tokens": {
+        "FxERC20": "0x83e58428928f9F5587e6bCB0A286e7D0DE1f8268",
+        "FxERC721": "0x887c78C68d45F090E98B509BDa673362f2155C4C",
+        "FxERC1155": "0xEe12368fE3FBf7730763fF32459B3a2901dBcE12"
+      }
+    },
+    "GenesisContracts": {
+      "BorValidatorSet": "0x0000000000000000000000000000000000001000",
+      "StateReceiver": "0x0000000000000000000000000000000000001001"
+    }
+  },
+  "Heimdall": {
+    "ChainId": "heimdall-80002",
+    "API": "https://heimdall-api-amoy.polygon.technology"
+  }
+} as const;
