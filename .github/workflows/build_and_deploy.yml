@@ -4,42 +4,42 @@ on:
       environment:
         required: false
         type: string
-        default: "dev"
+        default: 'dev'
       core_app:
         required: false
         type: string
-        description: "Core app name"
-        default: "static"
+        description: 'Core app name'
+        default: 'static'
 
 jobs:
   set-env-variable:
-      runs-on: ubuntu-latest
-      outputs:
-          ACCOUNT_NUMBER: ${{ steps.set-env-var.outputs.ACCOUNT_NUMBER }}
-          APP_NAME: ${{ steps.set-env-var.outputs.APP_NAME }}
-      steps:
-        - name: Set Environment Variable
-          id: set-env-var
-          run: |
-              if [ "${{ inputs.environment }}" == "dev" ]; then
-                  echo "ACCOUNT_NUMBER=058264511034" >> $GITHUB_OUTPUT
-                  echo "APP_NAME=${{ inputs.core_app }}-dev" >> $GITHUB_OUTPUT
-              elif [ "${{ inputs.environment }}" == "staging" ]; then
-                  echo "ACCOUNT_NUMBER=070528468658" >> $GITHUB_OUTPUT
-                  echo "APP_NAME=${{ inputs.core_app }}-staging" >> $GITHUB_OUTPUT
-              elif [ "${{ inputs.environment }}" == "prod" ]; then
-                  echo "ACCOUNT_NUMBER=042947190491" >> $GITHUB_OUTPUT
-                  echo "APP_NAME=${{ inputs.core_app }}" >> $GITHUB_OUTPUT
-              fi
-          
+    runs-on: ubuntu-latest
+    outputs:
+      ACCOUNT_NUMBER: ${{ steps.set-env-var.outputs.ACCOUNT_NUMBER }}
+      APP_NAME: ${{ steps.set-env-var.outputs.APP_NAME }}
+    steps:
+      - name: Set Environment Variable
+        id: set-env-var
+        run: |
+          if [ "${{ inputs.environment }}" == "dev" ]; then
+              echo "ACCOUNT_NUMBER=058264511034" >> $GITHUB_OUTPUT
+              echo "APP_NAME=${{ inputs.core_app }}-dev" >> $GITHUB_OUTPUT
+          elif [ "${{ inputs.environment }}" == "staging" ]; then
+              echo "ACCOUNT_NUMBER=070528468658" >> $GITHUB_OUTPUT
+              echo "APP_NAME=${{ inputs.core_app }}-staging" >> $GITHUB_OUTPUT
+          elif [ "${{ inputs.environment }}" == "prod" ]; then
+              echo "ACCOUNT_NUMBER=042947190491" >> $GITHUB_OUTPUT
+              echo "APP_NAME=${{ inputs.core_app }}" >> $GITHUB_OUTPUT
+          fi
+
   deploy:
-      uses: 0xPolygon/pipelines/.github/workflows/ecs_deploy_docker_taskdef.yaml@main
-      needs: set-env-variable
-      with:            
-          app_name: ${{ needs.set-env-variable.outputs.APP_NAME }}
-          taskdef_file_vars: .github/taskdef/${{ inputs.environment }}-taskdef.yaml
-          aws_region: eu-west-1
-          environment: ${{ inputs.environment }}
-          cluster_name: frontend-${{ inputs.environment }}-ecs-cluster
-          account_number: "${{ needs.set-env-variable.outputs.ACCOUNT_NUMBER }}"
-      secrets: inherit
+    uses: 0xPolygon/pipelines/.github/workflows/ecs_deploy_docker_taskdef.yaml@main
+    needs: set-env-variable
+    with:
+      app_name: ${{ needs.set-env-variable.outputs.APP_NAME }}
+      taskdef_file_vars: .github/taskdef/${{ inputs.environment }}-taskdef.yaml
+      aws_region: eu-west-1
+      environment: ${{ inputs.environment }}
+      cluster_name: frontend-${{ inputs.environment }}-ecs-cluster
+      account_number: '${{ needs.set-env-variable.outputs.ACCOUNT_NUMBER }}'
+    secrets: inherit

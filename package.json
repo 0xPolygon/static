@@ -14,13 +14,32 @@
     "node": ">=24"
   },
   "scripts": {
+    "prepare": "husky",
     "build": "pnpm -r --if-present run build",
     "codegen": "pnpm -r --if-present run codegen",
+    "test": "pnpm -r --if-present run test",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "lint": "concurrently --group --prefix-colors auto 'pnpm:lint:md' 'pnpm:lint:ts' 'pnpm:typecheck' 'prettier --check .'",
+    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "lint:ts": "eslint .",
+    "format": "pnpm run format:md && pnpm run format:ts && prettier --write .",
+    "format:md": "markdownlint-cli2 --fix \"**/*.md\"",
+    "format:ts": "eslint . --fix",
     "ci:publish": "changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@polygonlabs/apps-team-lint": "^2.0.0",
     "@tsconfig/node-ts": "^23.6.4",
-    "@tsconfig/node24": "^24.0.4"
+    "@tsconfig/node24": "^24.0.4",
+    "concurrently": "^9.2.1",
+    "eslint": "^10.0.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "husky": "^9.0.0",
+    "lint-staged": "^16.2.7",
+    "markdownlint-cli2": "^0.21.0",
+    "prettier": "^3.0.0"
   }
 }

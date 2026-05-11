@@ -146,7 +146,7 @@ the trailing `as const` automatically. Don't hand-edit anything under
 
 ## Path scheme
 
-```
+```text
 @polygonlabs/meta/abi/<chain>/<network>/<type>/<Contract>           # typed
 @polygonlabs/meta/info/<chain>/<network>                            # typed
 @polygonlabs/meta/info/networks                                     # typed

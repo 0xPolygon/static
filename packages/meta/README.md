@@ -67,7 +67,7 @@ import abi from '@polygonlabs/meta/network/mainnet/v1/artifacts/pos/AccessContro
 
 ## HTTP endpoint
 
-```
+```text
 https://static.polygon.technology/network/<chain>/<network>/artifacts/<type>/<Contract>.json
 ```
 
@@ -82,7 +82,7 @@ any origin.
 
 ## Available paths
 
-```
+```text
 @polygonlabs/meta/abi/<chain>/<network>/<type>/<Contract>           # typed
 @polygonlabs/meta/info/<chain>/<network>                            # typed
 @polygonlabs/meta/info/networks                                     # typed

@@ -8,7 +8,7 @@ on:
       environment:
         required: false
         type: choice
-        description: "Select the environment to deploy to (optional for pushes)"
+        description: 'Select the environment to deploy to (optional for pushes)'
         options:
           - staging
           - prod

@@ -16,11 +16,11 @@ updating ABIs in one place keeps both surfaces in sync.
 
 ## Repo layout
 
-```
+```text
 packages/meta/        # @polygonlabs/meta npm package
   network/            # source-of-truth JSON tree (also COPYed into the nginx image)
   src/generated/      # codegenned `as const` TS modules
-  scripts/codegen.mjs # walks network/, emits src/generated/
+  scripts/codegen.ts  # walks network/, emits src/generated/
 
 Dockerfile            # nginx image for static.polygon.technology
 nginx.conf, index.html

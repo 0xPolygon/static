@@ -31,6 +31,7 @@
     "codegen": "node scripts/codegen.ts",
     "codegen:watch": "chokidar 'network/**/*.json' --initial --debounce 200 -c 'pnpm run codegen'",
     "codegen-drift-check": "pnpm run codegen && git diff --exit-code -- src/generated",
+    "typecheck": "tsc --noEmit",
     "build": "pnpm run codegen && tsc -p tsconfig.build.json",
     "prepack": "pnpm run build"
   },
