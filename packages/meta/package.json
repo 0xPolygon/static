@@ -28,7 +28,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "codegen": "node scripts/codegen.mjs",
+    "codegen": "node scripts/codegen.ts",
     "build": "pnpm run codegen && tsc -p tsconfig.build.json",
     "prepack": "pnpm run build"
   },
