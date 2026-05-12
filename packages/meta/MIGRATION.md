@@ -44,8 +44,17 @@ Three things, none of which existed before:
 - Node ≥ 24
 - ESM consumer (use `import`, not `require`)
 
-If you can't be ESM yet, stay on `@maticnetwork/meta@2.x` for now or
-keep fetching from `static.polygon.technology` over HTTPS.
+The package itself is ESM-only — we don't publish a CommonJS
+distribution. That doesn't lock CJS apps out: modern bundlers
+(esbuild, webpack 5+, Vite, Rollup, Parcel) consume ESM packages from
+CJS host code transparently. If you're building a bundled app and
+your bundler handles ESM dependencies (most do), `@polygonlabs/meta`
+works whether your own source is ESM or CJS.
+
+The only environments where this is a hard block are Node runtimes
+that still load this package via `require()` without bundling, or
+older bundlers without ESM support. Those should fetch JSON from
+`static.polygon.technology` over HTTPS instead.
 
 ## Import migration
 
