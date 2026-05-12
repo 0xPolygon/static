@@ -1,7 +1,7 @@
 # static
 
-Two public surfaces driven from one set of source JSON files under
-`packages/meta/network/`:
+Two public surfaces driven from one set of source JSON files under the
+repo-root `network/` directory:
 
 1. **npm package [`@polygonlabs/meta`](./packages/meta/)** — typed
    `as const` ABI modules, typed network metadata, and raw JSON. See
@@ -11,18 +11,23 @@ Two public surfaces driven from one set of source JSON files under
    the root `Dockerfile` and deployed via the workflows under
    `.github/workflows/`.
 
-Both consumers read from `packages/meta/network/`, so adding or
-updating ABIs in one place keeps both surfaces in sync.
+Both consumers read from the same `network/` tree at the repo root, so
+adding or updating ABIs in one place keeps both surfaces in sync. The
+npm package's `scripts/codegen.ts` reads from there and emits typed
+modules + a mirror of the JSON tree into `packages/meta/` before
+publish.
 
 ## Repo layout
 
 ```text
-packages/meta/        # @polygonlabs/meta npm package
-  network/            # source-of-truth JSON tree (also COPYed into the nginx image)
-  src/generated/      # codegenned `as const` TS modules
-  scripts/codegen.ts  # walks network/, emits src/generated/
+network/              # source-of-truth JSON tree (consumed by both surfaces below)
 
-Dockerfile            # nginx image for static.polygon.technology
+packages/meta/        # @polygonlabs/meta npm package
+  scripts/codegen.ts  # reads <repo-root>/network/, emits src/generated/
+  src/generated/      # codegenned `as const` TS modules (tracked)
+  network/            # mirror of <repo-root>/network/ for the ./network/* subpath export (gitignored, materialised by prepack)
+
+Dockerfile            # nginx image for static.polygon.technology — COPYs network/
 nginx.conf, index.html
 ```
 
