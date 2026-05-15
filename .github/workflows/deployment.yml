@@ -14,7 +14,7 @@ on:
           - prod
 
 permissions:
-  contents: read
+  contents: write
   id-token: write
 
 jobs:
