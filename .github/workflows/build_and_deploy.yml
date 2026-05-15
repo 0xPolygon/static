@@ -16,7 +16,7 @@ on:
         description: 'JSON-encoded build-time secrets forwarded to the ECS deploy workflow.'
 
 permissions:
-  contents: read
+  contents: write
   id-token: write
 
 jobs:
