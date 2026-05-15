@@ -2,7 +2,7 @@ packages:
   - 'packages/*'
 
 blockExoticSubdeps: true
-minimumReleaseAge: 1440
+minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
   - '@polygonlabs/*'
   - '@maticnetwork/*'
