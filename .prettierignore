@@ -1,0 +1,18 @@
+# Prettier should not format md files, as we use `markdownlint` for that purpose
+*.md
+dist/
+pnpm-lock.yaml
+
+# Codegenned `as const` TypeScript modules. Regenerate via `pnpm run codegen`
+# rather than hand-formatting; the drift-check PR gate fails if these get
+# out of sync with their JSON sources under `network/`.
+packages/meta/src/generated/
+
+# Source-of-truth ABI JSON at repo root. Hand-curated; prettier reformats
+# numeric literals inside `abi` arrays and would force endless churn.
+network/
+
+# Mirror of `<repo-root>/network/` materialised by `scripts/codegen.ts`
+# before publish. Gitignored, but listed here defensively in case a
+# developer keeps a local materialised copy.
+packages/meta/network/

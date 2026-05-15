@@ -1,24 +1,45 @@
 {
-  "name": "@maticnetwork/meta",
-  "version": "2.4.82",
-  "description": "Matic network contracts' addresses and ABIs",
+  "name": "static",
+  "version": "1.0.0",
+  "description": "Polygon static — npm package @polygonlabs/meta plus the static.polygon.technology HTTP endpoint, sharing one source-of-truth JSON tree under packages/meta/network/",
+  "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maticnetwork/static.git"
+    "url": "git+https://github.com/0xPolygon/static.git"
   },
   "license": "MIT",
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
-    "minify": "node minify.js",
-    "prepublish": "npm run minify"
+    "prepare": "husky",
+    "build": "pnpm -r --if-present run build",
+    "codegen": "pnpm -r --if-present run codegen",
+    "test": "pnpm -r --if-present run test",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "lint": "concurrently --group --prefix-colors auto 'pnpm:lint:md' 'pnpm:lint:ts' 'pnpm:typecheck' 'prettier --check .'",
+    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "lint:ts": "eslint .",
+    "format": "pnpm run format:md && pnpm run format:ts && prettier --write .",
+    "format:md": "markdownlint-cli2 --fix \"**/*.md\"",
+    "format:ts": "eslint . --fix",
+    "ci:publish": "changeset publish"
   },
-  "bugs": {
-    "url": "https://github.com/maticnetwork/static/issues"
-  },
-  "homepage": "https://github.com/maticnetwork/static#readme",
-  "main": "./network/index.js",
-  "keywords": [
-    "meta",
-    "addresses",
-    "abi"
-  ]
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0",
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@polygonlabs/apps-team-lint": "^2.0.0",
+    "@tsconfig/node-ts": "^23.6.4",
+    "@tsconfig/node24": "^24.0.4",
+    "concurrently": "^9.2.1",
+    "eslint": "^10.0.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "husky": "^9.0.0",
+    "lint-staged": "^16.2.7",
+    "markdownlint-cli2": "^0.21.0",
+    "prettier": "^3.0.0"
+  }
 }

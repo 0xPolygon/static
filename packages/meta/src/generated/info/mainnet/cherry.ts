@@ -1,0 +1,28 @@
+export const info = {
+  "Main": {
+    "NetworkName": "Ethereum",
+    "ChainId": 1,
+    "Explorer": "https://etherscan.io",
+    "SupportsEIP1559": true,
+    "Contracts": {
+      "PolygonZkEVM": "0xe262ea2782e2e8dbfe354048c3b5d6de9603efef",
+      "PolygonZkEVMProxy": "0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2",
+      "PolygonZkEVMBridge": "0x5ac4182a1dd41aeef465e40b82fd326bf66ab82c",
+      "PolygonZkEVMBridgeProxy": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
+      "PolygonZkEVMGlobalExitRoot": "0xbc1ea504fC54D078514eFCCA1F6860B5219B6BC3",
+      "PolygonZkEVMGlobalExitRootProxy": "0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb",
+      "ZkEVMWrapper": "0x000000d19e30E7b15c0C0902ab715b65000fC900"
+    }
+  },
+  "zkEVM": {
+    "NetworkName": "Cherry",
+    "ChainId": 1101,
+    "RPC": "https://zkevm-rpc.com",
+    "Explorer": "https://explorer.mainnet.zkevm-test.net",
+    "SupportsEIP1559": false,
+    "Contracts": {
+      "PolygonZkEVMBridge": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
+      "PolygonZkEVMGlobalExitRootL2": "0xa40d5f56745a118d0906a34e69aec8c0db1cb8fa"
+    }
+  }
+} as const;

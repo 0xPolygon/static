@@ -1,0 +1,33 @@
+#!/bin/sh
+# Require at least one changeset per push — mirrors the changeset-check CI gate so
+# the gap is caught locally while there is still time to amend it into the right commit.
+# Skip on changeset-release/* branches (automated version-bump PRs have no code to describe).
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+case "$branch" in
+  changeset-release/*) exit 0 ;;
+esac
+
+base_branch=$(grep '"baseBranch"' .changeset/config.json | sed 's/.*"baseBranch"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/')
+
+[ "$branch" = "$base_branch" ] && exit 0
+
+# If origin/<base_branch> doesn't exist yet (brand-new repo), nothing to compare against.
+git rev-parse --verify "origin/$base_branch" > /dev/null 2>&1 || exit 0
+
+# Git sets GIT_DIR / GIT_WORK_TREE to the worktree's gitdir when running hooks
+# inside a linked worktree (e.g. one created via `git worktree add`). Those vars
+# break `changeset status` — it invokes its own `git` subprocesses, which then
+# read from the linked gitdir rather than the worktree's actual tree, and report
+# "no changesets found" even when a valid one exists. Unset both so changeset's
+# git calls resolve against the CWD the hook is running in.
+unset GIT_DIR GIT_WORK_TREE
+
+if ! pnpm exec changeset status --since="origin/$base_branch" 2>/dev/null; then
+  echo ""
+  echo "  No changeset found. Add one before pushing:"
+  echo "    pnpm exec changeset add          # for code/behaviour changes"
+  echo "    pnpm exec changeset add --empty  # for CI, docs, or tooling changes"
+  echo ""
+  exit 1
+fi

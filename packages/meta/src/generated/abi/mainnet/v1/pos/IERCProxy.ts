@@ -1,0 +1,28 @@
+export const abi = [
+  {
+    "inputs": [],
+    "name": "proxyType",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "proxyTypeId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "implementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "codeAddr",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+] as const;

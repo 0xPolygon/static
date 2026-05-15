@@ -1,0 +1,132 @@
+export const info = {
+  "Main": {
+    "NetworkName": "Ethereum",
+    "ChainId": 1,
+    "DaggerEndpoint": "wss://mainnet.dagger.matic.network",
+    "StakingAPI": "https://staking-api.polygon.technology/api/v2",
+    "Explorer": "https://etherscan.io",
+    "SubgraphUrl": "https://api.thegraph.com/subgraphs/name/maticnetwork/mainnet-root-subgraphs",
+    "SupportsEIP1559": true,
+    "Contracts": {
+      "PriorityQueue": "0x61AdDcD534Bdc1721c91740Cf711dBEcE936053e",
+      "Governance": "0x98165b71cdDea047C0A49413350C40571195fd07",
+      "GovernanceProxy": "0x6e7a5820baD6cebA8Ef5ea69c0C92EbbDAc9CE48",
+      "Timelock": "0xCaf0aa768A3AE1297DF20072419Db8Bb8b5C8cEf",
+      "Registry": "0x33a02E6cC863D393d6Bf231B697b82F6e499cA71",
+      "RootChain": "0x536c55cFe4892E581806e10b38dFE8083551bd03",
+      "RootChainProxy": "0x86E4Dc95c7FBdBf52e33D563BbDB00823894C287",
+      "ValidatorShareFactory": "0xc4FA447A0e77Eff9717b09C057B40570813bb642",
+      "StakingInfo": "0xa59C847Bd5aC0172Ff4FE912C5d29E5A71A7512B",
+      "StakingNFT": "0x47Cbe25BbDB40a774cC37E1dA92d10C2C7Ec897F",
+      "StakeManager": "0x3AD88467E40399dc6Ae10427f8B0842348d9076c",
+      "StakeManagerProxy": "0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908",
+      "ValidatorShare": "0xBe63B977ABBAA99fC0243e208340c530Dd4ee9E8",
+      "StateSender": "0x28e4F3a7f651294B9564800b2D01f35189A5bFbE",
+      "DepositManager": "0xb00aa68b87256E2F22058fB2Ba3246EEc54A44fc",
+      "DepositManagerProxy": "0x401F6c983eA34274ec46f84D70b31C151321188b",
+      "WithdrawManager": "0x6F8a42cf6f3CE657B66A9d5849f1251dE7a35168",
+      "WithdrawManagerProxy": "0x2A88696e0fFA76bAA1338F2C74497cC013495922",
+      "EventsHubProxy": "0x6dF5CB08d3f0193C768C8A01f42ac4424DC5086b",
+      "ExitNFT": "0xDF74156420Bd57ab387B195ed81EcA36F9fABAca",
+      "ERC20Predicate": "0x4EeA1780c06709D7FA0BCaA6D0f1aB29673586c0",
+      "ERC721Predicate": "0x36C2503d53C6948331144b85D1e74a3B96731d1b",
+      "EIP1559Burn": "0x70bca57f4579f58670ab2d18ef16e02c17553c38",
+      "Tokens": {
+        "MaticToken": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
+        "TestToken": "0x3db715989dA05C1D17441683B5b41d4510512722",
+        "RootERC721": "0x96CDDF45C0Cd9a59876A2a29029d7c54f6e54AD3",
+        "MaticWeth": "0xa45b966996374E9e65ab991C6FE4Bfce3a56DDe8"
+      },
+      "PolygonMigrationProxy": "0x29e7DF7b6A1B2b07b731457f499E1696c60E2C4e",
+      "PolygonMigration": "0xB037347ef306db3b41aB0b250F891887039d9231",
+      "DefaultEmissionManagerProxy": "0xbC9f74b3b14f460a6c47dCdDFd17411cBc7b6c53",
+      "DefaultEmissionManager": "0x152442D77E9fB9C210953d583Cbb2da88027fCB9",
+      "PolygonEcosystemToken": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6"
+    },
+    "POSContracts": {
+      "SafeERC20": "0xeFfdCB49C2D0EF813764B709Ca3c6fe71f230E3e",
+      "RootChainManager": "0xF0235dCa8fb0D3999685724dCBB9DD00c5d62DFa",
+      "RootChainManagerProxy": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
+      "ERC20Predicate": "0x1F4c1E0afBeb5b5B86d7722549274434b29884F6",
+      "ERC20PredicateProxy": "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf",
+      "ERC721Predicate": "0x02Bc987f54B54bf18Ca6E20a13e57508ec561072",
+      "ERC721PredicateProxy": "0xE6F45376f64e1F568BD1404C155e5fFD2F80F7AD",
+      "ERC1155Predicate": "0xCFA65db73cB45D458d0a98006d3d558b5e1F021d",
+      "ERC1155PredicateProxy": "0x0B9020d4E32990D67559b1317c7BF0C15D6EB88f",
+      "MintableERC20Predicate": "0x94D40724d6aA4AB313065006E4bA8CA448dcDfae",
+      "MintableERC20PredicateProxy": "0x9923263fA127b3d1484cFD649df8f1831c2A74e4",
+      "MintableERC721Predicate": "0xba31389292f7EdfC7b60B937b97014b4C354689b",
+      "MintableERC721PredicateProxy": "0x932532aA4c0174b8453839A6E44eE09Cc615F2b7",
+      "MintableERC1155Predicate": "0xFD47E7d657b07B071C3362bBCe908a70895EE747",
+      "MintableERC1155PredicateProxy": "0x2d641867411650cd05dB93B59964536b1ED5b1B7",
+      "EtherPredicate": "0xeB185ED8f664D105903EF434E5becd214a8AC874",
+      "EtherPredicateProxy": "0x8484Ef722627bf18ca5Ae6BcF031c23E6e922B30",
+      "DummyStateSender": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+      "GasSwapper": "0x4CcD4CbDE5Ec758cCBf75f0be280647Ff359c17a",
+      "Tokens": {
+        "DummyERC20": "0xf2F3bD7Ca5746C5fac518f67D1BE87805a2Be82A",
+        "DummyERC721": "0x71B821aa52a49F32EEd535fCA6Eb5aa130085978",
+        "DummyMintableERC721": "0x578360AdF0BbB2F10ec9cEC7EF89Ef495511ED5f",
+        "DummyERC1155": "0x556f501CF8a43216Df5bc9cC57Eb04D4FFAA9e6D"
+      }
+    },
+    "FxPortalContracts": {
+      "FxRoot": "0xfe5e5D361b2ad62c541bAb87C45a0B9B018389a2",
+      "FxERC20RootTunnel": "0x0cc2caed31490b546c741bd93dbba8ab387f7f2c",
+      "FxERC721RootTunnel": "0xca1f5ec720eCdA31bE3d80BD3ef4686cBb07eb4D",
+      "FxERC1155RootTunnel": "0x1E2baf7541C68FAfd0560FB87D2eAb0c4E51589d",
+      "FxMintableERC20RootTunnel": "0xB005512d330501d93b12Aa4A8FF30bE8858769dE",
+      "Tokens": {
+        "FxERC20Root": "0xd26CD6ce2a1705C49610F951f232510532c6856D",
+        "FxERC721Root": "0x43E2bC0C29B1Db3389e5Ffd30CbB2aC31e47078a",
+        "FxERC1155Root": "0xAf21e1B1F2e8711a95AB4cAa579885224a8e3461"
+      }
+    }
+  },
+  "Matic": {
+    "NetworkName": "Polygon",
+    "ChainId": 137,
+    "RPC": "https://polygon-rpc.com",
+    "DaggerEndpoint": "wss://matic-mainnet.dagger.matic.network",
+    "Explorer": "https://polygonscan.com",
+    "NetworkAPI": "https://proof-generator.polygon.technology/api/v1/matic",
+    "SupportsEIP1559": true,
+    "Contracts": {
+      "ChildChain": "0xD9c7C4ED4B66858301D0cb28Cc88bf655Fe34861",
+      "EIP1559Burn": "0x7A8ed27F4C30512326878652d20fC85727401854",
+      "Tokens": {
+        "MaticWeth": "0x8cc8538d60901d19692F5ba22684732Bc28F54A3",
+        "MaticToken": "0x0000000000000000000000000000000000001010",
+        "TestToken": "0x5E1DDF2e5a0eCDD923692d4b4429d8603825A8C6",
+        "RootERC721": "0xa35363CFf92980F8268299D0132D5f45834A9527",
+        "WMATIC": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270"
+      }
+    },
+    "POSContracts": {
+      "ChildChainManager": "0xa40fc0782bee28dd2cf8cb4ac2ecdb05c537f1b5",
+      "ChildChainManagerProxy": "0xA6FA4fB5f76172d178d61B04b0ecd319C5d1C0aa",
+      "Tokens": {
+        "DummyERC20": "0xeFfdCB49C2D0EF813764B709Ca3c6fe71f230E3e",
+        "DummyERC721": "0x6EBEAC13f6403D19C95b6B75008B12fd21a93Aab",
+        "DummyMintableERC721": "0xD4888faB8bd39A663B63161F5eE1Eae31a25B653",
+        "DummyERC1155": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
+        "MaticWETH": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619"
+      }
+    },
+    "FxPortalContracts": {
+      "FxChild": "0x8397259c983751DAf40400790063935a11afa28a",
+      "FxERC20ChildTunnel": "0xd531Cf2142D9b9Dc8b077dF3c4E93B46E7Cf879a",
+      "FxERC721ChildTunnel": "0x2b4732e448b3023131a7b25046b3A5EF50CfCf71",
+      "FxERC1155ChildTunnel": "0x80a708B92939B373e86eF8e8cfc9e05EfE2f5e49",
+      "FxMintableERC20ChildTunnel": "0xE633A3eeADF030Edf6ABB6Ebbf792679a475C042"
+    },
+    "GenesisContracts": {
+      "BorValidatorSet": "0x0000000000000000000000000000000000001000",
+      "StateReceiver": "0x0000000000000000000000000000000000001001"
+    }
+  },
+  "Heimdall": {
+    "ChainId": "heimdall-137",
+    "API": "https://heimdall-api.polygon.technology"
+  }
+} as const;

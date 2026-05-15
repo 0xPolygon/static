@@ -1,49 +1,40 @@
-# Static server
+# static
 
-The private static server for Matic.
+Two public surfaces driven from one set of source JSON files under the
+repo-root `network/` directory:
 
-### How it works?
+1. **npm package [`@polygonlabs/meta`](./packages/meta/)** — typed
+   `as const` ABI modules, typed network metadata, and raw JSON. See
+   [`packages/meta/README.md`](./packages/meta/README.md) for usage.
+2. **HTTP endpoint** at `https://static.polygon.technology/...` — the
+   same JSON files served verbatim by an nginx Docker image built from
+   the root `Dockerfile` and deployed via the workflows under
+   `.github/workflows/`.
 
-All files, in this repository, will be served over AWS S3 at `https://static.polygon.technology/<file-path>`.
+Both consumers read from the same `network/` tree at the repo root, so
+adding or updating ABIs in one place keeps both surfaces in sync. The
+npm package's `scripts/codegen.ts` reads from there and emits typed
+modules + a mirror of the JSON tree into `packages/meta/` before
+publish.
 
-### Production
+## Repo layout
 
-Master branch will be automatically deployed. No other action required.
+```text
+network/              # source-of-truth JSON tree (consumed by both surfaces below)
 
-## Package Usage
+packages/meta/        # @polygonlabs/meta npm package
+  scripts/codegen.ts  # reads <repo-root>/network/, emits src/generated/
+  src/generated/      # codegenned `as const` TS modules (tracked)
+  network/            # mirror of <repo-root>/network/ for the ./network/* subpath export (gitignored, materialised by prepack)
 
-### Installation
-
-```bash
-$ npm i --save @maticnetwork/meta
+Dockerfile            # nginx image for static.polygon.technology — COPYs network/
+nginx.conf, index.html
 ```
 
-### Usage
+See [`packages/meta/CONTRIBUTING.md`](./packages/meta/CONTRIBUTING.md)
+for contributor docs and [`packages/meta/MIGRATION.md`](./packages/meta/MIGRATION.md)
+for `@maticnetwork/meta` → `@polygonlabs/meta` migration notes.
 
-```javascript
-const Network = require("@maticnetwork/meta/network")
+## License
 
-// define network
-const network = new Network("testnet", "mumbai")
-
-const Matic = network.Matic  // all info related to Matic
-const Main = network.Main // all info related to Main
-const Heimdall = network.Heimdall // all info related to Heimdall
-
-const RootChainABI = network.abi("RootChain")
-
-// use matic js
-let matic = new Matic ({
-    maticProvider: Matic.RPC,
-    mainProvider: Main.RPC,
-    registry: Main.Contracts.Registry,
-    ...
-    ...
-})
-```
-
-### Before Publishing
-
-```
-npm run minify
-```
+MIT
