@@ -13,9 +13,14 @@ on:
           - staging
           - prod
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   deploy:
     uses: ./.github/workflows/build_and_deploy.yml
     with:
       environment: ${{ inputs.environment || 'dev' }}
-    secrets: inherit
+    secrets:
+      build_params_gh_secret_keys: ${{ secrets.build_params_gh_secret_keys }}

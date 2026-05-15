@@ -10,6 +10,14 @@ on:
         type: string
         description: 'Core app name'
         default: 'static'
+    secrets:
+      build_params_gh_secret_keys:
+        required: false
+        description: 'JSON-encoded build-time secrets forwarded to the ECS deploy workflow.'
+
+permissions:
+  contents: read
+  id-token: write
 
 jobs:
   set-env-variable:
@@ -42,4 +50,5 @@ jobs:
       environment: ${{ inputs.environment }}
       cluster_name: frontend-${{ inputs.environment }}-ecs-cluster
       account_number: '${{ needs.set-env-variable.outputs.ACCOUNT_NUMBER }}'
-    secrets: inherit
+    secrets:
+      build_params_gh_secret_keys: ${{ secrets.build_params_gh_secret_keys }}
