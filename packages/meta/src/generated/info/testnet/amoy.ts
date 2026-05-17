@@ -72,6 +72,10 @@ export const info = {
       "FxERC20RootTunnel": "0x4B915DC5D123631C53aE619D2222f7124a2143Fa",
       "FxERC721RootTunnel": "0x9E688939Cb5d484e401933D850207D6750852053",
       "FxERC1155RootTunnel": "0x085C505139C3Ec6dD3D285f350f1155cf63Ad7E2"
+    },
+    "PriorityFeeDistributionContracts": {
+      "MultiRootDistributor": "0x42666db9f9dBdE270Bc752E776EaD2967E606679",
+      "MultiRootDistributorProxy": "0x1Ff397F3BCDA58952Ac2326A1Fb799f9FBE6ecd7"
     }
   },
   "Matic": {
