@@ -1,0 +1,38 @@
+# Cloudflare Workers static-assets deployment for the static.polygon.technology
+# HTTP endpoint. No worker script — Cloudflare serves the assembled dist/ bundle
+# (network/ JSON tree + health-check index.html + _headers) directly from its
+# edge. Replaces the previous nginx-on-ECS origin; the npm package
+# (@polygonlabs/meta, packages/meta/) is a separate surface and unaffected.
+name = "polygon-static"
+main = "src/index.ts"
+compatibility_date = "2026-06-24"
+placement = { mode = "smart" }
+workers_dev = false
+preview_urls = false
+send_metrics = false
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+# Missing paths return a real 404 (a JSON CDN, not an SPA). The old nginx
+# try_files fell back to index.html, masking 404s as 200+HTML.
+not_found_handling = "none"
+
+[build]
+command = "pnpm run build:cdn"
+
+# Validation domain — wrangler auto-provisions DNS in the Cloudflare-managed
+# polygon.technology zone, so this needs no separate infra change. Used to
+# verify real consumer paths before the apex cutover.
+[env.staging]
+routes = [{ pattern = "static-cf.polygon.technology", custom_domain = true }]
+
+# Apex. A route (NOT custom_domain): it attaches the Worker in front of the
+# EXISTING proxied static.polygon.technology record without creating or overriding
+# any DNS record. That matters because our CI token has Workers permissions but not
+# Zone:DNS:Edit — custom_domain/override fail with code 100117 on these
+# externally-managed records (see portal/staking-ui history). A route needs only
+# Workers-Routes permission, and the cutover is zero-downtime and reversible
+# (remove the route → traffic falls straight back to the AWS origin).
+[env.production]
+routes = [{ pattern = "static.polygon.technology/*", zone_name = "polygon.technology" }]

@@ -23,12 +23,32 @@ Two public surfaces driven from one source JSON tree at the repo-root
    `as const` ABI modules, typed network metadata, plus a verbatim JSON
    mirror exposed via the `./network/*` subpath export.
 2. **HTTP endpoint** at `https://static.polygon.technology/...` —
-   the same JSON files served verbatim by an nginx Docker image built
-   from the root `Dockerfile`. Deployed to AWS ECS via the legacy
-   `deployment.yml` / `build_and_deploy.yml` workflows and to GCP via
-   `deployment_gcp.yml`. These predate the team's canonical
-   `docker-release` pattern and are load-bearing for prod; do not
-   migrate them without coordinating with the team.
+   the same JSON files served verbatim from Cloudflare Workers static
+   assets. `scripts/assemble-cdn.sh` (`pnpm run build:cdn`) stages
+   `network/`, `index.html`, and `public/_headers` into `dist/`, which
+   `wrangler.toml` serves directly (no worker script). CORS and caching
+   live in `public/_headers`.
+
+   `deploy.yml` is trunk-based: every push to `master` deploys
+   **staging** (`static-cf.polygon.technology`, a `custom_domain` on a
+   fresh hostname). **Production** is `workflow_dispatch`-only and binds
+   the Worker to `static.polygon.technology` via a **route**, not a
+   `custom_domain`: the apex record already exists (proxied, pointing at
+   AWS) and is externally managed, so a `custom_domain` would fail with
+   Cloudflare error 100117 and our CI token lacks `Zone:DNS:Edit` to
+   override it. A route needs only Workers-Routes permission, never
+   touches DNS, and is a zero-downtime, reversible cutover (remove the
+   route → traffic falls back to the AWS origin). The first prod deploy
+   *is* the apex cutover, hence dispatch-only; once verified, a release-tag
+   trigger can be re-added so prod auto-deploys on each `@polygonlabs/meta`
+   release. See the apps-team-ops Cloudflare-migration runbook for the full
+   rationale (100117, override failure, route pattern).
+
+   The legacy nginx-on-ECS origin (`Dockerfile`, `nginx.conf`,
+   `deployment.yml`, `build_and_deploy.yml`) and the staged GCP path
+   (`deployment_gcp.yml`) are kept as rollback until the apex DNS is
+   cut over to Cloudflare, then removed in a follow-up PR. The apex DNS
+   cutover and the AWS/GCP teardown are manual infra steps.
 
 ## Codegen flow
 
