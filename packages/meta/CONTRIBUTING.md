@@ -101,6 +101,22 @@ pnpm run build        # codegen + tsc → dist/
 `prepack` runs `build`, so `pnpm pack` and `pnpm publish` always emit
 a fresh dist.
 
+### Node version: build vs. runtime
+
+`codegen` runs the script directly with `node scripts/codegen.ts`,
+which relies on Node's native TypeScript execution — so **building**
+this package requires Node 24. That requirement is declared in
+`devEngines.runtime`.
+
+The **published** package, however, is pure data: every module under
+`dist/generated/**` is an `export const ... = [...] as const` literal
+with no runtime code, so it runs on any Node that supports ESM subpath
+exports. `engines.node` is therefore set to `>=20` to describe the
+consumer runtime, not the build toolchain. Don't raise it to match the
+build requirement — that would force a Node 24 floor on downstream SDKs
+(e.g. `@polygonlabs/pos-sdk`) that legitimately target Node 20 for no
+runtime reason.
+
 ## Release
 
 This repo uses [Changesets](https://github.com/changesets/changesets)
