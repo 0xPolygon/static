@@ -16,7 +16,9 @@
   "scripts": {
     "prepare": "husky",
     "build": "pnpm -r --if-present run build",
+    "build:cdn": "bash scripts/assemble-cdn.sh",
     "codegen": "pnpm -r --if-present run codegen",
+    "deploy": "wrangler deploy",
     "test": "pnpm -r --if-present run test",
     "typecheck": "pnpm -r --if-present run typecheck",
     "lint": "concurrently --group --prefix-colors auto 'pnpm:lint:md' 'pnpm:lint:ts' 'pnpm:typecheck' 'prettier --check .'",
@@ -40,6 +42,7 @@
     "husky": "^9.0.0",
     "lint-staged": "^16.2.7",
     "markdownlint-cli2": "^0.21.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "wrangler": "^4.78.0"
   }
 }

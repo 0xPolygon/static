@@ -1,0 +1,63 @@
+name: Deploy to Cloudflare
+
+# Trunk-based deployment. master is the only branch.
+#
+#   - staging:    every push to master (trunk) deploys staging
+#                 (static-cf.polygon.technology, a custom_domain on a fresh
+#                 hostname). Trunk is always deployable, so staging tracks trunk.
+#   - production: workflow_dispatch ONLY, for now. Production uses a *route* on the
+#                 existing static.polygon.technology record, so the first prod
+#                 deploy IS the apex cutover — it must be deliberate, not fired by
+#                 a stray release. After cutover is verified, re-add a release-tag
+#                 trigger here so prod auto-deploys on each @polygonlabs/meta
+#                 release (the route is idempotent once bound).
+#
+# Production deploy is also the rollback lever: removing the route (or dispatching
+# an older build) falls straight back to the AWS origin behind the same record.
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      environment:
+        required: true
+        type: choice
+        description: 'Cloudflare environment to deploy to'
+        options:
+          - staging
+          - production
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # dispatch → chosen env; a push to master → staging.
+      - run: >
+          pnpm exec wrangler deploy --env ${{
+            github.event_name == 'workflow_dispatch' && github.event.inputs.environment
+            || 'staging'
+          }}
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_WORKER_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_WORKER_API_TOKEN }}

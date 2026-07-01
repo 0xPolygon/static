@@ -1,6 +1,8 @@
 .DS_Store
 node_modules/
 dist/
+# Wrangler local dev/build state (cache, local KV/assets manifests).
+.wrangler/
 # Codegen mirror of the repo-root network/ tree, materialised by
 # scripts/codegen.ts before publish. Pure publish artifact; the canonical
 # tree at repo root is the source of truth.
