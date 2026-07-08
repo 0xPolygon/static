@@ -4,7 +4,6 @@
 # edge. Replaces the previous nginx-on-ECS origin; the npm package
 # (@polygonlabs/meta, packages/meta/) is a separate surface and unaffected.
 name = "polygon-static"
-main = "src/index.ts"
 compatibility_date = "2026-06-24"
 placement = { mode = "smart" }
 workers_dev = false
@@ -13,7 +12,6 @@ send_metrics = false
 
 [assets]
 directory = "./dist"
-binding = "ASSETS"
 # Missing paths return a real 404 (a JSON CDN, not an SPA). The old nginx
 # try_files fell back to index.html, masking 404s as 200+HTML.
 not_found_handling = "none"
@@ -21,18 +19,24 @@ not_found_handling = "none"
 [build]
 command = "pnpm run build:cdn"
 
-# Validation domain — wrangler auto-provisions DNS in the Cloudflare-managed
-# polygon.technology zone, so this needs no separate infra change. Used to
-# verify real consumer paths before the apex cutover.
+# Validation domain — a fresh hostname, so wrangler creates its DNS record itself.
+# custom_domain only works from CI when NO record pre-exists; on a hostname with an
+# existing externally-managed record it fails with code 100117, our CI token cannot
+# override (no Zone:DNS:Edit), and zone routes fail likewise (SPEC has tried).
 [env.staging]
 routes = [{ pattern = "static-cf.polygon.technology", custom_domain = true }]
 
-# Apex. A route (NOT custom_domain): it attaches the Worker in front of the
-# EXISTING proxied static.polygon.technology record without creating or overriding
-# any DNS record. That matters because our CI token has Workers permissions but not
-# Zone:DNS:Edit — custom_domain/override fail with code 100117 on these
-# externally-managed records (see portal/staking-ui history). A route needs only
-# Workers-Routes permission, and the cutover is zero-downtime and reversible
-# (remove the route → traffic falls straight back to the AWS origin).
+# Apex — deliberately NO domain binding yet. static.polygon.technology still has an
+# externally-managed record pointing at AWS, so no wrangler-side binding can take it
+# over (see staging note). The zero-downtime cutover, per SPEC, ordered so that a
+# stray production deploy is harmless at every step:
+#   1. Merge this, dispatch production once — green run, the worker now exists
+#      (polygon-static-production).
+#   2. Immediately land the follow-up PR setting `routes = [{ pattern =
+#      "static.polygon.technology", custom_domain = true }]` here. Until the swap
+#      (step 3), any production dispatch fails harmlessly at the domain-registration
+#      step (code 100117) — wrangler deploys the script BEFORE registering domains,
+#      so nothing already deployed or bound is touched.
+#   3. SPEC swaps the existing DNS record onto the worker in the CF dashboard.
+#   4. Dispatch production to verify wrangler now owns the domain (idempotent).
 [env.production]
-routes = [{ pattern = "static.polygon.technology/*", zone_name = "polygon.technology" }]

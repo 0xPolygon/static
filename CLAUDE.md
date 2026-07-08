@@ -31,18 +31,20 @@ Two public surfaces driven from one source JSON tree at the repo-root
 
    `deploy.yml` is trunk-based: every push to `master` deploys
    **staging** (`static-cf.polygon.technology`, a `custom_domain` on a
-   fresh hostname). **Production** is `workflow_dispatch`-only and binds
-   the Worker to `static.polygon.technology` via a **route**, not a
-   `custom_domain`: the apex record already exists (proxied, pointing at
-   AWS) and is externally managed, so a `custom_domain` would fail with
-   Cloudflare error 100117 and our CI token lacks `Zone:DNS:Edit` to
-   override it. A route needs only Workers-Routes permission, never
-   touches DNS, and is a zero-downtime, reversible cutover (remove the
-   route → traffic falls back to the AWS origin). The first prod deploy
-   *is* the apex cutover, hence dispatch-only; once verified, a release-tag
-   trigger can be re-added so prod auto-deploys on each `@polygonlabs/meta`
-   release. See the apps-team-ops Cloudflare-migration runbook for the full
-   rationale (100117, override failure, route pattern).
+   fresh hostname, where wrangler can create the DNS record itself).
+   **Production** is `workflow_dispatch`-only. The apex cannot be bound
+   from CI while its externally-managed record exists — `custom_domain`
+   fails with Cloudflare error 100117, our CI token lacks
+   `Zone:DNS:Edit` to override, and zone routes fail likewise (SPEC has
+   tried) — so the cutover is the four-step process documented in
+   `wrangler.toml` `[env.production]`: dispatch to create the worker,
+   land `custom_domain = true`, SPEC swaps the DNS record onto the
+   worker in the CF dashboard (zero downtime), dispatch to verify
+   wrangler owns the domain. The ordering makes a stray production
+   dispatch harmless at every step. Once ownership is verified, a
+   release-tag trigger can be re-added so prod auto-deploys on each
+   `@polygonlabs/meta` release. See the apps-team-ops
+   Cloudflare-migration runbook for the full rationale.
 
    The legacy nginx-on-ECS origin (`Dockerfile`, `nginx.conf`,
    `deployment.yml`, `build_and_deploy.yml`) and the staged GCP path

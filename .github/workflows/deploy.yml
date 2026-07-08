@@ -5,15 +5,13 @@ name: Deploy to Cloudflare
 #   - staging:    every push to master (trunk) deploys staging
 #                 (static-cf.polygon.technology, a custom_domain on a fresh
 #                 hostname). Trunk is always deployable, so staging tracks trunk.
-#   - production: workflow_dispatch ONLY, for now. Production uses a *route* on the
-#                 existing static.polygon.technology record, so the first prod
-#                 deploy IS the apex cutover — it must be deliberate, not fired by
-#                 a stray release. After cutover is verified, re-add a release-tag
-#                 trigger here so prod auto-deploys on each @polygonlabs/meta
-#                 release (the route is idempotent once bound).
-#
-# Production deploy is also the rollback lever: removing the route (or dispatching
-# an older build) falls straight back to the AWS origin behind the same record.
+#   - production: workflow_dispatch ONLY, for now. The apex cutover sequence is
+#                 documented in wrangler.toml [env.production]: dispatch once to
+#                 create the worker → land custom_domain → SPEC swaps DNS in the
+#                 CF dashboard → dispatch to verify ownership. The ordering makes
+#                 a stray production dispatch harmless at every step. Once the
+#                 domain is wrangler-owned, re-add a release-tag trigger here so
+#                 prod auto-deploys on each @polygonlabs/meta release.
 on:
   push:
     branches:
