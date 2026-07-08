@@ -32,27 +32,30 @@ Two public surfaces driven from one source JSON tree at the repo-root
    and caching for asset hits live in `public/_headers`.
 
    `deploy.yml` is trunk-based: every push to `master` deploys
-   **staging** (`static-cf.polygon.technology`, a `custom_domain` on a
-   fresh hostname, where wrangler can create the DNS record itself).
-   **Production** is `workflow_dispatch`-only. The apex cannot be bound
-   from CI while its externally-managed record exists — `custom_domain`
-   fails with Cloudflare error 100117, our CI token lacks
-   `Zone:DNS:Edit` to override, and zone routes fail likewise (SPEC has
-   tried) — so the cutover is the four-step process documented in
-   `wrangler.toml` `[env.production]`: dispatch to create the worker,
-   land `custom_domain = true`, SPEC swaps the DNS record onto the
-   worker in the CF dashboard (zero downtime), dispatch to verify
-   wrangler owns the domain. The ordering makes a stray production
-   dispatch harmless at every step. Once ownership is verified, a
-   release-tag trigger can be re-added so prod auto-deploys on each
-   `@polygonlabs/meta` release. See the apps-team-ops
-   Cloudflare-migration runbook for the full rationale.
+   **staging** (`static-staging.polygon.technology`); the `@polygonlabs/meta`
+   release tag (pushed by the release bot when the Version Packages PR
+   merges) deploys **production** (`static.polygon.technology`) in
+   lockstep with the npm publish — merging that PR is the deliberate
+   promote-to-prod step, and gating prod on the release keeps the CDN
+   and the npm package (two surfaces of one `network/` tree) from
+   drifting. `workflow_dispatch` is the manual escape hatch for either
+   environment.
 
-   The legacy nginx-on-ECS origin (`Dockerfile`, `nginx.conf`,
-   `deployment.yml`, `build_and_deploy.yml`) and the staged GCP path
-   (`deployment_gcp.yml`) are kept as rollback until the apex DNS is
-   cut over to Cloudflare, then removed in a follow-up PR. The apex DNS
-   cutover and the AWS/GCP teardown are manual infra steps.
+   If this hostname (or any live hostname) ever needs to move to a
+   different host, follow the team's internal `service-hosting-migration`
+   runbook — wrangler cannot bind a hostname whose DNS record already
+   exists elsewhere, and the working process is documented there.
+
+## Changelog
+
+Maintain the root [`CHANGELOG.md`](./CHANGELOG.md) whenever a change
+fundamentally alters the repository's capabilities — what the running
+service serves or how (endpoint behaviour, status codes, headers, paths
+added/removed), the API surface consumers depend on, or the deployment/
+hosting mechanism that drives the static site. It is hand-maintained and
+scoped to the repo/HTTP endpoint; routine content updates under
+`network/` don't need an entry, and `packages/meta` has its own
+changesets-managed changelog.
 
 ## Codegen flow
 

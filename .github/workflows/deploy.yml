@@ -3,19 +3,23 @@ name: Deploy to Cloudflare
 # Trunk-based deployment. master is the only branch.
 #
 #   - staging:    every push to master (trunk) deploys staging
-#                 (static-cf.polygon.technology, a custom_domain on a fresh
-#                 hostname). Trunk is always deployable, so staging tracks trunk.
-#   - production: workflow_dispatch ONLY, for now. The apex cutover sequence is
-#                 documented in wrangler.toml [env.production]: dispatch once to
-#                 create the worker → land custom_domain → SPEC swaps DNS in the
-#                 CF dashboard → dispatch to verify ownership. The ordering makes
-#                 a stray production dispatch harmless at every step. Once the
-#                 domain is wrangler-owned, re-add a release-tag trigger here so
-#                 prod auto-deploys on each @polygonlabs/meta release.
+#                 (static-staging.polygon.technology). Trunk is always deployable, so
+#                 staging tracks trunk.
+#   - production: the @polygonlabs/meta release tag, pushed by the release bot
+#                 when the Version Packages PR merges, deploys production
+#                 (static.polygon.technology) in lockstep with the npm publish.
+#                 The CDN and the npm package serve the same network/ tree, so
+#                 gating prod on the release keeps them from drifting; merging
+#                 the Version Packages PR is the deliberate promote-to-prod step.
+#                 (The release commit also re-deploys staging — a harmless
+#                 idempotent no-op.)
+#   - dispatch:   manual escape hatch for either env (rollback / re-deploy).
 on:
   push:
     branches:
       - master
+    tags:
+      - '@polygonlabs/meta@*'
   workflow_dispatch:
     inputs:
       environment:
@@ -50,12 +54,32 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      # dispatch → chosen env; a push to master → staging.
-      - run: >
-          pnpm exec wrangler deploy --env ${{
-            github.event_name == 'workflow_dispatch' && github.event.inputs.environment
-            || 'staging'
-          }}
+      # dispatch → chosen env; a tag push → production; a push to master → staging.
+      # Deliberately plain bash rather than a ${{ }} ternary chain: GitHub
+      # expression short-circuiting silently falls through when a middle operand
+      # is falsy (e.g. an empty dispatch input), and shell if/else has no such
+      # trap. Anything unexpected exits 1 instead of deploying somewhere.
+      - name: Resolve target environment
+        id: target
+        env:
+          DISPATCH_ENV: ${{ github.event.inputs.environment }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            case "$DISPATCH_ENV" in
+              staging|production) ENV="$DISPATCH_ENV" ;;
+              *) echo "Unexpected dispatch environment: '$DISPATCH_ENV'" >&2; exit 1 ;;
+            esac
+          elif [ "$GITHUB_REF_TYPE" = "tag" ]; then
+            ENV="production"
+          elif [ "$GITHUB_REF" = "refs/heads/master" ]; then
+            ENV="staging"
+          else
+            echo "Unexpected ref for deploy: $GITHUB_REF ($GITHUB_REF_TYPE)" >&2; exit 1
+          fi
+          echo "resolved: $GITHUB_EVENT_NAME $GITHUB_REF -> $ENV"
+          echo "environment=$ENV" >> "$GITHUB_OUTPUT"
+
+      - run: pnpm exec wrangler deploy --env ${{ steps.target.outputs.environment }}
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_WORKER_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_WORKER_API_TOKEN }}

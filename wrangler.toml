@@ -3,9 +3,9 @@
 # tree + health-check index.html + _headers) directly from its edge; the tiny
 # worker script exists only because the asset layer serves GET/HEAD and 405s
 # every other method — including the OPTIONS preflights browsers send for
-# maticjs's Content-Type-bearing GETs (see worker/worker.ts). Replaces the
-# previous nginx-on-ECS origin; the npm package (@polygonlabs/meta,
-# packages/meta/) is a separate surface and unaffected.
+# maticjs's Content-Type-bearing GETs (see worker/worker.ts). The npm package
+# (@polygonlabs/meta, packages/meta/) is a separate surface with its own
+# release pipeline; both are generated from the same network/ tree.
 name = "polygon-static"
 main = "worker/worker.ts"
 compatibility_date = "2026-06-24"
@@ -16,8 +16,8 @@ send_metrics = false
 
 [assets]
 directory = "./dist"
-# Missing paths return a real 404 (a JSON CDN, not an SPA). The old nginx
-# try_files fell back to index.html, masking 404s as 200+HTML.
+# Missing paths return a real 404: this is a JSON store consumed by SDKs, not an
+# SPA — an index.html fallback would mask missing files as 200+HTML.
 not_found_handling = "none"
 # Lets the worker delegate non-OPTIONS requests back to the asset layer.
 binding = "ASSETS"
@@ -31,20 +31,17 @@ run_worker_first = true
 [build]
 command = "pnpm run build:cdn"
 
-# Validation domain — a fresh hostname, so wrangler creates its DNS record itself.
-# custom_domain only works from CI when NO record pre-exists; on a hostname with an
-# existing externally-managed record it fails with code 100117, our CI token cannot
-# override (no Zone:DNS:Edit), and zone routes fail likewise (SPEC has tried).
+# Staging tracks trunk: every push to master deploys here. static-staging's
+# DNS record predates this worker (externally managed), so until SPEC swaps it
+# onto the polygon-static-staging worker in the CF dashboard, a staging deploy
+# fails harmlessly at the domain-registration step (code 100117) — same
+# sequence as the apex cutover; see the service-hosting-migration runbook.
 [env.staging]
-routes = [{ pattern = "static-cf.polygon.technology", custom_domain = true }]
+routes = [{ pattern = "static-staging.polygon.technology", custom_domain = true }]
 
-# Apex. The worker (polygon-static-production) is deployed and unbound; the
-# static.polygon.technology record still points at AWS (externally managed), so no
-# wrangler-side binding can take it over from CI (see staging note). Until SPEC
-# swaps the record onto the worker in the CF dashboard, a production deploy fails
-# harmlessly at the domain-registration step (code 100117) — the script deploys
-# before domain registration, so nothing already deployed or bound is touched.
-# After the swap, this config matches the dashboard state and deploys idempotently
-# own the domain.
+# Apex. Deploys on the @polygonlabs/meta release tag, in lockstep with the npm
+# publish. If this hostname ever needs to move to another platform, follow the
+# team's internal service-hosting-migration runbook — wrangler cannot rebind a
+# hostname whose DNS record already exists elsewhere.
 [env.production]
 routes = [{ pattern = "static.polygon.technology", custom_domain = true }]
