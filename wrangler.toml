@@ -26,17 +26,13 @@ command = "pnpm run build:cdn"
 [env.staging]
 routes = [{ pattern = "static-cf.polygon.technology", custom_domain = true }]
 
-# Apex — deliberately NO domain binding yet. static.polygon.technology still has an
-# externally-managed record pointing at AWS, so no wrangler-side binding can take it
-# over (see staging note). The zero-downtime cutover, per SPEC, ordered so that a
-# stray production deploy is harmless at every step:
-#   1. Merge this, dispatch production once — green run, the worker now exists
-#      (polygon-static-production).
-#   2. Immediately land the follow-up PR setting `routes = [{ pattern =
-#      "static.polygon.technology", custom_domain = true }]` here. Until the swap
-#      (step 3), any production dispatch fails harmlessly at the domain-registration
-#      step (code 100117) — wrangler deploys the script BEFORE registering domains,
-#      so nothing already deployed or bound is touched.
-#   3. SPEC swaps the existing DNS record onto the worker in the CF dashboard.
-#   4. Dispatch production to verify wrangler now owns the domain (idempotent).
+# Apex. The worker (polygon-static-production) is deployed and unbound; the
+# static.polygon.technology record still points at AWS (externally managed), so no
+# wrangler-side binding can take it over from CI (see staging note). Until SPEC
+# swaps the record onto the worker in the CF dashboard, a production deploy fails
+# harmlessly at the domain-registration step (code 100117) — the script deploys
+# before domain registration, so nothing already deployed or bound is touched.
+# After the swap, this config matches the dashboard state and deploys idempotently
+# own the domain.
 [env.production]
+routes = [{ pattern = "static.polygon.technology", custom_domain = true }]
