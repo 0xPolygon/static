@@ -4,6 +4,6 @@ import { recommended, typescript } from '@polygonlabs/apps-team-lint';
 
 export default defineConfig([
   ...recommended({ globals: 'node' }),
-  ...typescript(),
+  ...typescript({ tsconfigRootDir: import.meta.dirname }),
   { ignores: ['.claude/**', '**/dist/**', 'packages/meta/src/generated/**'] }
 ]);

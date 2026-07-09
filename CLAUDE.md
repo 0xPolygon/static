@@ -26,8 +26,10 @@ Two public surfaces driven from one source JSON tree at the repo-root
    the same JSON files served verbatim from Cloudflare Workers static
    assets. `scripts/assemble-cdn.sh` (`pnpm run build:cdn`) stages
    `network/`, `index.html`, and `public/_headers` into `dist/`, which
-   `wrangler.toml` serves directly (no worker script). CORS and caching
-   live in `public/_headers`.
+   `wrangler.toml` serves directly. `worker/worker.ts` answers CORS
+   preflight OPTIONS (the asset layer serves GET/HEAD only and 405s
+   everything else, which blocks maticjs in browsers); response CORS
+   and caching for asset hits live in `public/_headers`.
 
    `deploy.yml` is trunk-based: every push to `master` deploys
    **staging** (`static-cf.polygon.technology`, a `custom_domain` on a

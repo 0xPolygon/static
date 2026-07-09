@@ -1,9 +1,13 @@
 # Cloudflare Workers static-assets deployment for the static.polygon.technology
-# HTTP endpoint. No worker script — Cloudflare serves the assembled dist/ bundle
-# (network/ JSON tree + health-check index.html + _headers) directly from its
-# edge. Replaces the previous nginx-on-ECS origin; the npm package
-# (@polygonlabs/meta, packages/meta/) is a separate surface and unaffected.
+# HTTP endpoint. Cloudflare serves the assembled dist/ bundle (network/ JSON
+# tree + health-check index.html + _headers) directly from its edge; the tiny
+# worker script exists only because the asset layer serves GET/HEAD and 405s
+# every other method — including the OPTIONS preflights browsers send for
+# maticjs's Content-Type-bearing GETs (see worker/worker.ts). Replaces the
+# previous nginx-on-ECS origin; the npm package (@polygonlabs/meta,
+# packages/meta/) is a separate surface and unaffected.
 name = "polygon-static"
+main = "worker/worker.ts"
 compatibility_date = "2026-06-24"
 placement = { mode = "smart" }
 workers_dev = false
@@ -15,6 +19,14 @@ directory = "./dist"
 # Missing paths return a real 404 (a JSON CDN, not an SPA). The old nginx
 # try_files fell back to index.html, masking 404s as 200+HTML.
 not_found_handling = "none"
+# Lets the worker delegate non-OPTIONS requests back to the asset layer.
+binding = "ASSETS"
+# Required for the worker to see OPTIONS at all: without it the asset layer
+# answers non-GET/HEAD on asset-matched paths itself (405) — verified with
+# `wrangler dev`; the docs' "other methods route to the Worker" doesn't hold
+# for matched paths. GET/HEAD delegated via the binding still get _headers
+# and not_found_handling applied.
+run_worker_first = true
 
 [build]
 command = "pnpm run build:cdn"

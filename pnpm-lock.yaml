@@ -17,6 +17,9 @@ importers:
       '@changesets/cli':
         specifier: ^2.31.0
         version: 2.31.0(@types/node@24.12.2)
+      '@cloudflare/workers-types':
+        specifier: ^4.20260702.1
+        version: 4.20260702.1
       '@commitlint/cli':
         specifier: ^19.0.0
         version: 19.8.1(@types/node@24.12.2)(typescript@6.0.3)
@@ -55,7 +58,7 @@ importers:
         version: 3.8.3
       wrangler:
         specifier: ^4.78.0
-        version: 4.103.0
+        version: 4.103.0(@cloudflare/workers-types@4.20260702.1)
 
   packages/meta:
     devDependencies:
@@ -192,6 +195,9 @@ packages:
     engines: {node: '>=16'}
     cpu: [x64]
     os: [win32]
+
+  '@cloudflare/workers-types@4.20260702.1':
+    resolution: {integrity: sha512-mOhf5TUEB1m2vPrxtqoIGfz0fUC9xyxRDx5gWHy5s+OCo6dcV+g7wI1R7gYCMFohhqF/2y2xeKVwMwCJjfn/WA==}
 
   '@commitlint/cli@19.8.1':
     resolution: {integrity: sha512-LXUdNIkspyxrlV6VDHWBmCZRtkEVRpBKxi2Gtw3J54cGWhLCTouVD/Q6ZSaSvd2YaDObWK8mDjrz3TIKtaQMAA==}
@@ -2496,6 +2502,8 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20260617.1':
     optional: true
 
+  '@cloudflare/workers-types@4.20260702.1': {}
+
   '@commitlint/cli@19.8.1(@types/node@24.12.2)(typescript@6.0.3)':
     dependencies:
       '@commitlint/format': 19.8.1
@@ -4513,7 +4521,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20260617.1
       '@cloudflare/workerd-windows-64': 1.20260617.1
 
-  wrangler@4.103.0:
+  wrangler@4.103.0(@cloudflare/workers-types@4.20260702.1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260617.1)
@@ -4524,6 +4532,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20260617.1
     optionalDependencies:
+      '@cloudflare/workers-types': 4.20260702.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
