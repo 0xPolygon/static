@@ -8,9 +8,9 @@
 # preflight handling broke every browser consumer of the SDK. Allow-headers
 # only matter on the preflight response, so they live in the worker, not here.
 #
-# Cache-Control is new: the store is fetched uncached at every maticjs client
-# init, so a short shared-cache TTL cuts repeated edge/origin load without
-# risking staleness for the rare network/ABI additions.
+# The short shared-cache TTL matters because consumers (maticjs and friends)
+# fetch this store uncached at every client init: edge caching absorbs that
+# repeat load, while 300s keeps new network/ABI additions from going stale.
 /*
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, HEAD, OPTIONS
