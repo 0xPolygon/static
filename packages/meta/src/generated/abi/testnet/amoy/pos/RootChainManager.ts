@@ -5,12 +5,183 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "receive",
-    "stateMutability": "payable"
+    "name": "MetaTransactionExecuted",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "userAddress",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "relayerAddress",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address payable"
+      },
+      {
+        "name": "functionSignature",
+        "type": "bytes",
+        "indexed": false,
+        "internalType": "bytes"
+      }
+    ],
+    "anonymous": false
   },
   {
-    "type": "function",
+    "name": "MigrationStatusChanged",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "rootToken",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "isDepositDisabled",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      },
+      {
+        "name": "isExitDisabled",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      },
+      {
+        "name": "lastExitBlockNumber",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "name": "PredicateRegistered",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "tokenType",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "predicateAddress",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "name": "RoleAdminChanged",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "role",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "previousAdminRole",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "newAdminRole",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "name": "RoleGranted",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "role",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "account",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "sender",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "name": "RoleRevoked",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "role",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "account",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "sender",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "name": "TokenMapped",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "rootToken",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "childToken",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "tokenType",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      }
+    ],
+    "anonymous": false
+  },
+  {
     "name": "DEFAULT_ADMIN_ROLE",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -22,8 +193,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "DEPOSIT",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -35,8 +206,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "ERC712_VERSION",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -48,8 +219,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "ETHER_ADDRESS",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -61,8 +232,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "MAPPER_ROLE",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -74,8 +245,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "MAP_TOKEN",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -87,8 +258,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "MIGRATION_MANAGER_ROLE",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -100,21 +271,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
-    "name": "USDT_ADDRESS",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
     "name": "checkpointManagerAddress",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -126,8 +284,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "childChainManagerAddress",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -139,8 +297,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "childToRootToken",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -158,8 +316,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "cleanMapToken",
+    "type": "function",
     "inputs": [
       {
         "name": "rootToken",
@@ -176,8 +334,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "depositEtherFor",
+    "type": "function",
     "inputs": [
       {
         "name": "user",
@@ -189,8 +347,8 @@ export const abi = [
     "stateMutability": "payable"
   },
   {
-    "type": "function",
     "name": "depositFor",
+    "type": "function",
     "inputs": [
       {
         "name": "user",
@@ -212,8 +370,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "executeMetaTransaction",
+    "type": "function",
     "inputs": [
       {
         "name": "userAddress",
@@ -251,8 +409,8 @@ export const abi = [
     "stateMutability": "payable"
   },
   {
-    "type": "function",
     "name": "exit",
+    "type": "function",
     "inputs": [
       {
         "name": "inputData",
@@ -264,8 +422,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "getChainId",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -277,8 +435,8 @@ export const abi = [
     "stateMutability": "pure"
   },
   {
-    "type": "function",
     "name": "getDomainSeperator",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -290,8 +448,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "getNonce",
+    "type": "function",
     "inputs": [
       {
         "name": "user",
@@ -309,8 +467,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "getRoleAdmin",
+    "type": "function",
     "inputs": [
       {
         "name": "role",
@@ -328,8 +486,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "getRoleMember",
+    "type": "function",
     "inputs": [
       {
         "name": "role",
@@ -352,8 +510,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "getRoleMemberCount",
+    "type": "function",
     "inputs": [
       {
         "name": "role",
@@ -371,8 +529,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "grantRole",
+    "type": "function",
     "inputs": [
       {
         "name": "role",
@@ -389,8 +547,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "hasRole",
+    "type": "function",
     "inputs": [
       {
         "name": "role",
@@ -413,8 +571,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "initialize",
+    "type": "function",
     "inputs": [
       {
         "name": "_owner",
@@ -426,15 +584,15 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "initializeEIP712",
+    "type": "function",
     "inputs": [],
     "outputs": [],
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "isMigrated",
+    "type": "function",
     "inputs": [
       {
         "name": "rootToken",
@@ -452,8 +610,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "mapToken",
+    "type": "function",
     "inputs": [
       {
         "name": "rootToken",
@@ -475,8 +633,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "migrateBridgeFunds",
+    "type": "function",
     "inputs": [
       {
         "name": "rootToken",
@@ -493,8 +651,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "migrationStatus",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -522,8 +680,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "processedExits",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -541,8 +699,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "registerPredicate",
+    "type": "function",
     "inputs": [
       {
         "name": "tokenType",
@@ -559,8 +717,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "remapToken",
+    "type": "function",
     "inputs": [
       {
         "name": "rootToken",
@@ -582,8 +740,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "renounceRole",
+    "type": "function",
     "inputs": [
       {
         "name": "role",
@@ -600,8 +758,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "revokeRole",
+    "type": "function",
     "inputs": [
       {
         "name": "role",
@@ -618,8 +776,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "rootToChildToken",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -637,8 +795,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "setCheckpointManager",
+    "type": "function",
     "inputs": [
       {
         "name": "newCheckpointManager",
@@ -650,8 +808,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "setChildChainManagerAddress",
+    "type": "function",
     "inputs": [
       {
         "name": "newChildChainManager",
@@ -663,8 +821,8 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "setStateSender",
+    "type": "function",
     "inputs": [
       {
         "name": "newStateSender",
@@ -676,15 +834,15 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "setupContractId",
+    "type": "function",
     "inputs": [],
     "outputs": [],
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "stateSenderAddress",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -696,8 +854,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "tokenToType",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -715,8 +873,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "typeToPredicate",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -734,8 +892,8 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "updateTokenMigrationStatus",
+    "type": "function",
     "inputs": [
       {
         "name": "rootToken",
@@ -762,178 +920,7 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "type": "event",
-    "name": "MetaTransactionExecuted",
-    "inputs": [
-      {
-        "name": "userAddress",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      },
-      {
-        "name": "relayerAddress",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address payable"
-      },
-      {
-        "name": "functionSignature",
-        "type": "bytes",
-        "indexed": false,
-        "internalType": "bytes"
-      }
-    ],
-    "anonymous": false
-  },
-  {
-    "type": "event",
-    "name": "MigrationStatusChanged",
-    "inputs": [
-      {
-        "name": "rootToken",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      },
-      {
-        "name": "isDepositDisabled",
-        "type": "bool",
-        "indexed": false,
-        "internalType": "bool"
-      },
-      {
-        "name": "isExitDisabled",
-        "type": "bool",
-        "indexed": false,
-        "internalType": "bool"
-      },
-      {
-        "name": "lastExitBlockNumber",
-        "type": "uint256",
-        "indexed": false,
-        "internalType": "uint256"
-      }
-    ],
-    "anonymous": false
-  },
-  {
-    "type": "event",
-    "name": "PredicateRegistered",
-    "inputs": [
-      {
-        "name": "tokenType",
-        "type": "bytes32",
-        "indexed": true,
-        "internalType": "bytes32"
-      },
-      {
-        "name": "predicateAddress",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      }
-    ],
-    "anonymous": false
-  },
-  {
-    "type": "event",
-    "name": "RoleAdminChanged",
-    "inputs": [
-      {
-        "name": "role",
-        "type": "bytes32",
-        "indexed": true,
-        "internalType": "bytes32"
-      },
-      {
-        "name": "previousAdminRole",
-        "type": "bytes32",
-        "indexed": true,
-        "internalType": "bytes32"
-      },
-      {
-        "name": "newAdminRole",
-        "type": "bytes32",
-        "indexed": true,
-        "internalType": "bytes32"
-      }
-    ],
-    "anonymous": false
-  },
-  {
-    "type": "event",
-    "name": "RoleGranted",
-    "inputs": [
-      {
-        "name": "role",
-        "type": "bytes32",
-        "indexed": true,
-        "internalType": "bytes32"
-      },
-      {
-        "name": "account",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      },
-      {
-        "name": "sender",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      }
-    ],
-    "anonymous": false
-  },
-  {
-    "type": "event",
-    "name": "RoleRevoked",
-    "inputs": [
-      {
-        "name": "role",
-        "type": "bytes32",
-        "indexed": true,
-        "internalType": "bytes32"
-      },
-      {
-        "name": "account",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      },
-      {
-        "name": "sender",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      }
-    ],
-    "anonymous": false
-  },
-  {
-    "type": "event",
-    "name": "TokenMapped",
-    "inputs": [
-      {
-        "name": "rootToken",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      },
-      {
-        "name": "childToken",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      },
-      {
-        "name": "tokenType",
-        "type": "bytes32",
-        "indexed": true,
-        "internalType": "bytes32"
-      }
-    ],
-    "anonymous": false
+    "type": "receive",
+    "stateMutability": "payable"
   }
 ] as const;
