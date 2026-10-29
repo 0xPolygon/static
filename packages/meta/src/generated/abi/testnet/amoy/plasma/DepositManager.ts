@@ -2,399 +2,12 @@ export const abi = [
   {
     "type": "constructor",
     "inputs": [],
+    "payable": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "fallback",
-    "stateMutability": "payable"
-  },
-  {
-    "type": "function",
-    "name": "childChain",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "depositBulk",
-    "inputs": [
-      {
-        "name": "_tokens",
-        "type": "address[]",
-        "internalType": "address[]"
-      },
-      {
-        "name": "_amountOrTokens",
-        "type": "uint256[]",
-        "internalType": "uint256[]"
-      },
-      {
-        "name": "_user",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "depositERC20",
-    "inputs": [
-      {
-        "name": "_token",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_amount",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "depositERC20ForUser",
-    "inputs": [
-      {
-        "name": "_token",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_user",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_amount",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "depositERC721",
-    "inputs": [
-      {
-        "name": "_token",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_tokenId",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "depositERC721ForUser",
-    "inputs": [
-      {
-        "name": "_token",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_user",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_tokenId",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "depositEther",
-    "inputs": [],
-    "outputs": [],
-    "stateMutability": "payable"
-  },
-  {
-    "type": "function",
-    "name": "deposits",
-    "inputs": [
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [
-      {
-        "name": "depositHash",
-        "type": "bytes32",
-        "internalType": "bytes32"
-      },
-      {
-        "name": "createdAt",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "governance",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "contract IGovernance"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "isOwner",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool",
-        "internalType": "bool"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "lock",
-    "inputs": [],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "locked",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool",
-        "internalType": "bool"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "maxErc20Deposit",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "migrateMatic",
-    "inputs": [],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "onERC721Received",
-    "inputs": [
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "",
-        "type": "bytes",
-        "internalType": "bytes"
-      }
-    ],
-    "outputs": [
-      {
-        "name": "",
-        "type": "bytes4",
-        "internalType": "bytes4"
-      }
-    ],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "owner",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "registry",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "contract Registry"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "renounceOwnership",
-    "inputs": [],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "rootChain",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "contract RootChain"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "stateSender",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "contract StateSender"
-      }
-    ],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "transferAssets",
-    "inputs": [
-      {
-        "name": "_token",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_user",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_amountOrNFTId",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "transferOwnership",
-    "inputs": [
-      {
-        "name": "newOwner",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "unlock",
-    "inputs": [],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "updateChildChainAndStateSender",
-    "inputs": [],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "updateMaxErc20Deposit",
-    "inputs": [
-      {
-        "name": "maxDepositAmount",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "updateRootChain",
-    "inputs": [
-      {
-        "name": "_rootChain",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "event",
     "name": "MaxErc20DepositUpdate",
+    "type": "event",
     "inputs": [
       {
         "name": "oldLimit",
@@ -412,8 +25,8 @@ export const abi = [
     "anonymous": false
   },
   {
-    "type": "event",
     "name": "NewDepositBlock",
+    "type": "event",
     "inputs": [
       {
         "name": "owner",
@@ -443,8 +56,8 @@ export const abi = [
     "anonymous": false
   },
   {
-    "type": "event",
     "name": "OwnershipTransferred",
+    "type": "event",
     "inputs": [
       {
         "name": "previousOwner",
@@ -460,5 +73,452 @@ export const abi = [
       }
     ],
     "anonymous": false
+  },
+  {
+    "type": "fallback",
+    "payable": true,
+    "stateMutability": "payable"
+  },
+  {
+    "name": "childChain",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "depositBulk",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "_tokens",
+        "type": "address[]",
+        "internalType": "address[]"
+      },
+      {
+        "name": "_amountOrTokens",
+        "type": "uint256[]",
+        "internalType": "uint256[]"
+      },
+      {
+        "name": "_user",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "depositERC20",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_amount",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "depositERC20ForUser",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_user",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_amount",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "depositERC721",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_tokenId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "depositERC721ForUser",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_user",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_tokenId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "depositEther",
+    "type": "function",
+    "inputs": [],
+    "outputs": [],
+    "payable": true,
+    "constant": false,
+    "stateMutability": "payable"
+  },
+  {
+    "name": "deposits",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "depositHash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "createdAt",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "governance",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IGovernance"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "isOwner",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "lock",
+    "type": "function",
+    "inputs": [],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "locked",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "maxErc20Deposit",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "migrateMatic",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "_amount",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "onERC721Received",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes4",
+        "internalType": "bytes4"
+      }
+    ],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "owner",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "registry",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract Registry"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "renounceOwnership",
+    "type": "function",
+    "inputs": [],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "rootChain",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract RootChain"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "stateSender",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract StateSender"
+      }
+    ],
+    "payable": false,
+    "constant": true,
+    "stateMutability": "view"
+  },
+  {
+    "name": "transferAssets",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_user",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_amountOrNFTId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "transferOwnership",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "unlock",
+    "type": "function",
+    "inputs": [],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "updateChildChainAndStateSender",
+    "type": "function",
+    "inputs": [],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "updateMaxErc20Deposit",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "maxDepositAmount",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "updateRootChain",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "_rootChain",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
   }
 ] as const;
