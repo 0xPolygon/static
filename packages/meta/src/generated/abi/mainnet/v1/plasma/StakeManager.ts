@@ -305,26 +305,6 @@ export const abi = [
     "stateMutability": "view"
   },
   {
-    "name": "decreaseValidatorDelegatedAmount",
-    "type": "function",
-    "inputs": [
-      {
-        "name": "validatorId",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "amount",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "payable": false,
-    "constant": false,
-    "stateMutability": "nonpayable"
-  },
-  {
     "name": "delegatedAmount",
     "type": "function",
     "inputs": [
@@ -475,21 +455,6 @@ export const abi = [
   },
   {
     "name": "eventsHub",
-    "type": "function",
-    "inputs": [],
-    "outputs": [
-      {
-        "name": "",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "payable": false,
-    "constant": true,
-    "stateMutability": "view"
-  },
-  {
-    "name": "extensionCode",
     "type": "function",
     "inputs": [],
     "outputs": [
@@ -757,26 +722,6 @@ export const abi = [
     "stateMutability": "nonpayable"
   },
   {
-    "name": "migrateValidatorsData",
-    "type": "function",
-    "inputs": [
-      {
-        "name": "validatorIdFrom",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "validatorIdTo",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "payable": false,
-    "constant": false,
-    "stateMutability": "nonpayable"
-  },
-  {
     "name": "migration",
     "type": "function",
     "inputs": [],
@@ -903,6 +848,21 @@ export const abi = [
     "stateMutability": "view"
   },
   {
+    "name": "reinitializeValidatorState",
+    "type": "function",
+    "inputs": [
+      {
+        "name": "expectedIncrease",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "payable": false,
+    "constant": false,
+    "stateMutability": "nonpayable"
+  },
+  {
     "name": "renounceOwnership",
     "type": "function",
     "inputs": [],
@@ -1020,21 +980,6 @@ export const abi = [
     "payable": false,
     "constant": true,
     "stateMutability": "view"
-  },
-  {
-    "name": "setCurrentEpoch",
-    "type": "function",
-    "inputs": [
-      {
-        "name": "_currentEpoch",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "payable": false,
-    "constant": false,
-    "stateMutability": "nonpayable"
   },
   {
     "name": "setDelegationEnabled",
