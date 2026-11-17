@@ -1,8 +1,11 @@
 # See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 #
-# Every PR against `master` requires approval from a member of
-# @0xPolygon/product-applications. The team also owns the
-# static.polygon.technology HTTP endpoint and the @polygonlabs/meta
-# npm package, so a single owner block at the repo root is intentional.
+# Every PR against `master` requires approval from a code owner: a member
+# of @0xPolygon/product-applications or of the smart contracts team
+# (ethyla, Agusx1211). Product applications owns the
+# static.polygon.technology HTTP endpoint and the @polygonlabs/meta npm
+# package; the smart contracts team keeps the contract addresses and
+# ABIs under `network/` in sync with what is deployed on-chain. A single
+# owner block at the repo root is intentional.
 
-* @0xPolygon/product-applications
+* @0xPolygon/product-applications @ethyla @Agusx1211
