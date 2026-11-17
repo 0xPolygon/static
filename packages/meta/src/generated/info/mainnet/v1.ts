@@ -18,7 +18,7 @@ export const info = {
       "ValidatorShareFactory": "0xc4FA447A0e77Eff9717b09C057B40570813bb642",
       "StakingInfo": "0xa59C847Bd5aC0172Ff4FE912C5d29E5A71A7512B",
       "StakingNFT": "0x47Cbe25BbDB40a774cC37E1dA92d10C2C7Ec897F",
-      "StakeManager": "0x3AD88467E40399dc6Ae10427f8B0842348d9076c",
+      "StakeManager": "0x428D1067b33B2bCa826cF66344dbEcBd5AA6506e",
       "StakeManagerProxy": "0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908",
       "ValidatorShare": "0xBe63B977ABBAA99fC0243e208340c530Dd4ee9E8",
       "StateSender": "0x28e4F3a7f651294B9564800b2D01f35189A5bFbE",
@@ -26,6 +26,7 @@ export const info = {
       "DepositManagerProxy": "0x401F6c983eA34274ec46f84D70b31C151321188b",
       "WithdrawManager": "0x6F8a42cf6f3CE657B66A9d5849f1251dE7a35168",
       "WithdrawManagerProxy": "0x2A88696e0fFA76bAA1338F2C74497cC013495922",
+      "EventsHub": "0x0672777617CAA1E778083a4f74eBC997262C9EdD",
       "EventsHubProxy": "0x6dF5CB08d3f0193C768C8A01f42ac4424DC5086b",
       "ExitNFT": "0xDF74156420Bd57ab387B195ed81EcA36F9fABAca",
       "ERC20Predicate": "0x4EeA1780c06709D7FA0BCaA6D0f1aB29673586c0",
@@ -40,7 +41,7 @@ export const info = {
       "PolygonMigrationProxy": "0x29e7DF7b6A1B2b07b731457f499E1696c60E2C4e",
       "PolygonMigration": "0xB037347ef306db3b41aB0b250F891887039d9231",
       "DefaultEmissionManagerProxy": "0xbC9f74b3b14f460a6c47dCdDFd17411cBc7b6c53",
-      "DefaultEmissionManager": "0x152442D77E9fB9C210953d583Cbb2da88027fCB9",
+      "DefaultEmissionManager": "0x282FD46E108E40A45e4CE425bA75f80245e6C2E0",
       "PolygonEcosystemToken": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6"
     },
     "POSContracts": {
@@ -94,6 +95,7 @@ export const info = {
     "Contracts": {
       "ChildChain": "0xD9c7C4ED4B66858301D0cb28Cc88bf655Fe34861",
       "EIP1559Burn": "0x7A8ed27F4C30512326878652d20fC85727401854",
+      "NewBurn1559": "0xAe88570eB386A9c902488a6535F0957a46a68765",
       "Tokens": {
         "MaticWeth": "0x8cc8538d60901d19692F5ba22684732Bc28F54A3",
         "MaticToken": "0x0000000000000000000000000000000000001010",

@@ -2,11 +2,50 @@ export const abi = [
   {
     "type": "constructor",
     "inputs": [],
+    "payable": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
+    "name": "OwnershipTransferred",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "previousOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "newOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "name": "RootChainChanged",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "previousRootChain",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "newRootChain",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
     "name": "CHECKPOINT_REWARD",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -15,11 +54,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "NFTContract",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -28,11 +69,13 @@ export const abi = [
         "internalType": "contract StakingNFT"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "NFTCounter",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -41,11 +84,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "WITHDRAWAL_DELAY",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -54,11 +99,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "accountStateRoot",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -67,11 +114,13 @@ export const abi = [
         "internalType": "bytes32"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "auctionPeriod",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -80,11 +129,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "changeRootChain",
+    "type": "function",
     "inputs": [
       {
         "name": "newRootChain",
@@ -93,11 +144,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "checkPointBlockInterval",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -106,11 +159,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "checkSignatures",
+    "type": "function",
     "inputs": [
       {
         "name": "blockInterval",
@@ -145,11 +200,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "checkpointRewardDelta",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -158,11 +215,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "claimFee",
+    "type": "function",
     "inputs": [
       {
         "name": "accumFeeAmount",
@@ -181,29 +240,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
-    "name": "confirmAuctionBid",
-    "inputs": [
-      {
-        "name": "validatorId",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "heimdallFee",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "convertMaticToPOL",
+    "type": "function",
     "inputs": [
       {
         "name": "amount",
@@ -212,11 +255,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "currentEpoch",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -225,11 +270,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "currentValidatorSetSize",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -238,11 +285,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "currentValidatorSetTotalStake",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -251,11 +300,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "decreaseValidatorDelegatedAmount",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -269,11 +320,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "delegatedAmount",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -288,11 +341,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "delegationDeposit",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -317,11 +372,13 @@ export const abi = [
         "internalType": "bool"
       }
     ],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "delegationDepositPOL",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -346,11 +403,13 @@ export const abi = [
         "internalType": "bool"
       }
     ],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "delegationEnabled",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -359,11 +418,13 @@ export const abi = [
         "internalType": "bool"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "delegatorsReward",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -378,95 +439,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
-    "name": "dethroneAndStake",
-    "inputs": [
-      {
-        "name": "auctionUser",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "heimdallFee",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "validatorId",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "auctionAmount",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "acceptDelegation",
-        "type": "bool",
-        "internalType": "bool"
-      },
-      {
-        "name": "signerPubkey",
-        "type": "bytes",
-        "internalType": "bytes"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "drain",
-    "inputs": [
-      {
-        "name": "destination",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "amount",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "drainValidatorShares",
-    "inputs": [
-      {
-        "name": "validatorId",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "tokenAddr",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "destination",
-        "type": "address",
-        "internalType": "address payable"
-      },
-      {
-        "name": "amount",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "dynasty",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -475,11 +454,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "epoch",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -488,11 +469,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "eventsHub",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -501,11 +484,13 @@ export const abi = [
         "internalType": "address"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "extensionCode",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -514,11 +499,13 @@ export const abi = [
         "internalType": "address"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "forceUnstake",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -527,11 +514,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "forceUnstakePOL",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -540,11 +529,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "getRegistry",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -553,11 +544,13 @@ export const abi = [
         "internalType": "address"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "getValidatorContract",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -572,11 +565,13 @@ export const abi = [
         "internalType": "address"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "getValidatorId",
+    "type": "function",
     "inputs": [
       {
         "name": "user",
@@ -591,11 +586,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "governance",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -604,82 +601,13 @@ export const abi = [
         "internalType": "contract IGovernance"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
-    "name": "initialize",
-    "inputs": [
-      {
-        "name": "_registry",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_rootchain",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_token",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_NFTContract",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_stakingLogger",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_validatorShareFactory",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_governance",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_owner",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_extensionCode",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "initializePOL",
-    "inputs": [
-      {
-        "name": "_tokenNew",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_migration",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "insertSigners",
+    "type": "function",
     "inputs": [
       {
         "name": "_signers",
@@ -688,11 +616,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "isOwner",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -701,11 +631,13 @@ export const abi = [
         "internalType": "bool"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "isValidator",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -720,11 +652,13 @@ export const abi = [
         "internalType": "bool"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "latestSignerUpdateEpoch",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -739,18 +673,22 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "lock",
+    "type": "function",
     "inputs": [],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "locked",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -759,11 +697,13 @@ export const abi = [
         "internalType": "bool"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "logger",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -772,11 +712,13 @@ export const abi = [
         "internalType": "contract StakingInfo"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "maxRewardedCheckpoints",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -785,11 +727,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "migrateDelegation",
+    "type": "function",
     "inputs": [
       {
         "name": "fromValidatorId",
@@ -808,11 +752,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "migrateValidatorsData",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorIdFrom",
@@ -826,11 +772,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "migration",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -839,11 +787,13 @@ export const abi = [
         "internalType": "contract IPolygonMigration"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "minDeposit",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -852,11 +802,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "minHeimdallFee",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -865,11 +817,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "owner",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -878,11 +832,13 @@ export const abi = [
         "internalType": "address"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "ownerOf",
+    "type": "function",
     "inputs": [
       {
         "name": "tokenId",
@@ -897,11 +853,13 @@ export const abi = [
         "internalType": "address"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "prevBlockInterval",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -910,11 +868,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "proposerBonus",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -923,11 +883,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "registry",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -936,46 +898,22 @@ export const abi = [
         "internalType": "address"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
-    "name": "reinitialize",
-    "inputs": [
-      {
-        "name": "_NFTContract",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_stakingLogger",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_validatorShareFactory",
-        "type": "address",
-        "internalType": "address"
-      },
-      {
-        "name": "_extensionCode",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "renounceOwnership",
+    "type": "function",
     "inputs": [],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "replacementCoolDown",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -984,11 +922,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "restake",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1007,11 +947,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "restakePOL",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1030,11 +972,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "rewardDecreasePerCheckpoint",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1043,11 +987,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "rewardPerStake",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1056,11 +1002,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "rootChain",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1069,11 +1017,13 @@ export const abi = [
         "internalType": "address"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "setCurrentEpoch",
+    "type": "function",
     "inputs": [
       {
         "name": "_currentEpoch",
@@ -1082,11 +1032,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "setDelegationEnabled",
+    "type": "function",
     "inputs": [
       {
         "name": "enabled",
@@ -1095,24 +1047,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
-    "name": "setStakingToken",
-    "inputs": [
-      {
-        "name": "_token",
-        "type": "address",
-        "internalType": "address"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "signerToValidator",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -1127,11 +1068,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "signerUpdateLimit",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1140,11 +1083,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "signers",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -1159,30 +1104,13 @@ export const abi = [
         "internalType": "address"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
-    "name": "slash",
-    "inputs": [
-      {
-        "name": "_slashingInfoList",
-        "type": "bytes",
-        "internalType": "bytes"
-      }
-    ],
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "stakeFor",
+    "type": "function",
     "inputs": [
       {
         "name": "user",
@@ -1211,11 +1139,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "stakeForPOL",
+    "type": "function",
     "inputs": [
       {
         "name": "user",
@@ -1244,52 +1174,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
-    "name": "startAuction",
-    "inputs": [
-      {
-        "name": "validatorId",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "amount",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "_acceptDelegation",
-        "type": "bool",
-        "internalType": "bool"
-      },
-      {
-        "name": "_signerPubkey",
-        "type": "bytes",
-        "internalType": "bytes"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
-    "name": "stopAuctions",
-    "inputs": [
-      {
-        "name": "forNCheckpoints",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "token",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1298,11 +1189,13 @@ export const abi = [
         "internalType": "contract IERC20"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "tokenMatic",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1311,11 +1204,13 @@ export const abi = [
         "internalType": "contract IERC20"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "topUpForFee",
+    "type": "function",
     "inputs": [
       {
         "name": "user",
@@ -1329,11 +1224,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "totalHeimdallFee",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1342,11 +1239,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "totalRewards",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1355,11 +1254,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "totalRewardsLiquidated",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1368,11 +1269,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "totalStaked",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1381,11 +1284,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "totalStakedFor",
+    "type": "function",
     "inputs": [
       {
         "name": "user",
@@ -1400,11 +1305,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "transferFunds",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1429,11 +1336,13 @@ export const abi = [
         "internalType": "bool"
       }
     ],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "transferFundsPOL",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1458,11 +1367,13 @@ export const abi = [
         "internalType": "bool"
       }
     ],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "transferOwnership",
+    "type": "function",
     "inputs": [
       {
         "name": "newOwner",
@@ -1471,31 +1382,22 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
-    "name": "unjail",
-    "inputs": [
-      {
-        "name": "validatorId",
-        "type": "uint256",
-        "internalType": "uint256"
-      }
-    ],
-    "outputs": [],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "unlock",
+    "type": "function",
     "inputs": [],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "unstake",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1504,11 +1406,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "unstakeClaim",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1517,11 +1421,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "unstakeClaimPOL",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1530,11 +1436,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "unstakePOL",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1543,11 +1451,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateCheckPointBlockInterval",
+    "type": "function",
     "inputs": [
       {
         "name": "_blocks",
@@ -1556,11 +1466,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateCheckpointReward",
+    "type": "function",
     "inputs": [
       {
         "name": "newReward",
@@ -1569,11 +1481,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateCheckpointRewardParams",
+    "type": "function",
     "inputs": [
       {
         "name": "_rewardDecreasePerCheckpoint",
@@ -1592,11 +1506,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateCommissionRate",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1610,11 +1526,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateDynastyValue",
+    "type": "function",
     "inputs": [
       {
         "name": "newDynasty",
@@ -1623,11 +1541,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateMinAmounts",
+    "type": "function",
     "inputs": [
       {
         "name": "_minDeposit",
@@ -1641,11 +1561,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateProposerBonus",
+    "type": "function",
     "inputs": [
       {
         "name": "newProposerBonus",
@@ -1654,11 +1576,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateSigner",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1672,11 +1596,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateSignerUpdateLimit",
+    "type": "function",
     "inputs": [
       {
         "name": "_limit",
@@ -1685,11 +1611,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateValidatorContractAddress",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1703,11 +1631,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateValidatorDelegation",
+    "type": "function",
     "inputs": [
       {
         "name": "delegation",
@@ -1716,11 +1646,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateValidatorState",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1734,11 +1666,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "updateValidatorThreshold",
+    "type": "function",
     "inputs": [
       {
         "name": "newThreshold",
@@ -1747,11 +1681,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "userFeeExit",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -1766,11 +1702,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "validatorAuction",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -1805,11 +1743,13 @@ export const abi = [
         "internalType": "bytes"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "validatorReward",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1824,11 +1764,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "validatorShareFactory",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1837,11 +1779,13 @@ export const abi = [
         "internalType": "contract ValidatorShareFactory"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "validatorStake",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -1856,11 +1800,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "validatorState",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1874,11 +1820,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "validatorStateChanges",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -1898,11 +1846,13 @@ export const abi = [
         "internalType": "int256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "validatorThreshold",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -1911,11 +1861,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "validators",
+    "type": "function",
     "inputs": [
       {
         "name": "",
@@ -1990,11 +1942,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
   },
   {
-    "type": "function",
     "name": "withdrawDelegatorsReward",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -2009,11 +1963,13 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "withdrawRewards",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -2022,11 +1978,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "withdrawRewardsPOL",
+    "type": "function",
     "inputs": [
       {
         "name": "validatorId",
@@ -2035,11 +1993,13 @@ export const abi = [
       }
     ],
     "outputs": [],
+    "payable": false,
+    "constant": false,
     "stateMutability": "nonpayable"
   },
   {
-    "type": "function",
     "name": "withdrawalDelay",
+    "type": "function",
     "inputs": [],
     "outputs": [
       {
@@ -2048,44 +2008,8 @@ export const abi = [
         "internalType": "uint256"
       }
     ],
+    "payable": false,
+    "constant": true,
     "stateMutability": "view"
-  },
-  {
-    "type": "event",
-    "name": "OwnershipTransferred",
-    "inputs": [
-      {
-        "name": "previousOwner",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      },
-      {
-        "name": "newOwner",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      }
-    ],
-    "anonymous": false
-  },
-  {
-    "type": "event",
-    "name": "RootChainChanged",
-    "inputs": [
-      {
-        "name": "previousRootChain",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      },
-      {
-        "name": "newRootChain",
-        "type": "address",
-        "indexed": true,
-        "internalType": "address"
-      }
-    ],
-    "anonymous": false
   }
 ] as const;
