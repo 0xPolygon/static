@@ -1,5 +1,17 @@
 # @polygonlabs/meta
 
+## 1.2.0
+
+### Minor Changes
+
+- [#197](https://github.com/0xPolygon/static/pull/197) [`d3fd9c3`](https://github.com/0xPolygon/static/commit/d3fd9c37c4cbe0231abc52fbe32fa501f5dd5b4d) Thanks [@ethyla](https://github.com/ethyla)! - Add the EventsHub implementation address on mainnet and Amoy, and the NewBurn1559 implementation (behind the Polygon/Amoy `EIP1559Burn` proxy) with its ABI.
+
+### Patch Changes
+
+- [#197](https://github.com/0xPolygon/static/pull/197) [`9ab182f`](https://github.com/0xPolygon/static/commit/9ab182f95854ca77040b09e2da510b092eabc665) Thanks [@ethyla](https://github.com/ethyla)! - Refresh ABIs to match the live implementations: StakeManager, DefaultEmissionManager and StateReceiver on mainnet; StakeManager, StateReceiver, DepositManager, PolygonMigration, RootChainManager, ChildChainManager and the six upgraded PoS predicates on Amoy.
+
+- [#197](https://github.com/0xPolygon/static/pull/197) [`e1a1fb4`](https://github.com/0xPolygon/static/commit/e1a1fb47da7a801166f3d7632a7d32cced3c8d08) Thanks [@ethyla](https://github.com/ethyla)! - Point upgraded implementations at their live addresses: StakeManager and DefaultEmissionManager on mainnet; StakeManager, ValidatorShare and the six upgraded PoS bridge predicates on Amoy.
+
 ## 1.1.1
 
 ### Patch Changes
