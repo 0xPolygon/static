@@ -16,7 +16,7 @@ export const info = {
       "DepositManagerProxy": "0x44Ad17990F9128C6d823Ee10dB7F0A5d40a731A4",
       "WithdrawManager": "0xE1D0DdD817CA39301c9E4F5A7218BbDAf59D248D",
       "WithdrawManagerProxy": "0x822db7e79096E7247d9273E5782ecAec464Eb96C",
-      "StakeManager": "0x428D1067b33B2bCa826cF66344dbEcBd5AA6506e",
+      "StakeManager": "0x1D9eE26F794676acF56baC9A479F766403D0f5cC",
       "StakeManagerProxy": "0x4AE8f648B1Ec892B6cc68C89cc088583964d08bE",
       "SlashingManager": "0x9e699267858ce513eACF3b66420334785f9c8E4c",
       "StakingInfo": "0x5E3111a5d928D24718c1A7897261D0B9087002ed",
@@ -30,6 +30,7 @@ export const info = {
       "ERC20Predicate": "0x7A03d5b77e2091805013EeCE6CF2B53253dA9645",
       "ERC721Predicate": "0x0059bBF8E5b9b071acc7682B6fe198c32AAA2A97",
       "EIP1559Burn": "0xeCDD77cE6f146cCf5dab707941d318Bd50eeD2C9",
+      "NewBurnTunnel": "0xDEAD4CD252BB87237325B18D71fF4D872CAabcBc",
       "Tokens": {
         "MaticToken": "0x3fd0A53F4Bf853985a95F4Eb3F9C9FDE1F8e2b53",
         "MaticWeth": "0x700dDE29De87ed2c01c27C896dc8Badb4f671302",
@@ -88,6 +89,7 @@ export const info = {
     "SupportsEIP1559": true,
     "Contracts": {
       "EIP1559Burn": "0xeCDD77cE6f146cCf5dab707941d318Bd50eeD2C9",
+      "NewBurnTunnel": "0xDEAD4CD252BB87237325B18D71fF4D872CAabcBc",
       "NewBurn1559": "0xAe88570eB386A9c902488a6535F0957a46a68765",
       "ChildChain": "0x4f9cd8a945EE035523979D7A120a23999D17D8C0",
       "Tokens": {
