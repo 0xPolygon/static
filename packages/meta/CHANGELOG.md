@@ -1,5 +1,17 @@
 # @polygonlabs/meta
 
+## 1.2.1
+
+### Patch Changes
+
+- [#204](https://github.com/0xPolygon/static/pull/204) [`e618dfa`](https://github.com/0xPolygon/static/commit/e618dfa25cc9580bed538b46e63a9334b21df5d6) Thanks [@ethyla](https://github.com/ethyla)! - Point the Amoy `StakeManager` at the PIP-91 Part 2 implementation `0x1D9eE26F794676acF56baC9A479F766403D0f5cC` and refresh its ABI to match mainnet: `setCurrentEpoch`, `decreaseValidatorDelegatedAmount`, `extensionCode` and `migrateValidatorsData` are gone, `reinitializeValidatorState` is added. Also list the POL burn tunnel `NewBurnTunnel` (`0xDEAD4CD252BB87237325B18D71fF4D872CAabcBc`) under `Main.Contracts` (Sepolia) and `Matic.Contracts` (Amoy) in `testnet/amoy/index.json`; it is the burn destination of the Amoy `EIP1559Burn` collector.
+
+- [#200](https://github.com/0xPolygon/static/pull/200) [`b0c46fb`](https://github.com/0xPolygon/static/commit/b0c46fbd1827a4ed6bfa04b77d085a5e4b2275bf) Thanks [@Agusx1211](https://github.com/Agusx1211)! - Add the POL burn tunnel to the mainnet registry.
+
+  `NewBurnTunnel` (`0xDEAD4CD252BB87237325B18D71fF4D872CAabcBc`) is now listed under `Main.Contracts` (Ethereum) and `Matic.Contracts` (Polygon PoS) in `mainnet/v1/index.json`. It is the same contract at the same address on both chains: on Polygon it receives the POL burned by the EIP-1559 collector (`Matic.Contracts.EIP1559Burn`), and on Ethereum it settles the exit and sweeps POL to `0x000000000000000000000000000000000000dEaD`.
+
+- [#198](https://github.com/0xPolygon/static/pull/198) [`29fad55`](https://github.com/0xPolygon/static/commit/29fad55576a01db7ed18c743834e65e385c9d33f) Thanks [@Agusx1211](https://github.com/Agusx1211)! - Point the mainnet `StakeManager` at the PIP-91 Part 2 implementation `0x1D9eE26F794676acF56baC9A479F766403D0f5cC` and refresh its ABI: `setCurrentEpoch`, `decreaseValidatorDelegatedAmount`, `extensionCode` and `migrateValidatorsData` are gone, `reinitializeValidatorState` is added.
+
 ## 1.2.0
 
 ### Minor Changes
